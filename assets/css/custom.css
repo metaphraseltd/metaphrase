@@ -1,1 +1,23 @@
+/* --- Metaphrase Custom Styles --- */
 
+/* 1. Global Font and Text Color */
+body {
+    font-family: 'Gloock', serif; /* Applying Gloock as the primary font */
+    color: #4A4A4A; /* Dark charcoal grey for general body text */
+}
+
+/* Ensure headings also use Gloock and Metaphrase primary blue */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Gloock', serif;
+    color: #2672EC; /* Primary Metaphrase blue for headings */
+}
+
+/* 2. Primary Brand Color for Links */
+a {
+    color: #2672EC; /* Metaphrase blue for general links */
+}
+
+a:hover {
+    color: #1a51a8; /* A slightly darker shade of your primary blue for hover effect */
+    text-decoration: underline;
+}
