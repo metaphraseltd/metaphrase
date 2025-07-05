@@ -1,31 +1,130 @@
-/* --- Metaphrase Custom Styles --- */
+/*
+================================================================
+Metaphrase Custom Stylesheet
+================================================================
+*/
 
-/* 1. Global Font and Text Color - ULTIMATE FORCED OVERRIDE */
-/* This targets the highest level elements and directly applies !important */
-html, body {
-    font-family: 'Gloock', serif !important; /* Force Gloock font on ALL text */
-    color: #4A4A4A !important; /* Force dark charcoal grey for general body text */
+/* 1. Brand Color & Font Variables
+--------------------------------------------------------------*/
+:root {
+  --primary-color: #357ABD; /* Metaphrase Blue */
+  --text-color: #212529;      /* Neutral Dark for Text */
+  --light-bg-color: #F8F9FA; /* Accent Grey for Backgrounds */
+  --heading-font: 'Gloock', serif;
+  --body-font: 'Roboto', sans-serif;
 }
 
-/* Ensure headings also use Gloock and Metaphrase primary blue - ULTIMATE FORCED OVERRIDE */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Gloock', serif !important; /* Force Gloock for ALL headings */
-    color: #2672EC !important; /* Force Primary Metaphrase blue for headings */
+
+/* 2. Global Styles & Typography
+--------------------------------------------------------------*/
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
 }
 
-/* 2. Primary Brand Color for Links - FORCED OVERRIDE */
+/* General link color */
 a {
-    color: #2672EC !important; /* Force Metaphrase blue for general links */
+  color: var(--primary-color);
 }
 
 a:hover {
-    color: #1a51a8 !important; /* Force slightly darker shade for hover effect */
-    text-decoration: underline !important;
+  color: #2a629a; /* A slightly darker blue for hover */
 }
 
-/* 3. Re-confirming the variable override (might not be necessary now, but good to keep) */
-:root {
-    --default-font: 'Gloock', serif !important;
-    --heading-font: 'Gloock', serif !important;
-    --nav-font: 'Gloock', serif !important;
+/* Apply Gloock font to all main headings and titles */
+h1, h2, h3, h4, h5, h6,
+.sitename,
+.hero-title,
+.section-title h2,
+.about h3,
+.services h3,
+.portfolio h3,
+.pricing h3,
+.team-content h4 {
+  font-family: var(--heading-font);
+}
+
+
+/* 3. Header & Navigation
+--------------------------------------------------------------*/
+/* Header "Get Started" button */
+.header .btn-getstarted {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: 2px solid var(--primary-color);
+}
+
+.header .btn-getstarted:hover {
+  background-color: #2a629a;
+  border-color: #2a629a;
+}
+
+/* Active navigation link color */
+.navmenu .active {
+  color: var(--primary-color);
+}
+
+
+/* 4. Buttons
+--------------------------------------------------------------*/
+/* Primary button style */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #2a629a;
+  border-color: #2a629a;
+}
+
+/* Outline button style */
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    color: #ffffff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+
+/* 5. Key Sections & Icons
+--------------------------------------------------------------*/
+/* Change icon colors to brand blue */
+.feature-box .feature-icon i,
+.service-item .service-icon i,
+.about ul li i,
+.info-card .icon-box i {
+  color: var(--primary-color);
+}
+
+/* Section title underline effect */
+.section-title p::after {
+  background: var(--primary-color);
+}
+
+/* Specific link in the about section */
+.about .read-more {
+  color: var(--primary-color);
+}
+
+/* Pricing plan "Popular" badge */
+.pricing-card.popular .popular-badge {
+    background: var(--primary-color);
+}
+
+
+/* 6. Background Colors
+--------------------------------------------------------------*/
+/* Sections with a light grey background */
+.light-background {
+  background-color: var(--light-bg-color) !important;
+}
+
+/* Styling for the dot after the site name in the logo */
+.logo .sitename + span {
+    color: var(--primary-color);
 }
