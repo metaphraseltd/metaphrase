@@ -1,14 +1,15 @@
 /* --- Metaphrase Custom Styles --- */
 
-/* 1. Global Font and Text Color - FORCED OVERRIDE */
-html, body { /* Target both html and body for maximum override */
-    font-family: 'Gloock', serif !important; /* Force Gloock font */
+/* 1. Global Font and Text Color - ULTIMATE FORCED OVERRIDE */
+/* This targets the highest level elements and directly applies !important */
+html, body {
+    font-family: 'Gloock', serif !important; /* Force Gloock font on ALL text */
     color: #4A4A4A !important; /* Force dark charcoal grey for general body text */
 }
 
-/* Ensure headings also use Gloock and Metaphrase primary blue - FORCED OVERRIDE */
+/* Ensure headings also use Gloock and Metaphrase primary blue - ULTIMATE FORCED OVERRIDE */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Gloock', serif !important; /* Force Gloock for headings */
+    font-family: 'Gloock', serif !important; /* Force Gloock for ALL headings */
     color: #2672EC !important; /* Force Primary Metaphrase blue for headings */
 }
 
@@ -22,8 +23,7 @@ a:hover {
     text-decoration: underline !important;
 }
 
-/* 3. OVERRIDE TEMPLATE'S CSS FONT VARIABLES - IMPORTANT TO KEEP THESE TOO! */
-/* These will ensure any elements using these variables also get Gloock */
+/* 3. Re-confirming the variable override (might not be necessary now, but good to keep) */
 :root {
     --default-font: 'Gloock', serif !important;
     --heading-font: 'Gloock', serif !important;
