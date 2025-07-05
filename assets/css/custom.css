@@ -1,6 +1,6 @@
 /*
 ================================================================
-Metaphrase Custom Stylesheet
+Metaphrase Custom Stylesheet (V2 - More Specific)
 ================================================================
 */
 
@@ -8,6 +8,7 @@ Metaphrase Custom Stylesheet
 --------------------------------------------------------------*/
 :root {
   --primary-color: #357ABD; /* Metaphrase Blue */
+  --primary-color-hover: #2a629a; /* Darker Blue for Hover */
   --text-color: #212529;      /* Neutral Dark for Text */
   --light-bg-color: #F8F9FA; /* Accent Grey for Backgrounds */
   --heading-font: 'Gloock', serif;
@@ -23,12 +24,12 @@ body {
 }
 
 /* General link color */
-a {
+a, .service-link, .about .read-more {
   color: var(--primary-color);
 }
 
-a:hover {
-  color: #2a629a; /* A slightly darker blue for hover */
+a:hover, .service-link:hover, .about .read-more:hover {
+  color: var(--primary-color-hover);
 }
 
 /* Apply Gloock font to all main headings and titles */
@@ -38,10 +39,11 @@ h1, h2, h3, h4, h5, h6,
 .section-title h2,
 .about h3,
 .services h3,
-.portfolio h3,
-.pricing h3,
-.team-content h4 {
-  font-family: var(--heading-font);
+.portfolio-content h3,
+.pricing-card h3,
+.team-content h4,
+.faq-header h3 {
+  font-family: var(--heading-font) !important; /* !important ensures override */
 }
 
 
@@ -51,16 +53,18 @@ h1, h2, h3, h4, h5, h6,
 .header .btn-getstarted {
   background-color: var(--primary-color);
   color: #ffffff;
-  border: 2px solid var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .header .btn-getstarted:hover {
-  background-color: #2a629a;
-  border-color: #2a629a;
+  background-color: var(--primary-color-hover);
+  border-color: var(--primary-color-hover);
 }
 
 /* Active navigation link color */
-.navmenu .active {
+.navmenu a.active,
+.navmenu a:hover,
+.navmenu .active:hover {
   color: var(--primary-color);
 }
 
@@ -68,23 +72,23 @@ h1, h2, h3, h4, h5, h6,
 /* 4. Buttons
 --------------------------------------------------------------*/
 /* Primary button style */
-.btn-primary {
+.btn.btn-primary, .cta-wrapper .btn-primary {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
 }
 
-.btn-primary:hover {
-  background-color: #2a629a;
-  border-color: #2a629a;
+.btn.btn-primary:hover, .cta-wrapper .btn-primary:hover {
+  background-color: var(--primary-color-hover);
+  border-color: var(--primary-color-hover);
 }
 
-/* Outline button style */
-.btn-outline-primary {
+/* Outline button style for CTA sections */
+.call-to-action-2 .btn-outline-primary {
     color: var(--primary-color);
     border-color: var(--primary-color);
 }
 
-.btn-outline-primary:hover {
+.call-to-action-2 .btn-outline-primary:hover {
     color: #ffffff;
     background-color: var(--primary-color);
     border-color: var(--primary-color);
@@ -97,7 +101,8 @@ h1, h2, h3, h4, h5, h6,
 .feature-box .feature-icon i,
 .service-item .service-icon i,
 .about ul li i,
-.info-card .icon-box i {
+.info-card .icon-box i,
+.call-to-action-2 .feature-item i {
   color: var(--primary-color);
 }
 
@@ -106,16 +111,27 @@ h1, h2, h3, h4, h5, h6,
   background: var(--primary-color);
 }
 
-/* Specific link in the about section */
-.about .read-more {
-  color: var(--primary-color);
-}
-
 /* Pricing plan "Popular" badge */
 .pricing-card.popular .popular-badge {
     background: var(--primary-color);
 }
 
+/* Footer link hover state */
+.footer .footer-links ul i {
+  color: var(--primary-color);
+}
+
+.footer .footer-links ul a:hover {
+  color: var(--primary-color);
+}
+
+/* Scroll to top button */
+.scroll-top {
+    background: var(--primary-color);
+}
+.scroll-top:hover {
+    background: var(--primary-color-hover);
+}
 
 /* 6. Background Colors
 --------------------------------------------------------------*/
