@@ -21,3 +21,10 @@ a:hover {
     color: #1a51a8; /* A slightly darker shade of your primary blue for hover effect */
     text-decoration: underline;
 }
+
+/* 3. OVERRIDE TEMPLATE'S CSS FONT VARIABLES */
+:root {
+    --default-font: 'Gloock', serif;
+    --heading-font: 'Gloock', serif;
+    --nav-font: 'Gloock', serif;
+}
