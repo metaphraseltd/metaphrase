@@ -1,30 +1,31 @@
 /* --- Metaphrase Custom Styles --- */
 
-/* 1. Global Font and Text Color */
-body {
-    font-family: 'Gloock', serif; /* Applying Gloock as the primary font */
-    color: #4A4A4A; /* Dark charcoal grey for general body text */
+/* 1. Global Font and Text Color - FORCED OVERRIDE */
+html, body { /* Target both html and body for maximum override */
+    font-family: 'Gloock', serif !important; /* Force Gloock font */
+    color: #4A4A4A !important; /* Force dark charcoal grey for general body text */
 }
 
-/* Ensure headings also use Gloock and Metaphrase primary blue */
+/* Ensure headings also use Gloock and Metaphrase primary blue - FORCED OVERRIDE */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Gloock', serif;
-    color: #2672EC; /* Primary Metaphrase blue for headings */
+    font-family: 'Gloock', serif !important; /* Force Gloock for headings */
+    color: #2672EC !important; /* Force Primary Metaphrase blue for headings */
 }
 
-/* 2. Primary Brand Color for Links */
+/* 2. Primary Brand Color for Links - FORCED OVERRIDE */
 a {
-    color: #2672EC; /* Metaphrase blue for general links */
+    color: #2672EC !important; /* Force Metaphrase blue for general links */
 }
 
 a:hover {
-    color: #1a51a8; /* A slightly darker shade of your primary blue for hover effect */
-    text-decoration: underline;
+    color: #1a51a8 !important; /* Force slightly darker shade for hover effect */
+    text-decoration: underline !important;
 }
 
-/* 3. OVERRIDE TEMPLATE'S CSS FONT VARIABLES */
+/* 3. OVERRIDE TEMPLATE'S CSS FONT VARIABLES - IMPORTANT TO KEEP THESE TOO! */
+/* These will ensure any elements using these variables also get Gloock */
 :root {
-    --default-font: 'Gloock', serif;
-    --heading-font: 'Gloock', serif;
-    --nav-font: 'Gloock', serif;
+    --default-font: 'Gloock', serif !important;
+    --heading-font: 'Gloock', serif !important;
+    --nav-font: 'Gloock', serif !important;
 }
