@@ -1,16 +1,17 @@
 /*
 ================================================================
-Metaphrase Custom Stylesheet (FINAL)
+Metaphrase Custom Stylesheet (V3 - Final Branding)
 ================================================================
 */
 
 /* 1. Brand Color & Font Variables
 --------------------------------------------------------------*/
 :root {
-  --primary-color: #357ABD; /* Metaphrase Blue */
-  --primary-color-hover: #2a629a; /* Darker Blue for Hover */
-  --text-color: #212529;      /* Neutral Dark for Text */
-  --light-bg-color: #F8F9FA; /* Accent Grey for Backgrounds */
+  --primary-color: #357ABD;       /* Metaphrase Blue */
+  --primary-color-hover: #2a629a; /* A slightly darker blue for hover */
+  --contrast-color: #ffffff;      /* White for text on dark buttons */
+  --text-color: #212529;           /* Neutral Dark for Text */
+  --light-bg-color: #F8F9FA;      /* Accent Grey for Backgrounds */
   --heading-font: 'Gloock', serif;
   --body-font: 'Roboto', sans-serif;
 }
@@ -23,74 +24,91 @@ body {
   color: var(--text-color);
 }
 
-a, .service-link, .about .read-more {
+a {
   color: var(--primary-color);
 }
 
-a:hover, .service-link:hover, .about .read-more:hover {
+a:hover {
   color: var(--primary-color-hover);
 }
 
 h1, h2, h3, h4, h5, h6,
-.sitename,
-.hero-title,
-.section-title h2,
-.about h3,
-.services h3,
-.portfolio-content h3,
-.pricing-card h3,
-.team-content h4,
-.faq-header h3 {
+.sitename, .hero-title, .section-title h2,
+.about h3, .services h3, .portfolio-content h3,
+.pricing-card h3, .team-content h4, .faq-header h3 {
   font-family: var(--heading-font);
 }
 
-
-/* 3. Header, Buttons & Links
---------------------------------------------------------------*/
-.header .btn-getstarted,
-.btn.btn-primary, 
-.cta-wrapper .btn-primary {
-  background-color: var(--primary-color);
-  color: #ffffff;
-  border-color: var(--primary-color);
-}
-
-.header .btn-getstarted:hover,
-.btn.btn-primary:hover, 
-.cta-wrapper .btn-primary:hover {
-  background-color: var(--primary-color-hover);
-  border-color: var(--primary-color-hover);
-}
-
-.navmenu a.active,
-.navmenu a:hover {
-  color: var(--primary-color);
-}
-
-.logo .sitename + span {
-    color: var(--primary-color);
-}
-
-/* 4. Sections & Icons
---------------------------------------------------------------*/
-.feature-box .feature-icon i,
-.service-item .service-icon i,
-.about ul li i,
-.info-card .icon-box i {
-  color: var(--primary-color);
-}
-
-.section-title p::after {
+.logo .sitename + span,
+.section-title h2::after {
   background: var(--primary-color);
-}
-
-.scroll-top {
-    background: var(--primary-color);
-}
-.scroll-top:hover {
-    background: var(--primary-color-hover);
 }
 
 .light-background {
   background-color: var(--light-bg-color);
+}
+
+
+/* 3. Comprehensive Button Overrides
+--------------------------------------------------------------*/
+/* Targeting all primary action buttons across the template */
+.btn-primary,
+.btn-getstarted,
+.about .content .read-more,
+.services-alt .content-block .button-wrapper .btn,
+.call-to-action-2 .cta-action .btn-primary,
+.contact .form-wrapper button,
+.portfolio .portfolio-filters li.filter-active {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--contrast-color) !important;
+}
+
+/* Targeting all button hover states */
+.btn-primary:hover,
+.btn-getstarted:hover,
+.about .content .read-more:hover,
+.services-alt .content-block .button-wrapper .btn:hover,
+.call-to-action-2 .cta-action .btn-primary:hover,
+.contact .form-wrapper button:hover {
+  background-color: var(--primary-color-hover) !important;
+  border-color: var(--primary-color-hover) !important;
+  color: var(--contrast-color) !important; /* Ensures text stays white on hover */
+}
+
+/* Special case for outline buttons on hover */
+.call-to-action-2 .cta-action .btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.call-to-action-2 .cta-action .btn-outline-primary:hover {
+  background-color: var(--primary-color) !important;
+  color: var(--contrast-color) !important;
+}
+
+
+/* 4. Other Specific Elements
+--------------------------------------------------------------*/
+.navmenu a:hover,
+.navmenu .active {
+  color: var(--primary-color);
+}
+
+.feature-box .feature-icon i,
+.service-item .service-icon,
+.about ul li i,
+.info-card .icon-box,
+.call-to-action-2 .cta-features .feature-item i {
+  color: var(--primary-color);
+  background-color: color-mix(in srgb, var(--primary-color), transparent 90%);
+}
+
+.scroll-top,
+.pricing-card.popular {
+  background: var(--primary-color);
+}
+
+.pricing .pricing-card.popular .btn-light {
+    color: var(--primary-color);
 }
