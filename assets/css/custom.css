@@ -1,1 +1,96 @@
-body { background-color: red !important; } 
+/*
+================================================================
+Metaphrase Custom Stylesheet (FINAL)
+================================================================
+*/
+
+/* 1. Brand Color & Font Variables
+--------------------------------------------------------------*/
+:root {
+  --primary-color: #357ABD; /* Metaphrase Blue */
+  --primary-color-hover: #2a629a; /* Darker Blue for Hover */
+  --text-color: #212529;      /* Neutral Dark for Text */
+  --light-bg-color: #F8F9FA; /* Accent Grey for Backgrounds */
+  --heading-font: 'Gloock', serif;
+  --body-font: 'Roboto', sans-serif;
+}
+
+
+/* 2. Global Styles & Typography
+--------------------------------------------------------------*/
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
+}
+
+a, .service-link, .about .read-more {
+  color: var(--primary-color);
+}
+
+a:hover, .service-link:hover, .about .read-more:hover {
+  color: var(--primary-color-hover);
+}
+
+h1, h2, h3, h4, h5, h6,
+.sitename,
+.hero-title,
+.section-title h2,
+.about h3,
+.services h3,
+.portfolio-content h3,
+.pricing-card h3,
+.team-content h4,
+.faq-header h3 {
+  font-family: var(--heading-font);
+}
+
+
+/* 3. Header, Buttons & Links
+--------------------------------------------------------------*/
+.header .btn-getstarted,
+.btn.btn-primary, 
+.cta-wrapper .btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border-color: var(--primary-color);
+}
+
+.header .btn-getstarted:hover,
+.btn.btn-primary:hover, 
+.cta-wrapper .btn-primary:hover {
+  background-color: var(--primary-color-hover);
+  border-color: var(--primary-color-hover);
+}
+
+.navmenu a.active,
+.navmenu a:hover {
+  color: var(--primary-color);
+}
+
+.logo .sitename + span {
+    color: var(--primary-color);
+}
+
+/* 4. Sections & Icons
+--------------------------------------------------------------*/
+.feature-box .feature-icon i,
+.service-item .service-icon i,
+.about ul li i,
+.info-card .icon-box i {
+  color: var(--primary-color);
+}
+
+.section-title p::after {
+  background: var(--primary-color);
+}
+
+.scroll-top {
+    background: var(--primary-color);
+}
+.scroll-top:hover {
+    background: var(--primary-color-hover);
+}
+
+.light-background {
+  background-color: var(--light-bg-color);
+}
