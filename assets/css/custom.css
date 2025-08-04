@@ -112,3 +112,11 @@ h1, h2, h3, h4, h5, h6,
 .pricing .pricing-card.popular .btn-light {
     color: var(--primary-color);
 }
+
+/* 5. Logo Size Adjustment
+--------------------------------------------------------------*/
+.header .logo img {
+  height: 50px; /* Adjust this value up or down to your liking */
+  width: auto;  /* This makes sure the logo doesn't stretch */
+  max-height: none; /* Overrides any potential template limits */
+}
