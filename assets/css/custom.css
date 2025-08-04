@@ -127,6 +127,6 @@ h1, h2, h3, h4, h5, h6,
 /* This rule applies only to screens 991px wide or smaller */
 @media (max-width: 991px) {
   .header .logo img {
-    height: 50px; /* Adjust this for the small screen view */
+    height: 80px; /* Adjust this for the small screen view */
   }
 }
