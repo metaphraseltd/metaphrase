@@ -765,7 +765,7 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  padding-top: 140px;
+  padding-top: 170px;
   position: relative;
   overflow: hidden;
   background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
