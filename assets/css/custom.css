@@ -141,5 +141,5 @@ h1, h2, h3, h4, h5, h6,
   background: none;
 }
   .about .about-images img {
-    border-radius: 68px;
+    border-radius: 68px !important;
   }
