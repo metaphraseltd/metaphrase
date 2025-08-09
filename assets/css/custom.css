@@ -147,3 +147,12 @@ h1, h2, h3, h4, h5, h6,
 .about .about-images img {
   border-radius: 68px !important;
 }
+
+  /* 8. Vertically Align "About Us" Text
+--------------------------------------------------------------*/
+.about .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
