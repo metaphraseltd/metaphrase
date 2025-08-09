@@ -151,8 +151,8 @@ h1, h2, h3, h4, h5, h6,
   /* 8. Vertically Align "About Us" Text
 --------------------------------------------------------------*/
 .about .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  height: 100% !important;
 }
