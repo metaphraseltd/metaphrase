@@ -152,5 +152,5 @@ h1, h2, h3, h4, h5, h6,
 /* 9. Manual Line Height for About Us Paragraph (Corrected)
 --------------------------------------------------------------*/
 .about .content h3 + p {
-  line-height: 2.5;
+  line-height: 3.5;
 }
