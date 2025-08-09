@@ -163,3 +163,11 @@ h1, h2, h3, h4, h5, h6,
   #about .row {
   align-items: center !important;
 }
+
+
+/* 9. Manual Line Height for About Us Paragraph
+--------------------------------------------------------------*/
+/* This targets the main descriptive paragraph in the About Us section */
+.about .content p + p {
+  line-height: 2.5;
+}
