@@ -961,7 +961,7 @@ section,
 .about .content .who-we-are {
   text-transform: uppercase;
   margin-bottom: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--accent-color), transparent 40%);
 }
 
 .about .content h3 {
