@@ -19,6 +19,9 @@ Metaphrase Custom Stylesheet (V3 - Final Branding)
 
 /* 2. Global Styles & Typography
 --------------------------------------------------------------*/
+h1 { color: red !important; }
+
+
 body {
   font-family: var(--body-font);
   color: var(--text-color);
