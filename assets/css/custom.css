@@ -156,9 +156,3 @@ h1, h2, h3, h4, h5, h6,
 #about .row {
   align-items: center !important;
 }
-
-  /* 10. Custom line-height for About Us paragraph
---------------------------------------------------------------*/
-.about-description {
-  line-height: 3.8 !important; 
-}
