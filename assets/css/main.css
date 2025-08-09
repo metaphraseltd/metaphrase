@@ -1019,7 +1019,7 @@ section,
 }
 
 .about .about-images img {
-  border-radius: 68px;
+  border-radius: 68px !important;
 }
 
 /*--------------------------------------------------------------
