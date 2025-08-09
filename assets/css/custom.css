@@ -151,7 +151,8 @@ h1, h2, h3, h4, h5, h6,
 }
 
 
-.col-lg-6.content.aos-init.aos-animate p {
-  padding-top: 4rem !important;
-  line-height: 3.5 !important;
+/* 8. Vertically Align "About Us" Content
+--------------------------------------------------------------*/
+#about .row {
+  align-items: center;
 }
