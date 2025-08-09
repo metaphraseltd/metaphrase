@@ -148,26 +148,9 @@ h1, h2, h3, h4, h5, h6,
   border-radius: 68px !important;
 }
 
- /* 8. Vertically Align "About Us" Text (Final Override)
+
+/* 9. Manual Line Height for About Us Paragraph (Corrected)
 --------------------------------------------------------------*/
-#about .row {
-  align-items: center !important;
-}
-
-#about > div > div > div.col-lg-6.content.aos-init.aos-animate > p:nth-child(3) {
-  line-height: 7.5; 
-
-}
-
-
-  #about .row {
-  align-items: center !important;
-}
-
-
-/* 9. Manual Line Height for About Us Paragraph
---------------------------------------------------------------*/
-/* This targets the main descriptive paragraph in the About Us section */
-.about .content p + p {
+.about .content h3 + p {
   line-height: 2.5;
 }
