@@ -148,11 +148,8 @@ h1, h2, h3, h4, h5, h6,
   border-radius: 68px !important;
 }
 
-  /* 8. Vertically Align "About Us" Text
+ /* 8. Vertically Align "About Us" Text (Revised)
 --------------------------------------------------------------*/
-.about .content {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  height: 100% !important;
+.about .row {
+  align-items: center !important;
 }
