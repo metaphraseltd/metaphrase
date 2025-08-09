@@ -976,6 +976,7 @@ section,
 
 .about .content ul li {
   padding-bottom: 10px;
+  background: none;
 }
 
 .about .content ul i {
