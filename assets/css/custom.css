@@ -140,6 +140,10 @@ h1, h2, h3, h4, h5, h6,
 .hero .feature-boxes .feature-box .feature-icon i {
   background: none;
 }
-  .about .about-images img {
-    border-radius: 68px !important;
-  }
+
+
+  /* 7. Custom Border Radius for About Us Images
+--------------------------------------------------------------*/
+.about .about-images img {
+  border-radius: 68px !important;
+}
