@@ -982,7 +982,6 @@ section,
 .about .content ul i {
   font-size: 1.25rem;
   margin-right: 4px;
-  color: var(--accent-color);
 }
 
 .about .content p:last-child {
