@@ -3000,5 +3000,5 @@ section,
 /* 10. Custom line-height for About Us paragraph
 --------------------------------------------------------------*/
 .about-description {
-  line-height: 1.8; 
+  line-height: 2.5 !important; 
 }
