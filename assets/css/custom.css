@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5, h6,
   align-items: center !important;
 }
 
-#about .content {
+#about > div > div > div.col-lg-6.content.aos-init.aos-animate > p:nth-child(3) {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
