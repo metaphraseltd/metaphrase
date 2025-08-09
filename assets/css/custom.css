@@ -137,3 +137,7 @@ h1, h2, h3, h4, h5, h6,
     height: 80px; /* Adjust this for the small screen view */
   }
 }
+
+.hero .feature-boxes .feature-box .feature-icon i {
+  background: none;
+}
