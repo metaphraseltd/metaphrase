@@ -19,7 +19,6 @@ Metaphrase Custom Stylesheet (V3 - Final Branding)
 
 /* 2. Global Styles & Typography
 --------------------------------------------------------------*/
-h1 { color: red !important; }
 
 
 body {
@@ -152,11 +151,8 @@ h1, h2, h3, h4, h5, h6,
 }
 
 
-
-
-/* 9. Spacing for About Us Text
+/* 8. Manual Padding for "About Us" Text
 --------------------------------------------------------------*/
 .about .content {
-  line-height: 1.8 !important; /* Increases spacing between all lines of text */
-  padding: 2rem 0 !important;  /* Adds vertical spacing to the top and bottom of the text block */
+  padding-top: 4rem !important;
 }
