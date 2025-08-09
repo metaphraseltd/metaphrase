@@ -101,7 +101,6 @@ h1, h2, h3, h4, h5, h6,
 .info-card .icon-box,
 .call-to-action-2 .cta-features .feature-item i {
   color: var(--primary-color);
-  background-color: color-mix(in srgb, var(--primary-color), transparent 90%);
 }
 
 /* Style for simple ICONS (like the bullet points in the About section) */
