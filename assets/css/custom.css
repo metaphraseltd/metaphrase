@@ -149,8 +149,11 @@ h1, h2, h3, h4, h5, h6,
 }
 
 
-/* 9. Manual Line Height for About Us Paragraph (Corrected)
+
+
+/* 9. Spacing for About Us Text
 --------------------------------------------------------------*/
-.about .content h3 + p {
-  line-height: 3.5 !important;
+.about .content {
+  line-height: 1.8 !important; /* Increases spacing between all lines of text */
+  padding: 2rem 0 !important;  /* Adds vertical spacing to the top and bottom of the text block */
 }
