@@ -981,6 +981,7 @@ section,
 .about .content ul i {
   font-size: 1.25rem;
   margin-right: 4px;
+  line-height: 2 !important;
 }
 
 .about .content p:last-child {
@@ -3000,5 +3001,5 @@ section,
 /* 10. Custom line-height for About Us paragraph
 --------------------------------------------------------------*/
 .about-description {
-  line-height: 2.5 !important; 
+  line-height: 2 !important; 
 }
