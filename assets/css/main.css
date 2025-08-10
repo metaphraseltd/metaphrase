@@ -963,6 +963,19 @@ section,
   margin-bottom: 15px;
 }
 
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+/* ADD THIS NEW RULE */
+.about .row {
+  align-items: center;
+}
+
+.about .content .who-we-are {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
 .about .content h3 {
   font-size: 2rem;
   font-weight: 700;
