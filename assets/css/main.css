@@ -3005,3 +3005,8 @@ section,
 }
 
 
+/* 11. Custom line-height for About Us paragraph
+--------------------------------------------------------------*/
+.about-list {
+  line-height: 2 !important; 
+}
