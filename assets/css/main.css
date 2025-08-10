@@ -971,6 +971,7 @@ section,
 .about .content ul {
   list-style: none;
   padding: 0;
+  line-height: 2 !important;
 }
 
 .about .content ul li {
@@ -981,7 +982,6 @@ section,
 .about .content ul i {
   font-size: 1.25rem;
   margin-right: 4px;
-  line-height: 2 !important;
 }
 
 .about .content p:last-child {
@@ -3003,3 +3003,5 @@ section,
 .about-description {
   line-height: 2 !important; 
 }
+
+
