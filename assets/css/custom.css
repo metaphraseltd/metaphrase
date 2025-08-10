@@ -156,3 +156,9 @@ h1, h2, h3, h4, h5, h6,
 #about .row {
   align-items: center !important;
 }
+
+  /* 11. "How We Work" Section Color Override
+--------------------------------------------------------------*/
+.how-we-work {
+  --accent-color: var(--primary-color) !important;
+}
