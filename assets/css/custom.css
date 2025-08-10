@@ -191,3 +191,9 @@ h1, h2, h3, h4, h5, h6,
   color: var(--contrast-color); /* White text on hover */
   transform: translateY(-2px); /* Slight lift effect */
 }
+
+/* 13. Vertically Align "Why Choose Us" Content
+--------------------------------------------------------------*/
+#services-alt .row {
+  align-items: center !important;
+}
