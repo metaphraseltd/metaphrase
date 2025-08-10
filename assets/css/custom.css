@@ -163,3 +163,31 @@ h1, h2, h3, h4, h5, h6,
 .how-we-work {
   --accent-color: var(--primary-color) !important;
 }
+
+/* 12. "Industries We Serve" Pill Styling
+--------------------------------------------------------------*/
+.industries-list {
+  list-style: none; /* Removes the default bullet points */
+  padding: 0;
+  margin-top: 1rem;
+  display: flex; /* Lines up the items */
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  gap: 10px; /* Creates space between the pills */
+}
+
+.industries-list li {
+  padding: 8px 15px;
+  background-color: color-mix(in srgb, var(--primary-color), transparent 90%); /* Light blue background */
+  color: var(--primary-color); /* Darker blue text */
+  border-radius: 20px; /* Makes the corners fully rounded */
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+/* The Interactive Hover Effect */
+.industries-list li:hover {
+  background-color: var(--primary-color); /* Solid blue background on hover */
+  color: var(--contrast-color); /* White text on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
