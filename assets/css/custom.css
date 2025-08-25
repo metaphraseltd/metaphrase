@@ -201,9 +201,9 @@ h1, h2, h3, h4, h5, h6,
 /* 15. Logo Slogan Styling
 --------------------------------------------------------------*/
 .logo-slogan {
-  font-size: 13px;
+  font-size: 9px;
   margin-left: 15px;
-  color: #6c757d; /* A subtle, secondary grey color */
+  color: Black !important;
   font-weight: 400;
 }
 
