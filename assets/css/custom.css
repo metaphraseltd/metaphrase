@@ -198,20 +198,29 @@ h1, h2, h3, h4, h5, h6,
   align-items: center !important;
 }
 
-/* 15. Logo Slogan Styling
+/* 15. Logo Slogan Styling (Pill Style)
 --------------------------------------------------------------*/
-
 .logo-slogan {
-  font-size: 14px !important;
-  color: #888888 !important; /* A subtle, secondary grey color */
-  font-weight: 400 !important;
-  font-style: italic !important;
+  /* Spacing */
+  margin-left: 15px;
+
+  /* Pill Shape & Colors */
+  background-color: color-mix(in srgb, var(--primary-color), transparent 90%);
+  padding: 6px 12px;
+  border-radius: 20px;
+
+  /* Text Styling */
+  color: var(--primary-color);
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal; /* Removes the previous italic style */
+  letter-spacing: 0.5px; /* Adds a little breathing room to the text */
+  white-space: nowrap; /* Ensures the text stays on one line */
 }
 
-/* Hide the separator and slogan on mobile to prevent clutter */
+/* Hide the slogan on mobile to prevent clutter */
 @media (max-width: 991px) {
-  .logo-slogan,
-  .logo-separator {
+  .logo-slogan {
     display: none;
   }
 }
