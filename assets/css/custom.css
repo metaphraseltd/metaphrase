@@ -209,10 +209,10 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .logo-slogan {
-  font-size: 14px;
-  color: #888888; /* A subtle, secondary grey color */
-  font-weight: 400;
-  font-style: italic;
+  font-size: 14px !important;
+  color: #888888 !important; /* A subtle, secondary grey color */
+  font-weight: 400 !important;
+  font-style: italic !important;
 }
 
 /* Hide the separator and slogan on mobile to prevent clutter */
