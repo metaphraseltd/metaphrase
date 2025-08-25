@@ -197,3 +197,19 @@ h1, h2, h3, h4, h5, h6,
 #services-alt .row {
   align-items: center !important;
 }
+
+/* 15. Logo Slogan Styling
+--------------------------------------------------------------*/
+.logo-slogan {
+  font-size: 13px;
+  margin-left: 15px;
+  color: #6c757d; /* A subtle, secondary grey color */
+  font-weight: 400;
+}
+
+/* Hide the slogan on mobile to prevent clutter */
+@media (max-width: 991px) {
+  .logo-slogan {
+    display: none;
+  }
+}
