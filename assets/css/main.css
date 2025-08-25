@@ -174,14 +174,6 @@ h6 {
   font-style: italic;
 }
 
-.logo-separator {
-  margin-left: 15px;
-  margin-right: 15px;
-  font-size: 1.5rem; /* Controls the height of the bar */
-  color: #e0e0e0;   /* A very light grey */
-  font-weight: 100; /* Makes the bar thin */
-}
-
 /* Hide the separator and slogan on mobile to prevent clutter */
 @media (max-width: 991px) {
   .logo-slogan,
