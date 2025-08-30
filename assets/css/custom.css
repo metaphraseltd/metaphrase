@@ -211,7 +211,7 @@ h1, h2, h3, h4, h5, h6,
 
   /* Text Styling */
   color: var(--primary-color);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   font-style: normal; /* Removes the previous italic style */
   letter-spacing: 0.5px; /* Adds a little breathing room to the text */
