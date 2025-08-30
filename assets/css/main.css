@@ -3031,3 +3031,73 @@ section,
 .about-list {
   line-height: 2 !important; 
 }
+
+/*--------------------------------------------------------------
+# Founder Section Custom Styles
+--------------------------------------------------------------*/
+.founder-profile {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.founder-profile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.1);
+}
+
+.founder-image img {
+  border-radius: 12px;
+}
+
+.founder-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.founder-info h3 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.founder-info h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.founder-info p {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.founder-info .btn-linkedin {
+  background-color: var(--primary-color);
+  color: var(--contrast-color);
+  padding: 8px 20px;
+  border-radius: 50px; /* This creates the capsule shape */
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  align-self: flex-start; /* Aligns button to the left */
+}
+
+.founder-info .btn-linkedin:hover {
+  background-color: var(--primary-color-hover);
+  color: var(--contrast-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.founder-info .btn-linkedin i {
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
