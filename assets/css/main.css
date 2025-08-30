@@ -3079,16 +3079,27 @@ section,
   margin-bottom: 20px;
 }
 
-.founder-info .btn-linkedin {
-  background-color: var(--primary-color);
-  color: var(--contrast-color);
+/*--------------------------------------------------------------
+# Founder Section Custom Styles (Updated Buttons)
+--------------------------------------------------------------*/
+/* Shared Button Styles */
+.founder-info .btn-founder-social {
   padding: 8px 20px;
-  border-radius: 50px; /* This creates the capsule shape */
+  border-radius: 50px; /* Capsule shape */
   display: inline-flex;
   align-items: center;
   font-weight: 500;
   transition: all 0.3s ease;
-  align-self: flex-start; /* Aligns button to the left */
+  align-self: flex-start; /* Aligns buttons to the left */
+  margin-right: 15px; /* Space between buttons */
+  margin-bottom: 10px; /* Space if buttons wrap on smaller screens */
+  text-decoration: none; /* Removes underline */
+}
+
+/* LinkedIn Button Specific Styles */
+.founder-info .btn-linkedin {
+  background-color: var(--primary-color);
+  color: var(--contrast-color);
 }
 
 .founder-info .btn-linkedin:hover {
@@ -3100,4 +3111,23 @@ section,
 .founder-info .btn-linkedin i {
   margin-right: 8px;
   font-size: 1.1rem;
+}
+
+/* CIOL Button Specific Styles */
+.founder-info .btn-ciol {
+  background-color: #DC3545; /* Red color */
+  color: var(--contrast-color);
+  border: 1px solid #DC3545; /* Red border */
+}
+
+.founder-info .btn-ciol:hover {
+  background-color: #C82333; /* Darker red on hover */
+  color: var(--contrast-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.founder-info .btn-ciol img {
+  height: 1.1rem; /* Adjust size of CIOL logo */
+  margin-right: 8px;
+  filter: brightness(0) invert(1); /* Makes the CIOL logo white */
 }
