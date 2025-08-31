@@ -3080,19 +3080,13 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Founder Section Custom Styles (Updated Buttons)
+# Founder / Booking Section Custom Styles
 --------------------------------------------------------------*/
 .founder-profile {
   background-color: #ffffff;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
-
-.founder-profile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.1);
 }
 
 .founder-image img {
@@ -3122,59 +3116,62 @@ section,
 }
 
 .founder-info p {
-  font-style: italic;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-/* This new rule makes the buttons sit side-by-side */
 .founder-buttons {
-  flex-wrap: wrap; /* Allows buttons to stack on very small screens */
-  margin-top: auto; /* Pushes buttons to the bottom */
-  gap: 15px; /* Add gap for consistent spacing between buttons */
-  margin-top: 25px; /* Add some space above the buttons */
+  flex-wrap: wrap;
+  gap: 10px; /* This creates consistent spacing between buttons */
 }
 
 .founder-info .btn-founder-social {
-  padding: 8px 20px;
-  border-radius: 50px; /* Capsule shape */
+  padding: 8px 15px;
+  border-radius: 50px;
   display: inline-flex;
   align-items: center;
   font-weight: 500;
   transition: all 0.3s ease;
   text-decoration: none;
+  color: #ffffff;
+  border: 1px solid transparent;
 }
 
-/* LinkedIn Button Specific Styles */
+.founder-info .btn-founder-social:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* NEW: Booking Button (Red) */
+.founder-info .btn-booking {
+  background-color: #DC3545;
+}
+.founder-info .btn-booking:hover {
+  background-color: #C82333;
+}
+
+/* UPDATED: CIOL Button (Grey) */
+.founder-info .btn-ciol {
+  background-color: #6c757d;
+}
+.founder-info .btn-ciol:hover {
+  background-color: #5a6268;
+}
+
+/* LinkedIn Button (Blue) */
 .founder-info .btn-linkedin {
   background-color: var(--primary-color);
-  color: var(--contrast-color);
 }
-
 .founder-info .btn-linkedin:hover {
   background-color: var(--primary-color-hover);
-  color: var(--contrast-color);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.founder-info .btn-linkedin i {
+.founder-info .btn-founder-social i {
   margin-right: 8px;
   font-size: 1.1rem;
-}
-
-/* CIOL Button Specific Styles */
-.founder-info .btn-ciol {
-  background-color: #DC3545; /* Red color */
-  color: var(--contrast-color);
-  border: 1px solid #DC3545;
-}
-
-.founder-info .btn-ciol:hover {
-  background-color: #C82333; /* Darker red on hover */
-  color: var(--contrast-color);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .founder-info .btn-ciol img {
   height: 1.1rem;
   margin-right: 8px;
+  filter: brightness(0) invert(1); /* This turns your black CIOL logo white so it is visible */
 }
