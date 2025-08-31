@@ -3049,7 +3049,7 @@ section,
 }
 
 .founder-image img {
-  border-radius: 12px;
+  border-radius: 15px;
 }
 
 .founder-info {
@@ -3061,12 +3061,12 @@ section,
 
 .founder-info h3 {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 14px;
   margin-bottom: 5px;
 }
 
 .founder-info h4 {
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 500;
   color: var(--primary-color);
   margin-bottom: 15px;
@@ -3091,13 +3091,13 @@ section,
 
 .founder-profile-fullwidth img {
   border-radius: 50%;
-  max-width: 220px; /* Increased image size */
+  max-width: 320px; /* Increased image size */
   border: 5px solid color-mix(in srgb, var(--primary-color), transparent 85%);
 }
 
 .founder-info-fullwidth h3 {
   font-weight: 700;
-  font-size: 24px; /* Reduced font size */
+  font-size: 4px; /* Reduced font size */
   margin-bottom: 5px;
 }
 
@@ -3105,7 +3105,7 @@ section,
   font-size: 14px; /* Reduced font size */
   font-weight: 500;
   color: #32353a;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
