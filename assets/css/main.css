@@ -3032,55 +3032,10 @@ section,
   line-height: 2 !important; 
 }
 
-/*--------------------------------------------------------------
-# Founder Section Custom Styles
---------------------------------------------------------------*/
-.founder-profile {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
 
-.founder-profile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.1);
-}
-
-.founder-image img {
-  border-radius: 15px;
-}
-
-.founder-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-
-.founder-info h3 {
-  font-weight: 700;
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-.founder-info h4 {
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--primary-color);
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.founder-info p {
-  font-style: italic;
-  margin-bottom: 20px;
-}
 
 /*--------------------------------------------------------------
-# Founder / Booking Section Custom Styles (Full Width)
+# Founder / Booking Section Styles (Final)
 --------------------------------------------------------------*/
 .founder-profile-fullwidth {
   background-color: #ffffff;
@@ -3090,38 +3045,55 @@ section,
 }
 
 .founder-profile-fullwidth img {
-  border-radius: 50%;
-  max-width: 320px; /* Increased image size */
+  border-radius: 50%; /* Makes the image a circle */
+  max-width: 250px;
   border: 5px solid color-mix(in srgb, var(--primary-color), transparent 85%);
 }
 
-.founder-info-fullwidth h3 {
+/* Styles for Name and Title under the image */
+.founder-title-mobile {
+  margin-top: 15px;
+}
+
+.founder-title-mobile h3 {
   font-weight: 700;
-  font-size: 4px; /* Reduced font size */
+  font-size: 16px; /* Your requested size */
   margin-bottom: 5px;
 }
 
-.founder-info-fullwidth h4 {
-  font-size: 14px; /* Reduced font size */
+.founder-title-mobile h4 {
+  font-size: 13px; /* Your requested size */
   font-weight: 500;
-  color: #32353a;
-  margin-bottom: 5px;
+  color: var(--primary-color);
+  margin-bottom: 0;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-.founder-info-fullwidth h4 a {
+.founder-title-mobile h4 a {
   color: var(--primary-color);
+}
+
+/* Styles for the main text content on the right */
+.founder-info-fullwidth h2 {
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.founder-info-fullwidth p {
+  font-size: 15px;
+  margin-bottom: 25px;
+  line-height: 1.7;
+}
+
+.founder-info-fullwidth p a {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
-.founder-info-fullwidth p {
-  margin-bottom: 25px;
-  line-height: 1.7;
-}
-
+/* Styles for the buttons */
 .founder-buttons {
   display: flex;
   flex-wrap: wrap;
