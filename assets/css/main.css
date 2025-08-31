@@ -3079,35 +3079,29 @@ section,
   margin-bottom: 20px;
 }
 
-/*--------------------------------------------------------------
-# Founder / Booking Section Custom Styles
+# Founder Section Custom Styles (Full Width)
 --------------------------------------------------------------*/
-.founder-profile {
+.founder-profile-fullwidth {
   background-color: #ffffff;
-  padding: 30px;
+  padding: 40px;
   border-radius: 15px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
 }
 
-.founder-image img {
-  border-radius: 12px;
+.founder-profile-fullwidth img {
+  border-radius: 50%; /* Makes the image a circle */
+  max-width: 200px;
+  border: 5px solid color-mix(in srgb, var(--primary-color), transparent 85%);
 }
 
-.founder-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-
-.founder-info h3 {
+.founder-info-fullwidth h3 {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 28px;
   margin-bottom: 5px;
 }
 
-.founder-info h4 {
-  font-size: 14px;
+.founder-info-fullwidth h4 {
+  font-size: 15px;
   font-weight: 500;
   color: var(--primary-color);
   margin-bottom: 15px;
@@ -3115,17 +3109,28 @@ section,
   letter-spacing: 0.5px;
 }
 
-.founder-info p {
+/* Style for the new CIOL link */
+.founder-info-fullwidth h4 a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.founder-info-fullwidth p {
   margin-bottom: 25px;
+  line-height: 1.7;
 }
 
 .founder-buttons {
+  display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* This creates consistent spacing between buttons */
+  gap: 15px;
+  align-items: center;
 }
 
-.founder-info .btn-founder-social {
-  padding: 8px 15px;
+.founder-info-fullwidth .btn-founder-social {
+  padding: 8px 20px;
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
@@ -3136,42 +3141,26 @@ section,
   border: 1px solid transparent;
 }
 
-.founder-info .btn-founder-social:hover {
+.founder-info-fullwidth .btn-founder-social:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* NEW: Booking Button (Red) */
-.founder-info .btn-booking {
-  background-color: #DC3545;
+.founder-info-fullwidth .btn-booking {
+  background-color: #DC3545; /* Red */
 }
-.founder-info .btn-booking:hover {
+.founder-info-fullwidth .btn-booking:hover {
   background-color: #C82333;
 }
 
-/* UPDATED: CIOL Button (Grey) */
-.founder-info .btn-ciol {
-  background-color: #6c757d;
+.founder-info-fullwidth .btn-linkedin {
+  background-color: var(--primary-color); /* Blue */
 }
-.founder-info .btn-ciol:hover {
-  background-color: #5a6268;
-}
-
-/* LinkedIn Button (Blue) */
-.founder-info .btn-linkedin {
-  background-color: var(--primary-color);
-}
-.founder-info .btn-linkedin:hover {
+.founder-info-fullwidth .btn-linkedin:hover {
   background-color: var(--primary-color-hover);
 }
 
-.founder-info .btn-founder-social i {
+.founder-info-fullwidth .btn-founder-social i {
   margin-right: 8px;
   font-size: 1.1rem;
-}
-
-.founder-info .btn-ciol img {
-  height: 1.1rem;
-  margin-right: 8px;
-  filter: brightness(0) invert(1); /* This turns your black CIOL logo white so it is visible */
 }
