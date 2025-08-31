@@ -3079,7 +3079,8 @@ section,
   margin-bottom: 20px;
 }
 
-# Founder Section Custom Styles (Full Width)
+/*--------------------------------------------------------------
+# Founder / Booking Section Custom Styles (Full Width)
 --------------------------------------------------------------*/
 .founder-profile-fullwidth {
   background-color: #ffffff;
@@ -3089,27 +3090,26 @@ section,
 }
 
 .founder-profile-fullwidth img {
-  border-radius: 50%; /* Makes the image a circle */
-  max-width: 200px;
+  border-radius: 50%;
+  max-width: 220px; /* Increased image size */
   border: 5px solid color-mix(in srgb, var(--primary-color), transparent 85%);
 }
 
 .founder-info-fullwidth h3 {
   font-weight: 700;
-  font-size: 28px;
+  font-size: 24px; /* Reduced font size */
   margin-bottom: 5px;
 }
 
 .founder-info-fullwidth h4 {
-  font-size: 15px;
+  font-size: 14px; /* Reduced font size */
   font-weight: 500;
-  color: var(--primary-color);
+  color: #32353a;
   margin-bottom: 15px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-/* Style for the new CIOL link */
 .founder-info-fullwidth h4 a {
   color: var(--primary-color);
   text-decoration: underline;
@@ -3130,7 +3130,7 @@ section,
 }
 
 .founder-info-fullwidth .btn-founder-social {
-  padding: 8px 20px;
+  padding: 10px 22px;
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
