@@ -365,22 +365,27 @@ h1, h2, h3, h4, h5, h6,
 }
 
 
-/* --- 13. Footer Logo & Registration Styling --- */
+/* --- 13. Enhanced Footer Branding --- */
 
-.footer .footer-about .logo img {
-  max-height: 50px; /* Adjust this value to match your desired logo size */
-  margin-bottom: 10px;
+/* Make the footer logo larger and clearer */
+.footer-logo {
+  max-height: 80px !important; /* Increased from 50px */
+  width: auto;
+  margin-bottom: 15px;
 }
 
-.footer .footer-contact p {
+/* Polished styling for company registration text */
+.company-reg {
+  font-size: 13px;
   line-height: 1.6;
-  margin-bottom: 5px;
+  color: #6c757d;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  font-style: italic;
 }
 
-/* Specific styling for the registration info to keep it subtle but readable */
-.footer .footer-contact p:nth-child(3) {
-  border-top: 1px solid #eee;
-  padding-top: 10px;
-  margin-top: 10px;
-  font-style: italic;
+/* Ensure contact info stands out */
+.footer-contact strong {
+  color: #0077b5; /* LinkedIn Blue for emphasis */
 }
