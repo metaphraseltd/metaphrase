@@ -225,42 +225,88 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-/* --- 10. Testimonials Styling (Updated) --- */
+/* --- 10. Testimonials Styling (Final Equal Height Fix) --- */
 
-/* Force all slides to be the same height */
+/* 1. Force the swiper wrapper to allow stretching */
+.testimonials .swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+/* 2. Make each slide a flex container */
 .testimonials .swiper-slide {
   height: auto !important;
   display: flex;
+  flex-direction: column;
 }
 
+/* 3. Force the card to fill 100% of the slide height */
 .testimonial-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 100%; /* Ensure card takes full width of slide */
-  height: 100%; /* Ensure card takes full height of the container */
+  flex: 1; /* This makes all cards the same height */
+  width: 100%;
   padding: 30px;
   background: #fff;
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
+  position: relative;
+  border: 1px solid transparent;
+  transition: 0.3s;
 }
 
-/* Remove quote icon spacing if needed */
+/* 4. Keep the content at the top and push profile/footer to the bottom */
+.testimonial-content {
+  flex-grow: 1; /* This pushes the rest to the bottom */
+}
+
 .testimonial-content p {
   font-style: italic;
   margin-bottom: 20px;
+  color: #444;
 }
 
+/* 5. Style the grey profile box */
 .testimonial-profile {
-  margin-top: auto; /* Pushes profile to the bottom */
-  text-align: left;
+  background: #f4f4f4;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
 }
 
-/* Style for the manual navigation arrows */
+.testimonial-profile h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+.testimonial-profile h4 {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 0 0 0;
+}
+
+/* 6. LinkedIn Link at the very bottom */
+.testimonial-footer {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  text-align: right;
+}
+
+.testimonial-footer a {
+  color: #0077b5;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* 7. Navigation Buttons styling */
 .testimonials .swiper-button-next,
 .testimonials .swiper-button-prev {
-  color: #444;
-  background: rgba(255, 255, 255, 0.8);
+  color: #0077b5;
+  background: #fff;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -269,24 +315,6 @@ h1, h2, h3, h4, h5, h6,
 
 .testimonials .swiper-button-next:after,
 .testimonials .swiper-button-prev:after {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
 }
-
-/* Position buttons outside the content on larger screens */
-@media (min-width: 1400px) {
-  .testimonials .swiper-button-prev { left: -50px; }
-  .testimonials .swiper-button-next { right: -50px; }
-}
-
-/* Testimonial profile and footer remains same */
-.testimonial-profile h3 { font-size: 18px; font-weight: 700; color: #111; margin: 0; }
-.testimonial-profile h4 { font-size: 14px; color: #999; margin: 5px 0 0 0; }
-
-.testimonial-footer {
-  margin-top: 15px;
-  padding-top: 10px;
-  border-top: 1px solid #eee;
-  text-align: right;
-}
-.testimonial-footer a { color: #0077b5; font-size: 13px; font-weight: 600; text-decoration: none; }
