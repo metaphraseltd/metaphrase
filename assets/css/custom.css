@@ -363,3 +363,24 @@ h1, h2, h3, h4, h5, h6,
 .footer .social-links a:hover {
   background: #005582;
 }
+
+
+/* --- 13. Footer Logo & Registration Styling --- */
+
+.footer .footer-about .logo img {
+  max-height: 50px; /* Adjust this value to match your desired logo size */
+  margin-bottom: 10px;
+}
+
+.footer .footer-contact p {
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+/* Specific styling for the registration info to keep it subtle but readable */
+.footer .footer-contact p:nth-child(3) {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  margin-top: 10px;
+  font-style: italic;
+}
