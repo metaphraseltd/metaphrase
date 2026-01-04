@@ -390,39 +390,32 @@ h1, h2, h3, h4, h5, h6,
   color: #0077b5; /* LinkedIn Blue for emphasis */
 }
 
-/* --- 14. Final Balanced & Aligned Footer --- */
+/* --- 14. Final Balanced 4-Column Footer --- */
 
 .footer {
   padding: 60px 0 40px 0 !important;
   background-color: #fcfcfc;
 }
 
-/* Force equal height and bottom alignment for all columns */
+/* Force equal height and bottom alignment for all 4 columns */
 .footer-columns-container {
   display: flex !important;
   flex-wrap: wrap;
-  align-items: stretch; /* Forces all columns to be the same height */
+  align-items: stretch; 
 }
 
-/* Ensure individual columns behave as flex containers */
-.footer-about-col, .footer-links-col, .footer-contact-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Aligns content to top */
-}
-
-/* Universal Font Size for all footer text */
+/* Universal Font Size for perfect consistency */
 .footer p, 
 .footer ul li a, 
 .footer-contact-col p {
-  font-size: 16px !important; /* Uniform font size */
+  font-size: 16px !important; 
   line-height: 1.6 !important;
   color: #444 !important;
   margin: 0;
 }
 
 .footer h4 {
-  font-size: 18px !important;
+  font-size: 17px !important;
   font-weight: 700 !important;
   color: #0077b5 !important;
   margin-bottom: 25px !important;
@@ -434,33 +427,44 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 20px;
 }
 
-/* Left Column Styling */
+/* Registration text styling */
 .company-reg {
   font-style: italic;
   color: #666 !important;
   padding-right: 20px;
 }
 
-/* Link List Styling - Adjusted padding to match the height of Column 1 */
+/* Vertical Stretching for Link Columns */
+.footer-links-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-links-col ul {
   padding: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: space-between; /* Spreads links out to fill the vertical space */
-  padding-bottom: 10px;
+  justify-content: space-between; /* This forces the bottom link to align with the bottom of the logo/reg text */
+  padding-bottom: 5px;
 }
 
 .footer-links-col ul li {
-  padding: 4px 0;
+  padding: 2px 0;
 }
 
-/* Right Column Social Alignment */
+/* Right Column Contact & Social Alignment */
+.footer-contact-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .contact-info-wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
+  justify-content: space-between;
 }
 
 .footer .social-links a {
