@@ -390,25 +390,42 @@ h1, h2, h3, h4, h5, h6,
   color: #0077b5; /* LinkedIn Blue for emphasis */
 }
 
-/* --- 14. Final Box-Layout Footer (Aligned & Polished) --- */
+/* --- 14. Final Balanced & Aligned Footer --- */
 
 .footer {
   padding: 60px 0 40px 0 !important;
   background-color: #fcfcfc;
 }
 
-/* Ensure all columns start at the exact same height */
-.footer .row {
+/* Force equal height and bottom alignment for all columns */
+.footer-columns-container {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: stretch; /* Forces all columns to be the same height */
+}
+
+/* Ensure individual columns behave as flex containers */
+.footer-about-col, .footer-links-col, .footer-contact-col {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start; /* Aligns content to top */
+}
+
+/* Universal Font Size for all footer text */
+.footer p, 
+.footer ul li a, 
+.footer-contact-col p {
+  font-size: 16px !important; /* Uniform font size */
+  line-height: 1.6 !important;
+  color: #444 !important;
+  margin: 0;
 }
 
 .footer h4 {
-  font-size: 18px !important; /* Slightly larger header */
+  font-size: 18px !important;
   font-weight: 700 !important;
   color: #0077b5 !important;
-  margin-bottom: 25px !important; /* More space under the header */
-  text-transform: uppercase;
+  margin-bottom: 25px !important;
   letter-spacing: 1px;
 }
 
@@ -417,52 +434,38 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 20px;
 }
 
-/* Polished styling for registration text */
+/* Left Column Styling */
 .company-reg {
-  font-size: 13px !important;
-  line-height: 1.7 !important;
-  color: #666 !important;
   font-style: italic;
-  padding-right: 25px;
-  margin-bottom: 0;
+  color: #666 !important;
+  padding-right: 20px;
 }
 
-/* --- Stretching the Link Columns --- */
-.footer .footer-links ul li {
-  padding: 8px 0 !important; /* Increased padding to stretch the list vertically */
+/* Link List Styling - Adjusted padding to match the height of Column 1 */
+.footer-links-col ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between; /* Spreads links out to fill the vertical space */
+  padding-bottom: 10px;
 }
 
-.footer .footer-links ul a {
-  font-size: 16px !important; /* Increased font size for better readability */
-  line-height: 1.5;
-  color: #444;
-  transition: 0.3s;
+.footer-links-col ul li {
+  padding: 4px 0;
 }
 
-.footer .footer-links ul a:hover {
-  color: #0077b5;
-  padding-left: 5px; /* Subtle hover effect */
+/* Right Column Social Alignment */
+.contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-/* --- Contact Column Alignment --- */
-.footer-contact-col {
-  padding-top: 2px;
-}
-
-.footer-contact-col p {
-  font-size: 16px; /* Matches the link font size */
-  margin-bottom: 12px !important;
-  color: #444;
-}
-
-.footer-contact-col strong {
-  color: #0077b5;
-}
-
-/* Social Icon Styling */
 .footer .social-links a {
-  width: 36px !important;
-  height: 36px !important;
+  width: 38px !important;
+  height: 38px !important;
   background-color: #0077b5 !important;
   color: #fff !important;
   display: flex;
@@ -470,16 +473,13 @@ h1, h2, h3, h4, h5, h6,
   justify-content: center;
   border-radius: 50% !important;
   margin-right: 12px !important;
-  font-size: 16px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
   background-color: #005582 !important;
-  transform: translateY(-3px);
 }
 
-/* Copyright line */
 .footer .copyright {
   border-top: 1px solid #eee;
   padding-top: 30px;
