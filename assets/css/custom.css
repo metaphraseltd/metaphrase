@@ -680,3 +680,102 @@ input[type="file"]::file-selector-button:hover {
   padding: 160px 0 80px 0 !important; /* Increased top padding for the fixed header */
   background: linear-gradient(135deg, #0077b5 0%, #005582 100%) !important;
 }
+
+/* --- 18. Services Page Specific Styling --- */
+
+.service-detail-card {
+  padding: 40px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  border: 1px solid #eee;
+  transition: 0.3s ease;
+}
+
+.service-detail-card:hover {
+  transform: translateY(-5px);
+  border-color: #0077b5;
+  box-shadow: 0 10px 40px rgba(0, 119, 181, 0.1);
+}
+
+.service-detail-card .icon-box {
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 119, 181, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.service-detail-card .icon-box i {
+  font-size: 32px;
+  color: #0077b5;
+}
+
+.service-detail-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.service-detail-card p {
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Language & Tag Badges */
+.language-tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.language-tags li {
+  background: #0077b5;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.expertise-list span {
+  display: block;
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.expertise-list i {
+  color: #0077b5;
+  font-size: 18px;
+}
+
+/* Commitment Banner Styling */
+.commitment-banner {
+  padding: 80px 0;
+  margin-top: 60px;
+}
+
+.commitment-banner h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0077b5;
+  margin-bottom: 20px;
+}
+
+.commitment-banner p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
