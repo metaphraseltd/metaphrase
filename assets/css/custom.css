@@ -657,3 +657,26 @@ input[type="file"]::file-selector-button:hover {
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
+
+/* --- 17. Privacy Hero Title Styling --- */
+
+/* Fix the title color and spacing in the blue hero section */
+.page-title-section h1 {
+  color: #ffffff !important; /* Forces the text to be white */
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  padding-top: 40px; /* Adds space so it's not hidden under the header */
+}
+
+.page-title-section p {
+  color: rgba(255, 255, 255, 0.9) !important; /* Semi-transparent white for the subtitle */
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* Ensure the hero section has enough breathing room on all sides */
+.page-title-section {
+  padding: 160px 0 80px 0 !important; /* Increased top padding for the fixed header */
+  background: linear-gradient(135deg, #0077b5 0%, #005582 100%) !important;
+}
