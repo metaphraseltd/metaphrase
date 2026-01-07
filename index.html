@@ -970,10 +970,12 @@
     </div>
 
     <div class="col-md-12 form-group">
-      <label for="file-upload" style="font-size: 14px; color: #666; margin-bottom: 5px; display: block;">Attach Document (PDF, Word, or Image)</label>
-      <input type="file" id="file-upload" name="attachment" class="form-control" accept=".pdf,.doc,.docx,.jpg,.png">
-    </div>
-
+  <div class="file-upload-wrapper">
+    <label id="file-upload-label" for="attachment">Attach Document (PDF, Word, or Image)</label>
+    <input type="file" name="attachment" class="form-control" id="attachment" accept=".pdf,.doc,.docx,.jpg,.png">
+  </div>
+</div>
+    
     <div class="form-group mt-1">
       <textarea class="form-control" name="message" rows="5" placeholder="Any specific instructions?*" required></textarea>
     </div>
