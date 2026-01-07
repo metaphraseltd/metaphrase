@@ -825,3 +825,34 @@ input[type="file"]::file-selector-button:hover {
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
+
+/* --- 20. Header Consistency Fix for Sub-Pages --- */
+
+/* Force white background on sub-pages so logo/menu are visible */
+.index-page:not(.home) #header {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #eee;
+}
+
+/* Style the slogan background as seen in your screenshots */
+.logo-slogan {
+  background: #e7f3ff; /* Light blue background */
+  color: #0077b5;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 15px;
+  display: inline-block;
+}
+
+/* Ensure the header navigation text is dark blue on white bg */
+.index-page:not(.home) .navmenu a {
+  color: #444 !important;
+}
+
+.index-page:not(.home) .navmenu a:hover, 
+.index-page:not(.home) .navmenu .active {
+  color: #0077b5 !important;
+}
