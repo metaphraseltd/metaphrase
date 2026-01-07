@@ -591,3 +591,69 @@ input[type="file"]::file-selector-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 119, 181, 0.4);
 }
+
+/* --- 16. Privacy Page Aesthetics & Spacing --- */
+
+.page-title-section {
+  padding: 120px 0 60px 0;
+  background: linear-gradient(135deg, #0077b5 0%, #005582 100%);
+  color: white;
+  text-align: center;
+}
+
+.page-title-section h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.page-title-section p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.privacy-text-wrapper {
+  padding-top: 40px;
+}
+
+.policy-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+}
+
+.policy-item {
+  margin-bottom: 35px;
+  line-height: 1.8 !important; /* Fixes the cluttered text problem */
+}
+
+.policy-item h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0077b5;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.policy-item h3 i {
+  margin-right: 12px;
+  font-size: 24px;
+}
+
+.policy-item p, .policy-item li {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.policy-item ul {
+  padding-left: 20px;
+}
+
+/* Fix for header background on white pages */
+.privacy-page .header {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
