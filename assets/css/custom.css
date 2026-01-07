@@ -779,3 +779,49 @@ input[type="file"]::file-selector-button:hover {
   margin: 0 auto;
   line-height: 1.8;
 }
+
+
+/* --- 19. Services SEO Content & Button Styling --- */
+
+.content-essay {
+  line-height: 2 !important;
+  color: #444;
+}
+
+.content-essay h2, .content-essay h3 {
+  color: #0077b5;
+  font-weight: 700;
+}
+
+.cta-box {
+  background: #f8fbff;
+  border: 1px solid #e0eefd;
+  border-radius: 15px;
+}
+
+/* Professional Padded Quote Button */
+.btn-quote-aesthetic {
+  display: inline-block;
+  background-color: #0077b5;
+  color: #ffffff !important;
+  padding: 15px 40px !important; /* Fixed padding for proper button look */
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 119, 181, 0.2);
+  margin-top: 20px;
+}
+
+.btn-quote-aesthetic:hover {
+  background-color: #005582;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 119, 181, 0.3);
+}
+
+/* Ensure the header on this page behaves correctly */
+.services-page .header {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
