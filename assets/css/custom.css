@@ -884,9 +884,9 @@ input[type="file"]::file-selector-button:hover {
   display: block;
 }
 
-/* --- 21. FAQ & Contact Form Polishing --- */
+/* --- 21. FAQ & Contact Page Styling --- */
 
-/* Restored FAQ Card Styling - Ensuring White Text */
+/* Fix white text for the Blue Card */
 .faq-contact-card {
   background: var(--primary-color) !important;
   color: #ffffff !important;
@@ -899,14 +899,13 @@ input[type="file"]::file-selector-button:hover {
   color: #ffffff !important;
 }
 
-/* Functional FAQ Accordion (Restored from index.html) */
+/* Restored Accordion Functionality */
 .faq-accordion .faq-item {
-  background-color: var(--contrast-color);
+  background-color: #ffffff;
   margin-bottom: 15px;
   border: 1px solid #eee;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
 
 .faq-accordion .faq-header {
@@ -915,7 +914,6 @@ input[type="file"]::file-selector-button:hover {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .faq-accordion .faq-header h3 {
@@ -925,29 +923,17 @@ input[type="file"]::file-selector-button:hover {
   margin: 0;
 }
 
-.faq-accordion .faq-toggle {
-  font-size: 18px;
-  color: var(--primary-color);
-  transition: 0.3s;
-}
-
 .faq-accordion .faq-content {
   padding: 0 25px 25px 25px;
-  display: none; /* Controlled by template JS */
+  display: none; /* Controlled by main.js */
   color: var(--text-color);
-  line-height: 1.6;
 }
 
-/* Active State Styles */
 .faq-item.faq-active .faq-content {
   display: block;
 }
 
-.faq-item.faq-active .faq-toggle {
-  transform: rotate(180deg);
-}
-
-/* Polishing the "Choose File" Area for Aesthetics */
+/* Polishing File Upload Button */
 .file-upload-wrapper {
   margin-top: 10px;
   padding: 30px;
@@ -955,22 +941,8 @@ input[type="file"]::file-selector-button:hover {
   border-radius: 12px;
   background-color: #f8fbff;
   text-align: center;
-  transition: 0.3s;
 }
 
-.file-upload-wrapper:hover {
-  background-color: #f0f7ff;
-}
-
-#file-upload-label {
-  display: block;
-  font-weight: 700;
-  color: var(--text-color);
-  margin-bottom: 15px;
-  font-size: 16px;
-}
-
-/* Branding the File Button */
 input[type="file"]::file-selector-button {
   background-color: var(--primary-color) !important;
   color: white !important;
@@ -979,9 +951,4 @@ input[type="file"]::file-selector-button {
   font-weight: 600 !important;
   border: none !important;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-input[type="file"]::file-selector-button:hover {
-  background-color: var(--primary-color-hover) !important;
 }
