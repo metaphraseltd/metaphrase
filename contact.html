@@ -24,7 +24,7 @@
   <link href="assets/css/custom.css" rel="stylesheet">
 </head>
 
-<body class="index-page home"> <header id="header" class="header d-flex align-items-center fixed-top">
+<body class="index-page"> <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <img src="assets/img/metaphrase-logo-only.png" alt="Metaphrase Logo">
@@ -103,7 +103,7 @@
                   <i class="bi bi-chevron-down faq-toggle"></i>
                 </div>
                 <div class="faq-content">
-                  <p>Turnaround depends on the complexity and volume. We always provide a firm delivery date with your quote.</p>
+                  <p>Turnaround depends on complexity and volume. We always provide a firm delivery date with your quote.</p>
                 </div>
               </div>
 
@@ -113,7 +113,7 @@
                   <i class="bi bi-chevron-down faq-toggle"></i>
                 </div>
                 <div class="faq-content">
-                  <p>It indicates that our linguists have reached the highest level of professional accreditation in the UK.</p>
+                  <p>It indicates that our linguists have reached the highest professional accreditation in the UK.</p>
                 </div>
               </div>
             </div>
@@ -169,25 +169,50 @@
   <footer id="footer" class="footer">
     <div class="container footer-top">
       <div class="row gy-4 footer-columns-container">
-        <div class="col-lg-4 col-md-6 footer-about-col">
+        
+        <div class="col-lg-3 col-md-6 footer-about-col">
           <a href="index.html" class="logo d-flex align-items-center">
             <img src="assets/img/metaphrase-logo-only.png" alt="Metaphrase Logo" class="footer-logo">
           </a>
-          <p class="company-reg">Metaphrase Ltd is registered in England & Wales and is fully ICO-registered.</p>
+          <div class="registration-wrapper">
+            <p class="company-reg">Metaphrase Ltd is registered in England & Wales and is fully registered with the ICO.</p>
+          </div>
         </div>
-        <div class="col-lg-4 col-md-6 footer-links-col">
+
+        <div class="col-lg-3 col-md-6 footer-links-col">
           <h4>USEFUL LINKS</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="terms.html">Terms of service</a></li>
             <li><a href="privacy.html">Privacy policy</a></li>
           </ul>
         </div>
-        <div class="col-lg-4 col-md-6 footer-contact-col">
-          <h4>CONTACT US</h4>
-          <p>Birmingham, UK<br><strong>P:</strong> +44 7852 408467</p>
+
+        <div class="col-lg-3 col-md-6 footer-links-col">
+          <h4>OUR SERVICES</h4>
+          <ul>
+            <li><a href="services.html">Certified Translation</a></li>
+            <li><a href="services.html">Medical & Legal</a></li>
+            <li><a href="services.html">Transcreation</a></li>
+            <li><a href="services.html">Localization</a></li>
+            <li><a href="services.html">Linguistic Task</a></li>
+          </ul>
         </div>
+
+        <div class="col-lg-3 col-md-6 footer-contact-col">
+          <h4>CONTACT US</h4>
+          <div class="contact-info-wrapper">
+            <p>Birmingham, UK</p>
+            <p><strong>P:</strong> +44 7852 408467</p>
+            <p><strong>E:</strong> <a href="mailto:metaphraseltd@gmail.com">metaphraseltd@gmail.com</a></p>
+          </div>
+        </div>
+
       </div>
+    </div>
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Metaphrase</strong> <span>All Rights Reserved</span></p>
     </div>
   </footer>
 
@@ -195,5 +220,13 @@
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/js/main.js"></script>
   <script>AOS.init();</script>
+
+  <script>
+    document.querySelectorAll('.faq-item .faq-header, .faq-item .faq-toggle').forEach((el) => {
+      el.addEventListener('click', () => {
+        el.closest('.faq-item').classList.toggle('faq-active');
+      });
+    });
+  </script>
 </body>
 </html>
