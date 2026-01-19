@@ -883,3 +883,61 @@ input[type="file"]::file-selector-button:hover {
 .faq-item.faq-active .faq-content {
   display: block;
 }
+
+/* --- 21. FAQ Section Polishing & Interaction Fix --- */
+
+/* Force left-side text to be white for readability */
+.faq-contact-card {
+  background: #0077b5 !important;
+  color: #ffffff !important;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.faq-contact-card .card-content h3, 
+.faq-contact-card .card-content p {
+  color: #ffffff !important; /* Overriding template defaults */
+}
+
+/* Right-side interaction styling */
+.faq-accordion .faq-item {
+  background: #ffffff;
+  margin-bottom: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-accordion .faq-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.faq-accordion .faq-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0077b5;
+  margin-bottom: 0;
+}
+
+.faq-accordion .faq-content {
+  padding: 0 20px 20px 20px;
+  display: none; /* Hidden by default */
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Active state toggle - Logic handled by main.js */
+.faq-item.faq-active .faq-content {
+  display: block;
+}
+
+.faq-item.faq-active .faq-toggle {
+  transform: rotate(180deg);
+  color: #0077b5;
+}
