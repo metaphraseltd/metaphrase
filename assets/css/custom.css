@@ -856,3 +856,30 @@ input[type="file"]::file-selector-button:hover {
 .index-page:not(.home) .navmenu .active {
   color: #0077b5 !important;
 }
+
+/* FAQ Accordion Styling */
+.faq-accordion .faq-item {
+  background: #fff;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  padding: 15px 20px;
+}
+
+.faq-accordion .faq-item h3 {
+  font-size: 18px;
+  color: #0077b5;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.faq-accordion .faq-content {
+  padding-top: 10px;
+  color: #555;
+  display: none; /* Controlled by main.js or Bootstrap */
+}
+
+/* Show content when active */
+.faq-item.faq-active .faq-content {
+  display: block;
+}
