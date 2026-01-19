@@ -941,3 +941,39 @@ input[type="file"]::file-selector-button:hover {
   transform: rotate(180deg);
   color: #0077b5;
 }
+
+/* --- FAQ Functional Styling --- */
+
+/* Hide content by default */
+.faq-container .faq-item .faq-content {
+  display: none;
+  padding: 0 0 20px 0;
+  overflow: hidden;
+}
+
+/* Show content only when parent has .faq-active class */
+.faq-container .faq-item.faq-active .faq-content {
+  display: block;
+}
+
+/* Arrow rotation logic */
+.faq-container .faq-item .faq-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.faq-container .faq-item.faq-active .faq-toggle {
+  transform: rotate(90deg); /* Downward arrow when open */
+  color: #0077b5;
+}
+
+.faq-item h3 {
+  padding: 20px 40px 20px 0;
+  cursor: pointer;
+  margin-bottom: 0;
+  transition: 0.3s;
+}
