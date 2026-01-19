@@ -884,11 +884,11 @@ input[type="file"]::file-selector-button:hover {
   display: block;
 }
 
-/* --- 21. FAQ Section Polishing & Interaction Fix --- */
+/* --- 21. FAQ & Contact Form Polishing --- */
 
-/* Force left-side text to be white for readability */
+/* Restored FAQ Card Styling - Ensuring White Text */
 .faq-contact-card {
-  background: #0077b5 !important;
+  background: var(--primary-color) !important;
   color: #ffffff !important;
   padding: 40px;
   border-radius: 15px;
@@ -896,84 +896,92 @@ input[type="file"]::file-selector-button:hover {
 
 .faq-contact-card .card-content h3, 
 .faq-contact-card .card-content p {
-  color: #ffffff !important; /* Overriding template defaults */
+  color: #ffffff !important;
 }
 
-/* Right-side interaction styling */
+/* Functional FAQ Accordion (Restored from index.html) */
 .faq-accordion .faq-item {
-  background: #ffffff;
+  background-color: var(--contrast-color);
   margin-bottom: 15px;
   border: 1px solid #eee;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
 
 .faq-accordion .faq-header {
-  padding: 20px;
+  padding: 20px 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  background: #fff;
   transition: 0.3s;
 }
 
 .faq-accordion .faq-header h3 {
   font-size: 18px;
   font-weight: 600;
-  color: #0077b5;
-  margin-bottom: 0;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.faq-accordion .faq-toggle {
+  font-size: 18px;
+  color: var(--primary-color);
+  transition: 0.3s;
 }
 
 .faq-accordion .faq-content {
-  padding: 0 20px 20px 20px;
-  display: none; /* Hidden by default */
-  color: #444;
+  padding: 0 25px 25px 25px;
+  display: none; /* Controlled by template JS */
+  color: var(--text-color);
   line-height: 1.6;
 }
 
-/* Active state toggle - Logic handled by main.js */
+/* Active State Styles */
 .faq-item.faq-active .faq-content {
   display: block;
 }
 
 .faq-item.faq-active .faq-toggle {
   transform: rotate(180deg);
-  color: #0077b5;
 }
 
-/* --- FAQ Functional Styling --- */
-
-/* Hide content by default */
-.faq-container .faq-item .faq-content {
-  display: none;
-  padding: 0 0 20px 0;
-  overflow: hidden;
+/* Polishing the "Choose File" Area for Aesthetics */
+.file-upload-wrapper {
+  margin-top: 10px;
+  padding: 30px;
+  border: 2px dashed var(--primary-color);
+  border-radius: 12px;
+  background-color: #f8fbff;
+  text-align: center;
+  transition: 0.3s;
 }
 
-/* Show content only when parent has .faq-active class */
-.faq-container .faq-item.faq-active .faq-content {
+.file-upload-wrapper:hover {
+  background-color: #f0f7ff;
+}
+
+#file-upload-label {
   display: block;
-}
-
-/* Arrow rotation logic */
-.faq-container .faq-item .faq-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 15px;
   font-size: 16px;
-  transition: 0.3s;
-  cursor: pointer;
 }
 
-.faq-container .faq-item.faq-active .faq-toggle {
-  transform: rotate(90deg); /* Downward arrow when open */
-  color: #0077b5;
+/* Branding the File Button */
+input[type="file"]::file-selector-button {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  border-radius: 50px !important;
+  padding: 8px 25px !important;
+  font-weight: 600 !important;
+  border: none !important;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.faq-item h3 {
-  padding: 20px 40px 20px 0;
-  cursor: pointer;
-  margin-bottom: 0;
-  transition: 0.3s;
+input[type="file"]::file-selector-button:hover {
+  background-color: var(--primary-color-hover) !important;
 }
