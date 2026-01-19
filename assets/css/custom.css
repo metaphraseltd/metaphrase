@@ -952,3 +952,20 @@ input[type="file"]::file-selector-button {
   border: none !important;
   cursor: pointer;
 }
+
+/* Ensure FAQ content is clickable and toggles correctly */
+.faq-accordion .faq-content {
+  display: none;
+  padding: 0 25px 25px 25px;
+  color: var(--text-color);
+}
+
+.faq-item.faq-active .faq-content {
+  display: block;
+}
+
+/* Force header visibility on sub-pages */
+.index-page.home #header {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
