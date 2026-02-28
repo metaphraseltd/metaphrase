@@ -1189,7 +1189,7 @@ input[type="file"]::file-selector-button {
 
 .founder-buttons .btn-founder-social {
   flex: 1; /* Makes them equal width to fill the space */
-  font-size: 11px !important; /* Smaller button font to fit the text */
+  font-size: 13px !important; /* Smaller button font to fit the text */
   padding: 8px 4px !important; /* Minimal padding */
   text-align: center;
   width: auto !important; /* Overrides previous full width setting */
