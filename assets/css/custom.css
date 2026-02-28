@@ -1069,3 +1069,18 @@ input[type="file"]::file-selector-button {
     font-size: 45px !important; /* Scales down the big background numbers */
     top: -20px !important;
   }
+
+/* --- Section 5: Industries & Commitment Polish --- */
+
+  /* 1. Add some space between the industry "pills" */
+  .industry-pill {
+    margin-bottom: 10px !important;
+    font-size: 14px !important;
+    padding: 8px 15px !important;
+  }
+
+  /* 2. Tighten the heading for mobile */
+  .commitment-section h2 {
+    font-size: 26px !important;
+    margin-bottom: 20px !important;
+  }
