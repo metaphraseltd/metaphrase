@@ -1600,3 +1600,15 @@ input[type="file"]::file-selector-button {
     margin-right: 12px !important;
   }
 }
+
+/* --- Professional Process: Description Padding Fix --- */
+@media (max-width: 991px) {
+  /* Targets the centered text under 'Our Professional Process' */
+  .features .section-title p {
+    padding-left: 40px !important; /* Significant room on both sides */
+    padding-right: 40px !important;
+    line-height: 1.6 !important;
+    font-size: 15px !important; /* Slightly larger for easier reading */
+    margin-bottom: 30px !important;
+  }
+}
