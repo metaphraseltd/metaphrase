@@ -1494,3 +1494,51 @@ input[type="file"]::file-selector-button {
     font-size: 14px !important;
   }
 }
+
+/* --- Restore Founder Section for PC Only --- */
+@media (min-width: 992px) {
+  /* 1. Make the section spacious again */
+  .founder-profile-fullwidth {
+    padding: 80px 0 !important;
+    text-align: left !important;
+  }
+
+  /* 2. Scale the profile photo back up */
+  .founder-image-wrapper img {
+    max-width: 380px !important; /* Original desktop size */
+    margin-bottom: 0 !important;
+    border: 6px solid #357ABD !important;
+  }
+
+  /* 3. Restore large heading and bio text */
+  .founder-info-fullwidth h2 {
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+    white-space: normal !important; /* Allows text to wrap naturally */
+    text-align: left !important;
+  }
+
+  .founder-info-fullwidth .hero-description {
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+    text-align: left !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* 4. Restore the large horizontal buttons */
+  .founder-buttons {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 20px !important;
+    justify-content: flex-start !important;
+    margin-top: 30px !important;
+  }
+
+  .btn-founder-social {
+    flex: none !important;
+    width: auto !important;
+    padding: 14px 40px !important;
+    font-size: 16px !important;
+  }
+}
