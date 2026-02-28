@@ -969,3 +969,47 @@ input[type="file"]::file-selector-button {
   background-color: rgba(255, 255, 255, 0.95) !important;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
+
+/* ==============================================================
+   MOBILE HEADER OPTIMIZATION (metaphrase.uk)
+============================================================== */
+
+@media (max-width: 991px) {
+  
+  /* 1. Reduce header height and padding for a compact look */
+  .header {
+    padding: 10px 0 !important;
+    height: auto !important;
+  }
+
+  /* 2. Resize the logo img so it fits perfectly in the bar */
+  .header .logo img {
+    height: 45px !important; /* Reduced from 80px to prevent hiding */
+    width: auto;
+    margin-right: 0;
+  }
+
+  /* 3. Hide the slogan on mobile to save horizontal space */
+  .logo-slogan {
+    display: none !important; /* Prevents text from pushing logo out of view */
+  }
+
+  /* 4. Adjust the "Request a Quote" button for small screens */
+  .header .btn-getstarted {
+    padding: 8px 15px !important;
+    font-size: 13px !important;
+    margin-right: 10px;
+  }
+
+  /* 5. Ensure the mobile nav toggle is aligned with the logo */
+  .mobile-nav-toggle {
+    font-size: 28px;
+    margin-left: 10px;
+    color: var(--primary-color);
+  }
+
+  /* 6. Fix Hero Section spacing to account for the fixed header */
+  .hero {
+    padding-top: 100px !important;
+  }
+}
