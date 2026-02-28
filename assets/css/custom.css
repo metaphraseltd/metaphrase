@@ -1247,3 +1247,42 @@ input[type="file"]::file-selector-button {
     width: auto !important;
   }
 }
+
+/* --- Founder Section Final Refinement --- */
+
+@media (max-width: 991px) {
+  
+  /* 1. Shrink heading to fit on one line */
+  .founder-info-fullwidth h2 {
+    font-size: 15.5px !important; /* Reduced to ensure it fits on one line */
+    white-space: nowrap; /* Prevents text from jumping to a second line */
+    margin-bottom: 10px !important;
+    letter-spacing: -0.2px;
+  }
+
+  /* 2. Increase bio text font for better readability */
+  .founder-info-fullwidth .hero-description {
+    font-size: 15px !important; /* Increased for better legibility on mobile */
+    line-height: 1.5 !important;
+  }
+
+  /* 3. Center the icon and text inside the buttons */
+  .founder-buttons .btn-founder-social {
+    display: flex !important;
+    justify-content: center !important; /* Centers the content horizontally */
+    align-items: center !important;
+    text-align: center !important;
+    font-size: 12px !important; /* Slight boost to match the bio text */
+  }
+
+  /* 4. Tighten vertical room to fit the screen fold */
+  .founder-profile-fullwidth {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .founder-image-wrapper img {
+    max-width: 90px !important; /* Slightly smaller to give more room for text */
+    margin-bottom: 8px !important;
+  }
+}
