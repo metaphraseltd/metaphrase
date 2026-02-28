@@ -1019,3 +1019,22 @@ input[type="file"]::file-selector-button {
     display: none !important;
   }
 }
+
+
+/* --- Section 3: Spacing Polish --- */
+
+  /* 1. Add space under the main heading */
+  .about .content h3 {
+    margin-bottom: 25px !important; 
+    line-height: 1.3;
+  }
+
+  /* 2. Add space between each bullet point */
+  .about .about-list li {
+    margin-bottom: 18px !important; 
+  }
+
+  /* 3. Push the button down slightly for a cleaner look */
+  .about .read-more {
+    margin-top: 25px !important;
+  }
