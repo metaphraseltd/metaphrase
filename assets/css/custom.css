@@ -1286,3 +1286,18 @@ input[type="file"]::file-selector-button {
     margin-bottom: 8px !important;
   }
 }
+
+/* --- Founder Section: Button Content Centering --- */
+@media (max-width: 991px) {
+  .btn-founder-social {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .btn-founder-social i {
+    margin-right: 8px !important; /* Spacing between icon and text */
+    margin-bottom: 0 !important; /* Ensures vertical alignment */
+  }
+}
