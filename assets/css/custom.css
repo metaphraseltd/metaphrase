@@ -1045,3 +1045,27 @@ input[type="file"]::file-selector-button {
     display: none !important;
   }
 }
+
+/* --- Section 4: Compact Process Steps --- */
+
+  .features .features-item {
+    padding: 20px !important; /* Makes the cards much shorter */
+    margin-bottom: 15px !important;
+    text-align: center;
+  }
+
+  .features .features-item .icon {
+    margin: 0 auto 10px auto !important; /* Centers the icon */
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .features .features-item h4 {
+    margin-bottom: 0 !important; /* Removes bottom gap since text is gone */
+    font-size: 18px !important;
+  }
+
+  .features .features-item .number {
+    font-size: 45px !important; /* Scales down the big background numbers */
+    top: -20px !important;
+  }
