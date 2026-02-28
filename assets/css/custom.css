@@ -1084,3 +1084,38 @@ input[type="file"]::file-selector-button {
     font-size: 26px !important;
     margin-bottom: 20px !important;
   }
+
+/* --- Section 5: Vertical Space Rescue --- */
+
+  /* 1. Reduce the top padding of the whole section */
+  .commitment-section {
+    padding-top: 30px !important;
+    padding-bottom: 20px !important;
+  }
+
+  /* 2. Shrink the heading and first paragraph slightly */
+  .commitment-section h2 {
+    font-size: 22px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .commitment-section p {
+    font-size: 14px !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* 3. Force Industry Pills into 2 Columns to save height */
+  .industry-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .industry-pill {
+    flex: 0 0 47%; /* Makes them sit 2-per-row */
+    font-size: 12px !important;
+    padding: 6px 10px !important;
+    margin: 0 !important;
+    text-align: center;
+  }
