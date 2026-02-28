@@ -1119,3 +1119,31 @@ input[type="file"]::file-selector-button {
     margin: 0 !important;
     text-align: center;
   }
+
+/* --- Founder Section Consistency Fix --- */
+
+.founder-info-fullwidth .hero-description {
+  /* Match the Hero section font exactly */
+  font-family: "Open Sans", system-ui, -apple-system, sans-serif !important; 
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: #444444 !important;
+  text-align: left; /* Better for reading bio text */
+}
+
+/* Tighten the heading to match your site's style */
+.founder-info-fullwidth h2 {
+  font-family: "Raleway", sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  margin-bottom: 15px !important;
+  line-height: 1.2 !important;
+}
+
+/* Ensure the buttons are accessible */
+.founder-buttons {
+  margin-top: 25px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
