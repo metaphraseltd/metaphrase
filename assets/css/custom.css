@@ -1147,3 +1147,55 @@ input[type="file"]::file-selector-button {
   flex-direction: column;
   gap: 10px;
 }
+
+/* --- Founder Section "One-Screen" Rescue --- */
+
+/* 1. Reduce padding of the entire white box */
+.founder-profile-fullwidth {
+  padding: 15px 10px !important; /* Tighter padding saves significant vertical height */
+}
+
+/* 2. Shrink the heading dramatically to fit fewer lines */
+.founder-info-fullwidth h2 {
+  font-size: 19px !important; /* Much smaller so it doesn't push content down */
+  margin-bottom: 8px !important;
+  line-height: 1.2 !important;
+  text-align: center;
+}
+
+/* 3. Shrink the profile picture significantly */
+.founder-image-wrapper img {
+  max-width: 120px !important; /* Tiny image to maximize space for text/buttons */
+  margin-bottom: 10px !important;
+  border-width: 3px !important; /* Thinner border for a cleaner mobile look */
+}
+
+/* 4. Fine-tune the remaining text description */
+.founder-info-fullwidth .hero-description {
+  font-size: 13px !important; /* Small, readable font */
+  line-height: 1.4 !important; /* Tight line height */
+  margin-bottom: 12px !important;
+  text-align: center;
+}
+
+/* 5. Force Buttons to fit Side-by-Side (THIS SAVES THE MOST SPACE) */
+.founder-buttons {
+  margin-top: 15px !important;
+  display: flex !important;
+  flex-direction: row !important; /* Puts them on one line */
+  gap: 8px; /* Small gap between buttons */
+  justify-content: center;
+}
+
+.founder-buttons .btn-founder-social {
+  flex: 1; /* Makes them equal width to fill the space */
+  font-size: 11px !important; /* Smaller button font to fit the text */
+  padding: 8px 4px !important; /* Minimal padding */
+  text-align: center;
+  width: auto !important; /* Overrides previous full width setting */
+}
+
+/* Ensure the second button doesn't have a top margin from stacking */
+.founder-buttons .btn-founder-social + .btn-founder-social {
+  margin-top: 0 !important;
+}
