@@ -1301,3 +1301,38 @@ input[type="file"]::file-selector-button {
     margin-bottom: 0 !important; /* Ensures vertical alignment */
   }
 }
+
+/* --- Testimonials Section: Mobile Polish --- */
+@media (max-width: 991px) {
+  
+  /* 1. Remove the extra white space inside the card */
+  .testimonial-card {
+    padding: 20px !important; 
+    min-height: auto !important; /* Prevents the card from being taller than needed */
+  }
+
+  /* 2. Style the quote text to feel more 'premium' */
+  .testimonial-content p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 15px !important;
+  }
+
+  /* 3. Hide the blue arrows on mobile (Swipe is enough) */
+  .testimonials .swiper-button-next,
+  .testimonials .swiper-button-prev {
+    display: none !important;
+  }
+
+  /* 4. Center the 'Read on LinkedIn' link and make it easier to tap */
+  .testimonial-footer {
+    text-align: center !important;
+    padding-top: 15px !important;
+  }
+
+  /* 5. Simplify the dots at the bottom */
+  .testimonials .swiper-pagination {
+    margin-top: 20px !important;
+    position: relative !important;
+  }
+}
