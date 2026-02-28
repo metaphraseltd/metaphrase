@@ -1199,3 +1199,51 @@ input[type="file"]::file-selector-button {
 .founder-buttons .btn-founder-social + .btn-founder-social {
   margin-top: 0 !important;
 }
+
+
+/* --- Add this to the bottom of custom.css --- */
+
+@media (max-width: 991px) {
+  /* 1. Global Padding: Fixes text touching the screen edges */
+  .about .container, 
+  .founder-profile-fullwidth,
+  .commitment-section .container,
+  .features .container {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+
+  /* 2. Founder Section: Compact Layout for iPhone 17 Pro Max */
+  .founder-image-wrapper img {
+    max-width: 100px !important; /* Smaller image pulls buttons up */
+    margin-bottom: 10px !important;
+  }
+
+  .founder-info-fullwidth h2 {
+    font-size: 18px !important; /* Smaller heading saves vertical space */
+    margin-bottom: 8px !important;
+  }
+
+  .founder-info-fullwidth .hero-description {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 15px !important;
+  }
+
+  /* 3. Side-by-Side Buttons: Eliminates the vertical stack height */
+  .founder-buttons {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+    margin-top: 15px !important;
+  }
+
+  .btn-founder-social {
+    flex: 1;
+    font-size: 11px !important;
+    padding: 12px 5px !important;
+    text-align: center;
+    white-space: nowrap;
+    width: auto !important;
+  }
+}
