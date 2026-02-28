@@ -1038,3 +1038,10 @@ input[type="file"]::file-selector-button {
   .about .read-more {
     margin-top: 25px !important;
   }
+
+
+@media (max-width: 991px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+}
