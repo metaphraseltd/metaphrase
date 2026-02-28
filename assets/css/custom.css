@@ -1336,3 +1336,63 @@ input[type="file"]::file-selector-button {
     position: relative !important;
   }
 }
+
+/* --- Contact Section: Mobile Efficiency Fix --- */
+@media (max-width: 991px) {
+
+  /* 1. Reduce the massive spacing at the top */
+  #contact {
+    padding-top: 30px !important;
+  }
+
+  /* 2. Shrink the "Our Address" card */
+  #contact .info-item {
+    padding: 20px !important;
+    margin-bottom: 15px !important;
+  }
+
+  /* 3. Make Contact Number and Opening Hours sit side-by-side */
+  /* This pulls the form up by an entire screen-length */
+  .contact .info-wrap .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
+  .contact .info-wrap .col-md-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    padding: 5px !important;
+  }
+
+  /* 4. Shrink icons and text inside those cards */
+  .contact .info-item i {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 18px !important;
+  }
+
+  .contact .info-item h3 {
+    font-size: 14px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .contact .info-item p {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* 5. Tighten the Form fields */
+  #contact .php-email-form {
+    padding: 20px !important;
+    margin-top: 10px !important;
+  }
+
+  #contact .form-group {
+    margin-bottom: 12px !important;
+  }
+
+  /* 6. Fix the File Upload box for small screens */
+  .file-upload-wrapper {
+    padding: 15px !important;
+  }
+}
