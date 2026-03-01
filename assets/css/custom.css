@@ -1740,3 +1740,37 @@ input[type="file"]::file-selector-button {
     display: inline-block;
     margin-bottom: 2px;
   }
+
+
+  /* --- Final Fixes: Closing Brackets & Footer Logic --- */
+
+} /* This closes the @media query from your last snippet */
+
+/* Fix for the Giant Footer Logo */
+.footer-logo {
+  max-width: 180px !important; /* Forces the logo to stay a professional size */
+  height: auto !important;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Header Breathing Room (Requested) */
+.header {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+
+/* Mobile Alignment Polish */
+@media (max-width: 991px) {
+  .header {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+  .footer-logo {
+    max-width: 140px !important;
+    margin: 0 auto 20px;
+  }
+  .footer {
+    text-align: center;
+  }
+}
