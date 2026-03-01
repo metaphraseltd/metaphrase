@@ -1612,3 +1612,24 @@ input[type="file"]::file-selector-button {
     margin-bottom: 30px !important;
   }
 }
+
+/* --- Header: Top & Bottom Breathing Room --- */
+.header {
+  padding-top: 15px !important; /* Adds professional space at the top */
+  padding-bottom: 15px !important; /* Adds professional space at the bottom */
+  transition: all 0.3s ease;
+}
+
+/* Ensure the logo container stays centered vertically with the new padding */
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Fix for Mobile: Keeps the bar compact but balanced */
+@media (max-width: 991px) {
+  .header {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+}
