@@ -1633,3 +1633,15 @@ input[type="file"]::file-selector-button {
     padding-bottom: 12px !important;
   }
 }
+
+/* --- Professional Process: Enhanced Mobile Padding --- */
+@media (max-width: 991px) {
+  /* Targets the description text under the section heading */
+  .features .section-title p {
+    padding-left: 45px !important; /* Forces the text into a narrower, elegant column */
+    padding-right: 45px !important;
+    line-height: 1.6 !important; /* Adds vertical breathing room between lines */
+    font-size: 15px !important;
+    margin-bottom: 30px !important;
+  }
+}
