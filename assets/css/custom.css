@@ -116,7 +116,10 @@ h1, h2, h3, h4, h5, h6,
 .scroll-top,
 .pricing-card.popular {
   background: var(--primary-color);
-  right: 20px;
+}
+
+.scroll-top {
+  right: 25px !important;
 }
 
 .pricing .pricing-card.popular .btn-light {
