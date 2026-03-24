@@ -1811,3 +1811,16 @@ input[type="file"]::file-selector-button {
     margin-bottom: 20px;
   }
 }
+
+@media (max-width: 768px) {
+  .social-links {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+  }
+}
+
+.social-links a {
+  margin: 0 8px;
+}
