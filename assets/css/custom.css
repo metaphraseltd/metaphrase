@@ -1791,7 +1791,7 @@ input[type="file"]::file-selector-button {
 
 .info-card .icon-box {
   font-size: 28px;
-  color: #0d6efd;
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 
