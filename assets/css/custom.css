@@ -119,7 +119,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .scroll-top {
-  right: 25px !important;
+  right: 23px !important;
 }
 
 .pricing .pricing-card.popular .btn-light {
@@ -1881,4 +1881,17 @@ input[type="file"]::file-selector-button {
     width: 50px;
     height: 50px;
   }
+}
+
+.header .logo .logo-slogan {
+  color: #000 !important;              /* Force true black */
+  opacity: 1 !important;              /* Remove faded look */
+  font-weight: 500;                   /* Slightly premium weight */
+  letter-spacing: 0.5px;              /* Better readability */
+
+  background: #e6eef7;                /* Softer premium background */
+  padding: 6px 14px;                  /* Proper spacing */
+  border-radius: 20px;                /* Smooth pill shape */
+
+  display: inline-block;              /* Ensure proper box rendering */
 }
