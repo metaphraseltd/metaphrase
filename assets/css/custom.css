@@ -1138,7 +1138,7 @@ input[type="file"]::file-selector-button {
 
 /* Tighten the heading to match your site's style */
 .founder-info-fullwidth h2 {
-  font-family: "Raleway", sans-serif !important;
+  font-family: var(--heading-font) !important;
   font-size: 24px !important;
   font-weight: 700 !important;
   margin-bottom: 15px !important;
