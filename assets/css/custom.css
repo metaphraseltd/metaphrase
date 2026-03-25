@@ -1906,3 +1906,8 @@ input[type="file"]::file-selector-button {
 .btn:active {
   transform: scale(0.97);
 }
+
+.page-title-section h1 {
+  max-width: 90%;
+  margin: 0 auto;
+}
