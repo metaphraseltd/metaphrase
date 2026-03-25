@@ -1128,11 +1128,12 @@ input[type="file"]::file-selector-button {
 
 .founder-info-fullwidth .hero-description {
   /* Match the Hero section font exactly */
-  font-family: "Open Sans", system-ui, -apple-system, sans-serif !important; 
-  font-size: 14px !important;
-  line-height: 1.6 !important;
+  
+  .founder-info-fullwidth .hero-description {
+  font-family: var(--body-font) !important; 
+  font-size: 16px !important;
+  line-height: 1.8 !important;
   color: #444444 !important;
-  text-align: left; /* Better for reading bio text */
 }
 
 /* Tighten the heading to match your site's style */
