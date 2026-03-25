@@ -267,7 +267,7 @@ h1, h2, h3, h4, h5, h6,
 .testimonial-content p {
   font-style: italic;
   margin-bottom: 20px;
-  color: #444;
+  color: #212529;
 }
 
 /* 5. Style the grey profile box */
@@ -281,13 +281,13 @@ h1, h2, h3, h4, h5, h6,
 .testimonial-profile h3 {
   font-size: 18px;
   font-weight: 700;
-  color: #111;
+  color: #212529;
   margin: 0;
 }
 
 .testimonial-profile h4 {
   font-size: 14px;
-  color: #777;
+  color: #212529;
   margin: 5px 0 0 0;
 }
 
@@ -325,7 +325,7 @@ h1, h2, h3, h4, h5, h6,
 
 /* --- 12. Footer Styling --- */
 .footer {
-  color: #444;
+  color: #212529;
   background-color: #f9f9f9;
   font-size: 14px;
   padding-bottom: 50px;
@@ -347,7 +347,7 @@ h1, h2, h3, h4, h5, h6,
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
-  color: #111;
+  color: #212529;
 }
 
 .footer .footer-links ul i {
@@ -414,7 +414,7 @@ h1, h2, h3, h4, h5, h6,
 .footer-contact-col p {
   font-size: 16px !important; 
   line-height: 1.6 !important;
-  color: #444 !important;
+  color: #212529 !important;
   margin: 0;
 }
 
@@ -648,7 +648,7 @@ input[type="file"]::file-selector-button:hover {
 
 .policy-item p, .policy-item li {
   font-size: 16px;
-  color: #444;
+  color: #212529;
   margin-bottom: 10px;
 }
 
@@ -722,13 +722,13 @@ input[type="file"]::file-selector-button:hover {
 .service-detail-card h3 {
   font-size: 24px;
   font-weight: 700;
-  color: #111;
+  color: #212529;
   margin-bottom: 15px;
 }
 
 .service-detail-card p {
   line-height: 1.7;
-  color: #555;
+  color: #212529;
   margin-bottom: 20px;
 }
 
@@ -754,7 +754,7 @@ input[type="file"]::file-selector-button:hover {
 .expertise-list span {
   display: block;
   font-size: 15px;
-  color: #444;
+  color: #212529;
   margin-bottom: 8px;
   font-weight: 500;
 }
@@ -789,7 +789,7 @@ input[type="file"]::file-selector-button:hover {
 
 .content-essay {
   line-height: 2 !important;
-  color: #444;
+  color: #212529;
 }
 
 .content-essay h2, .content-essay h3 {
@@ -853,7 +853,7 @@ input[type="file"]::file-selector-button:hover {
 
 /* Ensure the header navigation text is dark blue on white bg */
 .index-page:not(.home) .navmenu a {
-  color: #444 !important;
+  color: #212529 !important;
 }
 
 .index-page:not(.home) .navmenu a:hover, 
@@ -879,7 +879,7 @@ input[type="file"]::file-selector-button:hover {
 
 .faq-accordion .faq-content {
   padding-top: 10px;
-  color: #555;
+  color: #212529;
   display: none; /* Controlled by main.js or Bootstrap */
 }
 
@@ -1133,7 +1133,7 @@ input[type="file"]::file-selector-button {
   font-family: var(--body-font) !important; 
   font-size: 16px !important;
   line-height: 1.8 !important;
-  color: #444444 !important;
+  color: #212529 !important;
 }
 
 /* Tighten the heading to match your site's style */
@@ -1413,7 +1413,7 @@ input[type="file"]::file-selector-button {
 
   /* 2. Style the phone and email as interactive links */
   .contact .info-item p a {
-    color: #444 !important;
+    color: #212529 !important;
     text-decoration: none;
     font-weight: 500;
   }
@@ -1579,7 +1579,7 @@ input[type="file"]::file-selector-button {
     line-height: 1.8 !important;
     text-align: left !important;
     margin-bottom: 25px !important;
-    color: #444 !important;
+    color: #212529 !important;
   }
 
   /* 4. Professional PC Buttons: Larger and well-spaced */
