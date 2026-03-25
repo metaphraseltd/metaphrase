@@ -1127,9 +1127,6 @@ input[type="file"]::file-selector-button {
 /* --- Founder Section Consistency Fix --- */
 
 .founder-info-fullwidth .hero-description {
-  /* Match the Hero section font exactly */
-  
-  .founder-info-fullwidth .hero-description {
   font-family: var(--body-font) !important; 
   font-size: 16px !important;
   line-height: 1.8 !important;
