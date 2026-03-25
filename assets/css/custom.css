@@ -1895,3 +1895,12 @@ input[type="file"]::file-selector-button {
 
   display: inline-block;              /* Ensure proper box rendering */
 }
+
+/* Smooth professional hover */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
