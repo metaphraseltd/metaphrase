@@ -1960,4 +1960,22 @@ input[type="file"]::file-selector-button {
     padding: 0 16px !important;
   }
 }
+/* FIX C5: Unified submit button on both forms */
+#contact .php-email-form .btn-primary,
+#contact form .btn-primary {
+  background: var(--primary-color) !important;
+  border: 0 !important;
+  padding: 14px 50px !important;
+  color: #fff !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  box-shadow: 0 4px 15px rgba(53, 122, 189, 0.3) !important;
+}
+
+#contact .php-email-form .btn-primary:hover,
+#contact form .btn-primary:hover {
+  background: var(--primary-color-hover) !important;
+  transform: translateY(-2px);
+}
 
