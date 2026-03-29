@@ -1939,3 +1939,25 @@ input[type="file"]::file-selector-button {
   }
 
 }
+
+/* FIX C4: Sub-page hero title scaling for mobile */
+@media (max-width: 768px) {
+  .page-title-section {
+    padding: 110px 0 50px 0 !important;
+  }
+
+  .page-title-section h1 {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+    padding-top: 0 !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    word-break: break-word;
+  }
+
+  .page-title-section p {
+    font-size: 15px !important;
+    padding: 0 16px !important;
+  }
+}
+
