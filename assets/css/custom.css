@@ -2173,5 +2173,39 @@ input[type="file"]::file-selector-button {
   font-size: 16px;
 }
 
+/* Add to custom.css */
+@media (max-width: 991px) {
+  .hero .feature-boxes .col-lg-4 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+
+  /* Last item (3rd) takes full width */
+  .hero .feature-boxes .col-lg-4:last-child {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  .feature-box {
+    padding: 16px !important;
+  }
+
+  .feature-box .feature-title {
+    font-size: 15px !important;
+  }
+
+  .feature-box .feature-text {
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* On very small phones, just stack them normally */
+  .hero .feature-boxes .col-lg-4,
+  .hero .feature-boxes .col-lg-4:last-child {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
 
 
