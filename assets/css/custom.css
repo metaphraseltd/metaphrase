@@ -1258,7 +1258,7 @@ input[type="file"]::file-selector-button {
   
   /* 1. Shrink heading to fit on one line */
   .founder-info-fullwidth h2 {
-    font-size: 15.5px !important; /* Reduced to ensure it fits on one line */
+    font-size: 20px !important; /* Reduced to ensure it fits on one line */
     white-space: normal;
     margin-bottom: 10px !important;
     letter-spacing: -0.2px;
