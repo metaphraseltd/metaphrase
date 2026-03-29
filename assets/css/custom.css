@@ -1046,12 +1046,6 @@ input[type="file"]::file-selector-button {
   }
 
 
-@media (max-width: 991px) {
-  .mobile-hidden {
-    display: none !important;
-  }
-}
-
 /* --- Section 4: Compact Process Steps --- */
 
   .features .features-item {
@@ -2031,5 +2025,92 @@ input[type="file"]::file-selector-button {
   }
 }
 
+/* FIX M6: Base styles for founder buttons (missing from original) */
+.btn-founder-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.btn-booking {
+  background-color: var(--primary-color);
+  color: #ffffff !important;
+  border-color: var(--primary-color);
+}
+
+.btn-booking:hover {
+  background-color: var(--primary-color-hover);
+  border-color: var(--primary-color-hover);
+  transform: translateY(-2px);
+}
+
+.btn-linkedin {
+  background-color: #0077b5;
+  color: #ffffff !important;
+  border-color: #0077b5;
+}
+
+.btn-linkedin:hover {
+  background-color: #005582;
+  transform: translateY(-2px);
+}
+
+/* Add to bottom of custom.css */
+@media (max-width: 767px) {
+  .policy-card {
+    padding: 20px 16px !important;
+    border-radius: 10px !important;
+  }
+
+  .policy-item {
+    margin-bottom: 24px !important;
+  }
+
+  .policy-item h3 {
+    font-size: 17px !important;
+    flex-wrap: wrap;
+  }
+
+  .policy-item p,
+  .policy-item li {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+}
+
+/* Add to bottom of custom.css */
+@media (max-width: 767px) {
+  .testimonials-slider.swiper {
+    padding-bottom: 40px !important; /* makes room for dots below card */
+  }
+
+  .testimonials .swiper-pagination {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+
+  /* Larger dots for easier tapping */
+  .testimonials .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    margin: 0 5px !important;
+  }
+
+  .testimonials .swiper-pagination-bullet-active {
+    background-color: var(--primary-color) !important;
+  }
+}
 
 
