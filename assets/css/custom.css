@@ -1217,7 +1217,7 @@ input[type="file"]::file-selector-button {
 
   .btn-founder-social {
     flex: 1;
-    font-size: 11px !important;
+    font-size: 13px !important;
     padding: 12px 5px !important;
     text-align: center;
     white-space: nowrap;
@@ -1559,18 +1559,6 @@ input[type="file"]::file-selector-button {
   }
 }
 
-/* --- Professional Process: Description Padding Fix --- */
-@media (max-width: 991px) {
-  /* Targets the centered text under 'Our Professional Process' */
-  .how-we-work .section-title p {
-    padding-left: 40px !important; /* Significant room on both sides */
-    padding-right: 40px !important;
-    line-height: 1.6 !important;
-    font-size: 15px !important; /* Slightly larger for easier reading */
-    margin-bottom: 30px !important;
-  }
-}
-
 /* --- Header: Top & Bottom Breathing Room --- */
 .header {
   padding-top: 15px !important; /* Adds professional space at the top */
@@ -1596,8 +1584,8 @@ input[type="file"]::file-selector-button {
 @media (max-width: 991px) {
   /* Targets the description text under the section heading */
   .how-we-work .section-title p {
-    padding-left: 55px !important; /* Forces the text into a narrower, elegant column */
-    padding-right: 55px !important;
+    padding-left: 20px !important; /* Forces the text into a narrower, elegant column */
+    padding-right: 20px !important;
     line-height: 1.6 !important; /* Adds vertical breathing room between lines */
     font-size: 15px !important;
     margin-bottom: 30px !important;
@@ -1727,9 +1715,6 @@ input[type="file"]::file-selector-button {
   .footer-logo {
     max-width: 140px !important;
     margin: 0 auto 20px;
-  }
-  .footer {
-    text-align: center;
   }
 }
 
@@ -2141,5 +2126,38 @@ input[type="file"]::file-selector-button {
     font-size: 14px !important;
   }
 }
+
+@media (max-width: 991px) {
+  .hero-image {
+    max-height: 220px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+}
+
+/* On very small phones, hide the hero image entirely to
+   show the heading + CTA above the fold */
+@media (max-width: 480px) {
+  .hero-image {
+    display: none;
+  }
+}
+
+
+/* Add to custom.css */
+@media (max-width: 767px) {
+  #contact .form-wrapper {
+    padding: 20px 16px !important;
+    border-radius: 10px !important;
+  }
+}
+
 
 
