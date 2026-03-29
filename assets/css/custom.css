@@ -1911,3 +1911,29 @@ input[type="file"]::file-selector-button {
   max-width: 90%;
   margin: 0 auto;
 }
+
+/* =====================================================
+   FIX: Compact header for medium laptops (~1200-1400px)
+   ===================================================== */
+@media (min-width: 1200px) and (max-width: 1400px) {
+
+  /* Tighten the spacing between nav links */
+  .navmenu a,
+  .navmenu a:focus {
+    padding: 18px 9px !important;
+    font-size: 14px !important;
+  }
+
+  /* Make the "Request a Quote" button slightly smaller */
+  .header .btn-getstarted,
+  .header .btn-getstarted:focus {
+    padding: 6px 14px !important;
+    font-size: 13px !important;
+  }
+
+  /* Hide the slogan pill on medium screens to save space */
+  .logo-slogan {
+    display: none !important;
+  }
+
+}
