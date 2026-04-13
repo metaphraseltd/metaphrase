@@ -2554,3 +2554,172 @@ input[type="file"]::file-selector-button:hover {
     font-size: 16px !important;
   }
 }
+
+
+/* ============================================================
+   43. MASTER BOOTSTRAP ROW-MARGIN FIX
+       Bootstrap rows have -12px side margins that cancel out
+       container padding. This section zeroes those margins
+       for sections that need proper edge padding on mobile.
+   ============================================================ */
+@media (max-width: 991px) {
+
+  /* --- About section --- */
+  #about .container > .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  /* Column padding: override the section-24 zero-out */
+  .about .content {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  /* --- Founder / Team section --- */
+  #team .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+  .founder-profile-fullwidth .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* --- Testimonials --- */
+  #testimonials .container > .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* --- Footer --- */
+  .footer .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .footer-columns-container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  /* Centre the Contact Us column in the footer */
+  .footer-contact-col {
+    text-align: center !important;
+  }
+  .footer-contact-col p,
+  .footer-contact-col a {
+    text-align: center !important;
+  }
+  /* But keep the useful/services link columns left-aligned */
+  .footer-links-col {
+    text-align: left !important;
+  }
+}
+
+
+/* ============================================================
+   44. HERO IMAGE — show FULL image, no cropping on mobile
+   ============================================================ */
+@media (max-width: 991px) {
+  .hero-image {
+    max-height: none !important;
+    overflow: visible !important;
+    border-radius: 14px !important;
+    margin-top: 24px !important;
+    margin-bottom: 16px !important;
+    box-shadow: 0 6px 20px rgba(53, 122, 189, 0.15) !important;
+  }
+
+  .hero-image img {
+    width: 100% !important;
+    height: auto !important;             /* show FULL image, no crop */
+    object-fit: unset !important;
+    object-position: unset !important;
+    border-radius: 14px !important;
+    display: block !important;
+  }
+}
+
+/* Small phones: still show it, just slightly smaller */
+@media (max-width: 480px) {
+  .hero-image {
+    display: block !important;
+    margin-top: 20px !important;
+  }
+}
+
+
+/* ============================================================
+   45. HOW WE WORK — bigger gap between top row and bottom row
+   ============================================================ */
+@media (max-width: 767px) {
+  .how-we-work .process-container {
+    row-gap: 22px !important;    /* vertical gap between 01/02 and 03/04 */
+    column-gap: 10px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .how-we-work .process-container {
+    row-gap: 32px !important;
+    column-gap: 28px !important;
+  }
+}
+
+
+/* ============================================================
+   46. FOUNDER SECTION — padding inside the white content body
+       and proper button sizing on mobile
+   ============================================================ */
+@media (max-width: 991px) {
+
+  /* The blue header band — keep full bleed */
+  .founder-profile-fullwidth .col-lg-3 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* White body content area — give it breathing room */
+  .founder-profile-fullwidth .col-lg-9 {
+    padding: 24px 20px 24px !important;
+  }
+
+  /* Heading inside body */
+  .founder-info-fullwidth h2 {
+    padding: 0 !important;
+    margin-bottom: 12px !important;
+    font-size: 17px !important;
+    line-height: 1.35 !important;
+    color: #32353a !important;
+    text-align: left !important;
+  }
+
+  /* Paragraphs */
+  .founder-info-fullwidth .hero-description {
+    padding: 0 !important;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    color: #555 !important;
+  }
+
+  /* Buttons — full width, clearly padded */
+  .founder-buttons {
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin-top: 18px !important;
+    padding-top: 16px !important;
+    border-top: 1px solid #eef2f7 !important;
+  }
+
+  .btn-founder-social {
+    width: 100% !important;
+    padding: 13px 24px !important;       /* left-right padding so it looks like a button */
+    font-size: 14px !important;
+    border-radius: 10px !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    min-width: unset !important;
+  }
+
+  .btn-founder-social i {
+    font-size: 16px !important;
+  }
+}
