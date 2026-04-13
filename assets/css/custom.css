@@ -1293,12 +1293,8 @@ input[type="file"]::file-selector-button:hover {
   }
 }
 
-/* Very small phones: hide hero image to show CTA above fold */
+/* Very small phones: hero-image is now shown (overridden in section 37 below) */
 @media (max-width: 480px) {
-  .hero-image {
-    display: none !important;
-  }
-
   /* Stack feature boxes 1-per-row */
   .hero .feature-boxes .col-lg-4,
   .hero .feature-boxes .col-lg-4:last-child {
@@ -2000,5 +1996,561 @@ input[type="file"]::file-selector-button:hover {
   #scroll-top {
     right: 15px !important;
     bottom: 20px !important;
+  }
+}
+
+
+/* ============================================================
+   37. HERO IMAGE — show on ALL mobile sizes (was hidden <480px)
+   ============================================================ */
+@media (max-width: 991px) {
+  /* Image sits BELOW the CTA block, full-width column */
+  .hero .col-lg-6:last-child {
+    margin-top: 28px;
+  }
+
+  .hero-image {
+    max-height: 240px !important;
+    overflow: hidden !important;
+    border-radius: 14px !important;
+    margin-bottom: 20px !important;
+    box-shadow: 0 8px 24px rgba(53, 122, 189, 0.15) !important;
+  }
+
+  .hero-image img {
+    width: 100% !important;
+    height: 240px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+  }
+}
+
+/* Re-enable on very small phones — was previously display:none */
+@media (max-width: 480px) {
+  .hero-image {
+    display: block !important;
+    max-height: 190px !important;
+  }
+
+  .hero-image img {
+    height: 190px !important;
+  }
+}
+
+
+/* ============================================================
+   38. GLOBAL SECTION CONTAINER PADDING CONSISTENCY
+       Every section gets identical left/right breathing room
+   ============================================================ */
+@media (max-width: 991px) {
+  /* Apply consistent padding to all section containers */
+  #hero .container,
+  #about .container,
+  #how-we-work .container,
+  #services .container,
+  #services-alt .container,
+  #team .container,
+  #testimonials .container,
+  #contact .container,
+  #footer .container,
+  .footer .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Consistent section vertical spacing */
+  section {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+
+  /* Section titles consistent */
+  .section-title h2 {
+    font-size: 24px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .section-title p {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    padding: 0 !important;
+  }
+}
+
+
+/* ============================================================
+   39. FOUNDER / TEAM SECTION — Full Mobile Redesign
+       Professional profile card look
+   ============================================================ */
+@media (max-width: 991px) {
+
+  /* Outer card */
+  .founder-profile-fullwidth {
+    padding: 0 !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+    background: #ffffff !important;
+  }
+
+  /* Photo column — becomes a full-width coloured header band */
+  .founder-profile-fullwidth .col-lg-3 {
+    background: linear-gradient(135deg, #357ABD 0%, #1a5d9e 100%) !important;
+    padding: 36px 20px 28px !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  /* Circular photo with white ring */
+  .founder-profile-fullwidth .col-lg-3 img {
+    width: 110px !important;
+    height: 110px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    border: 4px solid rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+    max-width: 110px !important;
+    margin-bottom: 14px !important;
+  }
+
+  /* Name on the blue banner */
+  .founder-title-mobile h3 {
+    color: #ffffff !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin-bottom: 4px !important;
+  }
+
+  /* Title/role on the blue banner */
+  .founder-title-mobile h4 {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+  }
+
+  .founder-title-mobile h4 a {
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-decoration: underline !important;
+  }
+
+  /* Content column — clean white body */
+  .founder-profile-fullwidth .col-lg-9 {
+    padding: 24px 20px 28px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  /* Book heading — smaller and left-aligned */
+  .founder-info-fullwidth h2 {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin-bottom: 14px !important;
+    line-height: 1.3 !important;
+    text-align: left !important;
+    color: #32353a !important;
+  }
+
+  /* Body paragraphs — readable size */
+  .founder-info-fullwidth .hero-description {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    color: #555 !important;
+    margin-bottom: 12px !important;
+    text-align: left !important;
+  }
+
+  /* Divider line before buttons */
+  .founder-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin-top: 20px !important;
+    padding-top: 18px !important;
+    border-top: 1px solid #eef2f7 !important;
+  }
+
+  /* Each button full width — easy to tap */
+  .btn-founder-social {
+    width: 100% !important;
+    flex: none !important;
+    font-size: 14px !important;
+    padding: 12px 20px !important;
+    border-radius: 10px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-width: unset !important;
+  }
+
+  .btn-founder-social i {
+    font-size: 17px !important;
+  }
+
+  /* Book button */
+  .btn-booking {
+    background: #357ABD !important;
+    border-color: #357ABD !important;
+  }
+
+  /* LinkedIn button */
+  .btn-linkedin {
+    background: #0077b5 !important;
+    border-color: #0077b5 !important;
+  }
+}
+
+
+/* ============================================================
+   40. FOOTER — Professional upgrade (desktop + mobile)
+   ============================================================ */
+
+/* Top accent stripe */
+.footer::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, #357ABD 0%, #1a5d9e 100%);
+  width: 100%;
+}
+
+/* Better base styling */
+.footer {
+  background-color: #f8fafd !important;
+  border-top: none !important;
+}
+
+.footer .footer-top {
+  border-top: none !important;
+  padding-top: 40px !important;
+}
+
+/* Section headings with underline bar */
+.footer h4 {
+  position: relative;
+  padding-bottom: 10px !important;
+  margin-bottom: 18px !important;
+}
+
+.footer h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background: #357ABD;
+  border-radius: 2px;
+}
+
+/* Link hover with arrow feel */
+.footer-links-col ul li a {
+  transition: all 0.2s ease !important;
+  padding-left: 0 !important;
+  display: inline-block !important;
+}
+
+.footer-links-col ul li a:hover {
+  color: #357ABD !important;
+  padding-left: 4px !important;
+}
+
+/* Social icons — rounded square style */
+.footer .social-links a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 8px !important;
+  background: rgba(53, 122, 189, 0.1) !important;
+  color: #357ABD !important;
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+  margin: 0 4px 4px 0 !important;
+}
+
+.footer .social-links a:hover {
+  background: #357ABD !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Copyright bar */
+.footer .copyright {
+  background: rgba(53, 122, 189, 0.05);
+  border-top: 1px solid #e2eaf4 !important;
+  padding: 14px 0 !important;
+  margin-top: 30px !important;
+}
+
+.footer .copyright p {
+  font-size: 13px !important;
+  color: #666 !important;
+}
+
+/* Mobile footer fixes */
+@media (max-width: 767px) {
+
+  .footer {
+    padding: 0 0 0 0 !important;
+  }
+
+  .footer .footer-top {
+    padding: 28px 0 20px !important;
+  }
+
+  .footer .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Logo and reg centred */
+  .footer-about-col {
+    text-align: center !important;
+    margin-bottom: 24px !important;
+  }
+
+  .footer-logo {
+    margin: 0 auto 12px !important;
+  }
+
+  .footer h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* 2-col links on mobile */
+  .footer-links-col {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    margin-bottom: 20px !important;
+  }
+
+  .footer-links-col h4,
+  .footer-contact-col h4 {
+    text-align: left !important;
+  }
+
+  .footer-links-col h4::after,
+  .footer-contact-col h4::after {
+    left: 0 !important;
+    transform: none !important;
+  }
+
+  /* Contact full width */
+  .footer-contact-col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Social centred */
+  .footer .social-links {
+    justify-content: flex-start !important;
+    margin-top: 12px !important;
+  }
+
+  .footer .copyright {
+    margin-top: 16px !important;
+  }
+
+  .footer .copyright p {
+    text-align: center !important;
+  }
+}
+
+
+/* ============================================================
+   41. CONTACT PAGE — Mobile padding & spacing
+   ============================================================ */
+@media (max-width: 991px) {
+
+  /* Hero banner */
+  .contact-hero {
+    padding: 110px 20px 48px !important;
+  }
+
+  .contact-hero h1 {
+    font-size: 28px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .contact-hero p {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+  }
+
+  /* Cards section */
+  .contact-cards-section {
+    padding: 36px 0 0 !important;
+  }
+
+  .contact-cards-section .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Individual contact cards */
+  .contact-card {
+    padding: 24px 16px !important;
+    margin-bottom: 14px !important;
+    border-radius: 12px !important;
+  }
+
+  .contact-card .card-icon {
+    width: 52px !important;
+    height: 52px !important;
+    font-size: 22px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .contact-card h3 {
+    font-size: 15px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .contact-card p,
+  .contact-card a {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Form section */
+  .contact-form-section {
+    padding: 36px 0 !important;
+  }
+
+  .contact-form-section .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Form wrapper */
+  #contact .form-wrapper,
+  .contact-form-section .form-wrapper {
+    padding: 24px 16px !important;
+    border-radius: 14px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+  }
+
+  /* Form heading */
+  #contact .form-wrapper h2,
+  .contact-form-section h2 {
+    font-size: 20px !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Form row gaps */
+  #contact .form-wrapper .row > div {
+    margin-bottom: 14px !important;
+  }
+
+  /* Submit button */
+  #contact form button[type="submit"],
+  #contact .form-wrapper button[type="submit"] {
+    width: 100% !important;
+    padding: 13px 20px !important;
+    font-size: 15px !important;
+  }
+
+  /* FAQ section */
+  .faq-section .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .faq-accordion .faq-header {
+    padding: 16px 18px !important;
+  }
+
+  .faq-accordion .faq-header h3 {
+    font-size: 15px !important;
+  }
+
+  .faq-accordion .faq-content {
+    padding: 0 18px 16px !important;
+    font-size: 14px !important;
+  }
+
+  /* Map embed responsive */
+  .contact-map iframe,
+  .map-section iframe {
+    height: 250px !important;
+  }
+}
+
+
+/* ============================================================
+   42. ABOUT SECTION — consistent padding + mobile visibility fix
+   ============================================================ */
+@media (max-width: 991px) {
+
+  /* Ensure the section title is properly padded */
+  .about .section-title {
+    padding: 0 !important;
+    margin-bottom: 24px !important;
+  }
+
+  /* Who-we-are label */
+  .about .who-we-are {
+    font-size: 11px !important;
+    letter-spacing: 1.5px !important;
+    color: #357ABD !important;
+    font-weight: 600 !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* About heading */
+  .about .content h3 {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 18px !important;
+  }
+
+  /* Checklist items */
+  .about .about-list li {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    padding: 10px 0 !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .about .about-list li:last-child {
+    border-bottom: none !important;
+  }
+
+  .about .about-list li i {
+    margin-top: 3px !important;
+    flex-shrink: 0 !important;
+    font-size: 16px !important;
+  }
+
+  /* Read more button */
+  .about .read-more {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-top: 22px !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    padding: 10px 22px !important;
+    border-radius: 50px !important;
+    background: #357ABD !important;
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+
+  .about .read-more i {
+    font-size: 16px !important;
   }
 }
