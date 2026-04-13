@@ -38,14 +38,21 @@
 
   /**
    * Hide mobile nav on same-page/hash links
+   * But do NOT close when clicking a dropdown parent link — toggle submenu instead
    */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
+  document.querySelectorAll('#navmenu a').forEach(function(navmenu) {
+    navmenu.addEventListener('click', function() {
       if (document.querySelector('.mobile-nav-active')) {
+        // If this <a> is the direct child of a .dropdown <li>, toggle submenu — don't close nav
+        if (this.parentElement.classList.contains('dropdown')) {
+          this.classList.toggle('active');
+          var sub = this.nextElementSibling;
+          if (sub) sub.classList.toggle('dropdown-active');
+          return; // keep menu open
+        }
         mobileNavToogle();
       }
     });
-
   });
 
   /**
