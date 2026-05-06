@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Expert articles on certified translation, legal interpreting, immigration documents, and professional linguistics — written by a CIOL-certified linguist.">
+  <link rel="canonical" href="https://metaphrase.uk/blog/">
+
+  <title>Blog | Translation & Language Insights | Metaphrase Ltd</title>
+
+  <!-- Google Fonts -->
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Premium CSS -->
+  <link rel="stylesheet" href="/assets/css/premium.css">
+
+  <style>
+    /* Design Tokens */
+    :root {
+      --navy: #0F2340;
+      --accent: #2563EB;
+      --gold: #C9A84C;
+      --gold-light: #F0D080;
+      --white: #FFFFFF;
+      --off-white: #F8FAFD;
+      --text-dark: #0A0F1C;
+      --text-muted: #4A5568;
+      --text-body: #2D3748;
+      --border: #E2E8F0;
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    /* Blog Hero Section */
+    .blog-hero {
+      background: linear-gradient(135deg, #0F2340 0%, #1a4a7f 100%);
+      padding: 160px 0 80px;
+      color: white;
+      position: relative;
+    }
+
+    .blog-hero h1 {
+      font-family: var(--font-heading);
+      font-size: 2.75rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 1.2;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .blog-hero-subtext {
+      font-size: 1.125rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto 32px;
+      text-align: center;
+    }
+
+    .blog-eyebrow {
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .blog-search-bar {
+      display: flex;
+      max-width: 540px;
+      margin: 32px auto 0;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50px;
+      overflow: hidden;
+      backdrop-filter: blur(4px);
+    }
+
+    .blog-search-bar input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      padding: 14px 20px;
+      color: white;
+      font-size: 0.95rem;
+      outline: none;
+      font-family: var(--font-body);
+    }
+
+    .blog-search-bar input::placeholder {
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .blog-search-bar button {
+      background: var(--accent);
+      border: none;
+      padding: 14px 20px;
+      color: white;
+      cursor: pointer;
+      border-radius: 0 50px 50px 0;
+      transition: background 0.2s ease;
+      font-weight: 600;
+    }
+
+    .blog-search-bar button:hover {
+      background: #1d4ed8;
+    }
+
+    .blog-breadcrumb {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .blog-breadcrumb a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+    }
+
+    .blog-breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    /* Featured Post Section */
+    .featured-section {
+      background: var(--off-white);
+      padding: 80px 0;
+    }
+
+    .featured-post {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 48px;
+      align-items: center;
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(15, 35, 64, 0.12);
+      border: 1.5px solid var(--border);
+    }
+
+    .featured-post-img {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+
+    .featured-post-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .featured-post:hover .featured-post-img img {
+      transform: scale(1.03);
+    }
+
+    .featured-post-body {
+      padding: 48px 48px 48px 0;
+    }
+
+    .featured-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--accent);
+      border: 1px solid rgba(37, 99, 235, 0.15);
+      border-radius: 50px;
+      padding: 4px 14px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+      font-family: var(--font-body);
+    }
+
+    .featured-post h2 {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 1.3;
+      color: var(--text-dark);
+    }
+
+    .featured-post h2 a {
+      color: var(--text-dark);
+      text-decoration: none;
+    }
+
+    .featured-post h2 a:hover {
+      color: var(--accent);
+    }
+
+    .featured-post-excerpt {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .featured-post-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .featured-post-meta span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .featured-read-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-family: var(--font-body);
+    }
+
+    .featured-read-btn:hover {
+      background: #1d4ed8;
+      transform: translateX(4px);
+    }
+
+    /* Blog Filter Bar */
+    .blog-filter-section {
+      background: var(--white);
+      padding: 48px 0 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .blog-filter-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .filter-btn {
+      background: var(--off-white);
+      border: 1.5px solid var(--border);
+      border-radius: 50px;
+      padding: 8px 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: var(--font-body);
+    }
+
+    .filter-btn:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    .filter-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    /* Blog Layout */
+    .blog-layout-section {
+      background: var(--white);
+      padding: 64px 0;
+    }
+
+    .blog-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .blog-grid-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    /* Premium Blog Card */
+    .premium-blog-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .premium-blog-card:hover {
+      border-color: rgba(37, 99, 235, 0.2);
+      box-shadow: 0 12px 48px rgba(15, 35, 64, 0.12);
+      transform: translateY(-3px);
+    }
+
+    .premium-blog-card.hidden {
+      display: none;
+    }
+
+    .blog-card-image {
+      aspect-ratio: 16/9;
+      overflow: hidden;
+    }
+
+    .blog-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .premium-blog-card:hover .blog-card-image img {
+      transform: scale(1.04);
+    }
+
+    .blog-card-content {
+      padding: 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .blog-card-tag {
+      background: rgba(37, 99, 235, 0.07);
+      color: var(--accent);
+      border: 1px solid rgba(37, 99, 235, 0.15);
+      border-radius: 50px;
+      padding: 3px 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 0.7rem;
+      font-family: var(--font-body);
+    }
+
+    .blog-card-content h2 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.4;
+      color: var(--text-dark);
+    }
+
+    .blog-card-content h2 a {
+      color: var(--text-dark);
+      text-decoration: none;
+    }
+
+    .blog-card-content h2 a:hover {
+      color: var(--accent);
+    }
+
+    .blog-card-content p {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    .blog-read-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: var(--accent);
+      margin-top: auto;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .blog-read-link:hover {
+      gap: 10px;
+    }
+
+    .blog-read-link i {
+      transition: transform 0.2s;
+    }
+
+    .premium-blog-card:hover .blog-read-link i {
+      transform: translateX(4px);
+    }
+
+    /* Blog Sidebar */
+    .blog-sidebar {
+      position: sticky;
+      top: 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .sidebar-widget {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .sidebar-widget h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      font-family: var(--font-body);
+    }
+
+    .sidebar-search {
+      display: flex;
+      gap: 0;
+    }
+
+    .sidebar-search input {
+      flex: 1;
+      border: 1.5px solid var(--border);
+      border-right: none;
+      border-radius: 8px 0 0 8px;
+      padding: 10px 14px;
+      font-size: 0.875rem;
+      outline: none;
+      font-family: var(--font-body);
+    }
+
+    .sidebar-search input:focus {
+      border-color: var(--accent);
+    }
+
+    .sidebar-search button {
+      background: var(--accent);
+      border: 1.5px solid var(--accent);
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+      color: white;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .sidebar-search button:hover {
+      background: #1d4ed8;
+    }
+
+    .sidebar-cats {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sidebar-cat {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      cursor: pointer;
+      color: var(--text-body);
+      border: 1px solid transparent;
+      transition: all 0.2s;
+      font-family: var(--font-body);
+    }
+
+    .sidebar-cat:hover {
+      background: var(--off-white);
+      border-color: var(--border);
+    }
+
+    .sidebar-cat span {
+      background: var(--off-white);
+      color: var(--text-muted);
+      border-radius: 50px;
+      padding: 2px 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      font-family: var(--font-body);
+    }
+
+    .sidebar-recent {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .sidebar-recent-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .sidebar-recent-item img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .sidebar-recent-item a {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      line-height: 1.4;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .sidebar-recent-item a:hover {
+      color: var(--accent);
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), #1a4a7f);
+      color: white;
+      text-align: center;
+    }
+
+    .sidebar-cta h4 {
+      color: white;
+      border-bottom-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .sidebar-cta p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.875rem;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .sidebar-cta .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: background 0.2s ease;
+      font-family: var(--font-body);
+    }
+
+    .sidebar-cta .btn:hover {
+      background: #1d4ed8;
+    }
+
+    .sidebar-author {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+    }
+
+    .author-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin: 0 auto;
+      font-family: var(--font-body);
+    }
+
+    .author-name {
+      font-weight: 700;
+      color: var(--text-dark);
+      font-size: 0.95rem;
+    }
+
+    .author-title {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .sidebar-author a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: color 0.2s ease;
+    }
+
+    .sidebar-author a:hover {
+      color: #1d4ed8;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .blog-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .blog-sidebar {
+        position: static;
+      }
+
+      .featured-post {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-post-body {
+        padding: 32px;
+      }
+
+      .blog-hero h1 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .blog-hero {
+        padding: 100px 0 60px;
+      }
+
+      .blog-hero h1 {
+        font-size: 1.75rem;
+      }
+
+      .blog-hero-subtext {
+        font-size: 0.95rem;
+      }
+
+      .featured-section {
+        padding: 60px 0;
+      }
+
+      .blog-layout-section {
+        padding: 48px 0;
+      }
+
+      .blog-sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .sidebar-widget {
+        flex: 1;
+        min-width: 200px;
+      }
+
+      .blog-filter-bar {
+        gap: 8px;
+      }
+
+      .filter-btn {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .blog-hero {
+        padding: 80px 0 50px;
+      }
+
+      .blog-hero h1 {
+        font-size: 1.5rem;
+      }
+
+      .blog-search-bar {
+        max-width: 100%;
+      }
+
+      .blog-grid-inner {
+        gap: 24px;
+      }
+
+      .blog-layout {
+        gap: 24px;
+      }
+
+      .featured-post-body {
+        padding: 24px;
+      }
+
+      .sidebar-widget {
+        width: 100%;
+      }
+
+      .blog-sidebar {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header / Navigation -->
+<header id="header">
+  <div class="container nav-container">
+    <a href="/" class="logo">
+      <img src="/assets/img/metaphrase-logo-m.svg" alt="Metaphrase Ltd" class="logo-mark" width="44" height="44">
+      <div class="logo-text">
+        <span class="logo-name">Metaphrase</span>
+        <span class="logo-tagline">Certified. Precise. Trusted.</span>
+      </div>
+    </a>
+    <nav class="nav-menu">
+      <a href="/">Home</a><a href="/about/">About</a><a href="/services/">Services</a>
+      <a href="/blog/" class="active">Blog</a>
+      <div class="nav-dropdown">
+        <a href="#" aria-haspopup="true">Trust &amp; Legal <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 8L1 3h10z"/></svg></a>
+        <div class="dropdown-menu" role="menu">
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+          <a href="https://www.ciol.org.uk/member-check/profile/58240/25304" target="_blank" rel="noopener">CIOL Certification ↗</a>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta"><a href="/contact/" class="btn btn-primary">Request a Quote</a></div>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a><a href="/about/">About</a><a href="/services/">Services</a><a href="/blog/">Blog</a>
+  <a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a>
+  <a href="https://www.ciol.org.uk/member-check/profile/58240/25304" target="_blank" rel="noopener">CIOL Certification ↗</a>
+  <div class="mobile-nav-cta">
+    <a href="/contact/" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Request a Quote</a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="blog-hero">
+  <div class="container">
+    <div class="blog-eyebrow">The Metaphrase Blog</div>
+    <h1>Insights & Guides on Translation, Language & the Law</h1>
+    <p class="blog-hero-subtext">Expert articles on certified translation, legal interpreting, immigration documents, and professional linguistics — written by a CIOL-certified linguist.</p>
+
+    <div class="blog-breadcrumb">
+      <a href="/">Home</a> › <span>Blog</span>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Post Section -->
+<section class="featured-section">
+  <div class="container">
+    <div class="featured-post">
+      <div class="featured-post-img">
+        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&h=500&fit=crop&q=80" alt="Certified Translation Guide">
+      </div>
+      <div class="featured-post-body">
+        <div class="featured-badge">Certified Translation</div>
+        <h2><a href="/blog/certified-translation-guide/">The Complete Guide to Certified Translation in the UK (2026)</a></h2>
+        <p class="featured-post-excerpt">Everything you need to know about certified translation in the UK — what it means legally, when you need it, and how to ensure your documents are accepted by the Home Office, UKVI, courts, and universities.</p>
+        <div class="featured-post-meta">
+          <span><i class="bi bi-calendar"></i> January 2026</span>
+          <span><i class="bi bi-clock"></i> 8 min read</span>
+        </div>
+        <a href="/blog/certified-translation-guide/" class="featured-read-btn">
+          Read Article <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Filter Bar -->
+<section class="blog-filter-section">
+  <div class="container">
+    <div class="blog-filter-bar">
+      <button class="filter-btn active" data-filter="all">All Posts</button>
+      <button class="filter-btn" data-filter="certified-translation">Certified Translation</button>
+      <button class="filter-btn" data-filter="interpreting">Interpreting</button>
+      <button class="filter-btn" data-filter="immigration">Immigration & Visa</button>
+      <button class="filter-btn" data-filter="legal">Legal Translation</button>
+      <button class="filter-btn" data-filter="standards">Professional Standards</button>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Grid + Sidebar -->
+<section class="blog-layout-section">
+  <div class="container">
+    <div class="blog-layout">
+      <!-- Main Grid -->
+      <div class="blog-grid-inner">
+
+        <!-- Card 1: Certified Translation -->
+        <article class="premium-blog-card" data-category="certified-translation" data-title="The Complete Guide to Certified Translation in the UK (2026)" data-excerpt="Everything from Home Office requirements to CIOL certification — the definitive UK guide.">
+          <div class="blog-card-image">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=340&fit=crop&q=80" alt="Certified Translation Guide">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-card-meta">
+              <span><i class="bi bi-calendar"></i> Jan 2026</span>
+              <span>•</span>
+              <span><i class="bi bi-clock"></i> 8 min read</span>
+              <span class="blog-card-tag">Certified Translation</span>
+            </div>
+            <h2><a href="/blog/certified-translation-guide/">The Complete Guide to Certified Translation in the UK (2026)</a></h2>
+            <p>Everything from Home Office requirements to CIOL certification — the definitive UK guide.</p>
+            <a href="/blog/certified-translation-guide/" class="blog-read-link">
+              Read More <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2: Interpreting -->
+        <article class="premium-blog-card" data-category="interpreting" data-title="Legal Interpreting in the UK: What You Need to Know" data-excerpt="From Crown Court to NHS consultations — how professional legal interpreting works and why qualifications matter.">
+          <div class="blog-card-image">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=340&fit=crop&q=80" alt="Legal Interpreting">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-card-meta">
+              <span><i class="bi bi-calendar"></i> Feb 2026</span>
+              <span>•</span>
+              <span><i class="bi bi-clock"></i> 7 min read</span>
+              <span class="blog-card-tag">Interpreting</span>
+            </div>
+            <h2><a href="/blog/legal-interpreting-uk/">Legal Interpreting in the UK: What You Need to Know</a></h2>
+            <p>From Crown Court to NHS consultations — how professional legal interpreting works and why qualifications matter.</p>
+            <a href="/blog/legal-interpreting-uk/" class="blog-read-link">
+              Read More <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3: Standards -->
+        <article class="premium-blog-card" data-category="standards" data-title="Why Choosing a CIOL-Certified Linguist Matters" data-excerpt="Not all translators are equal. Learn what CIOL certification means and how to verify credentials.">
+          <div class="blog-card-image">
+            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&h=340&fit=crop&q=80" alt="CIOL Certification">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-card-meta">
+              <span><i class="bi bi-calendar"></i> Mar 2026</span>
+              <span>•</span>
+              <span><i class="bi bi-clock"></i> 6 min read</span>
+              <span class="blog-card-tag">Professional Standards</span>
+            </div>
+            <h2><a href="/blog/choosing-certified-translator/">Why Choosing a CIOL-Certified Linguist Matters</a></h2>
+            <p>Not all translators are equal. Learn what CIOL certification means and how to verify credentials.</p>
+            <a href="/blog/choosing-certified-translator/" class="blog-read-link">
+              Read More <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 4: Logo Story -->
+        <article class="premium-blog-card" data-category="brand" data-title="A Logo With Meaning: The Story Behind the Metaphrase Mark" data-excerpt="Three universal concepts — continuity, communication, and exchange — fused into one mark. Here is the full story.">
+          <div class="blog-card-image">
+            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&h=340&fit=crop&q=80" alt="Brand identity and logo design">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-card-meta">
+              <span><i class="bi bi-calendar"></i> May 2026</span>
+              <span>•</span>
+              <span><i class="bi bi-clock"></i> 6 min read</span>
+              <span class="blog-card-tag" style="background:rgba(201,168,76,0.12);color:#9a7a2e;border-color:rgba(201,168,76,0.3);">Brand &amp; Identity</span>
+            </div>
+            <h2><a href="/blog/logo-meaning/">A Logo With Meaning: The Story Behind the Metaphrase Mark</a></h2>
+            <p>Three universal concepts — continuity, communication, and exchange — fused into one mark. The full story of how and why.</p>
+            <a href="/blog/logo-meaning/" class="blog-read-link">
+              Read More <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="blog-sidebar">
+
+        <!-- Search Widget -->
+        <div class="sidebar-widget">
+          <h4>Search Articles</h4>
+          <div class="sidebar-search">
+            <input type="search" placeholder="Search..." id="sidebarSearch">
+            <button type="submit" aria-label="Search"><i class="bi bi-search"></i></button>
+          </div>
+        </div>
+
+        <!-- Categories Widget -->
+        <div class="sidebar-widget">
+          <h4>Categories</h4>
+          <div class="sidebar-cats">
+            <div class="sidebar-cat" data-filter="all">
+              <span>All Posts</span>
+              <span>3</span>
+            </div>
+            <div class="sidebar-cat" data-filter="certified-translation">
+              <span>Certified Translation</span>
+              <span>1</span>
+            </div>
+            <div class="sidebar-cat" data-filter="interpreting">
+              <span>Interpreting</span>
+              <span>1</span>
+            </div>
+            <div class="sidebar-cat" data-filter="standards">
+              <span>Professional Standards</span>
+              <span>1</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Posts Widget -->
+        <div class="sidebar-widget">
+          <h4>Recent Posts</h4>
+          <div class="sidebar-recent">
+            <div class="sidebar-recent-item">
+              <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=100&h=100&fit=crop&q=80" alt="">
+              <a href="/blog/certified-translation-guide/">The Complete Guide to Certified Translation in the UK (2026)</a>
+            </div>
+            <div class="sidebar-recent-item">
+              <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=100&h=100&fit=crop&q=80" alt="">
+              <a href="/blog/legal-interpreting-uk/">Legal Interpreting in the UK: What You Need to Know</a>
+            </div>
+            <div class="sidebar-recent-item">
+              <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=100&h=100&fit=crop&q=80" alt="">
+              <a href="/blog/choosing-certified-translator/">Why Choosing a CIOL-Certified Linguist Matters</a>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-name" style="color:#FFFFFF;font-family:var(--font-heading);font-size:1.375rem;font-weight:700;display:block;margin-bottom:16px;">Metaphrase Ltd</span>
+        <p>CIOL-certified translation, interpreting, and transcription services. Based in Birmingham, serving clients across the UK.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/kashifqdn/" target="_blank" rel="noopener" aria-label="LinkedIn" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.instagram.com/metaphraseltd/" target="_blank" rel="noopener" aria-label="Instagram" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/metaphraseltd/" target="_blank" rel="noopener" aria-label="Facebook" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="mailto:info@metaphrase.uk" aria-label="Email" class="email"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h5>Services</h5><ul>
+        <li><a href="/services/#certified-translation">Certified Translation</a></li>
+        <li><a href="/services/#interpreting">Professional Interpreting</a></li>
+        <li><a href="/services/#transcription">Media Transcription</a></li>
+        <li><a href="/services/#editing">Editing &amp; Proofreading</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Company</h5><ul>
+        <li><a href="/about/">About Us</a></li><li><a href="/blog/">Blog</a></li>
+        <li><a href="/#testimonials">Testimonials</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul>
+        <li><a href="tel:+447852408467">+44 7852 408 467</a></li>
+        <li><a href="https://wa.me/447852408467" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="mailto:info@metaphrase.uk">info@metaphrase.uk</a></li>
+        <li><a href="/contact/">Send a Message</a></li>
+        <li><a href="https://maps.app.goo.gl/nRmAKT7i17k8CCxAA" target="_blank" rel="noopener">Find Us on Google Maps</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Metaphrase Ltd. Registered in England &amp; Wales. ICO Registered.</p>
+      <p><a href="/privacy/">Privacy Policy</a> &middot; <a href="/terms/">Terms of Service</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<div id="whatsappFloat">
+  <a href="https://wa.me/447852408467" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+</div>
+
+<!-- Back to Top -->
+<button id="backToTop" aria-label="Back to top">
+  <i class="bi bi-chevron-up"></i>
+</button>
+
+<!-- Premium JS -->
+<script src="/assets/js/premium.js"></script>
+
+<!-- Blog-Specific JavaScript -->
+<script>
+  // Blog filter functionality
+  const sidebarSearch = document.getElementById('sidebarSearch');
+  const blogCards = document.querySelectorAll('.premium-blog-card');
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const sidebarCats = document.querySelectorAll('.sidebar-cat');
+
+  let currentFilter = 'all';
+  let currentSearch = '';
+
+  function filterCards() {
+    blogCards.forEach(card => {
+      const category = card.getAttribute('data-category');
+      const title = card.getAttribute('data-title').toLowerCase();
+      const excerpt = card.getAttribute('data-excerpt').toLowerCase();
+
+      const matchesCategory = currentFilter === 'all' || category === currentFilter;
+      const matchesSearch = currentSearch === '' || title.includes(currentSearch) || excerpt.includes(currentSearch);
+
+      if (matchesCategory && matchesSearch) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+
+  // Filter button clicks
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentFilter = btn.getAttribute('data-filter');
+      filterCards();
+    });
+  });
+
+  // Sidebar category clicks
+  sidebarCats.forEach(cat => {
+    cat.addEventListener('click', () => {
+      const filter = cat.getAttribute('data-filter');
+      filterBtns.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-filter') === filter) {
+          btn.classList.add('active');
+        }
+      });
+      currentFilter = filter;
+      filterCards();
+    });
+  });
+
+  // Sidebar search
+  if (sidebarSearch) {
+    sidebarSearch.addEventListener('input', () => {
+      currentSearch = sidebarSearch.value.toLowerCase();
+      filterCards();
+    });
+  }
+</script>
+
+</body>
+</html>

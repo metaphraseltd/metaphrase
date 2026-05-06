@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Metaphrase Ltd — CIOL-Certified Translation, Birmingham UK</title>
+  <meta name="description" content="Learn about Metaphrase Ltd — a Birmingham-based CIOL-certified translation and interpreting company. Expert in Urdu, Hindi, Punjabi, Italian, Arabic, Polish and more.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://metaphrase.uk/about/">
+  <meta property="og:title" content="About Metaphrase Ltd | CIOL-Certified Linguist — Birmingham, UK">
+  <meta property="og:url" content="https://metaphrase.uk/about/">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="Metaphrase Ltd">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/assets/css/premium.css">
+
+  <style>
+    /* ── 1. Hero: generous spacing ── */
+    .page-hero {
+      padding: 160px 0 88px;
+    }
+    .page-hero .eyebrow { margin-bottom: 20px; display: block; }
+    .page-hero h1 { margin-bottom: 24px; }
+    .page-hero p   { margin-bottom: 28px; }
+
+    /* ── 3. Globe & language animation ── */
+    @keyframes globe-float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50%      { transform: translateY(-7px) scale(1.12); }
+    }
+    @keyframes pair-fade {
+      0%   { opacity: 1; transform: translateY(0); }
+      40%  { opacity: 0; transform: translateY(-8px); }
+      60%  { opacity: 0; transform: translateY(8px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    #globeEmoji {
+      display: inline-block;
+      animation: globe-float 3s ease-in-out infinite;
+    }
+    .lang-pair-animating #langCard1,
+    .lang-pair-animating #langCard2 { animation: pair-fade 0.6s ease forwards; }
+
+    /* ── Story visual ── */
+    .story-visual {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a4a7f 100%);
+      border-radius: var(--radius-xl);
+      padding: 56px 40px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 24px; min-height: 380px;
+      box-shadow: var(--shadow-xl);
+    }
+    .story-lang-pair { display:flex; align-items:center; gap:20px; }
+    .story-lang-card {
+      background: rgba(255,255,255,0.1); border-radius: var(--radius-lg);
+      padding: 16px 24px; text-align:center;
+      transition: background 0.3s;
+    }
+    @keyframes lang-arrow-pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: 0.5; transform: scale(1.3); }
+    }
+    .lang-arrow { animation: lang-arrow-pulse 1.8s ease-in-out infinite; }
+
+    /* ── How We Work cards ── */
+    .how-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-xl); padding: 36px 32px;
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; gap: 16px;
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .how-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+    .how-card-icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent) 0%, #1a4a7f 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; color: var(--white);
+    }
+    .how-card h3 { font-size: 1.05rem; color: var(--text-dark); margin: 0; }
+    .how-card p  { color: var(--text-muted); line-height: 1.65; font-size: 0.925rem; margin: 0; }
+
+    /* ── 8. Credentials section ── */
+    .cred-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; margin-top: 0;
+    }
+    .cred-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-xl); padding: 32px 28px;
+      display: flex; flex-direction: column; gap: 14px;
+      transition: box-shadow 0.25s, transform 0.25s;
+      position: relative; overflow: hidden;
+    }
+    .cred-card::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 3px; background: linear-gradient(90deg, var(--accent), var(--gold));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.35s ease;
+    }
+    .cred-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+    .cred-card:hover::after { transform: scaleX(1); }
+    .cred-icon {
+      width: 52px; height: 52px; border-radius: 12px;
+      background: rgba(37,99,235,0.08); border: 1.5px solid rgba(37,99,235,0.18);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; color: var(--accent);
+    }
+    .cred-card h4 { font-size: 1rem; color: var(--navy); margin: 0; }
+    .cred-card p  { color: var(--text-muted); font-size: 0.875rem; line-height: 1.65; margin: 0; }
+    .cred-verify  {
+      font-size: 0.8rem; font-weight: 600; color: var(--accent);
+      text-decoration: none; display: inline-flex; align-items: center; gap: 5px;
+      margin-top: auto;
+    }
+    .cred-verify:hover { text-decoration: underline; }
+
+    /* ── Language grid ── */
+    .lang-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px; margin-top: 0;
+    }
+    .lang-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 18px 16px;
+      display: flex; flex-direction: column;
+      align-items: center; gap: 10px; text-align: center;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .lang-card:hover { border-color: var(--accent); box-shadow: 0 2px 12px rgba(37,99,235,0.1); }
+    .lang-card span   { font-size: 2.2rem; }
+    .lang-card strong { color: var(--text-dark); font-size: 0.875rem; line-height: 1.3; }
+    /* first card highlighted */
+    .lang-card-primary { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(37,99,235,0.15); }
+
+    /* ── Why Clients Trust: icon grid ── */
+    .trust-feature {
+      text-align: center;
+      padding: 32px 20px;
+      border-radius: var(--radius-xl);
+      border: 1px solid transparent;
+      transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s, background 0.25s;
+      cursor: default;
+    }
+    .trust-feature:hover {
+      background: var(--white);
+      border-color: rgba(37,99,235,0.15);
+      box-shadow: 0 8px 32px rgba(37,99,235,0.09);
+      transform: translateY(-5px);
+    }
+    .trust-feature-icon {
+      width: 60px; height: 60px; border-radius: 50%;
+      background: rgba(37,99,235,0.08); border: 1.5px solid rgba(37,99,235,0.18);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; color: var(--accent);
+      margin: 0 auto 18px;
+      transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.25s;
+    }
+    .trust-feature:hover .trust-feature-icon {
+      background: linear-gradient(135deg, var(--accent) 0%, #1a4a7f 100%);
+      color: var(--white);
+      border-color: transparent;
+      transform: scale(1.12) rotate(-4deg);
+    }
+    .trust-feature h4 { font-size: 1rem; color: var(--text-dark); margin-bottom: 10px; transition: color 0.2s; }
+    .trust-feature:hover h4 { color: var(--navy); }
+    .trust-feature p  { color: var(--text-muted); line-height: 1.6; font-size: 0.9rem; max-width: 260px; margin: 0 auto; }
+
+    /* ── Clients trust wall ── */
+    .trust-wall-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px; margin-top: 0;
+    }
+    .trust-wall-item {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 20px 16px;
+      display: flex; align-items: center; gap: 12px;
+      transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+    }
+    .trust-wall-item:hover {
+      border-color: var(--accent);
+      box-shadow: 0 6px 24px rgba(37,99,235,0.13);
+      transform: translateY(-3px);
+    }
+    .trust-wall-icon {
+      width: 36px; height: 36px; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--accent) 0%, #1a4a7f 100%);
+      border-radius: 8px; display: flex; align-items: center;
+      justify-content: center; color: var(--white); font-size: 1rem;
+      transition: transform 0.25s;
+    }
+    .trust-wall-item:hover .trust-wall-icon { transform: scale(1.15) rotate(-6deg); }
+    .trust-wall-item span {
+      font-size: 0.875rem; font-weight: 600;
+      color: var(--text-dark); line-height: 1.3;
+    }
+
+    /* ── 7. Boutique section — more personal, darker numbers ── */
+    .boutique-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 28px; margin-top: 0;
+    }
+    .boutique-card {
+      border: 1px solid var(--border); border-radius: var(--radius-xl);
+      padding: 40px 32px; background: var(--white);
+      position: relative; overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .boutique-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+    .boutique-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 3px; background: linear-gradient(90deg, var(--accent), var(--gold));
+    }
+    .boutique-card-num {
+      font-size: 2.75rem; font-weight: 800;
+      color: var(--accent);          /* ← was rgba(37,99,235,0.1) — now fully visible */
+      font-family: var(--font-heading); line-height: 1; margin-bottom: 20px;
+      opacity: 0.75;
+    }
+    .boutique-card h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 14px; }
+    .boutique-card p  { color: var(--text-muted); line-height: 1.75; font-size: 0.925rem; margin: 0; }
+
+    /* ── Logo Story Section ── */
+    .logo-story-section { position: relative; overflow: hidden; }
+    .logo-story-bg { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+    .logo-story-bg::before {
+      content: ''; position: absolute; width: 680px; height: 680px;
+      border-radius: 50%; top: -280px; right: -180px;
+      background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+    }
+    .logo-story-bg::after {
+      content: ''; position: absolute; width: 500px; height: 500px;
+      border-radius: 50%; bottom: -220px; left: -150px;
+      background: radial-gradient(circle, rgba(37,99,235,0.05) 0%, transparent 70%);
+    }
+
+    .logo-concept-row {
+      display: flex; align-items: center; justify-content: center;
+      gap: 16px; margin-top: 56px; flex-wrap: wrap;
+    }
+    .logo-concept-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px; padding: 36px 24px;
+      text-align: center; flex: 0 1 190px; min-width: 150px;
+      cursor: default; position: relative;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(15,35,64,0.06);
+    }
+    .logo-concept-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(37,99,235,0.04) 0%, rgba(201,168,76,0.05) 100%);
+      opacity: 0; transition: opacity 0.35s; border-radius: inherit;
+    }
+    .logo-concept-card:hover {
+      transform: translateY(-12px) scale(1.03);
+      border-color: rgba(201,168,76,0.5);
+      box-shadow: 0 24px 56px rgba(15,35,64,0.13), 0 0 0 1px rgba(201,168,76,0.2);
+    }
+    .logo-concept-card:hover::before { opacity: 1; }
+
+    .logo-concept-icon {
+      width: 72px; height: 72px;
+      background: rgba(37,99,235,0.08);
+      border: 1.5px solid rgba(37,99,235,0.18);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; font-size: 1.75rem;
+      color: var(--accent);
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative; z-index: 1;
+    }
+    .logo-concept-card:hover .logo-concept-icon {
+      background: linear-gradient(135deg, var(--accent) 0%, #C9A84C 100%);
+      border-color: transparent;
+      color: #fff;
+      box-shadow: 0 10px 32px rgba(201,168,76,0.35);
+      transform: scale(1.18) rotate(-10deg);
+    }
+    .logo-concept-label {
+      font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 8px;
+      position: relative; z-index: 1;
+    }
+    .logo-concept-title {
+      font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700;
+      color: var(--navy); margin-bottom: 12px; line-height: 1.2;
+      position: relative; z-index: 1;
+    }
+    .logo-concept-desc {
+      font-size: 0.82rem; color: var(--text-muted);
+      line-height: 1.65; position: relative; z-index: 1;
+      margin: 0;
+    }
+    .logo-concept-connector {
+      font-size: 2rem; font-weight: 300;
+      color: rgba(15,35,64,0.18); flex-shrink: 0;
+      user-select: none; line-height: 1;
+    }
+    .logo-concept-equals {
+      font-size: 2.4rem; font-weight: 300;
+      color: rgba(201,168,76,0.7); flex-shrink: 0;
+      user-select: none; line-height: 1;
+    }
+
+    /* Result card — the M */
+    .logo-result-card {
+      background: var(--white);
+      border: 1.5px solid rgba(201,168,76,0.35);
+      border-radius: 20px; padding: 36px 28px;
+      text-align: center; flex: 0 1 210px; min-width: 170px;
+      cursor: default; position: relative;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(201,168,76,0.1);
+    }
+    .logo-result-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(201,168,76,0.07) 0%, rgba(37,99,235,0.04) 100%);
+      opacity: 0; transition: opacity 0.35s; border-radius: inherit;
+    }
+    @keyframes result-shimmer {
+      0%   { left: -60%; }
+      100% { left: 160%; }
+    }
+    .logo-result-card::after {
+      content: ''; position: absolute;
+      top: 0; left: -60%; width: 50%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.1), transparent);
+      transform: skewX(-15deg); pointer-events: none;
+    }
+    .logo-result-card:hover {
+      transform: translateY(-12px) scale(1.05);
+      border-color: rgba(201,168,76,0.7);
+      box-shadow: 0 24px 60px rgba(15,35,64,0.12), 0 0 32px rgba(201,168,76,0.18), 0 0 0 1px rgba(201,168,76,0.35);
+    }
+    .logo-result-card:hover::before { opacity: 1; }
+    .logo-result-card:hover::after { animation: result-shimmer 0.7s ease forwards; }
+
+    .logo-result-m {
+      width: 76px; height: 76px; margin: 0 auto 20px; display: block;
+      filter: none;
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s;
+    }
+    .logo-result-card:hover .logo-result-m {
+      transform: scale(1.22) rotate(6deg);
+      filter: drop-shadow(0 4px 16px rgba(201,168,76,0.5));
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 1100px) {
+      .trust-wall-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .logo-concept-row { gap: 12px; }
+      .logo-concept-card, .logo-result-card { flex: 0 1 160px; min-width: 130px; padding: 28px 16px; }
+      .logo-concept-connector, .logo-concept-equals { font-size: 1.5rem; }
+    }
+    @media (max-width: 768px) {
+      .story-grid { grid-template-columns: 1fr !important; }
+      .story-visual { min-height: 260px; padding: 40px 24px; }
+      .how-grid { grid-template-columns: 1fr !important; }
+      .why-trust-grid { grid-template-columns: repeat(2, 1fr) !important; }
+      .boutique-grid { grid-template-columns: 1fr; }
+      .trust-wall-grid { grid-template-columns: repeat(2, 1fr); }
+      .cred-grid { grid-template-columns: 1fr; }
+      .logo-concept-row { flex-direction: column; align-items: center; gap: 8px; }
+      .logo-concept-card, .logo-result-card { flex: none; width: 100%; max-width: 320px; }
+      .logo-concept-connector, .logo-concept-equals { transform: rotate(90deg); font-size: 1.6rem; }
+    }
+    @media (max-width: 480px) {
+      .lang-grid { grid-template-columns: repeat(3, 1fr); }
+      .trust-wall-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header id="header">
+  <div class="container nav-container">
+    <a href="/" class="logo" aria-label="Metaphrase Ltd — Home">
+      <img src="/assets/img/metaphrase-logo-m.svg" alt="Metaphrase Ltd" class="logo-mark" width="44" height="44">
+      <div class="logo-text">
+        <span class="logo-name">Metaphrase</span>
+        <span class="logo-tagline">Certified. Precise. Trusted.</span>
+      </div>
+    </a>
+    <nav class="nav-menu" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/about/" class="active">About</a>
+      <a href="/services/">Services</a>
+      <a href="/blog/">Blog</a>
+      <div class="nav-dropdown">
+        <a href="#" aria-haspopup="true">Trust &amp; Legal <svg viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M6 8L1 3h10z"/></svg></a>
+        <div class="dropdown-menu" role="menu">
+          <a href="/privacy/" role="menuitem">Privacy Policy</a>
+          <a href="/terms/" role="menuitem">Terms of Service</a>
+          <a href="https://www.ciol.org.uk/member-check/profile/58240/25304" target="_blank" rel="noopener noreferrer" role="menuitem">CIOL Certification ↗</a>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta"><a href="/contact/" class="btn btn-primary">Request a Quote</a></div>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ── MOBILE NAV ── -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <a href="/services/">Services</a>
+  <a href="/blog/">Blog</a>
+  <a href="/privacy/">Privacy Policy</a>
+  <a href="/terms/">Terms of Service</a>
+  <a href="https://www.ciol.org.uk/member-check/profile/58240/25304" target="_blank" rel="noopener">CIOL Certification ↗</a>
+  <div class="mobile-nav-cta">
+    <a href="/contact/" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Request a Quote</a>
+    <a href="https://wa.me/447852408467" class="btn btn-whatsapp btn-lg" style="width:100%;justify-content:center;"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════
+     1. HERO — generous spacing around heading
+══════════════════════════════════════════════ -->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">About Metaphrase Ltd</span>
+    <h1>Expert Linguists.<br>Verifiable Credentials.</h1>
+    <p>CIOL-certified translation and interpreting — handled personally, trusted by the NHS, Ministry of Justice, and leading UK law firms.</p>
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span>›</span> <strong>About</strong>
+    </nav>
+  </div>
+</section>
+
+
+<main>
+
+<!-- ══════════════════════════════════════════════
+     2. OUR STORY
+══════════════════════════════════════════════ -->
+<section class="section" style="background:var(--white);">
+  <div class="container">
+    <div class="story-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
+
+      <div class="reveal">
+        <span class="eyebrow">Our Story</span>
+        <h2 class="section-heading" style="text-align:left; max-width:none;">Certified. Precise. Trusted.</h2>
+        <p style="font-size:1.0625rem; color:var(--text-dark); line-height:1.8; margin-bottom:20px;">
+          Metaphrase Ltd was founded on one belief: that professional translation is not a commodity — it is a craft. In legal hearings, NHS consultations, and immigration cases, a single mistranslation can change lives. Every project here is handled with that weight in mind.
+        </p>
+        <p style="font-size:1.0625rem; color:var(--text-dark); line-height:1.8; margin-bottom:32px;">
+          Based in Birmingham and serving clients across the UK, Metaphrase Ltd is a boutique service where every translation, interpretation, and transcription is personally handled by our CIOL-certified founder. No agency layers, no outsourcing — just direct, accountable expertise. ICO-registered, GDPR-compliant, and trusted by the Ministry of Justice, the NHS, and top UK law firms.
+        </p>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="/contact/" class="btn btn-primary">Start a Project</a>
+          <a href="https://www.ciol.org.uk/member-check/profile/58240/25304" target="_blank" rel="noopener" class="btn btn-secondary">Verify CIOL Status ↗</a>
+        </div>
+      </div>
+
+      <!-- 3. Animated globe + cycling language pairs -->
+      <div class="reveal reveal-delay-1">
+        <div class="story-visual">
+          <div id="globeEmoji" style="font-size:2.8rem;" aria-hidden="true">🌍</div>
+          <div class="story-lang-pair" id="langPairWrap">
+            <div class="story-lang-card" id="langCard1">
+              <div style="font-size:2rem;" id="langFlag1">🇬🇧</div>
+              <div style="color:var(--white); font-weight:700; margin-top:8px;" id="langName1">English</div>
+            </div>
+            <div class="lang-arrow" style="color:var(--gold-light); font-size:2rem;" aria-hidden="true">⇄</div>
+            <div class="story-lang-card" id="langCard2">
+              <div style="font-size:2rem;" id="langFlag2">🇵🇰</div>
+              <div style="color:var(--white); font-weight:700; margin-top:8px;" id="langName2">Urdu</div>
+            </div>
+          </div>
+          <!-- 2. Updated caption — no fixed number -->
+          <div style="text-align:center;">
+            <p style="color:rgba(255,255,255,0.55); font-size:0.875rem; margin:0;">All Required Languages · CIOL Certified · UK Based</p>
+          </div>
+          <div style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center; margin-top:8px;">
+            <div style="text-align:center;">
+              <div style="color:var(--white); font-size:1.5rem; font-weight:800; font-family:var(--font-heading);">10+</div>
+              <div style="color:rgba(255,255,255,0.6); font-size:0.8rem;">Years Experience</div>
+            </div>
+            <div style="width:1px; background:rgba(255,255,255,0.2);"></div>
+            <div style="text-align:center;">
+              <div style="color:var(--white); font-size:1.5rem; font-weight:800; font-family:var(--font-heading);">1,000+</div>
+              <div style="color:rgba(255,255,255,0.6); font-size:0.8rem;">Projects</div>
+            </div>
+            <div style="width:1px; background:rgba(255,255,255,0.2);"></div>
+            <div style="text-align:center;">
+              <div style="color:var(--white); font-size:1.5rem; font-weight:800; font-family:var(--font-heading);">100%</div>
+              <div style="color:rgba(255,255,255,0.6); font-size:0.8rem;">Acceptance Rate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     3. HOW WE WORK
+══════════════════════════════════════════════ -->
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <header class="section-header centered reveal">
+      <span class="eyebrow">Our Principles</span>
+      <h2 class="section-heading">How We Work</h2>
+      <p class="section-subheading">Three commitments that define every project — from a one-page certificate to a week-long court assignment.</p>
+    </header>
+    <div class="how-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:0;">
+
+      <div class="how-card reveal reveal-delay-1">
+        <div class="how-card-icon"><i class="bi bi-award-fill" aria-hidden="true"></i></div>
+        <h3>Certified Excellence</h3>
+        <p>CIOL certification is not just a credential — it is a daily standard. Every piece of work is held to the benchmark that UK courts and government bodies recognise.</p>
+      </div>
+
+      <div class="how-card reveal reveal-delay-2">
+        <div class="how-card-icon"><i class="bi bi-shield-lock-fill" aria-hidden="true"></i></div>
+        <h3>Absolute Confidentiality</h3>
+        <p>Legal files, medical records, personal certificates — handled under strict ICO registration and GDPR compliance. Documents are deleted after delivery.</p>
+      </div>
+
+      <div class="how-card reveal reveal-delay-3">
+        <div class="how-card-icon"><i class="bi bi-person-check-fill" aria-hidden="true"></i></div>
+        <h3>Personal Accountability</h3>
+        <p>No outsourcing. No agency layers. You know exactly who handles your project — and they are directly reachable at every stage.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     8. CREDENTIALS YOU CAN VERIFY (replaces Founder)
+══════════════════════════════════════════════ -->
+<section class="section" style="background:var(--white);" id="credentials">
+  <div class="container">
+    <header class="section-header centered reveal">
+      <span class="eyebrow">Verified Expertise</span>
+      <h2 class="section-heading">Credentials You Can Check</h2>
+      <p class="section-subheading">Every credential we list is publicly verifiable. We believe trust must be earned — and proven.</p>
+    </header>
+
+    <div class="cred-grid">
+
+      <div class="cred-card reveal reveal-delay-1">
+        <div class="cred-icon"><i class="bi bi-patch-check-fill" aria-hidden="true"></i></div>
+        <h4>CIOL Full Membership (MCIL)</h4>
+        <p>Kashif holds full Member of the Chartered Institute of Linguists status — the UK's highest professional benchmark for translators and interpreters. Obtained through rigorous examination, not self-declaration.</p>
+        <a href="https://www.ciol.org.uk/member-check/profile/58240/25304" target="_blank" rel="noopener" class="cred-verify">
+          <i class="bi bi-box-arrow-up-right"></i> Verify on CIOL website
+        </a>
+      </div>
+
+      <div class="cred-card reveal reveal-delay-2">
+        <div class="cred-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></div>
+        <h4>ICO Registered — GDPR Compliant</h4>
+        <p>Metaphrase Ltd is registered with the Information Commissioner's Office. Every document you share is handled under UK GDPR — stored securely, never shared with third parties, and permanently deleted after project completion.</p>
+        <a href="https://ico.org.uk/ESDWebPages/Entry/ZB392264" target="_blank" rel="noopener" class="cred-verify">
+          <i class="bi bi-box-arrow-up-right"></i> Verify ICO registration
+        </a>
+      </div>
+
+      <div class="cred-card reveal reveal-delay-3">
+        <div class="cred-icon"><i class="bi bi-bank" aria-hidden="true"></i></div>
+        <h4>Ministry of Justice Approved</h4>
+        <p>Kashif has worked directly with the Ministry of Justice, Crown Courts, Magistrates' Courts, and Tribunals across the UK. Translations and interpretations accepted without challenge — every time.</p>
+        <span class="cred-verify" style="cursor:default; color:var(--green);">
+          <i class="bi bi-check-circle-fill"></i> 100% acceptance rate
+        </span>
+      </div>
+
+      <div class="cred-card reveal reveal-delay-1">
+        <div class="cred-icon"><i class="bi bi-heart-pulse-fill" aria-hidden="true"></i></div>
+        <h4>NHS &amp; Medical Sector Experience</h4>
+        <p>Over a decade of interpreting for NHS clinical consultations, mental health assessments, and hospital appointments. Trusted by clinicians who require precision and patient confidentiality without compromise.</p>
+        <span class="cred-verify" style="cursor:default; color:var(--text-muted);">
+          <i class="bi bi-calendar3"></i> 10+ years NHS experience
+        </span>
+      </div>
+
+      <div class="cred-card reveal reveal-delay-2">
+        <div class="cred-icon"><i class="bi bi-building-fill" aria-hidden="true"></i></div>
+        <h4>Home Office &amp; UKVI Accepted</h4>
+        <p>All certified translations produced by Metaphrase Ltd meet the Home Office and UK Visas &amp; Immigration acceptance criteria. Proper certificate of accuracy, full translator details — nothing missing, nothing rejected.</p>
+        <a href="/blog/certified-translation-guide/" class="cred-verify">
+          <i class="bi bi-book"></i> What makes a translation accepted?
+        </a>
+      </div>
+
+      <div class="cred-card reveal reveal-delay-3">
+        <div class="cred-icon"><i class="bi bi-linkedin" aria-hidden="true"></i></div>
+        <h4>40+ Verified Recommendations</h4>
+        <p>Over 40 written recommendations from solicitors, NHS clinicians, government clients, and international agencies — published publicly on LinkedIn. Not reviews on a company-controlled platform, but independently hosted professional endorsements.</p>
+        <a href="https://www.linkedin.com/in/kashifkhalidmcil/details/recommendations" target="_blank" rel="noopener" class="cred-verify">
+          <i class="bi bi-box-arrow-up-right"></i> Read on LinkedIn
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     5. LANGUAGES — all visible, no toggle
+══════════════════════════════════════════════ -->
+<section class="section" style="background:var(--off-white);" id="languages">
+  <div class="container">
+    <header class="section-header centered reveal">
+      <span class="eyebrow">Language Expertise</span>
+      <h2 class="section-heading">Languages We Cover</h2>
+      <p class="section-subheading">Native-level fluency and CIOL-certified accuracy across the UK's most in-demand language communities.</p>
+    </header>
+
+    <div class="lang-grid reveal" id="langGrid">
+      <div class="lang-card lang-card-primary"><span>🇮🇳</span><strong>Hindi</strong></div>
+      <div class="lang-card"><span>🇵🇰</span><strong>Urdu</strong></div>
+      <div class="lang-card"><span>🇵🇰</span><strong>Punjabi</strong></div>
+      <div class="lang-card"><span>🇮🇹</span><strong>Italian</strong></div>
+      <div class="lang-card"><span>🇸🇦</span><strong>Arabic</strong></div>
+      <div class="lang-card"><span>🇵🇱</span><strong>Polish</strong></div>
+      <div class="lang-card"><span>🇷🇴</span><strong>Romanian</strong></div>
+      <div class="lang-card"><span>🇦🇫</span><strong>Pashto</strong></div>
+      <div class="lang-card"><span>🇮🇷</span><strong>Farsi (Persian)</strong></div>
+      <div class="lang-card"><span>🇸🇴</span><strong>Somali</strong></div>
+      <div class="lang-card"><span>🇧🇩</span><strong>Bengali</strong></div>
+      <div class="lang-card"><span>🇹🇷</span><strong>Turkish</strong></div>
+      <div class="lang-card"><span>🇦🇱</span><strong>Albanian</strong></div>
+      <div class="lang-card"><span>🇪🇹</span><strong>Amharic</strong></div>
+      <div class="lang-card"><span>🇧🇬</span><strong>Bulgarian</strong></div>
+      <div class="lang-card"><span>🇨🇳</span><strong>Chinese (Mandarin)</strong></div>
+      <div class="lang-card"><span>🇨🇿</span><strong>Czech</strong></div>
+      <div class="lang-card"><span>🇫🇷</span><strong>French</strong></div>
+      <div class="lang-card"><span>🇩🇪</span><strong>German</strong></div>
+      <div class="lang-card"><span>🇮🇳</span><strong>Gujarati</strong></div>
+      <div class="lang-card"><span>🇭🇺</span><strong>Hungarian</strong></div>
+      <div class="lang-card"><span>🏳️</span><strong>Kurdish (Kurmanji / Sorani)</strong></div>
+      <div class="lang-card"><span>🇱🇹</span><strong>Lithuanian</strong></div>
+      <div class="lang-card"><span>🇵🇹</span><strong>Portuguese</strong></div>
+      <div class="lang-card"><span>🇷🇺</span><strong>Russian</strong></div>
+      <div class="lang-card"><span>🇸🇰</span><strong>Slovak</strong></div>
+      <div class="lang-card"><span>🇪🇸</span><strong>Spanish</strong></div>
+      <div class="lang-card"><span>🇮🇳</span><strong>Tamil</strong></div>
+      <div class="lang-card"><span>🇺🇦</span><strong>Ukrainian</strong></div>
+      <div class="lang-card"><span>🇻🇳</span><strong>Vietnamese</strong></div>
+    </div>
+
+    <!-- 5. Updated note — no toggle, request CTA -->
+    <p style="text-align:center; margin-top:28px; color:var(--text-muted); font-size:0.9rem; line-height:1.7;">
+      <i class="bi bi-info-circle" style="color:var(--accent); margin-right:5px;"></i>
+      Can't see the language you need?
+      <a href="/contact/" style="color:var(--accent); font-weight:600;">Request it here</a>
+      — we cover all required languages and work with a trusted network of specialist linguists for rare pairs.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     6. WHY CLIENTS TRUST METAPHRASE
+══════════════════════════════════════════════ -->
+<section class="section" style="background:var(--white);">
+  <div class="container">
+    <header class="section-header centered reveal">
+      <span class="eyebrow">Why Choose Metaphrase</span>
+      <h2 class="section-heading">Why Clients Trust Metaphrase</h2>
+      <p class="section-subheading">Six reasons our clients return — and recommend us to colleagues.</p>
+    </header>
+
+    <div class="why-trust-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:40px; margin-top:0;">
+
+      <div class="trust-feature reveal reveal-delay-1">
+        <div class="trust-feature-icon"><i class="bi bi-person-hearts" aria-hidden="true"></i></div>
+        <h4>Native Linguists</h4>
+        <p>Only linguists who speak the target language as their mother tongue — cultural nuance and authenticity are guaranteed, not approximate.</p>
+      </div>
+
+      <div class="trust-feature reveal reveal-delay-2">
+        <div class="trust-feature-icon"><i class="bi bi-check-circle-fill" aria-hidden="true"></i></div>
+        <h4>100% Acceptance Record</h4>
+        <p>Every certified translation meets Home Office, UKVI, court, and university requirements. If rejected for our error, we redo at no charge.</p>
+      </div>
+
+      <div class="trust-feature reveal reveal-delay-3">
+        <div class="trust-feature-icon"><i class="bi bi-lightning-fill" aria-hidden="true"></i></div>
+        <h4>Fast Turnaround</h4>
+        <p>Standard delivery within 24–48 hours. Same-day available for urgent documents. Rush services without compromising quality.</p>
+      </div>
+
+      <div class="trust-feature reveal reveal-delay-1">
+        <div class="trust-feature-icon"><i class="bi bi-shield-lock-fill" aria-hidden="true"></i></div>
+        <h4>Strict Confidentiality</h4>
+        <p>ICO-registered, GDPR-compliant. Legal files and medical records handled with the highest privacy standards. Documents deleted post-delivery.</p>
+      </div>
+
+      <div class="trust-feature reveal reveal-delay-2">
+        <div class="trust-feature-icon"><i class="bi bi-currency-pound" aria-hidden="true"></i></div>
+        <h4>Transparent Pricing</h4>
+        <p>Clear, itemised quotes before any work begins. No hidden fees, no surprises — you know exactly what you are paying, upfront.</p>
+      </div>
+
+      <div class="trust-feature reveal reveal-delay-3">
+        <div class="trust-feature-icon"><i class="bi bi-patch-check-fill" aria-hidden="true"></i></div>
+        <h4>Verifiable Credentials</h4>
+        <p>CIOL membership is publicly searchable. Any client can verify our certification directly on the CIOL website — full transparency, always.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     7. CLIENTS WE WORK WITH — 6-column, 3 full rows
+══════════════════════════════════════════════ -->
+<section class="section" style="background:var(--off-white);" id="clients">
+  <div class="container">
+    <header class="section-header centered reveal">
+      <span class="eyebrow">Trusted Partners</span>
+      <h2 class="section-heading">Clients We Work With</h2>
+      <p class="section-subheading">From government institutions to private law firms — trusted across the UK's most demanding sectors.</p>
+    </header>
+
+    <div class="trust-wall-grid reveal">
+      <!-- Row 1 -->
+      <div class="trust-wall-item">
+        <div class="trust-wall-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+        <span>NHS</span>
+      </div>
+      <div class="trust-wall-item">
+        <div class="trust-wall-icon"><i class="bi bi-bank"></i></div>
+        <span>Ministry of Justice</span>
+      </div>
+      <div class="trust-wall-item">
+        <div class="trust-wall-icon"><i class="bi bi-shield-fill"></i></div>
+        <span>West Midlands Police</span>
+      </div>
+      <div class="trust-wall-item">
+        <div class="trust-wall-icon"><i class="bi bi-briefcase-fill"></i></div>
+        <span>Solicitors &amp; Law Firms</span>
+      </div>
+      <div class="trust-wall-item">
+        <div class="trust-wall-icon"><i class="bi bi-building"></i></div>
+        <span>Home Office</span>
+      </div>
+      <div class="trust-wall-item">
+        <div class="trust-wall-icon"><i class="bi bi-columns-gap"></i></div>
+        <span>Crown Court</span>
+      </div>
+      <!-- Row 2 -->
+      <div class="trust-wall-item">
+        <div class="trust-wall-icon"><i class="bi bi-columns-gap"></i></div>
+        <span>Magistrates' Court</span>
+      </div>
+      <div class="trust-wall-item">
+        <div class="trust-wall-icon"><i class="bi bi-file-text-fill"></i></div>
+        <span>Tribunals</span>
+      </div>
+      <div class="trust-wall-item">
+        <div class="trust-wall-icon"><i class="bi bi-people-fill"></i></div>
+        <span>CAFCASS</span>
+      </div>
+      <div class="trust-wall-item">
+        <div class="trust-wall-icon"><i class="bi bi-house-fill"></i></div>
+        <span>Local Councils</span>
+      </div>
+      <div class="trust-wall-item">
+        <div class="trust-wall-icon"><i class="bi bi-person-fill"></i></div>
+        <span>Social Services</span>
+      </div>
+      <div class="trust-wall-item">
+        <div class="trust-wall-icon"><i class="bi bi-mortarboard-fill"></i></div>
+        <span>Schools &amp; Academies</span>
+      </div>
+      <!-- Row 3 — now complete with 6 -->
+      <div class="trust-wall-item">
+        <div class="trust-wall-icon"><i class="bi bi-graph-up"></i></div>
+        <span>Insurance Companies</span>
+      </div>
+      <div class="trust-wall-item">
+        <div class="trust-wall-icon"><i class="bi bi-chat-square-dots-fill"></i></div>
+        <span>Mediation Services</span>
+      </div>
+      <div class="trust-wall-item">
+        <div class="trust-wall-icon"><i class="bi bi-globe2"></i></div>
+        <span>Language Agencies</span>
+      </div>
+      <div class="trust-wall-item">
+        <div class="trust-wall-icon"><i class="bi bi-patch-check-fill"></i></div>
+        <span>CIOL Members</span>
+      </div>
+      <div class="trust-wall-item">
+        <div class="trust-wall-icon"><i class="bi bi-person-badge-fill"></i></div>
+        <span>Probation Service</span>
+      </div>
+      <div class="trust-wall-item">
+        <div class="trust-wall-icon"><i class="bi bi-building-fill"></i></div>
+        <span>Universities &amp; Colleges</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ══════════════════════════════════════════════
+     LOGO STORY — The thinking behind the mark
+══════════════════════════════════════════════ -->
+<section class="section logo-story-section" style="background: var(--off-white);">
+  <div class="logo-story-bg" aria-hidden="true"></div>
+  <div class="container" style="position:relative; z-index:1;">
+
+    <header class="section-header centered reveal" style="margin-bottom:0;">
+      <span class="eyebrow">The Mark Behind the Name</span>
+      <h2 class="section-heading">A Logo With Meaning</h2>
+      <p class="section-subheading" style="max-width:600px; margin:0 auto;">Every element of the Metaphrase mark was designed deliberately. Three universal concepts — fused into a single symbol that represents exactly what we do, and how we do it.</p>
+    </header>
+
+    <div class="logo-concept-row">
+
+      <!-- 1. Continuity -->
+      <div class="logo-concept-card reveal reveal-delay-1">
+        <div class="logo-concept-icon">
+          <i class="bi bi-infinity" aria-hidden="true"></i>
+        </div>
+        <div class="logo-concept-label">Element 01</div>
+        <div class="logo-concept-title">Continuity</div>
+        <p class="logo-concept-desc">Meaning flows without interruption — across languages, borders, and cultures. Nothing is lost in translation here.</p>
+      </div>
+
+      <!-- + -->
+      <div class="logo-concept-connector reveal" aria-hidden="true">+</div>
+
+      <!-- 2. Communication -->
+      <div class="logo-concept-card reveal reveal-delay-2">
+        <div class="logo-concept-icon">
+          <i class="bi bi-chat-quote-fill" aria-hidden="true"></i>
+        </div>
+        <div class="logo-concept-label">Element 02</div>
+        <div class="logo-concept-title">Communication</div>
+        <p class="logo-concept-desc">Languages connect people. Every word we translate bridges a real gap between two worlds and two lives.</p>
+      </div>
+
+      <!-- + -->
+      <div class="logo-concept-connector reveal" aria-hidden="true">+</div>
+
+      <!-- 3. Exchange -->
+      <div class="logo-concept-card reveal reveal-delay-3">
+        <div class="logo-concept-icon">
+          <i class="bi bi-arrow-left-right" aria-hidden="true"></i>
+        </div>
+        <div class="logo-concept-label">Element 03</div>
+        <div class="logo-concept-title">Exchange</div>
+        <p class="logo-concept-desc">Translation is not replacement — it is a careful, respectful exchange. Preserving meaning and intent, not merely words.</p>
+      </div>
+
+      <!-- = -->
+      <div class="logo-concept-equals reveal" aria-hidden="true">=</div>
+
+      <!-- Result: M mark -->
+      <div class="logo-result-card reveal reveal-delay-1">
+        <img src="/assets/img/metaphrase-logo-m.svg" alt="Metaphrase M mark" class="logo-result-m" width="76" height="76">
+        <div class="logo-concept-label">The Result</div>
+        <div class="logo-concept-title">Metaphrase</div>
+        <p class="logo-concept-desc">One mark encoding the act of translating meaning — precisely, continuously, and with purpose.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+
+<!-- ══════════════════════════════════════════════
+     FINAL CTA
+══════════════════════════════════════════════ -->
+<section class="cta-band" aria-labelledby="about-cta-heading">
+  <div class="container">
+    <h2 id="about-cta-heading">Ready to Work with a CIOL-Certified Expert?</h2>
+    <p>Get a free, no-obligation quote. Trusted by the NHS, Ministry of Justice, and top UK law firms.</p>
+    <div class="cta-band-actions">
+      <a href="/contact/" class="btn btn-primary btn-lg">
+        <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+        Get a Free Quote
+      </a>
+      <a href="https://wa.me/447852408467" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── FOOTER ── -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-name" style="color:#FFFFFF;font-family:var(--font-heading);font-size:1.375rem;font-weight:700;display:block;margin-bottom:16px;">Metaphrase Ltd</span>
+        <p>CIOL-certified translation, interpreting, and transcription services for legal, medical, and business sectors. Based in Birmingham, serving clients across the UK.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/kashifkhalidmcil/" target="_blank" rel="noopener" aria-label="LinkedIn" class="linkedin"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/metaphraseltd/" target="_blank" rel="noopener" aria-label="Instagram" class="instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/metaphraseltd/" target="_blank" rel="noopener" aria-label="Facebook" class="facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+          <a href="mailto:info@metaphrase.uk" aria-label="Email us" class="email"><i class="bi bi-envelope-fill" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="/services/#certified-translation">Certified Translation</a></li>
+          <li><a href="/services/#interpreting">Professional Interpreting</a></li>
+          <li><a href="/services/#transcription">Media Transcription</a></li>
+          <li><a href="/services/#editing">Editing &amp; Proofreading</a></li>
+          <li><a href="/services/#subtitling">Video Subtitling</a></li>
+          <li><a href="/services/#localisation">Content Localisation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#testimonials">Testimonials</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+          <li><a href="https://www.ciol.org.uk/member-check/profile/58240/25304" target="_blank" rel="noopener">CIOL Verification ↗</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+447852408467">+44 7852 408 467</a></li>
+          <li><a href="https://wa.me/447852408467" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:info@metaphrase.uk">info@metaphrase.uk</a></li>
+          <li><a href="/contact/">Send a Message</a></li>
+          <li><a href="https://maps.app.goo.gl/nRmAKT7i17k8CCxAA" target="_blank" rel="noopener">Find Us on Google Maps</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Metaphrase Ltd. Registered in England &amp; Wales. ICO Registered.</p>
+      <p><a href="/privacy/">Privacy Policy</a> &middot; <a href="/terms/">Terms of Service</a></p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ── FLOATING WHATSAPP ── -->
+<div class="whatsapp-float" role="complementary" aria-label="WhatsApp contact">
+  <span class="whatsapp-tooltip">Chat with us now!</span>
+  <a href="https://wa.me/447852408467" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+    <i class="bi bi-whatsapp" aria-hidden="true"></i>
+  </a>
+</div>
+
+<div class="back-to-top" id="backToTop" aria-label="Back to top">
+  <button aria-label="Scroll back to top"><i class="bi bi-chevron-up" aria-hidden="true"></i></button>
+</div>
+
+<script src="/assets/js/premium.js" defer></script>
+<script>
+/* ── 3. Globe rotation + cycling language pairs ── */
+(function () {
+  var globes = ['🌍', '🌎', '🌏'];
+  var gi = 0;
+  var globeEl = document.getElementById('globeEmoji');
+
+  var pairs = [
+    ['🇬🇧', 'English', '🇵🇰', 'Urdu'],
+    ['🇬🇧', 'English', '🇮🇳', 'Hindi'],
+    ['🇬🇧', 'English', '🇵🇰', 'Punjabi'],
+    ['🇬🇧', 'English', '🇮🇹', 'Italian'],
+    ['🇬🇧', 'English', '🇸🇦', 'Arabic'],
+    ['🇬🇧', 'English', '🇵🇱', 'Polish'],
+    ['🇬🇧', 'English', '🇷🇴', 'Romanian'],
+    ['🇬🇧', 'English', '🇦🇫', 'Pashto'],
+    ['🇬🇧', 'English', '🇸🇴', 'Somali'],
+    ['🇬🇧', 'English', '🇧🇩', 'Bengali'],
+    ['🇬🇧', 'English', '🇹🇷', 'Turkish'],
+    ['🇬🇧', 'English', '🇫🇷', 'French'],
+    ['🇬🇧', 'English', '🇩🇪', 'German'],
+    ['🇬🇧', 'English', '🇪🇸', 'Spanish'],
+  ];
+  var pi = 0;
+
+  var flag1  = document.getElementById('langFlag1');
+  var name1  = document.getElementById('langName1');
+  var flag2  = document.getElementById('langFlag2');
+  var name2  = document.getElementById('langName2');
+  var card1  = document.getElementById('langCard1');
+  var card2  = document.getElementById('langCard2');
+
+  if (!globeEl || !flag1) return;
+
+  /* Rotate globe emoji */
+  setInterval(function () {
+    gi = (gi + 1) % globes.length;
+    globeEl.textContent = globes[gi];
+  }, 900);
+
+  /* Cycle language pairs with fade */
+  function nextPair() {
+    pi = (pi + 1) % pairs.length;
+    var p = pairs[pi];
+
+    /* fade out */
+    card1.style.transition = 'opacity 0.3s';
+    card2.style.transition = 'opacity 0.3s';
+    card1.style.opacity = '0';
+    card2.style.opacity = '0';
+
+    setTimeout(function () {
+      flag1.textContent = p[0];
+      name1.textContent = p[1];
+      flag2.textContent = p[2];
+      name2.textContent = p[3];
+      /* fade in */
+      card1.style.opacity = '1';
+      card2.style.opacity = '1';
+    }, 320);
+  }
+
+  setInterval(nextPair, 2800);
+})();
+</script>
+</body>
+</html>
