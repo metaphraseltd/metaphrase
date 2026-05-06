@@ -184,7 +184,7 @@ p { color: var(--text-body); }
 }
 .logo-text {
   display: flex; flex-direction: row;
-  align-items: baseline; gap: 0;
+  align-items: center; gap: 0;
 }
 .logo-name {
   font-family: var(--font-heading);
@@ -208,6 +208,8 @@ p { color: var(--text-body); }
   white-space: nowrap;
   padding-left: 14px;
   position: relative;
+  /* Optical correction: Inter sits lower than Playfair Display in same em-box */
+  transform: translateY(-3px);
 }
 /* Separator — anchored to baseline so it aligns with the text */
 .logo-tagline::before {
