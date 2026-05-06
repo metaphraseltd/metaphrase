@@ -183,7 +183,7 @@ p { color: var(--text-body); }
 }
 .logo-text {
   display: flex; flex-direction: row;
-  align-items: center; gap: 0;
+  align-items: baseline; gap: 0;
 }
 .logo-name {
   font-family: var(--font-heading);
@@ -207,18 +207,14 @@ p { color: var(--text-body); }
   white-space: nowrap;
   padding-left: 14px;
   position: relative;
-  /* Force equal box height to logo-name so flex centering is optically accurate */
-  display: inline-flex;
-  align-items: center;
-  height: 1.5rem;
 }
-/* Fixed-height separator — stays centred regardless of font sizes */
+/* Separator — anchored to baseline so it aligns with the text */
 .logo-tagline::before {
   content: '';
   position: absolute;
-  left: 0; top: 50%;
-  transform: translateY(-50%);
-  width: 1px; height: 18px;
+  left: 0;
+  bottom: -0.1em;
+  width: 1px; height: 1.6em;
   background: currentColor;
   opacity: 0.45;
 }
