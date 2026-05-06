@@ -175,6 +175,7 @@ p { color: var(--text-body); }
 /* ── LOGO ── */
 .logo {
   display: flex; align-items: center; gap: 14px; flex-shrink: 0; text-decoration: none;
+  align-self: center; /* isolate from nav-container baseline propagation */
 }
 .logo-mark {
   width: 64px; height: 64px; flex-shrink: 0;
@@ -243,6 +244,7 @@ p { color: var(--text-body); }
 .nav-menu {
   display: flex; align-items: center; gap: 4px;
   flex: 1; justify-content: center;
+  align-self: center; /* match logo's explicit centering */
 }
 .nav-menu a {
   font-size: 0.975rem; font-weight: 500;
