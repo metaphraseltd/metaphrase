@@ -169,22 +169,27 @@ p { color: var(--text-body); }
 #header.header-solid.scrolled { padding: 12px 0; box-shadow: 0 1px 0 var(--border), 0 4px 20px rgba(15,35,64,0.06); }
 
 #header .nav-container {
-  display: flex; align-items: center; justify-content: space-between; gap: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  height: 64px; /* fixed reference height — everything centres within this */
 }
 
 /* ── LOGO ── */
 .logo {
   display: flex; align-items: center; gap: 14px; flex-shrink: 0; text-decoration: none;
-  align-self: center; /* isolate from nav-container baseline propagation */
+  height: 100%;
 }
 .logo-mark {
   width: 64px; height: 64px; flex-shrink: 0;
-  display: block; align-self: center;
+  display: block;
   transition: filter var(--duration) var(--ease);
 }
 .logo-text {
   display: flex; flex-direction: row;
   align-items: center; gap: 0;
+  height: 100%;
 }
 .logo-name {
   font-family: var(--font-heading);
@@ -192,7 +197,7 @@ p { color: var(--text-body); }
   font-weight: 700;
   color: var(--navy);
   letter-spacing: 0.04em;
-  line-height: 1;
+  line-height: 64px; /* match container height so text centres perfectly */
   transition: color var(--duration) var(--ease);
   white-space: nowrap;
   padding-right: 14px;
@@ -203,21 +208,19 @@ p { color: var(--text-body); }
   color: var(--text-muted);
   letter-spacing: 0.13em;
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 64px; /* same fixed line-height — centres in the 64px column */
   transition: color var(--duration) var(--ease);
   white-space: nowrap;
   padding-left: 14px;
   position: relative;
-  /* Optical correction: Inter sits lower than Playfair Display in same em-box */
-  transform: translateY(-3px);
 }
-/* Separator — anchored to baseline so it aligns with the text */
+/* Separator — centred in the 64px column */
 .logo-tagline::before {
   content: '';
   position: absolute;
-  left: 0;
-  bottom: -0.1em;
-  width: 1px; height: 1.6em;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 1px; height: 18px;
   background: currentColor;
   opacity: 0.45;
 }
@@ -246,7 +249,6 @@ p { color: var(--text-body); }
 .nav-menu {
   display: flex; align-items: center; gap: 4px;
   flex: 1; justify-content: center;
-  align-self: center; /* match logo's explicit centering */
 }
 .nav-menu a {
   font-size: 0.975rem; font-weight: 500;
