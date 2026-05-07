@@ -231,8 +231,12 @@
 
     /* ─── Responsiveness ─────────────────────────────── */
     @media (max-width: 768px) {
-      .s01-grid, .s02-grid { grid-template-columns: 1fr !important; }
+      .s01-grid, .s02-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
       .docs-grid { grid-template-columns: repeat(2,1fr) !important; }
+      /* Fix 9 & 10: prevent cards and inner containers cutting off on right edge */
+      .s01-grid > *, .s02-grid > * { max-width: 100%; overflow: hidden; }
+      .s02-grid [style*="padding:36px"] { padding: 20px !important; }
+      .s01-grid [style*="padding:36px"] { padding: 20px !important; }
     }
   </style>
 </head>
@@ -257,9 +261,7 @@
         <a href="#" aria-haspopup="true">Trust &amp; Legal <svg viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M6 8L1 3h10z"/></svg></a>
         <div class="dropdown-menu" role="menu">
           <a href="/privacy/" role="menuitem">Privacy Policy</a>
-          <a href="/terms/" role="menuitem">Terms of Service</a>
-          <a href="https://www.ciol.org.uk/member-check/profile/58240/25304" target="_blank" rel="noopener noreferrer" role="menuitem">CIOL Certification ↗</a>
-        </div>
+          <a href="/terms/" role="menuitem">Terms of Service</a>        </div>
       </div>
     </nav>
     <div class="nav-cta"><a href="/contact/" class="btn btn-primary">Request a Quote</a></div>
@@ -277,9 +279,7 @@
   <a href="/blog/">Blog</a>
   <a href="/contact/">Contact</a>
   <a href="/privacy/">Privacy Policy</a>
-  <a href="/terms/">Terms of Service</a>
-  <a href="https://www.ciol.org.uk/member-check/profile/58240/25304" target="_blank" rel="noopener">CIOL Certification ↗</a>
-  <div class="mobile-nav-cta">
+  <a href="/terms/">Terms of Service</a>  <div class="mobile-nav-cta">
     <a href="/contact/" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Request a Quote</a>
     <a href="https://wa.me/447852408467" class="btn btn-whatsapp btn-lg" style="width:100%;justify-content:center;"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
   </div>

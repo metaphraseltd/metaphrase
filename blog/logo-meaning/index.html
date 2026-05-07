@@ -266,6 +266,11 @@
     .post-body strong { font-weight: 700; color: var(--navy); }
     .post-body a { color: var(--accent); text-decoration: underline; }
     .post-body a:hover { color: var(--navy); }
+    /* Fix 13: Gold button text must be white even inside post-body */
+    .post-body .btn-gold,
+    .post-body a.btn-gold,
+    .post-body .btn-gold:hover,
+    .post-body a.btn-gold:hover { color: #ffffff !important; text-decoration: none !important; }
 
     /* Callout */
     .blog-callout {
@@ -491,7 +496,7 @@
       .related-posts-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 640px) {
-      .post-hero { padding: 64px 0 80px; }
+      .post-hero { padding: 110px 0 60px; } /* Fix 12: clear fixed header */
       .post-featured-wrap { margin-top: -32px; }
       .post-featured-wrap img { height: 220px; border-radius: 12px; }
       .post-mid-cta { padding: 28px 24px; }

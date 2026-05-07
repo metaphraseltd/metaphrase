@@ -423,7 +423,7 @@ p { color: var(--text-body); }
 .trust-bar { background: var(--off-white); padding: 28px 0; border-bottom: 1px solid var(--border); }
 .trust-bar-inner {
   display: flex; align-items: center; justify-content: center;
-  gap: 10px; flex-wrap: nowrap; overflow-x: auto;
+  gap: 10px; flex-wrap: wrap; overflow-x: auto;
   scrollbar-width: none; -webkit-overflow-scrolling: touch;
 }
 .trust-bar-inner::-webkit-scrollbar { display: none; }
@@ -960,7 +960,7 @@ footer { background: #08142A; padding: 64px 0 0; }
   :root { --section-py: 80px; }
   .hero-grid { grid-template-columns: 1fr; gap: 48px; }
   .hero-visual { display: none; }
-  .hero { min-height: auto; padding: 140px 0 80px; }
+  .hero { min-height: auto; padding: 110px 0 60px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .stats-grid .stat-item:nth-child(3),
   .stats-grid .stat-item:nth-child(4) { border-top: 1px solid var(--border); }
@@ -981,12 +981,31 @@ footer { background: #08142A; padding: 64px 0 0; }
   .nav-menu, .nav-cta { display: none; }
   .mobile-toggle { display: flex; }
   .mobile-nav { display: block; }
-  .hero { padding: 90px 0 52px; } /* reduced gap below header */
+
+  /* Fix 4 & 6: Hero — reduce blue padding, show visual image below buttons */
+  .hero { padding: 70px 0 36px; min-height: auto; } /* tighter top/bottom blue space */
   .hero h1 { font-size: clamp(1.6rem, 6.5vw, 2.2rem); margin-bottom: 12px; }
-  .hero-actions { gap: 10px; }
+  .hero-subtitle { margin-bottom: 24px; font-size: 1rem; }
+  .hero-actions { gap: 10px; margin-bottom: 20px; }
   .hero-actions .btn { width: 100%; justify-content: center; text-align: center; color: #fff; }
+  .hero-phone { margin-bottom: 20px; }
+  /* Show hero visual image on mobile, below content */
+  .hero-visual { display: block !important; margin-top: 28px; }
+  .hero-visual .hero-card-stack { max-width: 340px; margin: 0 auto; }
+  .hero-float-card { display: none; } /* hide floating overlay cards on mobile */
+
+  /* Fix 3: Trust badge capsules — wrap to rows */
+  .trust-bar-inner { justify-content: center; flex-wrap: wrap; padding: 0 var(--container-px); gap: 8px; }
+  .trust-badge { flex-shrink: 0; }
+
+  /* Fix 7: Why Choose cards — two-column flash cards layout */
+  .why-grid { grid-template-columns: 1fr !important; gap: 32px; }
+  .why-features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .why-feature { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md); padding: 16px 14px; }
+  .why-feature h4 { font-size: 0.9rem; margin-bottom: 6px; }
+  .why-feature p { font-size: 0.82rem; line-height: 1.55; }
+
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .trust-bar-inner { justify-content: flex-start; padding: 0 var(--container-px); }
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .founder-card { grid-template-columns: 1fr; padding: 32px 24px; gap: 32px; }
   .founder-card::before { display: none; }
@@ -1003,16 +1022,39 @@ footer { background: #08142A; padding: 64px 0 0; }
   .cta-band { padding: 64px 0; }
   .cta-band-actions { flex-direction: column; align-items: stretch; }
   .cta-band-actions .btn { justify-content: center; }
-  .page-hero { padding: 120px 0 60px; }
+
+  /* Fix 11 & 12: Page hero and blog post header — enough top padding so headings aren't hidden under nav */
+  .page-hero { padding: 110px 0 50px; }
   .page-hero h1 { font-size: clamp(1.75rem, 7vw, 2.25rem); }
+
   .back-to-top, .whatsapp-float { bottom: 20px; }
   .back-to-top { left: 16px; }
   .whatsapp-float { right: 16px; }
   .whatsapp-btn, .back-to-top button { width: 52px; height: 52px; font-size: 1.3rem; }
   .section-header { margin-bottom: 40px; }
   .blog-grid { grid-template-columns: 1fr; }
-  .blog-post-header { padding: 130px 0 50px; }
+
+  /* Fix 12: Blog post reading pages — top margin so header is visible */
+  .blog-post-header { padding: 110px 0 44px; }
   .blog-post-content { padding: 40px var(--container-px); }
+
+  /* Fix 8: FAQ font size — bigger and readable */
+  .faq-question { font-size: 1rem; padding: 20px 0; }
+  .faq-answer-inner { font-size: 0.95rem; }
+
+  /* Fix 2: FAQ two-column → single column on mobile */
+  .faq-two-col { grid-template-columns: 1fr !important; gap: 0 !important; }
+
+  /* Fix 1: About page "Why Clients Trust Metaphrase" — hide on mobile */
+  .why-trust-section-mobile-hide { display: none !important; }
+
+  /* Fix 9 & 10: Services page cards — prevent overflow/cutting on right */
+  .s01-grid, .s02-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .service-visual-card { padding: 20px !important; }
+
+  /* Fix 13: Gold buttons — text always white */
+  .btn-gold, .btn-gold:visited, a.btn-gold, a.btn-gold:visited { color: #ffffff !important; text-decoration: none !important; }
+  .post-body .btn-gold, .post-body a.btn-gold { color: #ffffff !important; text-decoration: none !important; }
 }
 
 @media (max-width: 480px) {
