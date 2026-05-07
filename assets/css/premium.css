@@ -983,27 +983,32 @@ footer { background: #08142A; padding: 64px 0 0; }
   .mobile-nav { display: block; }
 
   /* Fix 4 & 6: Hero — reduce blue padding, show visual image below buttons */
-  .hero { padding: 70px 0 36px; min-height: auto; } /* tighter top/bottom blue space */
+  .hero { padding: 70px 0 32px; min-height: auto; } /* tighter top/bottom blue space */
+  .hero-content { padding: 20px 0 16px; } /* reduce internal hero content padding on mobile */
   .hero h1 { font-size: clamp(1.6rem, 6.5vw, 2.2rem); margin-bottom: 12px; }
-  .hero-subtitle { margin-bottom: 24px; font-size: 1rem; }
-  .hero-actions { gap: 10px; margin-bottom: 20px; }
+  .hero-subtitle { margin-bottom: 20px; font-size: 0.975rem; }
+  .hero-actions { gap: 10px; margin-bottom: 16px; }
   .hero-actions .btn { width: 100%; justify-content: center; text-align: center; color: #fff; }
-  .hero-phone { margin-bottom: 20px; }
+  .hero-phone { margin-bottom: 16px; font-size: 0.875rem; }
+  .hero-trust-row { padding-top: 16px; gap: 12px; }
+  .hero-badges { padding-top: 16px; }
   /* Show hero visual image on mobile, below content */
-  .hero-visual { display: block !important; margin-top: 28px; }
-  .hero-visual .hero-card-stack { max-width: 340px; margin: 0 auto; }
+  .hero-visual { display: block !important; margin-top: 20px; }
+  .hero-visual .hero-card-stack { max-width: 320px; margin: 0 auto; }
   .hero-float-card { display: none; } /* hide floating overlay cards on mobile */
+  .hero-main-card { padding: 16px; } /* smaller card padding on mobile */
 
   /* Fix 3: Trust badge capsules — wrap to rows */
   .trust-bar-inner { justify-content: center; flex-wrap: wrap; padding: 0 var(--container-px); gap: 8px; }
   .trust-badge { flex-shrink: 0; }
 
-  /* Fix 7: Why Choose cards — two-column flash cards layout */
+  /* Fix 7: Why Choose cards — two-column flash cards layout on mobile */
   .why-grid { grid-template-columns: 1fr !important; gap: 32px; }
-  .why-features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .why-feature { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md); padding: 16px 14px; }
-  .why-feature h4 { font-size: 0.9rem; margin-bottom: 6px; }
-  .why-feature p { font-size: 0.82rem; line-height: 1.55; }
+  .why-reasons-grid { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+  .reason-item { flex-direction: column; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md); padding: 16px 14px; }
+  .reason-text h4 { font-size: 0.9rem !important; }
+  .reason-text p { font-size: 0.8rem !important; line-height: 1.5 !important; }
+  .reason-icon { width: 38px !important; height: 38px !important; font-size: 1rem !important; }
 
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }

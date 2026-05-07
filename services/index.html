@@ -21,6 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Translation &amp; Interpreting Services | Metaphrase Ltd">
   <meta name="twitter:description" content="CIOL-certified services in Urdu, Hindi, Punjabi and Italian — Birmingham, UK.">
+  <meta name="twitter:image" content="https://metaphrase.uk/assets/img/metaphrase-logo-only.png">
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
@@ -237,6 +238,16 @@
       .s01-grid > *, .s02-grid > * { max-width: 100%; overflow: hidden; }
       .s02-grid [style*="padding:36px"] { padding: 20px !important; }
       .s01-grid [style*="padding:36px"] { padding: 20px !important; }
+      /* Trust bullets: wrap on mobile */
+      .trust-bullet-row { grid-template-columns: 1fr 1fr; }
+      .trust-bullet { white-space: normal; font-size: 0.8rem; padding: 8px 12px; }
+      /* Receive grid on mobile */
+      .receive-grid { grid-template-columns: 1fr !important; }
+      .receive-card-full { grid-column: auto !important; }
+      /* Doc category grid on mobile */
+      .doc-cat-grid { grid-template-columns: 1fr 1fr; }
+      /* CTA strip center on mobile */
+      .cta-strip-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
     }
   </style>
 </head>
@@ -279,7 +290,8 @@
   <a href="/blog/">Blog</a>
   <a href="/contact/">Contact</a>
   <a href="/privacy/">Privacy Policy</a>
-  <a href="/terms/">Terms of Service</a>  <div class="mobile-nav-cta">
+  <a href="/terms/">Terms of Service</a>
+  <div class="mobile-nav-cta">
     <a href="/contact/" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Request a Quote</a>
     <a href="https://wa.me/447852408467" class="btn btn-whatsapp btn-lg" style="width:100%;justify-content:center;"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
   </div>
