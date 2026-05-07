@@ -193,7 +193,7 @@ p { color: var(--text-body); }
   font-size: 1.85rem;
   font-weight: 700;
   color: var(--navy);
-  letter-spacing: 0.15em; /* expanded to visually match tagline width */
+  letter-spacing: 0.19em; /* calculated to match tagline width exactly */
   line-height: 1;
   transition: color var(--duration) var(--ease);
   white-space: nowrap;
