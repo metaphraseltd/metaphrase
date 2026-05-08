@@ -1021,6 +1021,14 @@ footer { background: #08142A; padding: 64px 0 0; }
   /* Services: keep 2-col on mobile so cards don't require endless scroll */
   .grid-3 { grid-template-columns: repeat(2, 1fr); gap: 16px; }
 
+  /* Homepage service cards: compact icon+title tiles on mobile */
+  .services-section .service-card { padding: 18px 12px !important; text-align: center; }
+  .services-section .service-card .service-icon { margin: 0 auto 10px; width: 44px; height: 44px; font-size: 1.2rem; }
+  .services-section .service-card h3 { font-size: 0.88rem; margin-bottom: 0; line-height: 1.35; }
+  .services-section .service-card p { display: none; }
+  .services-section .service-tags { display: none; }
+  .services-section .grid-3 { gap: 12px !important; }
+
   /* Service detail cards — compact on mobile */
   .service-detail-card { padding: 22px 18px; }
   .service-detail-card .service-icon { width: 44px; height: 44px; margin-bottom: 16px; font-size: 1.3rem; }
