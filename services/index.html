@@ -238,9 +238,12 @@
       .s01-grid > *, .s02-grid > * { max-width: 100%; overflow: hidden; }
       .s02-grid [style*="padding:36px"] { padding: 20px !important; }
       .s01-grid [style*="padding:36px"] { padding: 20px !important; }
-      /* Trust bullets: wrap on mobile */
-      .trust-bullet-row { grid-template-columns: 1fr 1fr; }
-      .trust-bullet { white-space: normal; font-size: 0.8rem; padding: 8px 12px; }
+      /* Trust bullet capsules: 2-col centred */
+      .trust-bullet-row { grid-template-columns: repeat(2, auto); justify-content: center; margin-bottom: 20px; }
+      .trust-bullet { white-space: normal; font-size: 0.8rem; padding: 7px 12px; }
+      /* Interpreting visual cards: compact outer padding + reduce inner card padding */
+      .interp-cards-inner { padding: 16px !important; gap: 8px !important; }
+      .interp-cards-inner > div { padding: 12px 14px !important; }
       /* Receive grid on mobile */
       .receive-grid { grid-template-columns: 1fr !important; }
       .receive-card-full { grid-column: auto !important; }
@@ -547,7 +550,7 @@
 
       <!-- Visual cards -->
       <div class="reveal reveal-delay-1">
-        <div style="background:var(--off-white); border:1px solid var(--border); border-radius:var(--radius-xl); padding:36px; display:flex; flex-direction:column; gap:16px;">
+        <div class="interp-cards-inner" style="background:var(--off-white); border:1px solid var(--border); border-radius:var(--radius-xl); padding:36px; display:flex; flex-direction:column; gap:16px;">
 
           <div style="display:flex;align-items:center;gap:14px;padding:18px 20px;background:var(--white);border-radius:var(--radius-md);border:1px solid var(--border);">
             <div style="width:44px;height:44px;background:rgba(37,99,235,0.08);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--accent);flex-shrink:0;">
@@ -911,7 +914,7 @@
           <a href="https://www.linkedin.com/in/kashifqdn/" target="_blank" rel="noopener" aria-label="LinkedIn" class="linkedin"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
           <a href="https://www.instagram.com/metaphraseltd/" target="_blank" rel="noopener" aria-label="Instagram" class="instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
           <a href="https://www.facebook.com/metaphraseltd/" target="_blank" rel="noopener" aria-label="Facebook" class="facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
-          <a href="mailto:info@metaphrase.uk" aria-label="Email" class="email"><i class="bi bi-envelope-fill" aria-hidden="true"></i></a>
+          <a href="mailto:metaphraseltd@gmail.com" aria-label="Email" class="email"><i class="bi bi-envelope-fill" aria-hidden="true"></i></a>
         </div>
       </div>
       <div class="footer-col">
@@ -940,7 +943,7 @@
         <ul>
           <li><a href="tel:+447852408467">+44 7852 408 467</a></li>
           <li><a href="https://wa.me/447852408467" target="_blank" rel="noopener">WhatsApp</a></li>
-          <li><a href="mailto:info@metaphrase.uk">info@metaphrase.uk</a></li>
+          <li><a href="mailto:metaphraseltd@gmail.com">metaphraseltd@gmail.com</a></li>
           <li><a href="/contact/">Send a Message</a></li>
           <li><a href="https://maps.app.goo.gl/nRmAKT7i17k8CCxAA" target="_blank" rel="noopener">Find Us on Google Maps</a></li>
         </ul>

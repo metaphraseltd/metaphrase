@@ -53,7 +53,7 @@ body {
   background: var(--white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  /* overflow-x: hidden removed — causes position:fixed elements to break on iOS Safari */
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; transition: color var(--duration) var(--ease); }
@@ -223,10 +223,10 @@ p { color: var(--text-body); }
 #header.scrolled .logo-tagline,
 #header.header-solid .logo-tagline { color: var(--text-muted); }
 
-/* Mobile: tighten up */
+/* Mobile: slightly larger logo for readability */
 @media (max-width: 640px) {
-  .logo-mark { width: 48px; height: 48px; }
-  .logo-name { font-size: 1.4rem; }
+  .logo-mark { width: 54px; height: 54px; }
+  .logo-name { font-size: 1.55rem; }
   .logo-text { gap: 3px; }
 }
 
@@ -484,6 +484,7 @@ p { color: var(--text-body); }
 }
 .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; position: relative; z-index: 1; }
 .why-left .eyebrow { color: var(--gold-light); }
+.why-section .eyebrow { color: var(--gold-light); }
 .why-left h2 { color: var(--white); }
 .why-left p { color: rgba(255,255,255,0.78); font-size: 1.05rem; line-height: 1.8; margin-top: 16px; margin-bottom: 40px; }
 
@@ -982,9 +983,9 @@ footer { background: #08142A; padding: 64px 0 0; }
   .mobile-toggle { display: flex; }
   .mobile-nav { display: block; }
 
-  /* Fix 4 & 6: Hero — reduce blue padding, show visual image below buttons */
-  .hero { padding: 70px 0 32px; min-height: auto; } /* tighter top/bottom blue space */
-  .hero-content { padding: 20px 0 16px; } /* reduce internal hero content padding on mobile */
+  /* Hero spacing: more top room (logo breathing space), balanced bottom */
+  .hero { padding: 100px 0 28px; min-height: auto; }
+  .hero-content { padding: 28px 0 12px; }
   .hero h1 { font-size: clamp(1.6rem, 6.5vw, 2.2rem); margin-bottom: 12px; }
   .hero-subtitle { margin-bottom: 20px; font-size: 0.975rem; }
   .hero-actions { gap: 10px; margin-bottom: 16px; }
@@ -1011,7 +1012,23 @@ footer { background: #08142A; padding: 64px 0 0; }
   .reason-icon { width: 38px !important; height: 38px !important; font-size: 1rem !important; }
 
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .grid-2, .grid-4 { grid-template-columns: 1fr; }
+  /* Services: keep 2-col on mobile so cards don't require endless scroll */
+  .grid-3 { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+  /* Service detail cards — compact on mobile */
+  .service-detail-card { padding: 22px 18px; }
+  .service-detail-card .service-icon { width: 44px; height: 44px; margin-bottom: 16px; font-size: 1.3rem; }
+  .service-detail-card h3 { font-size: 1rem; margin-bottom: 8px; }
+  .service-detail-card p { font-size: 0.9rem; line-height: 1.65; margin-bottom: 14px; }
+  .service-detail-card .btn { padding: 9px 16px; font-size: 0.85rem; margin-top: 12px !important; }
+
+  /* Interpreting visual cards container — 2-col grid on mobile */
+  .interp-cards-inner { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 10px !important; flex-direction: unset !important; }
+
+  /* Trust bullet capsules — centred on mobile */
+  .trust-bullet-row { grid-template-columns: repeat(2, auto); justify-content: center; gap: 8px; }
+  .trust-bullet { font-size: 0.8rem; padding: 7px 12px; }
   .founder-card { grid-template-columns: 1fr; padding: 32px 24px; gap: 32px; }
   .founder-card::before { display: none; }
   .founder-photo-wrap { max-width: 180px; }
@@ -1022,7 +1039,12 @@ footer { background: #08142A; padding: 64px 0 0; }
   .process-grid::before { display: none; }
   .contact-form-wrap { padding: 28px 20px; }
   .form-row { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  /* Footer mobile: brand full-width, Services + Company in 2 cols, Contact centred */
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px 24px; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-social { justify-content: center; }
+  .footer-grid .footer-col:last-child { grid-column: 1 / -1; text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .footer-grid .footer-col:last-child ul { align-items: center; }
   .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
   .cta-band { padding: 64px 0; }
   .cta-band-actions { flex-direction: column; align-items: stretch; }
