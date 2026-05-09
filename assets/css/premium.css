@@ -1050,6 +1050,13 @@ footer { background: #08142A; padding: 64px 0 0; }
   .testimonial-grid .testimonial-card:nth-child(n+4) { display: none; }
   .process-grid { grid-template-columns: 1fr; gap: 32px; }
   .process-grid::before { display: none; }
+  /* Contact page: fix overflow of quick-action cards on mobile */
+  .contact-method { padding: 14px 12px !important; gap: 10px !important; min-width: 0; }
+  .contact-method-icon { width: 38px !important; height: 38px !important; font-size: 1rem !important; flex-shrink: 0; }
+  .contact-method-text span { font-size: 0.78rem !important; word-break: break-all; overflow-wrap: break-word; }
+  .contact-method-text strong { font-size: 0.7rem !important; }
+  /* Ensure grid-4 cells never overflow their column */
+  .grid-4 > * { min-width: 0; }
   .contact-form-wrap { padding: 28px 20px; }
   .form-row { grid-template-columns: 1fr; }
   /* Footer mobile: brand full-width, Services + Company in 2 cols, Contact centred */
