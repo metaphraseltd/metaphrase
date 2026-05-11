@@ -46,6 +46,31 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://metaphrase.uk/blog/immigration-translation-uk/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://metaphrase.uk/blog/translation-for-nhs/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://metaphrase.uk/blog/certified-translation-cost-uk/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://metaphrase.uk/blog/birmingham-translation-services/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://metaphrase.uk/blog/document-translation-home-office/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://metaphrase.uk/privacy/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

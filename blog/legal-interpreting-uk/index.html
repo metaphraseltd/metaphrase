@@ -431,6 +431,18 @@
       .post-body h2 { font-size: 1.35rem; }
     }
   </style>
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://metaphrase.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metaphrase.uk/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Legal Interpreting in the UK: What You Need to Know", "item": "https://metaphrase.uk/blog/legal-interpreting-uk/" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -732,5 +744,29 @@
   nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeNav); });
 })();
 </script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:#0f2855; color:#fff; padding:16px 24px; box-shadow:0 -4px 24px rgba(0,0,0,0.18);">
+    <div style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+      <p style="margin:0; font-size:0.88rem; line-height:1.6; flex:1; min-width:260px;">
+        🍪 We use cookies to improve your experience and analyse site traffic. By clicking <strong>Accept</strong>, you consent to our use of cookies in accordance with our <a href="/privacy/" style="color:#C9A84C; text-decoration:underline;">Privacy Policy</a>.
+      </p>
+      <div style="display:flex; gap:10px; flex-shrink:0;">
+        <button onclick="cookieChoice('decline')" style="padding:9px 20px; border-radius:6px; border:1px solid rgba(255,255,255,0.4); background:transparent; color:#fff; font-size:0.85rem; cursor:pointer; font-family:inherit;">Decline</button>
+        <button onclick="cookieChoice('accept')" style="padding:9px 20px; border-radius:6px; border:none; background:#C9A84C; color:#fff; font-size:0.85rem; font-weight:600; cursor:pointer; font-family:inherit;">Accept</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      if(!localStorage.getItem('cookieConsent')){
+        document.getElementById('cookie-banner').style.display='block';
+      }
+    })();
+    function cookieChoice(choice){
+      localStorage.setItem('cookieConsent', choice);
+      document.getElementById('cookie-banner').style.display='none';
+    }
+  </script>
 </body>
 </html>
