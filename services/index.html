@@ -298,60 +298,151 @@
       }
     }
   </style>
-  <!-- Schema Markup: Service Page -->
+
+
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Translation and Interpreting Services — Metaphrase Ltd",
-    "url": "https://metaphrase.uk/services/",
+  "@context": "https://schema.org",
+  "@type": [
+    "LocalBusiness",
+    "ProfessionalService"
+  ],
+  "@id": "https://metaphrase.uk/#business",
+  "name": "Metaphrase Ltd",
+  "description": "CIOL-certified translation, interpreting, and transcription services in Birmingham, UK. Specialising in legal, medical, and immigration document translation in Urdu, Hindi, Punjabi, Arabic, and Italian.",
+  "url": "https://metaphrase.uk",
+  "telephone": "+447852408467",
+  "email": "info@metaphrase.uk",
+  "image": "https://metaphrase.uk/assets/img/metaphrase-logo-only.png",
+  "logo": "https://metaphrase.uk/assets/img/metaphrase-logo-only.png",
+  "priceRange": "££",
+  "currenciesAccepted": "GBP",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Birmingham"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "West Midlands"
+    },
+    {
+      "@type": "Country",
+      "name": "United Kingdom"
+    }
+  ],
+  "knowsLanguage": [
+    "en",
+    "ur",
+    "hi",
+    "pa",
+    "it",
+    "ar"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/company/metaphrase-ltd",
+    "https://www.instagram.com/metaphraseltd/",
+    "https://www.facebook.com/metaphrase"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Mohammad Kashif Khalid",
+    "sameAs": "https://www.linkedin.com/company/metaphrase-ltd"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "20:00"
+    }
+  ],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.4862,
+    "longitude": -1.8904
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Birmingham",
+    "addressRegion": "West Midlands",
+    "addressCountry": "GB"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Translation & Interpreting Services",
     "itemListElement": [
       {
-        "@type": "ListItem", "position": 1,
-        "item": {
+        "@type": "Offer",
+        "itemOffered": {
           "@type": "Service",
-          "name": "Certified Translation",
-          "description": "Home Office and UKVI accepted certified translations of birth certificates, marriage certificates, passports, and all immigration documents.",
-          "provider": { "@type": "LocalBusiness", "name": "Metaphrase Ltd", "url": "https://metaphrase.uk" },
-          "areaServed": "United Kingdom",
-          "serviceType": "Certified Document Translation"
+          "name": "Certified Translation"
         }
       },
       {
-        "@type": "ListItem", "position": 2,
-        "item": {
+        "@type": "Offer",
+        "itemOffered": {
           "@type": "Service",
-          "name": "Legal Document Translation",
-          "description": "Accurate translation of legal contracts, court orders, affidavits, and solicitor documents. Used by Birmingham law firms.",
-          "provider": { "@type": "LocalBusiness", "name": "Metaphrase Ltd", "url": "https://metaphrase.uk" },
-          "areaServed": "United Kingdom",
-          "serviceType": "Legal Translation"
+          "name": "Professional Interpreting"
         }
       },
       {
-        "@type": "ListItem", "position": 3,
-        "item": {
+        "@type": "Offer",
+        "itemOffered": {
           "@type": "Service",
-          "name": "Medical Translation",
-          "description": "Translation of NHS referrals, medical reports, patient records, and clinical documents. Trusted by healthcare providers.",
-          "provider": { "@type": "LocalBusiness", "name": "Metaphrase Ltd", "url": "https://metaphrase.uk" },
-          "areaServed": "United Kingdom",
-          "serviceType": "Medical Translation"
+          "name": "Media Transcription"
         }
       },
       {
-        "@type": "ListItem", "position": 4,
-        "item": {
+        "@type": "Offer",
+        "itemOffered": {
           "@type": "Service",
-          "name": "Professional Interpreting",
-          "description": "Qualified in-person, telephone, and video interpreters for courts, tribunals, medical appointments, and business meetings.",
-          "provider": { "@type": "LocalBusiness", "name": "Metaphrase Ltd", "url": "https://metaphrase.uk" },
-          "areaServed": "Birmingham, West Midlands, United Kingdom",
-          "serviceType": "Interpreting Services"
+          "name": "Editing & Proofreading"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Video Subtitling"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Content Localisation"
         }
       }
     ]
   }
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://metaphrase.uk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://metaphrase.uk/services/"
+    }
+  ]
+}
   </script>
 </head>
 <body>
