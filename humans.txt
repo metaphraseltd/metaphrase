@@ -1,0 +1,10 @@
+/* TEAM */
+Founder & Lead Translator: Mohammad Kashif Khalid
+Company: Metaphrase Ltd
+Location: Birmingham, United Kingdom
+Website: https://metaphrase.uk
+
+/* SITE */
+Last update: 2026-05-15
+Language: English
+Standards: HTML5, CSS3
