@@ -1250,5 +1250,232 @@
       document.getElementById('cookie-banner').style.display='none';
     }
   </script>
+
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE-IN QUOTE FORM
+═══════════════════════════════════════════════ -->
+<style>
+#sq-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.35);z-index:8800;opacity:0;pointer-events:none;transition:opacity 0.3s ease;}
+#sq-backdrop.sq-open{opacity:1;pointer-events:all;}
+#sq-panel{
+  position:fixed;top:0;right:0;height:100%;width:360px;max-width:96vw;
+  background:#fff;z-index:8900;
+  display:flex;flex-direction:column;
+  transform:translateX(100%);transition:transform 0.38s cubic-bezier(0.4,0,0.2,1);
+  box-shadow:-6px 0 40px rgba(15,35,64,0.18);
+}
+#sq-panel.sq-open{transform:translateX(0);}
+#sq-header{
+  background:#0F2340;padding:14px 18px;
+  display:flex;align-items:center;justify-content:space-between;flex-shrink:0;
+}
+#sq-header-left .sq-eyebrow{color:#C9A84C;font-size:10px;font-weight:700;letter-spacing:0.12em;margin-bottom:2px;}
+#sq-header-left .sq-title{color:#fff;font-size:15px;font-weight:600;}
+#sq-header-right{display:flex;align-items:center;gap:10px;}
+#sq-close{
+  background:none;border:none;color:rgba(255,255,255,0.6);
+  font-size:22px;line-height:1;cursor:pointer;padding:2px 6px;
+  transition:color 0.2s;
+}
+#sq-close:hover{color:#fff;}
+#sq-body{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:12px;}
+.sq-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.sq-group{display:flex;flex-direction:column;gap:4px;}
+.sq-group label{font-size:11.5px;font-weight:600;color:#374151;}
+.sq-group .sq-opt{font-size:10.5px;font-weight:400;color:#9ca3af;}
+.sq-group input,.sq-group select,.sq-group textarea{
+  border:1px solid #d1d5db;border-radius:6px;padding:8px 11px;
+  font-size:13px;font-family:inherit;color:#111827;background:#fff;
+  outline:none;transition:border-color 0.2s;width:100%;box-sizing:border-box;
+}
+.sq-group input:focus,.sq-group select:focus,.sq-group textarea:focus{border-color:#C9A84C;}
+.sq-group textarea{resize:vertical;min-height:72px;}
+.sq-file-zone{
+  border:1.5px dashed #d1d5db;border-radius:6px;padding:10px 12px;
+  text-align:center;background:#f9fafb;cursor:pointer;transition:border-color 0.2s;
+  font-size:12px;color:#6b7280;
+}
+.sq-file-zone:hover{border-color:#C9A84C;}
+.sq-file-zone i{font-size:18px;display:block;margin-bottom:4px;color:#9ca3af;}
+#sq-submit{
+  width:100%;padding:11px;border:none;border-radius:7px;
+  background:#C9A84C;color:#fff;font-size:14px;font-weight:700;
+  cursor:pointer;font-family:inherit;transition:background 0.2s;
+  display:flex;align-items:center;justify-content:center;gap:7px;
+}
+#sq-submit:hover{background:#b8923d;}
+#sq-submit:disabled{background:#d4c08a;cursor:not-allowed;}
+#sq-trust{
+  display:flex;align-items:center;justify-content:center;gap:5px;
+  font-size:10.5px;color:#6b7280;padding-top:4px;flex-wrap:wrap;text-align:center;
+}
+#sq-success{display:none;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.3);border-radius:7px;padding:16px;text-align:center;color:#065f46;font-size:13px;font-weight:600;}
+#sq-error{display:none;background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);border-radius:7px;padding:12px;color:#dc2626;font-size:12.5px;font-weight:600;}
+@media(max-width:600px){
+  #sq-panel{width:100%;top:auto;bottom:0;height:88vh;transform:translateY(100%);border-radius:16px 16px 0 0;}
+  #sq-panel.sq-open{transform:translateY(0);}
+}
+</style>
+
+<div id="sq-backdrop" aria-hidden="true"></div>
+<div id="sq-panel" role="dialog" aria-modal="true" aria-labelledby="sq-panel-title">
+  <div id="sq-header">
+    <div id="sq-header-left">
+      <div class="sq-eyebrow">METAPHRASE LTD</div>
+      <div class="sq-title" id="sq-panel-title">Get a Free Quote</div>
+    </div>
+    <div id="sq-header-right">
+      <img src="/assets/img/metaphrase-logo-m.svg" width="30" height="30" alt="Metaphrase Ltd logo" style="opacity:0.92;">
+      <button id="sq-close" aria-label="Close quote form">&#215;</button>
+    </div>
+  </div>
+
+  <div id="sq-body">
+    <div id="sq-success">
+      <i class="bi bi-check-circle-fill" style="font-size:1.4rem;display:block;margin-bottom:6px;"></i>
+      Thank you! We'll get back to you within the hour.
+    </div>
+    <div id="sq-error">
+      <i class="bi bi-exclamation-triangle-fill"></i>
+      Something went wrong. Please email <a href="mailto:info@metaphrase.uk" style="color:#dc2626;">info@metaphrase.uk</a> directly.
+    </div>
+
+    <form id="sq-form" action="/forms/contact.php" method="POST" novalidate enctype="multipart/form-data">
+      <input type="text" name="_honey" style="display:none;" aria-hidden="true" tabindex="-1">
+      <input type="hidden" name="_subject" value="New Quote Request — Metaphrase Ltd (Slide-in Form)">
+      <input type="hidden" name="_source" value="homepage-slidein">
+
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div class="sq-row">
+          <div class="sq-group">
+            <label for="sq_first">First name <span style="color:#C9A84C;">*</span></label>
+            <input type="text" id="sq_first" name="first_name" placeholder="Jane" required autocomplete="given-name">
+          </div>
+          <div class="sq-group">
+            <label for="sq_last">Last name <span style="color:#C9A84C;">*</span></label>
+            <input type="text" id="sq_last" name="last_name" placeholder="Smith" required autocomplete="family-name">
+          </div>
+        </div>
+
+        <div class="sq-group">
+          <label for="sq_email">Email address <span style="color:#C9A84C;">*</span></label>
+          <input type="email" id="sq_email" name="email" placeholder="jane@example.com" required autocomplete="email">
+        </div>
+
+        <div class="sq-group">
+          <label for="sq_phone">Phone number <span class="sq-opt">(optional)</span></label>
+          <input type="tel" id="sq_phone" name="phone" placeholder="+44 7xxx xxx xxx" autocomplete="tel">
+        </div>
+
+        <div class="sq-group">
+          <label for="sq_message">Tell us about your project <span style="color:#C9A84C;">*</span></label>
+          <textarea id="sq_message" name="message" placeholder="Document type, language pair, any deadlines…" required></textarea>
+        </div>
+
+        <div class="sq-group">
+          <label>Attach a document <span class="sq-opt">(optional)</span></label>
+          <label class="sq-file-zone" for="sq_file">
+            <i class="bi bi-cloud-upload"></i>
+            PDF, Word or image — click to browse
+            <input type="file" id="sq_file" name="attachment" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.webp,.txt" style="display:none;">
+          </label>
+          <span id="sq-filename" style="font-size:11px;color:#6b7280;margin-top:3px;display:block;"></span>
+        </div>
+
+        <button type="submit" id="sq-submit">
+          <i class="bi bi-send-fill" aria-hidden="true"></i>
+          Send Enquiry
+        </button>
+
+        <div id="sq-trust">
+          <i class="bi bi-shield-lock-fill" style="color:#C9A84C;font-size:12px;" aria-hidden="true"></i>
+          Documents ISO-secure &middot; GDPR compliant &middot; ICO registered
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+(function(){
+  var STORAGE_KEY = 'sq_dismissed';
+  var panel = document.getElementById('sq-panel');
+  var backdrop = document.getElementById('sq-backdrop');
+  var closeBtn = document.getElementById('sq-close');
+  var form = document.getElementById('sq-form');
+  var submitBtn = document.getElementById('sq-submit');
+  var fileInput = document.getElementById('sq_file');
+  var fileLabel = document.getElementById('sq-filename');
+  var successEl = document.getElementById('sq-success');
+  var errorEl = document.getElementById('sq-error');
+
+  function openPanel(){
+    panel.classList.add('sq-open');
+    backdrop.classList.add('sq-open');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+  function closePanel(){
+    panel.classList.remove('sq-open');
+    backdrop.classList.remove('sq-open');
+    document.body.style.overflow = '';
+    localStorage.setItem(STORAGE_KEY, '1');
+  }
+
+  if(!localStorage.getItem(STORAGE_KEY)){
+    setTimeout(openPanel, 5000);
+  }
+
+  closeBtn.addEventListener('click', closePanel);
+  backdrop.addEventListener('click', closePanel);
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && panel.classList.contains('sq-open')) closePanel();
+  });
+
+  if(fileInput){
+    fileInput.addEventListener('change', function(){
+      fileLabel.textContent = this.files[0] ? this.files[0].name : '';
+    });
+  }
+
+  if(form){
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      errorEl.style.display = 'none';
+
+      var required = form.querySelectorAll('[required]');
+      var valid = true;
+      required.forEach(function(f){
+        f.style.borderColor = '';
+        if(!f.value.trim()){f.style.borderColor='#ef4444';valid=false;}
+      });
+      if(!valid){
+        form.querySelector('[required]:invalid, [required][style*="ef4444"]').focus();
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="bi bi-hourglass-split" aria-hidden="true"></i> Sending…';
+
+      try{
+        var data = new FormData(form);
+        var res = await fetch(form.action, {method:'POST', body:data});
+        if(res.ok){
+          form.style.display = 'none';
+          successEl.style.display = 'block';
+          localStorage.setItem(STORAGE_KEY, '1');
+        } else {
+          throw new Error('Server error');
+        }
+      } catch(err){
+        errorEl.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="bi bi-send-fill" aria-hidden="true"></i> Send Enquiry';
+      }
+    });
+  }
+})();
+</script>
 </body>
 </html>
