@@ -184,20 +184,22 @@
 
       try {
         const formData = new FormData(contactForm);
-        const response = await fetch(contactForm.action, {
+        const response = await fetch('https://formsubmit.co/ajax/metaphraseltd@gmail.com', {
           method: 'POST',
           body: formData,
           headers: { 'Accept': 'application/json' }
         });
 
-        if (response.ok) {
+        const result = await response.json();
+
+        if (result.success) {
           contactForm.reset();
           if (formSuccess) {
             formSuccess.style.display = 'block';
             formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           }
         } else {
-          throw new Error('Server error');
+          throw new Error(result.message || 'Server error');
         }
       } catch {
         if (formError) {

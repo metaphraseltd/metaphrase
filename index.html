@@ -1355,7 +1355,7 @@
 
     <form id="sq-form" action="https://api.web3forms.com/submit" method="POST" novalidate enctype="multipart/form-data">
       <!-- Web3Forms hidden fields -->
-      <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_KEY">
+      <input type="hidden" name="access_key" value="4022aeef-0bbb-4be8-a0f4-c3ec9223e1d0">
       <input type="hidden" name="subject" value="New Quote Request — Metaphrase Ltd">
       <input type="hidden" name="from_name" value="Metaphrase Website">
       <input type="hidden" name="redirect" value="false">
@@ -1389,16 +1389,6 @@
           <textarea id="sq_message" name="message" placeholder="Document type, language pair, any deadlines…" required></textarea>
         </div>
 
-        <div class="sq-group">
-          <label>Attach a document <span class="sq-opt">(optional)</span></label>
-          <label class="sq-file-zone" for="sq_file">
-            <i class="bi bi-cloud-upload" aria-hidden="true"></i>
-            PDF, Word or image — click to browse
-            <input type="file" id="sq_file" name="attachment" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.webp,.txt" style="display:none;">
-          </label>
-          <span id="sq-filename" style="font-size:11px;color:#6b7280;margin-top:3px;display:block;"></span>
-        </div>
-
         <button type="submit" id="sq-submit">
           <i class="bi bi-send-fill" aria-hidden="true"></i>
           Send Enquiry
@@ -1421,8 +1411,6 @@
   var closeBtn = document.getElementById('sq-close');
   var form = document.getElementById('sq-form');
   var submitBtn = document.getElementById('sq-submit');
-  var fileInput = document.getElementById('sq_file');
-  var fileLabel = document.getElementById('sq-filename');
   var successEl = document.getElementById('sq-success');
   var errorEl = document.getElementById('sq-error');
 
@@ -1448,12 +1436,6 @@
   document.addEventListener('keydown', function(e){
     if(e.key==='Escape' && panel.classList.contains('sq-open')) closePanel();
   });
-
-  if(fileInput){
-    fileInput.addEventListener('change', function(){
-      fileLabel.textContent = this.files[0] ? this.files[0].name : '';
-    });
-  }
 
   if(form){
     form.addEventListener('submit', async function(e){

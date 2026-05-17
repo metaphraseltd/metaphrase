@@ -386,14 +386,19 @@
 
           <form
             id="contactForm"
-            action="forms/contact.php"
+            action="https://formsubmit.co/metaphraseltd@gmail.com"
             method="POST"
             novalidate
+            enctype="multipart/form-data"
             aria-label="Contact and quote request form"
           >
+            <!-- FormSubmit.co config -->
+            <input type="hidden" name="_subject" value="New Quote Request — Metaphrase Ltd">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://metaphrase.uk/contact/?sent=true">
             <!-- Honeypot (spam protection) -->
             <input type="text" name="_honey" style="display:none;" aria-hidden="true" tabindex="-1">
-            <input type="hidden" name="_subject" value="New Quote Request — Metaphrase Ltd">
 
             <div class="form-row">
               <div class="form-group">
