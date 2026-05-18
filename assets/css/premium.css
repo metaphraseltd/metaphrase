@@ -1060,13 +1060,68 @@ footer { background: #08142A; padding: 64px 0 0; }
   .grid-4 > * { min-width: 0; }
   .contact-form-wrap { padding: 28px 20px; }
   .form-row { grid-template-columns: 1fr; }
-  /* Footer mobile: brand full-width, Services + Company in 2 cols, Contact centred */
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px 24px; }
-  .footer-brand { grid-column: 1 / -1; }
-  .footer-social { justify-content: center; }
-  .footer-grid .footer-col:last-child { grid-column: 1 / -1; text-align: center; display: flex; flex-direction: column; align-items: center; }
-  .footer-grid .footer-col:last-child ul { align-items: center; }
-  .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
+  /* ── MOBILE FOOTER — professional stacked layout ── */
+  footer { padding: 44px 0 0; }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  /* Brand: full width, centred, separated by a line */
+  .footer-brand {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .footer-social {
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  /* Services col (2nd child) — left */
+  .footer-grid .footer-col:nth-child(2) {
+    grid-column: 1;
+    padding-right: 12px;
+    padding-bottom: 28px;
+  }
+
+  /* Company col (3rd child) — right */
+  .footer-grid .footer-col:nth-child(3) {
+    grid-column: 2;
+    padding-left: 12px;
+    padding-bottom: 28px;
+  }
+
+  /* Contact col (4th child) — full width, centred */
+  .footer-grid .footer-col:nth-child(4) {
+    grid-column: 1 / -1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 32px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 4px;
+  }
+  .footer-grid .footer-col:nth-child(4) ul { align-items: center; }
+  .footer-col h5 { margin-bottom: 16px; }
+
+  /* Bottom bar */
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding: 20px 16px;
+  }
   .cta-band { padding: 64px 0; }
   .cta-band-actions { flex-direction: column; align-items: stretch; }
   .cta-band-actions .btn { justify-content: center; }
