@@ -712,8 +712,8 @@ footer { background: #08142A; padding: 64px 0 0; }
   text-transform: uppercase;
   margin-top: 5px;
 }
-.footer-brand p { color: rgba(255,255,255,0.88); font-size: 0.9rem; line-height: 1.75; margin-bottom: 24px; }
-.footer-social { display: flex; gap: 10px; }
+.footer-brand p { color: rgba(255,255,255,0.88); font-size: 0.9rem; line-height: 1.75; margin-bottom: 24px; text-align: center; }
+.footer-social { display: flex; gap: 10px; justify-content: center; }
 .footer-social a {
   width: 40px; height: 40px;
   border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm);
