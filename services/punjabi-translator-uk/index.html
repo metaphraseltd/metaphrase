@@ -284,14 +284,14 @@
 </section>
 
 <!-- STATS BAR -->
-<section style="background:var(--navy);padding:26px 0;" aria-label="Metaphrase key statistics">
+<section style="background:var(--navy);padding:52px 0;" aria-label="Metaphrase key statistics">
   <div class="container">
     <div class="stats-bar-row">
       <div class="stat-item"><span class="stat-num">10+</span><span class="stat-label">Years' Experience</span></div>
       <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">UKVI Acceptance Rate</span></div>
       <div class="stat-item"><span class="stat-num">2</span><span class="stat-label">Punjabi Scripts</span></div>
       <div class="stat-item"><span class="stat-num">24hr</span><span class="stat-label">Standard Turnaround</span></div>
-      <div class="stat-item"><span class="stat-num">£55</span><span class="stat-label">From per Page</span></div>
+      <div class="stat-item"><span class="stat-num">0</span><span class="stat-label">Rejections Ever</span></div>
       <div class="stat-item"><span class="stat-num">6+</span><span class="stat-label">Sectors Served</span></div>
     </div>
   </div>
@@ -905,7 +905,7 @@
         <thead>
           <tr>
             <th style="width:34%;">What Matters</th>
-            <th style="width:33%;background:rgba(15,40,85,0.06);">Human Certified Translation <span class="comparison-badge good">Metaphrase</span></th>
+            <th style="width:33%;background:rgba(15,40,85,0.88);">Human Certified Translation <span class="comparison-badge good">Metaphrase</span></th>
             <th style="width:33%;">AI / Machine Translation <span class="comparison-badge bad">Google Translate / DeepL</span></th>
           </tr>
         </thead>
@@ -1146,7 +1146,7 @@
   <div class="container">
     <div class="blog-promo-card reveal">
       <div class="blog-promo-img">
-        <img src="/assets/img/punjabi-language-history.jpg" alt="Golden wheat fields of Punjab — Gurmukhi and Shahmukhi script" loading="lazy" width="480" height="270">
+        <img src="/assets/img/blog/punjabi-language-history.jpg" alt="Golden wheat fields of Punjab — Gurmukhi and Shahmukhi script" loading="lazy" width="480" height="270">
       </div>
       <div class="blog-promo-content">
         <span class="eyebrow">From Our Blog</span>
@@ -1233,7 +1233,9 @@ SUGGESTED SUPPORTING BLOG TOPICS:
 
 <style>
 /* Page-specific styles */
-.punjabi-intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+.punjabi-intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:stretch; }
+.punjabi-intro-grid > div:last-child { display:flex; flex-direction:column; }
+.punjabi-intro-grid > div:last-child .service-card { flex:1; }
 @media(max-width:900px){ .punjabi-intro-grid { grid-template-columns:1fr; gap:40px; } }
 
 .check-row { display:flex; align-items:flex-start; gap:10px; font-size:0.9rem; color:var(--text-dark); }
@@ -1257,7 +1259,9 @@ SUGGESTED SUPPORTING BLOG TOPICS:
 .scripts-note i { color:var(--navy); font-size:1.2rem; flex-shrink:0; margin-top:2px; }
 .scripts-note p { margin:0; line-height:1.7; }
 
-.content-two-col { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
+.content-two-col { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:stretch; }
+.content-two-col > div:last-child { display:flex; flex-direction:column; }
+.content-two-col > div:last-child .service-card { flex:1; }
 @media(max-width:900px){ .content-two-col { grid-template-columns:1fr; gap:40px; } }
 
 .reason-mini { display:flex; align-items:flex-start; gap:14px; }
@@ -1279,14 +1283,39 @@ SUGGESTED SUPPORTING BLOG TOPICS:
 .doc-content-col p { font-size:0.9375rem; color:var(--text-dark); line-height:1.75; margin:0; }
 .doc-divider { height:1px; background:var(--border); margin:0; }
 
-.process-steps { display:flex; flex-direction:column; max-width:820px; margin:0 auto; }
-.process-step { display:flex; align-items:flex-start; gap:28px; padding:32px 0; border-bottom:1px solid var(--border); }
-.process-step:last-child { border-bottom:none; }
-.step-number { width:52px; height:52px; min-width:52px; background:var(--navy); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.2rem; font-weight:700; flex-shrink:0; margin-top:2px; }
-.step-content { flex:1; }
-.step-content h4 { margin:0 0 10px; color:var(--navy); font-size:1.05rem; }
-.step-content p { font-size:0.9375rem; color:var(--text-dark); line-height:1.75; margin:0; }
-@media(max-width:480px){ .process-step { gap:16px; } .step-number { width:40px; height:40px; min-width:40px; font-size:1rem; } }
+/* Horizontal process steps — 5 equal columns */
+.process-steps { display:grid; grid-template-columns:repeat(5,1fr); gap:0; max-width:none; margin:0; }
+.process-step {
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+  border-right:1px solid var(--border); border-bottom:none !important;
+  padding:36px 20px; position:relative;
+}
+.process-step:last-child { border-right:none; }
+/* Override premium.css: .step-number is position:absolute right:-8px — we reset it */
+.step-number {
+  position:relative !important; top:auto !important; right:auto !important;
+  width:56px; height:56px; min-width:56px;
+  background:var(--navy); color:#fff; border-radius:50%;
+  display:flex !important; align-items:center; justify-content:center;
+  font-size:1.25rem; font-weight:800; flex-shrink:0;
+  margin:0 auto 20px !important;
+}
+.step-content { flex:none; }
+.step-content h4 { margin:0 0 10px; color:var(--navy); font-size:1rem; font-weight:700; }
+.step-content p { font-size:0.875rem; color:var(--text-dark); line-height:1.75; margin:0; }
+@media(max-width:860px){
+  .process-steps { grid-template-columns:1fr 1fr; }
+  .process-step { border-right:1px solid var(--border); border-bottom:1px solid var(--border) !important; padding:28px 20px; }
+  .process-step:nth-child(even) { border-right:none; }
+  .process-step:nth-last-child(-n+2) { border-bottom:none !important; }
+}
+@media(max-width:480px){
+  .process-steps { grid-template-columns:1fr; }
+  .process-step { border-right:none !important; border-bottom:1px solid var(--border) !important; flex-direction:row; align-items:flex-start; text-align:left; gap:16px; padding:24px 0; }
+  .process-step:last-child { border-bottom:none !important; }
+  .step-number { margin:0 !important; }
+  .step-content { text-align:left; }
+}
 
 .problems-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
 @media(max-width:900px){ .problems-grid { grid-template-columns:1fr 1fr; } }
@@ -1305,18 +1334,19 @@ SUGGESTED SUPPORTING BLOG TOPICS:
 .faq-full-col { max-width:900px; margin:0 auto; }
 .faq-icon { font-weight:800; font-size:1.4rem; }
 
-/* Intent tag hover — navy tint, no white washout */
-.intent-tag:hover { background:rgba(255,255,255,0.25); border-color:rgba(255,255,255,0.5); cursor:default; }
+/* Intent tag hover — no visual change, no white box */
+.intent-tag:hover { background:rgba(255,255,255,0.15); border-color:rgba(255,255,255,0.25); cursor:default; }
 
 /* Comparison table badge tweak */
 .comparison-badge.bad { background:rgba(15,40,85,0.1); color:var(--navy); }
 
 /* Stats bar */
 .stats-bar-row { display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; }
-.stat-item { display:flex; flex-direction:column; align-items:center; gap:4px; flex:1; min-width:80px; }
+.stats-bar-row .stat-item { display:flex; flex-direction:column; align-items:center; gap:4px; flex:1; min-width:80px; background:transparent !important; border:none !important; padding:0 !important; }
+.stats-bar-row .stat-item:hover { background:transparent !important; }
 .stat-num { font-size:1.6rem; font-weight:800; color:#fff; line-height:1; }
 .stat-label { font-size:0.75rem; color:rgba(255,255,255,0.7); text-align:center; }
-@media(max-width:600px){ .stats-bar-row { justify-content:center; } .stat-item { min-width:calc(33% - 20px); } }
+@media(max-width:600px){ .stats-bar-row { justify-content:center; } .stats-bar-row .stat-item { min-width:calc(33% - 20px); } }
 
 /* Hero intent tags */
 .hero-intent-tags { display:flex; flex-wrap:wrap; gap:8px; }
@@ -1366,7 +1396,7 @@ SUGGESTED SUPPORTING BLOG TOPICS:
 .comp-good { color:#0d4a1c; font-weight:600; }
 .comp-good i { color:#1a7a32; margin-right:6px; }
 .comp-bad { color:#4a5568; font-weight:500; }
-.comp-bad i { color:#6b7a99; margin-right:6px; }
+.comp-bad i { color:#dc2626; margin-right:6px; }
 .ai-warning-note { display:flex; align-items:flex-start; gap:14px; background:rgba(15,40,85,0.05); border:1px solid rgba(15,40,85,0.15); border-radius:var(--radius-lg); padding:20px 24px; font-size:0.9rem; color:var(--text-dark); }
 .ai-warning-note i { color:var(--navy); font-size:1.2rem; flex-shrink:0; margin-top:2px; }
 .ai-warning-note p { margin:0; line-height:1.7; }
