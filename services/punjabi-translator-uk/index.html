@@ -237,7 +237,6 @@
   <a href="/">Home</a><a href="/about/">About</a><a href="/services/">Services</a>
   <a href="/blog/">Blog</a><a href="/contact/">Contact</a>
   <a href="/work-with-us/">Work With Us</a>
-  <a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a>
   <div class="mobile-nav-cta">
     <a href="/contact/" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Request a Quote</a>
     <a href="https://wa.me/447852408467" class="btn btn-whatsapp btn-lg" style="width:100%;justify-content:center;"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
@@ -249,7 +248,7 @@
   <div class="container" style="text-align:center;">
     <span class="eyebrow">CIOL-Accredited · Gurmukhi &amp; Shahmukhi · Legal, Immigration &amp; Medical</span>
     <h1 style="color:#FFFFFF;">Certified Punjabi Translation<br>Services in the UK</h1>
-    <p style="color:rgba(255,255,255,0.88);max-width:780px;margin:0 auto 28px;font-size:1.05rem;line-height:1.75;">Professional certified Punjabi–English translation for official documents — accepted by the Home Office, UKVI, UK courts, universities, and the NHS. Handled by a CIOL-certified Chartered Linguist with over a decade of experience in Gurmukhi and Shahmukhi Punjabi. Serving clients across the UK from Birmingham.</p>
+    <p style="color:rgba(255,255,255,0.88);max-width:780px;margin:0 auto 28px;font-size:1.05rem;line-height:1.75;">Professional certified Punjabi–English translation for official documents — accepted by the Home Office, UKVI, UK courts, universities, and the NHS. Handled by a CIOL-certified Chartered Linguist with over a decade of experience in Gurmukhi and Shahmukhi Punjabi. Serving clients across the UK.</p>
     <div style="margin-bottom:28px;">
       <div class="hero-intent-tags" style="justify-content:center;">
         <span class="intent-tag">Urgent Punjabi Translation UK</span>
@@ -1350,8 +1349,34 @@ SUGGESTED SUPPORTING BLOG TOPICS:
 @media(max-width:600px){ .stats-bar-row { justify-content:center; } .stats-bar-row .stat-item { min-width:calc(33% - 20px); } }
 
 /* Hero intent tags */
-.hero-intent-tags { display:flex; flex-wrap:wrap; gap:8px; }
+.hero-intent-tags { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
 .intent-tag { background:rgba(255,255,255,0.15); color:rgba(255,255,255,0.9); font-size:0.78rem; padding:5px 12px; border-radius:20px; border:1px solid rgba(255,255,255,0.25); }
+
+/* ── MOBILE FIXES ── */
+@media(max-width:600px){
+
+  /* Fix 3: Hero intent tags — 2-column grid so all fit on screen */
+  .hero-intent-tags { display:grid; grid-template-columns:1fr 1fr; gap:8px; width:100%; }
+  .intent-tag { text-align:center; font-size:0.75rem; }
+
+  /* Fix 4: Service cards — horizontal row layout, no tall boxes */
+  .grid-3 { grid-template-columns:1fr !important; }
+  .grid-3 .service-card { display:flex; flex-direction:row; align-items:flex-start; gap:14px; padding:18px 16px; }
+  .grid-3 .service-card .service-icon { width:40px; height:40px; min-width:40px; border-radius:10px; margin-bottom:0; font-size:1.1rem; }
+  .grid-3 .service-card h3 { font-size:0.9rem; margin-bottom:4px; }
+  .grid-3 .service-card p { font-size:0.825rem; margin:0; line-height:1.55; }
+
+  /* Fix 5: Process steps — fix text overflow, keep row layout clean */
+  .process-step { flex-direction:row !important; align-items:flex-start; text-align:left; gap:14px; padding:20px 0; }
+  .step-number { margin:0 !important; min-width:44px; width:44px; height:44px; font-size:1rem; flex-shrink:0; }
+  .step-content { flex:1; min-width:0; }
+  .step-content h4 { font-size:0.9rem; margin-bottom:6px; }
+  .step-content p { font-size:0.825rem; line-height:1.6; white-space:normal; overflow-wrap:break-word; }
+
+  /* Two-col sections: stack on mobile */
+  .punjabi-intro-grid { grid-template-columns:1fr !important; }
+  .content-two-col { grid-template-columns:1fr !important; }
+}
 
 /* Certification example box */
 .cert-example-box { border:1px solid rgba(15,40,85,0.15); border-radius:var(--radius-lg); overflow:hidden; background:var(--white); }
