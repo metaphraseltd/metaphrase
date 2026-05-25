@@ -280,43 +280,58 @@
       transform: translateX(4px);
     }
 
-    /* Blog Filter Bar */
-    .blog-filter-section {
-      background: var(--white);
-      padding: 48px 0 32px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .blog-filter-bar {
+    /* Pagination */
+    .blog-pagination {
       display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
+      align-items: center;
       justify-content: center;
+      gap: 6px;
+      margin-top: 48px;
+      flex-wrap: wrap;
     }
-
-    .filter-btn {
-      background: var(--off-white);
+    .page-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
       border: 1.5px solid var(--border);
-      border-radius: 50px;
-      padding: 8px 20px;
-      font-size: 0.85rem;
-      font-weight: 600;
+      background: var(--white);
       color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 600;
       cursor: pointer;
-      transition: all 0.2s ease;
       font-family: var(--font-body);
+      transition: all 0.2s ease;
+      text-decoration: none;
     }
-
-    .filter-btn:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: white;
+    .page-btn:hover {
+      border-color: var(--navy);
+      color: var(--navy);
+      background: rgba(15,40,85,0.05);
     }
-
-    .filter-btn.active {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: white;
+    .page-btn.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: #fff;
+    }
+    .page-btn.prev-next {
+      width: auto;
+      padding: 0 14px;
+      gap: 6px;
+    }
+    .page-btn:disabled, .page-btn[disabled] {
+      opacity: 0.35;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .no-results-msg {
+      text-align: center;
+      padding: 48px 20px;
+      color: var(--text-muted);
+      font-size: 1rem;
+      display: none;
     }
 
     /* Blog Layout */
@@ -721,14 +736,6 @@
         min-width: 200px;
       }
 
-      .blog-filter-bar {
-        gap: 8px;
-      }
-
-      .filter-btn {
-        padding: 6px 14px;
-        font-size: 0.8rem;
-      }
     }
 
     @media (max-width: 640px) {
@@ -999,22 +1006,6 @@
   </div>
 </section>
 
-<!-- Filter Bar -->
-<section class="blog-filter-section">
-  <div class="container">
-    <div class="blog-filter-bar">
-      <button class="filter-btn active" data-filter="all">All Posts</button>
-      <button class="filter-btn" data-filter="certified-translation">Certified Translation</button>
-      <button class="filter-btn" data-filter="immigration">Immigration &amp; Visa</button>
-      <button class="filter-btn" data-filter="interpreting">Interpreting</button>
-      <button class="filter-btn" data-filter="healthcare">Healthcare</button>
-      <button class="filter-btn" data-filter="legal">Legal Translation</button>
-      <button class="filter-btn" data-filter="standards">Professional Standards</button>
-      <button class="filter-btn" data-filter="pricing">Pricing Guide</button>
-    </div>
-  </div>
-</section>
-
 <!-- Blog Grid + Sidebar -->
 <section class="blog-layout-section">
   <div class="container">
@@ -1242,7 +1233,16 @@
           </div>
         </article>
 
+        <!-- No results message -->
+        <div class="no-results-msg" id="noResultsMsg">
+          <i class="bi bi-search" style="font-size:2rem;display:block;margin-bottom:12px;color:var(--border);"></i>
+          No articles found matching your search. Try different keywords.
+        </div>
+
       </div>
+
+      <!-- Pagination -->
+      <div class="blog-pagination" id="blogPagination" aria-label="Blog pagination"></div>
 
       <!-- Sidebar -->
       <aside class="blog-sidebar">
@@ -1262,11 +1262,15 @@
           <div class="sidebar-cats">
             <div class="sidebar-cat" data-filter="all">
               <span>All Posts</span>
-              <span>10</span>
+              <span>11</span>
             </div>
             <div class="sidebar-cat" data-filter="immigration">
               <span>Immigration &amp; Visa</span>
               <span>4</span>
+            </div>
+            <div class="sidebar-cat" data-filter="language-culture">
+              <span>Language &amp; Culture</span>
+              <span>2</span>
             </div>
             <div class="sidebar-cat" data-filter="certified-translation">
               <span>Certified Translation</span>
@@ -1288,10 +1292,6 @@
               <span>Professional Standards</span>
               <span>1</span>
             </div>
-            <div class="sidebar-cat" data-filter="language-culture">
-              <span>Language &amp; Culture</span>
-              <span>1</span>
-            </div>
           </div>
         </div>
 
@@ -1300,28 +1300,24 @@
           <h4>Recent Posts</h4>
           <div class="sidebar-recent">
             <div class="sidebar-recent-item">
+              <img loading="lazy" decoding="async" src="/assets/img/blog/hindi-language-history.jpg" alt="Hindi language history">
+              <a href="/blog/hindi-language-history/">The History &amp; Demography of Hindi: Devanagari, Hindustani &amp; What It Means for the UK</a>
+            </div>
+            <div class="sidebar-recent-item">
               <img loading="lazy" decoding="async" src="/assets/img/blog/punjabi-language-history.jpg" alt="Punjab wheat fields">
               <a href="/blog/punjabi-language-history/">The History &amp; Demography of Punjabi: Gurmukhi, Shahmukhi &amp; What It Means for the UK</a>
             </div>
             <div class="sidebar-recent-item">
-              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=100&h=100&fit=crop&q=80" alt="Home Office documents">
-              <a href="/blog/document-translation-home-office/">Which Documents Need Translation for the Home Office?</a>
-            </div>
-            <div class="sidebar-recent-item">
-              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1565018054866-968e244e4e08?w=100&h=100&fit=crop&q=80" alt="Birmingham city">
-              <a href="/blog/birmingham-translation-services/">Translation Services in Birmingham: Your Complete Guide</a>
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=100&h=100&fit=crop&q=80" alt="NHS healthcare">
+              <a href="/blog/translation-for-nhs/">Translation Services for the NHS and Healthcare Providers</a>
             </div>
             <div class="sidebar-recent-item">
               <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1532635241-17e820acc59f?w=100&h=100&fit=crop&q=80" alt="Immigration documents">
               <a href="/blog/immigration-translation-uk/">Immigration Document Translation UK: Everything You Need to Know</a>
             </div>
             <div class="sidebar-recent-item">
-              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=100&h=100&fit=crop&q=80" alt="Translation pricing">
-              <a href="/blog/certified-translation-cost-uk/">How Much Does Certified Translation Cost in the UK?</a>
-            </div>
-            <div class="sidebar-recent-item">
-              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=100&h=100&fit=crop&q=80" alt="NHS healthcare">
-              <a href="/blog/translation-for-nhs/">Translation Services for the NHS and Healthcare Providers</a>
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=100&h=100&fit=crop&q=80" alt="Home Office documents">
+              <a href="/blog/document-translation-home-office/">Which Documents Need Translation for the Home Office?</a>
             </div>
           </div>
         </div>
@@ -1391,64 +1387,118 @@
 
 <!-- Blog-Specific JavaScript -->
 <script>
-  // Blog filter functionality
-  const sidebarSearch = document.getElementById('sidebarSearch');
-  const blogCards = document.querySelectorAll('.premium-blog-card');
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const sidebarCats = document.querySelectorAll('.sidebar-cat');
+(function () {
+  var POSTS_PER_PAGE = 5;
+  var allCards = Array.from(document.querySelectorAll('.premium-blog-card'));
+  var paginationEl = document.getElementById('blogPagination');
+  var noResultsEl = document.getElementById('noResultsMsg');
+  var sidebarSearch = document.getElementById('sidebarSearch');
+  var sidebarCats = document.querySelectorAll('.sidebar-cat');
 
-  let currentFilter = 'all';
-  let currentSearch = '';
+  var currentPage = 1;
+  var currentSearch = '';
+  var currentFilter = 'all';
 
-  function filterCards() {
-    blogCards.forEach(card => {
-      const category = card.getAttribute('data-category');
-      const title = card.getAttribute('data-title').toLowerCase();
-      const excerpt = card.getAttribute('data-excerpt').toLowerCase();
-
-      const matchesCategory = currentFilter === 'all' || category === currentFilter;
-      const matchesSearch = currentSearch === '' || title.includes(currentSearch) || excerpt.includes(currentSearch);
-
-      if (matchesCategory && matchesSearch) {
-        card.classList.remove('hidden');
-      } else {
-        card.classList.add('hidden');
-      }
+  /* ── Get the subset of cards matching current search + filter ── */
+  function getVisible() {
+    return allCards.filter(function (card) {
+      var title = card.getAttribute('data-title').toLowerCase();
+      var excerpt = card.getAttribute('data-excerpt').toLowerCase();
+      var category = card.getAttribute('data-category');
+      var matchesSearch = currentSearch === '' || title.includes(currentSearch) || excerpt.includes(currentSearch);
+      var matchesFilter = currentFilter === 'all' || category === currentFilter;
+      return matchesSearch && matchesFilter;
     });
   }
 
-  // Filter button clicks
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentFilter = btn.getAttribute('data-filter');
-      filterCards();
-    });
-  });
+  /* ── Show the correct 5 cards for current page ── */
+  function render() {
+    var visible = getVisible();
+    var totalPages = Math.max(1, Math.ceil(visible.length / POSTS_PER_PAGE));
+    if (currentPage > totalPages) currentPage = 1;
 
-  // Sidebar category clicks
-  sidebarCats.forEach(cat => {
-    cat.addEventListener('click', () => {
-      const filter = cat.getAttribute('data-filter');
-      filterBtns.forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.getAttribute('data-filter') === filter) {
-          btn.classList.add('active');
-        }
-      });
-      currentFilter = filter;
-      filterCards();
-    });
-  });
+    var start = (currentPage - 1) * POSTS_PER_PAGE;
+    var end = start + POSTS_PER_PAGE;
 
-  // Sidebar search
+    // hide all, then show the right slice
+    allCards.forEach(function (card) { card.style.display = 'none'; });
+    visible.forEach(function (card, i) {
+      card.style.display = (i >= start && i < end) ? '' : 'none';
+    });
+
+    // no results
+    noResultsEl.style.display = visible.length === 0 ? 'block' : 'none';
+
+    // build pagination
+    buildPagination(totalPages, visible.length);
+  }
+
+  /* ── Build pagination controls ── */
+  function buildPagination(totalPages, totalItems) {
+    paginationEl.innerHTML = '';
+    if (totalItems === 0 || totalPages <= 1) return;
+
+    // Prev button
+    var prev = makeBtn('&lsaquo; Prev', 'prev-next', currentPage === 1);
+    prev.addEventListener('click', function () { currentPage--; render(); scrollToGrid(); });
+    paginationEl.appendChild(prev);
+
+    // Page number buttons
+    for (var i = 1; i <= totalPages; i++) {
+      (function (p) {
+        var btn = makeBtn(p, '', false);
+        if (p === currentPage) btn.classList.add('active');
+        btn.addEventListener('click', function () { currentPage = p; render(); scrollToGrid(); });
+        paginationEl.appendChild(btn);
+      })(i);
+    }
+
+    // Next button
+    var next = makeBtn('Next &rsaquo;', 'prev-next', currentPage === totalPages);
+    next.addEventListener('click', function () { currentPage++; render(); scrollToGrid(); });
+    paginationEl.appendChild(next);
+  }
+
+  function makeBtn(label, extraClass, disabled) {
+    var btn = document.createElement('button');
+    btn.className = 'page-btn' + (extraClass ? ' ' + extraClass : '');
+    btn.innerHTML = label;
+    if (disabled) btn.setAttribute('disabled', true);
+    return btn;
+  }
+
+  function scrollToGrid() {
+    var grid = document.querySelector('.blog-grid-inner');
+    if (grid) { grid.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  }
+
+  /* ── Search ── */
   if (sidebarSearch) {
-    sidebarSearch.addEventListener('input', () => {
-      currentSearch = sidebarSearch.value.toLowerCase();
-      filterCards();
+    sidebarSearch.addEventListener('input', function () {
+      currentSearch = sidebarSearch.value.trim().toLowerCase();
+      currentPage = 1;
+      render();
+    });
+    // allow Enter key to trigger search
+    sidebarSearch.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') { e.preventDefault(); }
     });
   }
+
+  /* ── Sidebar category filter (kept functional) ── */
+  sidebarCats.forEach(function (cat) {
+    cat.addEventListener('click', function () {
+      sidebarCats.forEach(function (c) { c.classList.remove('active'); });
+      cat.classList.add('active');
+      currentFilter = cat.getAttribute('data-filter');
+      currentPage = 1;
+      render();
+    });
+  });
+
+  /* ── Initial render ── */
+  render();
+})();
 </script>
 
 
