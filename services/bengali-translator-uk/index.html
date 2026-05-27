@@ -1007,6 +1007,35 @@
   </div>
 </section>
 
+<!-- BLOG LINK -->
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="blog-promo-card reveal">
+      <div class="blog-promo-img">
+        <img src="/assets/img/blog/bengali-language-history.jpg" alt="The history and culture of the Bengali language" loading="lazy" width="480" height="270">
+      </div>
+      <div class="blog-promo-content">
+        <span class="eyebrow">From Our Blog</span>
+        <h3>Bengali: A Language That People Died to Defend — and Why It Matters Today</h3>
+        <p>Bengali is spoken by 270 million people and is unique in being the only language for which people gave their lives. This article traces its ancient origins, the 1952 Language Movement, the distinction between Standard Bengali and Sylheti, and what all of this means for certified translation in the UK.</p>
+        <a href="/blog/bengali-language-history/" class="btn btn-primary" style="margin-top:8px;"><i class="bi bi-arrow-right-circle-fill"></i> Read the Article</a>
+      </div>
+    </div>
+
+    <div class="blog-promo-card reveal" style="margin-top:32px;">
+      <div class="blog-promo-img">
+        <img src="/assets/img/blog/certified-translation-guide.jpg" alt="Certified translation guide for UK immigration" loading="lazy" width="480" height="270">
+      </div>
+      <div class="blog-promo-content">
+        <span class="eyebrow">From Our Blog</span>
+        <h3>The Complete Guide to Certified Translation for UK Immigration</h3>
+        <p>If you are submitting documents to UKVI, the Home Office, or UK courts, understanding the difference between certified, notarised, and apostilled translation is essential. This guide explains what UKVI actually requires, why machine translation is always rejected, and how to get a certified translation accepted first time.</p>
+        <a href="/blog/certified-translation-guide/" class="btn btn-primary" style="margin-top:8px;"><i class="bi bi-arrow-right-circle-fill"></i> Read the Article</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- RELATED SERVICES -->
 <section class="section" style="background:var(--off-white);">
   <div class="container">
@@ -1195,6 +1224,15 @@
 .grid-4-related { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
 @media(max-width:900px){ .grid-4-related { grid-template-columns:1fr 1fr; } }
 @media(max-width:500px){ .grid-4-related { grid-template-columns:1fr; } }
+
+/* Blog promo card */
+.blog-promo-card { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; background:var(--white); border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; }
+.blog-promo-img { overflow:hidden; height:100%; min-height:260px; }
+.blog-promo-img img { width:100%; height:100%; object-fit:cover; display:block; }
+.blog-promo-content { padding:40px 40px 40px 0; }
+.blog-promo-content h3 { font-size:1.25rem; color:var(--navy); margin-bottom:14px; line-height:1.4; }
+.blog-promo-content p { font-size:0.9rem; color:var(--text-muted); line-height:1.75; margin:0; }
+@media(max-width:768px){ .blog-promo-card { grid-template-columns:1fr; } .blog-promo-img { min-height:200px; } .blog-promo-content { padding:28px; } }
 </style>
 
 <footer role="contentinfo">
