@@ -608,7 +608,7 @@ p { color: var(--text-body); }
 .testimonial-linkedin:hover { opacity: 1; }
 
 /* ── 15. FAQ ── */
-.faq-section { background: var(--white); }
+.faq-section { background: var(--white); padding: var(--section-py) 0; }
 .faq-item { border-bottom: 1px solid var(--border); }
 .faq-question {
   width: 100%; background: none; border: none; text-align: left; padding: 24px 0;
