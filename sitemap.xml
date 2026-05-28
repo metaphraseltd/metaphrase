@@ -91,6 +91,12 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://metaphrase.uk/services/turkish-translator-uk/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://metaphrase.uk/services/arabic-translator-uk/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
