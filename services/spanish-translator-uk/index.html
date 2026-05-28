@@ -13,7 +13,7 @@
   <meta name="msvalidate.01" content="4520DFA6865FF6D7C39511C8263B319F" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Certified Spanish Translator UK | Legal, Immigration &amp; Official Documents | Metaphrase Ltd</title>
-  <meta name="description" content="Certified Spanish translation services accepted by UKVI, the Home Office, UK courts and universities. Spanish and Latin American documents. CIOL-certified Chartered Linguist. 24–48hr turnaround. Free quote.">
+  <meta name="description" content="Certified Spanish translation services accepted by UKVI, the Home Office, UK courts and universities. Spain and Latin American documents. CIOL-certified Chartered Linguist. 24–48hr turnaround. Free quote.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Metaphrase Ltd">
   <link rel="canonical" href="https://metaphrase.uk/services/spanish-translator-uk/">
@@ -47,13 +47,150 @@
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"></noscript>
   <link rel="stylesheet" href="/assets/css/premium.css">
 
+  <style>
+    .lang-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    @media (max-width: 860px) {
+      .lang-intro-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+    .stats-bar-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      gap: 24px;
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.65);
+      margin-top: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: block;
+    }
+    .intent-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      color: #fff !important;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+    .hero-intent-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      margin-top: 48px;
+    }
+    .process-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-right: 1px solid var(--border);
+      padding: 36px 20px;
+    }
+    .process-step:last-child { border-right: none; }
+    .step-number {
+      width: 56px;
+      height: 56px;
+      min-width: 56px;
+      background: var(--navy);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin: 0 auto 20px;
+      flex-shrink: 0;
+    }
+    .step-content h4 { margin: 0 0 10px; color: var(--navy); font-size: 1rem; font-weight: 700; }
+    .step-content p { font-size: 0.875rem; color: var(--text-dark); line-height: 1.75; margin: 0; }
+    @media (max-width: 860px) {
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .process-step { border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+      .process-step:nth-child(2n) { border-right: none; }
+    }
+    @media (max-width: 480px) {
+      .process-steps { grid-template-columns: 1fr; }
+      .process-step { border-right: none; border-bottom: 1px solid var(--border); }
+      .process-step:last-child { border-bottom: none; }
+    }
+    .faq-list { display: flex; flex-direction: column; gap: 0; margin-top: 48px; }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-item summary {
+      padding: 20px 0;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--navy);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--navy);
+      flex-shrink: 0;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-body {
+      padding: 0 0 20px;
+      color: var(--text-dark);
+      font-size: 0.92rem;
+      line-height: 1.8;
+    }
+    .faq-body p { margin: 0; }
+    .blog-promo-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+    .blog-promo-card:hover { box-shadow: 0 8px 32px rgba(15,40,85,0.12); transform: translateY(-3px); }
+    .blog-promo-content { padding: 24px; }
+    .blog-promo-content h4 { color: var(--navy); font-size: 1rem; margin-bottom: 8px; line-height: 1.4; }
+    .blog-promo-content p { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 12px; }
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness","ProfessionalService"],
     "@id": "https://metaphrase.uk/#business",
     "name": "Metaphrase Ltd",
-    "description": "CIOL-certified translation, interpreting, and transcription services in Birmingham, UK.",
+    "description": "CIOL-certified translation, interpreting, and transcription services in Birmingham, UK. Specialising in legal, medical, and immigration document translation.",
     "url": "https://metaphrase.uk",
     "telephone": "+447852408467",
     "email": "info@metaphrase.uk",
@@ -61,7 +198,15 @@
     "logo": "https://metaphrase.uk/assets/img/og-social.png",
     "priceRange": "££",
     "currenciesAccepted": "GBP",
-    "areaServed": [{"@type": "Country","name": "United Kingdom"}],
+    "areaServed": [
+      {"@type": "City","name": "Birmingham"},
+      {"@type": "AdministrativeArea","name": "West Midlands"},
+      {"@type": "Country","name": "United Kingdom"}
+    ],
+    "sameAs": ["https://www.linkedin.com/company/metaphrase-ltd","https://www.instagram.com/metaphraseltd/","https://www.facebook.com/metaphrase","https://maps.app.goo.gl/dtfUvnDPFnSfpaQ2A"],
+    "founder": {"@type": "Person","name": "Mohammad Kashif Khalid","sameAs": "https://www.linkedin.com/company/metaphrase-ltd"},
+    "openingHoursSpecification": [{"@type": "OpeningHoursSpecification","dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens": "00:00","closes": "23:59"}],
+    "geo": {"@type": "GeoCoordinates","latitude": 52.4862,"longitude": -1.8904},
     "address": {"@type": "PostalAddress","streetAddress": "30 Victoria Road","addressLocality": "Birmingham","postalCode": "B21 0SA","addressRegion": "West Midlands","addressCountry": "GB"}
   }
   </script>
@@ -71,12 +216,12 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Certified Spanish Translation UK",
-    "description": "Professional certified Spanish–English translation services for immigration, legal, medical, and academic documents. CIOL-certified. Accepted by UKVI, the Home Office, UK courts, and universities.",
+    "description": "Professional certified Spanish–English translation for immigration, legal, medical, and academic documents. CIOL-certified. Accepted by UKVI, the Home Office, UK courts, and universities.",
     "provider": {"@type": "LocalBusiness","name": "Metaphrase Ltd","@id": "https://metaphrase.uk/#business"},
     "areaServed": {"@type": "Country","name": "United Kingdom"},
     "serviceType": "Certified Spanish Translation",
     "url": "https://metaphrase.uk/services/spanish-translator-uk/",
-    "offers": {"@type": "Offer","priceCurrency": "GBP","price": "55"}
+    "offers": {"@type": "Offer","priceCurrency": "GBP","price": "55","priceSpecification": {"@type": "PriceSpecification","minPrice": "55","priceCurrency": "GBP","description": "Per standard page. Certificate of accuracy included."}}
   }
   </script>
 
@@ -152,530 +297,496 @@
   </script>
 </head>
 <body>
-<header id="header">
-  <div class="container nav-container">
-    <a href="/" class="logo" aria-label="Metaphrase Ltd — Home">
-      <img src="/assets/img/metaphrase-logo-m.svg" alt="Metaphrase Ltd certified translation agency logo" class="logo-mark" width="44" height="44">
-      <div class="logo-text">
-        <span class="logo-name">Metaphrase</span>
-        <span class="logo-tagline">Certified. Precise. Trusted.</span>
-      </div>
-    </a>
-    <nav class="nav-menu" aria-label="Main navigation">
-      <a href="/">Home</a><a href="/about/">About</a><a href="/services/" class="active">Services</a>
-      <a href="/blog/">Blog</a><a href="/contact/">Contact</a><a href="/work-with-us/">Work With Us</a>
-    </nav>
-    <div class="nav-cta"><a href="/contact/" class="btn btn-primary">Request a Quote</a></div>
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
-  <a href="/">Home</a><a href="/about/">About</a><a href="/services/">Services</a>
-  <a href="/blog/">Blog</a><a href="/contact/">Contact</a><a href="/work-with-us/">Work With Us</a>
-  <div class="mobile-nav-cta">
-    <a href="/contact/" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Request a Quote</a>
-    <a href="https://wa.me/447852408467" class="btn btn-whatsapp btn-lg" style="width:100%;justify-content:center;"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
-  </div>
-</nav>
 
-<!-- HERO -->
-<section class="page-hero" aria-label="Certified Spanish Translation hero">
-  <div class="container" style="text-align:center;">
-    <span class="eyebrow">CIOL-Accredited · Spain &amp; Latin America · Legal, Immigration &amp; Medical</span>
-    <h1 style="color:#FFFFFF;">Certified Spanish Translation<br>Services in the UK</h1>
-    <p style="color:rgba(255,255,255,0.88);max-width:780px;margin:0 auto 28px;font-size:1.05rem;line-height:1.75;">Professional certified Spanish–English translation for official documents — accepted by the Home Office, UKVI, UK courts, universities, and the NHS. Handled by a CIOL-certified Chartered Linguist with specialist knowledge of Castilian Spanish and documents from all 20 Spanish-speaking countries. Serving clients across the UK.</p>
-    <div style="margin-bottom:28px;">
-      <div class="hero-intent-tags" style="justify-content:center;">
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="https://metaphrase.uk/" class="site-logo" aria-label="Metaphrase Ltd certified translation agency logo">
+        <img src="/assets/img/logo.svg" alt="Metaphrase" width="180" height="40">
+        <span class="logo-tagline">Certified. Precise. Trusted.</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="https://metaphrase.uk/">Home</a>
+        <a href="https://metaphrase.uk/about/">About</a>
+        <a href="https://metaphrase.uk/services/">Services</a>
+        <a href="https://metaphrase.uk/blog/">Blog</a>
+        <a href="https://metaphrase.uk/contact/">Contact</a>
+        <a href="https://metaphrase.uk/work-with-us/">Work With Us</a>
+      </nav>
+      <a href="https://metaphrase.uk/contact/" class="btn btn-primary nav-cta">Request a Quote</a>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="https://metaphrase.uk/">Home</a>
+      <a href="https://metaphrase.uk/about/">About</a>
+      <a href="https://metaphrase.uk/services/">Services</a>
+      <a href="https://metaphrase.uk/blog/">Blog</a>
+      <a href="https://metaphrase.uk/contact/">Contact</a>
+      <a href="https://metaphrase.uk/work-with-us/">Work With Us</a>
+      <div style="display:flex;gap:12px;margin-top:8px;flex-wrap:wrap;">
+        <a href="https://metaphrase.uk/contact/" class="btn btn-primary" style="flex:1;text-align:center;">Request a Quote</a>
+        <a href="https://wa.me/447852408467" class="btn btn-secondary" style="flex:1;text-align:center;">WhatsApp Us</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="page-hero" style="text-align:center;">
+    <div class="container">
+      <span class="eyebrow">CIOL-Accredited · Spain &amp; Latin America · Legal, Immigration &amp; Medical</span>
+      <h1 style="color:#FFFFFF;">Certified Spanish Translation<br>Services in the UK</h1>
+      <p class="hero-lead" style="color:rgba(255,255,255,0.92);max-width:720px;margin:0 auto 28px;">Professional certified Spanish–English translation for official documents — accepted by the Home Office, UKVI, UK courts, universities, and the NHS. Specialist translators for Castilian Spanish and documents from all 20 Spanish-speaking countries. Serving clients across the UK.</p>
+      <div class="hero-intent-tags" style="justify-content:center;margin-bottom:28px;">
         <span class="intent-tag">Urgent Spanish Translation UK</span>
         <span class="intent-tag">Same-Day Spanish Translator</span>
         <span class="intent-tag">Certified Spanish Translation Near Me</span>
         <span class="intent-tag">UKVI Accepted · 24hr Turnaround</span>
       </div>
-    </div>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px;justify-content:center;">
-      <a href="/contact/" class="btn btn-primary btn-lg"><i class="bi bi-envelope-fill"></i> Get a Free Quote</a>
-      <a href="https://wa.me/447852408467" class="btn btn-whatsapp btn-lg"><i class="bi bi-whatsapp"></i> WhatsApp for Urgent Help</a>
-    </div>
-    <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="justify-content:center;">
-      <a href="/">Home</a> <span aria-hidden="true">›</span>
-      <a href="/services/">Services</a> <span aria-hidden="true">›</span>
-      <strong>Certified Spanish Translator UK</strong>
-    </nav>
-  </div>
-</section>
-
-<!-- TRUST BAR -->
-<section class="section-sm" style="background:var(--white);">
-  <div class="container">
-    <div class="trust-bar-inner" style="justify-content:center;padding:0;flex-wrap:wrap;gap:12px;">
-      <span class="trust-badge"><i class="bi bi-patch-check-fill"></i> CIOL Certified Linguist</span>
-      <span class="trust-badge"><i class="bi bi-shield-check"></i> ICO Registered</span>
-      <span class="trust-badge trust-badge-highlight"><i class="bi bi-building"></i> UKVI &amp; Home Office Accepted</span>
-      <span class="trust-badge"><i class="bi bi-translate"></i> All 20 Spanish-Speaking Countries</span>
-      <span class="trust-badge"><i class="bi bi-clock-fill"></i> 24–48hr Turnaround</span>
-    </div>
-  </div>
-</section>
-
-<!-- STATS BAR -->
-<section style="background:var(--navy);padding:52px 0;" aria-label="Metaphrase key statistics">
-  <div class="container">
-    <div class="stats-bar-row">
-      <div class="stat-item"><span class="stat-num">10+</span><span class="stat-label">Years' Experience</span></div>
-      <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">UKVI Acceptance Rate</span></div>
-      <div class="stat-item"><span class="stat-num">20</span><span class="stat-label">Countries Covered</span></div>
-      <div class="stat-item"><span class="stat-num">24hr</span><span class="stat-label">Standard Turnaround</span></div>
-      <div class="stat-item"><span class="stat-num">0</span><span class="stat-label">Rejections Ever</span></div>
-      <div class="stat-item"><span class="stat-num">6+</span><span class="stat-label">Sectors Served</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- INTRODUCTION ══════════════════════════════════════════════════════ -->
-<section class="section" aria-labelledby="intro-heading">
-  <div class="container">
-    <div class="lang-intro-grid">
-      <div>
-        <span class="eyebrow">About Spanish in the UK</span>
-        <h2 id="intro-heading" class="section-heading">The World's Second Most-Spoken Language — With 20 Nations Behind It</h2>
-        <p>Spanish is spoken by over 500 million people as a native language, making it the world's second most-spoken language by native speakers. In the UK, it is spoken by hundreds of thousands of people — Spanish nationals, Latin American communities, and professionals across every sector.</p>
-        <p>What makes Spanish translation complex is its diversity. Spain and each of the 19 Latin American countries where Spanish is official use different civil registry systems, different administrative vocabulary, and different document formats. A <em>certificado de nacimiento</em> from Spain looks and reads differently from an <em>acta de nacimiento</em> from Mexico or a <em>partida de nacimiento</em> from Colombia. An accurate, accepted translation requires familiarity with the specific country's documents — not just the language.</p>
-        <p>Our CIOL-certified translators work exclusively with human expertise. We never use machine translation or AI tools for certified work. Every translation carries a signed certificate of accuracy accepted across UK immigration, legal, and official settings.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://metaphrase.uk/contact/" class="btn btn-primary btn-lg">Get a Free Quote</a>
+        <a href="https://wa.me/447852408467" class="btn btn-secondary btn-lg">WhatsApp for Urgent Help</a>
       </div>
-      <div>
-        <div style="background:var(--off-white);border-radius:var(--radius-lg);padding:32px;border:1px solid var(--border);">
-          <h3 style="color:var(--navy);margin-bottom:16px;font-size:1.1rem;">Spanish in Numbers</h3>
-          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
-            <li style="display:flex;gap:12px;align-items:flex-start;"><i class="bi bi-people-fill" style="color:var(--navy);margin-top:3px;flex-shrink:0;"></i><span><strong>500+ million</strong> native speakers worldwide</span></li>
-            <li style="display:flex;gap:12px;align-items:flex-start;"><i class="bi bi-globe2" style="color:var(--navy);margin-top:3px;flex-shrink:0;"></i><span><strong>20 countries</strong> where Spanish is an official language</span></li>
-            <li style="display:flex;gap:12px;align-items:flex-start;"><i class="bi bi-geo-alt-fill" style="color:var(--navy);margin-top:3px;flex-shrink:0;"></i><span><strong>200,000+</strong> Spanish nationals registered in the UK</span></li>
-            <li style="display:flex;gap:12px;align-items:flex-start;"><i class="bi bi-translate" style="color:var(--navy);margin-top:3px;flex-shrink:0;"></i><span>Official language of the <strong>UN, EU, and 6 other major international bodies</strong></span></li>
-            <li style="display:flex;gap:12px;align-items:flex-start;"><i class="bi bi-file-earmark-text-fill" style="color:var(--navy);margin-top:3px;flex-shrink:0;"></i><span>Each country has its own <strong>civil registry system</strong> and document vocabulary</span></li>
-          </ul>
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="justify-content:center;margin-top:32px;">
+        <a href="https://metaphrase.uk/">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="https://metaphrase.uk/services/">Services</a>
+        <span aria-hidden="true">›</span>
+        <strong>Certified Spanish Translator UK</strong>
+      </nav>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="section-sm" style="border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="trust-bar-inner">
+        <span class="trust-badge"><i class="bi bi-patch-check-fill" aria-hidden="true"></i> CIOL Certified Linguist</span>
+        <span class="trust-badge"><i class="bi bi-shield-lock-fill" aria-hidden="true"></i> ICO Registered</span>
+        <span class="trust-badge"><i class="bi bi-bank" aria-hidden="true"></i> UKVI &amp; Home Office Accepted</span>
+        <span class="trust-badge"><i class="bi bi-globe2" aria-hidden="true"></i> All 20 Spanish-Speaking Countries</span>
+        <span class="trust-badge"><i class="bi bi-clock-fill" aria-hidden="true"></i> 24–48hr Turnaround</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section style="background:var(--navy);padding:52px 0;">
+    <div class="container">
+      <div class="stats-bar-row">
+        <div class="stat-item">
+          <span class="stat-num">10+</span>
+          <span class="stat-label">Years' Experience</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">UKVI Acceptance Rate</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">20</span>
+          <span class="stat-label">Countries Covered</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">24hr</span>
+          <span class="stat-label">Standard Turnaround</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">0</span>
+          <span class="stat-label">Rejections Ever</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">6+</span>
+          <span class="stat-label">Sectors Served</span>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══ TWO VARIETIES ════════════════════════════════════════════════ -->
-<section class="section" style="background:var(--off-white);padding-top:0;padding-bottom:56px;" aria-labelledby="varieties-heading">
-  <div class="container">
-    <header class="section-header centered reveal">
-      <span class="eyebrow">Two Major Contexts</span>
-      <h2 id="varieties-heading" class="section-heading">Iberian Spanish vs Latin American Spanish</h2>
-      <p class="section-subheading">While mutually intelligible, official documents from Spain and Latin America differ substantially in format, administrative vocabulary, and the issuing authority's structure — requiring different expertise to translate accurately.</p>
-    </header>
-    <div class="grid-2" style="gap:24px;">
-
-      <!-- Iberian Spanish -->
-      <div style="background:var(--navy);border-radius:var(--radius-lg);padding:36px;color:var(--white);">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
-          <span style="font-size:2.2rem;">🇪🇸</span>
-          <div>
-            <h3 style="color:var(--white);margin:0;font-size:1.3rem;">Castilian Spanish (Spain)</h3>
-            <p style="color:rgba(255,255,255,0.65);margin:4px 0 0;font-size:0.9rem;">Español Castellano — Iberian Peninsula</p>
+  <!-- INTRODUCTION -->
+  <section class="section">
+    <div class="container">
+      <div class="lang-intro-grid">
+        <div>
+          <div class="section-label">About Spanish in the UK</div>
+          <h2 class="section-title">The World's Second Most-Spoken Language — With 20 Nations Behind It</h2>
+          <p>Spanish is spoken by over 500 million people as a native language, making it the world's second most-spoken language by native speakers. In the UK, it is spoken by hundreds of thousands of people — Spanish nationals, Latin American communities, and professionals across every sector.</p>
+          <p style="margin-top:16px;">What makes Spanish translation complex is its diversity. Spain and each of the 19 Latin American countries where Spanish is official use different civil registry systems, different administrative vocabulary, and different document formats. A <em>certificado de nacimiento</em> from Spain looks and reads differently from an <em>acta de nacimiento</em> from Mexico or a <em>partida de nacimiento</em> from Colombia. An accurate, accepted translation requires familiarity with the specific country's documents — not just the language.</p>
+          <p style="margin-top:16px;">Our CIOL-certified translators work exclusively with human expertise. We never use machine translation or AI tools for certified work. Every translation carries a signed certificate of accuracy accepted across UK immigration, legal, and official settings.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;">
+            <a href="https://metaphrase.uk/contact/" class="btn btn-primary">Get a Free Quote</a>
+            <a href="https://wa.me/447852408467" class="btn btn-secondary">WhatsApp Us</a>
           </div>
         </div>
-        <p style="color:rgba(255,255,255,0.82);margin-bottom:18px;">Documents from Spain are issued by the Registro Civil (Civil Registry), the Ministerio de Justicia, or the Dirección General de la Policía. Since Brexit, Spanish nationals living in the UK require certified translations of Spanish documents for the EU Settlement Scheme, spouse visas, and settled status applications.</p>
-        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-          <li style="display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,0.85);font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:rgba(255,255,255,0.7);margin-top:2px;flex-shrink:0;"></i><span><strong style="color:var(--white);">Certificado de nacimiento</strong> — birth certificate</span></li>
-          <li style="display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,0.85);font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:rgba(255,255,255,0.7);margin-top:2px;flex-shrink:0;"></i><span><strong style="color:var(--white);">Certificado de matrimonio</strong> — marriage certificate</span></li>
-          <li style="display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,0.85);font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:rgba(255,255,255,0.7);margin-top:2px;flex-shrink:0;"></i><span><strong style="color:var(--white);">Antecedentes penales</strong> — criminal record certificate</span></li>
-          <li style="display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,0.85);font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:rgba(255,255,255,0.7);margin-top:2px;flex-shrink:0;"></i><span><strong style="color:var(--white);">Permiso de conducir</strong> — driving licence</span></li>
-          <li style="display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,0.85);font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:rgba(255,255,255,0.7);margin-top:2px;flex-shrink:0;"></i><span><strong style="color:var(--white);">DNI</strong> (Documento Nacional de Identidad) — national ID</span></li>
-          <li style="display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,0.85);font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:rgba(255,255,255,0.7);margin-top:2px;flex-shrink:0;"></i><span><strong style="color:var(--white);">Sentencia de divorcio</strong> — divorce decree</span></li>
-        </ul>
-      </div>
-
-      <!-- Latin American Spanish -->
-      <div style="background:#1a4f2a;border-radius:var(--radius-lg);padding:36px;color:var(--white);">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
-          <span style="font-size:2.2rem;">🌎</span>
-          <div>
-            <h3 style="color:var(--white);margin:0;font-size:1.3rem;">Latin American Spanish</h3>
-            <p style="color:rgba(255,255,255,0.65);margin:4px 0 0;font-size:0.9rem;">Mexico, Colombia, Ecuador, Bolivia, Peru &amp; beyond</p>
+        <div>
+          <div style="background:var(--bg-light);border-radius:var(--radius-lg);padding:32px;border:1px solid var(--border);margin-bottom:24px;">
+            <h3 style="color:var(--navy);margin:0 0 20px;font-size:1.1rem;">Spanish in Numbers</h3>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:16px;">
+              <li style="display:flex;gap:12px;align-items:flex-start;"><i class="bi bi-people-fill" style="color:var(--navy);margin-top:3px;flex-shrink:0;font-size:1.1rem;" aria-hidden="true"></i><span><strong>500+ million</strong> native speakers worldwide</span></li>
+              <li style="display:flex;gap:12px;align-items:flex-start;"><i class="bi bi-globe2" style="color:var(--navy);margin-top:3px;flex-shrink:0;font-size:1.1rem;" aria-hidden="true"></i><span><strong>20 countries</strong> where Spanish is an official language</span></li>
+              <li style="display:flex;gap:12px;align-items:flex-start;"><i class="bi bi-geo-alt-fill" style="color:var(--navy);margin-top:3px;flex-shrink:0;font-size:1.1rem;" aria-hidden="true"></i><span><strong>200,000+</strong> Spanish nationals registered in the UK</span></li>
+              <li style="display:flex;gap:12px;align-items:flex-start;"><i class="bi bi-translate" style="color:var(--navy);margin-top:3px;flex-shrink:0;font-size:1.1rem;" aria-hidden="true"></i><span>Official language of the <strong>UN, EU, and 6 other major international bodies</strong></span></li>
+              <li style="display:flex;gap:12px;align-items:flex-start;"><i class="bi bi-file-earmark-text-fill" style="color:var(--navy);margin-top:3px;flex-shrink:0;font-size:1.1rem;" aria-hidden="true"></i><span>Each country has its own <strong>civil registry system</strong> and document vocabulary</span></li>
+            </ul>
+          </div>
+          <div style="background:var(--navy);border-radius:var(--radius-lg);padding:24px;color:#fff;">
+            <h3 style="color:#fff;margin:0 0 16px;font-size:1rem;">Countries We Cover</h3>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+              <span style="font-size:1.2rem;" title="Spain">🇪🇸</span>
+              <span style="font-size:1.2rem;" title="Mexico">🇲🇽</span>
+              <span style="font-size:1.2rem;" title="Colombia">🇨🇴</span>
+              <span style="font-size:1.2rem;" title="Argentina">🇦🇷</span>
+              <span style="font-size:1.2rem;" title="Peru">🇵🇪</span>
+              <span style="font-size:1.2rem;" title="Venezuela">🇻🇪</span>
+              <span style="font-size:1.2rem;" title="Chile">🇨🇱</span>
+              <span style="font-size:1.2rem;" title="Ecuador">🇪🇨</span>
+              <span style="font-size:1.2rem;" title="Guatemala">🇬🇹</span>
+              <span style="font-size:1.2rem;" title="Cuba">🇨🇺</span>
+              <span style="font-size:1.2rem;" title="Bolivia">🇧🇴</span>
+              <span style="font-size:1.2rem;" title="Dominican Republic">🇩🇴</span>
+              <span style="font-size:1.2rem;" title="Honduras">🇭🇳</span>
+              <span style="font-size:1.2rem;" title="Paraguay">🇵🇾</span>
+              <span style="font-size:1.2rem;" title="El Salvador">🇸🇻</span>
+              <span style="font-size:1.2rem;" title="Nicaragua">🇳🇮</span>
+              <span style="font-size:1.2rem;" title="Costa Rica">🇨🇷</span>
+              <span style="font-size:1.2rem;" title="Panama">🇵🇦</span>
+              <span style="font-size:1.2rem;" title="Uruguay">🇺🇾</span>
+              <span style="font-size:1.2rem;" title="Equatorial Guinea">🇬🇶</span>
+            </div>
+            <p style="color:rgba(255,255,255,0.7);font-size:0.82rem;margin:12px 0 0;">All 20 Spanish-speaking nations — one consistent standard of certified translation</p>
           </div>
         </div>
-        <p style="color:rgba(255,255,255,0.82);margin-bottom:18px;">Latin American countries each operate distinct civil registry systems. Documents are issued by Registros Civiles, juzgados, or municipal authorities depending on the country and era. Terminology, stamp types, apostille systems, and official seal formats all vary. Translating Latin American documents accurately requires country-specific knowledge.</p>
-        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-          <li style="display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,0.85);font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:rgba(255,255,255,0.7);margin-top:2px;flex-shrink:0;"></i><span><strong style="color:var(--white);">Acta/Partida de nacimiento</strong> — birth certificate (country variant)</span></li>
-          <li style="display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,0.85);font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:rgba(255,255,255,0.7);margin-top:2px;flex-shrink:0;"></i><span><strong style="color:var(--white);">Acta de matrimonio</strong> — marriage certificate</span></li>
-          <li style="display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,0.85);font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:rgba(255,255,255,0.7);margin-top:2px;flex-shrink:0;"></i><span><strong style="color:var(--white);">Antecedentes judiciales/buena conducta</strong> — criminal record</span></li>
-          <li style="display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,0.85);font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:rgba(255,255,255,0.7);margin-top:2px;flex-shrink:0;"></i><span><strong style="color:var(--white);">Licencia de conducir/manejo</strong> — driving licence</span></li>
-          <li style="display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,0.85);font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:rgba(255,255,255,0.7);margin-top:2px;flex-shrink:0;"></i><span><strong style="color:var(--white);">Título universitario / diploma</strong> — degree certificate</span></li>
-          <li style="display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,0.85);font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:rgba(255,255,255,0.7);margin-top:2px;flex-shrink:0;"></i><span><strong style="color:var(--white);">Apostilla de la Haya</strong> — Hague Apostille authentication</span></li>
-        </ul>
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══ DOCUMENT TYPES ════════════════════════════════════════════ -->
-<section class="section" aria-labelledby="docs-heading">
-  <div class="container">
-    <header class="section-header centered reveal">
-      <span class="eyebrow">Documents We Translate</span>
-      <h2 id="docs-heading" class="section-heading">Spanish Document Translation — All Types Covered</h2>
-      <p class="section-subheading">From standard civil registry documents to complex legal and academic records, we handle all Spanish-language document types from all 20 Spanish-speaking countries.</p>
-    </header>
-    <div class="grid-3" style="gap:24px;">
-
-      <div class="service-card">
-        <div class="service-icon"><i class="bi bi-file-earmark-person-fill"></i></div>
-        <h3>Birth &amp; Identity Documents</h3>
-        <p>Certified translation of birth certificates (certificado/acta/partida de nacimiento), national identity documents (DNI, cédula, DUI), and passports. Each country's birth certificate format differs significantly — we know them all.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon"><i class="bi bi-heart-fill"></i></div>
-        <h3>Marriage &amp; Divorce Documents</h3>
-        <p>Certified translation of marriage certificates (certificado/acta de matrimonio), divorce decrees (sentencia/acta de divorcio), civil partnership certificates, and separation agreements. Essential for UK spouse and family reunion visas.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon"><i class="bi bi-shield-fill-check"></i></div>
-        <h3>Criminal Record Certificates</h3>
-        <p>Certified translation of antecedentes penales (Spain), antecedentes judiciales (Argentina, Chile), certificado de buena conducta (Colombia), and equivalent documents from all countries. Required for UK employment, DBS equivalents, and visa applications.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon"><i class="bi bi-mortarboard-fill"></i></div>
-        <h3>Academic &amp; Professional Qualifications</h3>
-        <p>Certified translation of university degrees (título universitario, licenciatura, maestría), academic transcripts (expediente académico), professional licences, and vocational qualifications. Accepted by NARIC/ENIC, universities, and employers.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon"><i class="bi bi-briefcase-fill"></i></div>
-        <h3>Immigration &amp; Visa Documents</h3>
-        <p>Complete Spanish document bundles for UKVI applications — spouse and family visas, settlement, EU Settlement Scheme (EUSS), skilled worker visas, and citizenship. We coordinate document sets to meet your submission deadline.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon"><i class="bi bi-bank2"></i></div>
-        <h3>Legal &amp; Court Documents</h3>
-        <p>Certified translation of contracts, powers of attorney (poderes notariales), court orders, custody agreements (acuerdos de custodia), inheritance documents (testamentos, escrituras), and notarial deeds. Accepted in all UK courts and tribunals.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon"><i class="bi bi-heart-pulse-fill"></i></div>
-        <h3>Medical &amp; Healthcare Records</h3>
-        <p>Certified translation of medical records, diagnostic reports, hospital discharge summaries, vaccination certificates, and NHS referral documents to/from Spanish. Handled with full confidentiality and clinical accuracy.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon"><i class="bi bi-car-front-fill"></i></div>
-        <h3>Driving Licences</h3>
-        <p>Certified translation of Spanish driving licences (permiso de conducir) and Latin American equivalents (licencia de conducir/manejo) for DVLA exchange. All categories and restrictions accurately translated.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon"><i class="bi bi-building-fill"></i></div>
-        <h3>Business &amp; Commercial Documents</h3>
-        <p>Certified translation of company incorporation documents (escritura de constitución), articles of association (estatutos sociales), contracts, financial statements, and regulatory submissions. Serving UK businesses with Spanish-speaking partners.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ══ COUNTRIES COVERED ═══════════════════════════════════════════ -->
-<section class="section" style="background:var(--navy);color:var(--white);" aria-labelledby="countries-heading">
-  <div class="container">
-    <header class="section-header centered reveal">
-      <span class="eyebrow" style="color:rgba(255,255,255,0.6);">All Spanish-Speaking Nations</span>
-      <h2 id="countries-heading" class="section-heading" style="color:var(--white);">We Translate Documents from Every Spanish-Speaking Country</h2>
-      <p class="section-subheading" style="color:rgba(255,255,255,0.72);">Our translators are familiar with the civil registry systems, document formats, and administrative vocabulary of all 20 countries where Spanish is an official language.</p>
-    </header>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:8px;">
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇪🇸</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Spain</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇲🇽</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Mexico</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇨🇴</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Colombia</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇦🇷</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Argentina</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇵🇪</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Peru</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇻🇪</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Venezuela</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇨🇱</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Chile</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇪🇨</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Ecuador</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇬🇹</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Guatemala</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇨🇺</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Cuba</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇧🇴</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Bolivia</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇩🇴</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Dominican Republic</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇭🇳</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Honduras</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇵🇾</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Paraguay</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇸🇻</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">El Salvador</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇳🇮</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Nicaragua</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇨🇷</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Costa Rica</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇵🇦</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Panama</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇺🇾</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Uruguay</span></div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇬🇶</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Equatorial Guinea</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="section" style="background:var(--off-white);" aria-labelledby="process-section">
-  <div class="container">
-    <div class="section-header centered reveal">
-      <span class="eyebrow">How It Works</span>
-      <h2 id="process-section" class="section-heading">Our Translation Process,<br>Step by Step</h2>
-      <p style="color:var(--text-muted);">We keep the process simple and transparent. No unnecessary back-and-forth, no surprises.</p>
-    </div>
-    <div class="process-steps reveal">
-      <div class="process-step">
-        <div class="step-number">1</div>
-        <div class="step-content">
-          <h4>Send Your Document</h4>
-          <p>Email or WhatsApp your document as a scanned copy or clear photograph. We accept all common file formats and all document types from all 20 Spanish-speaking countries.</p>
+  <!-- TWO VARIETIES -->
+  <section class="section" style="background:var(--bg-light);">
+    <div class="container">
+      <div class="section-label">Two Major Contexts</div>
+      <h2 class="section-title">Iberian Spanish vs Latin American Spanish</h2>
+      <p class="section-intro">While mutually intelligible, official documents from Spain and Latin America differ substantially in format, administrative vocabulary, and issuing authority structure — requiring different expertise to translate accurately.</p>
+      <div class="scripts-grid" style="margin-top:48px;">
+        <div class="script-card">
+          <div class="script-card-header" style="background:var(--navy);">
+            <span style="font-size:2rem;">🇪🇸</span>
+            <h3 style="color:#fff;margin:8px 0 4px;">Castilian Spanish (Spain)</h3>
+            <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin:0;">Español Castellano — Iberian Peninsula</p>
+          </div>
+          <div class="script-card-body">
+            <p>Documents from Spain are issued by the Registro Civil (Civil Registry), the Ministerio de Justicia, or the Dirección General de la Policía. Since Brexit, Spanish nationals living in the UK require certified translations of Spanish documents for the EU Settlement Scheme, spouse visas, and settled status applications.</p>
+            <ul style="margin-top:16px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:10px;">
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:var(--navy);margin-top:2px;flex-shrink:0;" aria-hidden="true"></i><span><strong>Certificado de nacimiento</strong> — birth certificate</span></li>
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:var(--navy);margin-top:2px;flex-shrink:0;" aria-hidden="true"></i><span><strong>Certificado de matrimonio</strong> — marriage certificate</span></li>
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:var(--navy);margin-top:2px;flex-shrink:0;" aria-hidden="true"></i><span><strong>Antecedentes penales</strong> — criminal record certificate</span></li>
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:var(--navy);margin-top:2px;flex-shrink:0;" aria-hidden="true"></i><span><strong>Permiso de conducir</strong> — driving licence</span></li>
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:var(--navy);margin-top:2px;flex-shrink:0;" aria-hidden="true"></i><span><strong>DNI</strong> (Documento Nacional de Identidad) — national ID</span></li>
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:var(--navy);margin-top:2px;flex-shrink:0;" aria-hidden="true"></i><span><strong>Sentencia de divorcio</strong> — divorce decree</span></li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="process-step">
-        <div class="step-number">2</div>
-        <div class="step-content">
-          <h4>Receive a Fixed Quote</h4>
-          <p>We assess your document and send a fixed, all-inclusive quote within two hours. The certificate of accuracy is always included. No hidden fees, no surprises.</p>
-        </div>
-      </div>
-      <div class="process-step">
-        <div class="step-number">3</div>
-        <div class="step-content">
-          <h4>Translation Begins</h4>
-          <p>Once you approve the quote, work begins immediately. Handled directly by our CIOL-certified translator with specialist knowledge of Spanish civil registry systems.</p>
-        </div>
-      </div>
-      <div class="process-step">
-        <div class="step-number">4</div>
-        <div class="step-content">
-          <h4>Review &amp; Quality Check</h4>
-          <p>Every translation is reviewed field by field against the original before the certificate is signed. Accent marks (á, é, í, ó, ú, ñ) are checked for complete accuracy.</p>
-        </div>
-      </div>
-      <div class="process-step">
-        <div class="step-number">5</div>
-        <div class="step-content">
-          <h4>Certified Delivery</h4>
-          <p>Your certified translation is delivered by email as a PDF. Hard copies by post available on request for physical application submissions.</p>
+        <div class="script-card">
+          <div class="script-card-header" style="background:#1a4f2a;">
+            <span style="font-size:2rem;">🌎</span>
+            <h3 style="color:#fff;margin:8px 0 4px;">Latin American Spanish</h3>
+            <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin:0;">Mexico, Colombia, Ecuador, Bolivia, Peru &amp; beyond</p>
+          </div>
+          <div class="script-card-body">
+            <p>Latin American countries each operate distinct civil registry systems. Documents are issued by Registros Civiles, juzgados, or municipal authorities depending on the country and era. Terminology, stamp types, apostille systems, and official seal formats all vary. Translating Latin American documents accurately requires country-specific knowledge.</p>
+            <ul style="margin-top:16px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:10px;">
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:#1a4f2a;margin-top:2px;flex-shrink:0;" aria-hidden="true"></i><span><strong>Acta/Partida de nacimiento</strong> — birth certificate (country variant)</span></li>
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:#1a4f2a;margin-top:2px;flex-shrink:0;" aria-hidden="true"></i><span><strong>Acta de matrimonio</strong> — marriage certificate</span></li>
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:#1a4f2a;margin-top:2px;flex-shrink:0;" aria-hidden="true"></i><span><strong>Antecedentes judiciales/buena conducta</strong> — criminal record</span></li>
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:#1a4f2a;margin-top:2px;flex-shrink:0;" aria-hidden="true"></i><span><strong>Licencia de conducir/manejo</strong> — driving licence</span></li>
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:#1a4f2a;margin-top:2px;flex-shrink:0;" aria-hidden="true"></i><span><strong>Título universitario / diploma</strong> — degree certificate</span></li>
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.92rem;"><i class="bi bi-check-circle-fill" style="color:#1a4f2a;margin-top:2px;flex-shrink:0;" aria-hidden="true"></i><span><strong>Apostilla de la Haya</strong> — Hague Apostille authentication</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══ FAQ ═══════════════════════════════════════════════════════════ -->
-<section class="faq-section" aria-labelledby="faq-heading">
-  <div class="container">
-    <header class="section-header centered reveal">
-      <span class="eyebrow">Common Questions</span>
-      <h2 id="faq-heading" class="section-heading">Spanish Translation — Frequently Asked Questions</h2>
-    </header>
-    <div class="faq-grid">
-
-      <details class="faq-item">
-        <summary class="faq-question">What is a certified Spanish translation?</summary>
-        <div class="faq-answer"><p>A certified Spanish translation is a complete, word-for-word English translation of your Spanish-language document, accompanied by a signed certificate of accuracy from the translator. The certificate confirms the translator's professional competency in both languages and attests that the translation is a true and accurate rendering of the original. Without this certificate, UKVI, the Home Office, UK courts, and universities will not accept the translated document.</p></div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">Are your Spanish translations accepted by UKVI and the Home Office?</summary>
-        <div class="faq-answer"><p>Yes. Our certified Spanish translations fully meet UKVI and Home Office requirements. They are complete, word-for-word translations accompanied by a signed certificate of accuracy from a CIOL-certified Chartered Linguist. We have a 100% acceptance record across all visa categories including spouse visas, family reunion, EU Settlement Scheme, and citizenship applications.</p></div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">Do you translate documents from all Spanish-speaking countries?</summary>
-        <div class="faq-answer"><p>Yes. We translate documents from all 20 Spanish-speaking countries including Spain, Mexico, Colombia, Argentina, Peru, Ecuador, Bolivia, Venezuela, Chile, Cuba, Dominican Republic, Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica, Panama, Paraguay, Uruguay, and Equatorial Guinea. Each country's civil registry system and document vocabulary differs, and our translators are familiar with country-specific formats.</p></div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">Can you translate Spanish antecedentes penales for UK use?</summary>
-        <div class="faq-answer"><p>Yes. The antecedentes penales is the official criminal record certificate from Spain, issued by the Ministry of Justice. Latin American equivalents include antecedentes judiciales (Argentina, Chile), certificado de buena conducta (Colombia), and similar documents from every country. These are required for UK employment, professional licensing, and visa applications, and we handle them from all 20 countries.</p></div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">Do you translate Spanish documents for EU Settlement Scheme applications?</summary>
-        <div class="faq-answer"><p>Yes. Spanish nationals resident in the UK may require certified translations of Spanish documents for the EU Settlement Scheme (EUSS) or for settled/pre-settled status applications. The most commonly needed documents include certificado de nacimiento (birth certificate), certificado de matrimonio (marriage certificate), and civil registration documents. We handle EUSS document sets regularly.</p></div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">Can you translate Latin American birth certificates whose names contain accents or special characters?</summary>
-        <div class="faq-answer"><p>Yes — and this is an important point. Spanish uses accent marks (tildes) such as á, é, í, ó, ú and the ñ character. These are linguistically significant and must be reproduced accurately in certified translations. A name such as Núñez is not the same as Nunez, and a mismatch between your translation and your original document can cause problems at visa stage. Our translators always preserve Spanish orthography faithfully.</p></div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">Can you translate a Spanish driving licence for DVLA exchange?</summary>
-        <div class="faq-answer"><p>Yes. Spanish driving licences (permiso de conducir) and Latin American equivalents (licencia de conducir or licencia de manejo) can be exchanged for a UK licence through the DVLA, subject to eligibility. The exchange requires a certified English translation of the licence. We complete driving licence translations quickly — same-day turnaround is available when needed.</p></div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">How quickly can you complete a certified Spanish translation?</summary>
-        <div class="faq-answer"><p>Standard certified translations are delivered within 24 to 48 hours. Same-day urgent Spanish translation is available — contact us by phone or WhatsApp for immediate assistance. Turnaround depends on document length and complexity, and we will always give you a realistic delivery estimate before work begins.</p></div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">How much does a certified Spanish translation cost?</summary>
-        <div class="faq-answer"><p>Certified Spanish translation starts from £55 for a standard single-page document. The final cost depends on the length and complexity of the document. All quotes are fixed with no hidden costs — the certificate of accuracy is always included. Contact us with your document for a free quote within two hours.</p></div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">Is my document kept confidential?</summary>
-        <div class="faq-answer"><p>Absolutely. Metaphrase Ltd is registered with the Information Commissioner's Office (ICO) and operates in full compliance with UK GDPR. Your documents are treated as strictly confidential and are never shared with any third party. We do not use AI translation tools or cloud platforms that process your document on external servers. Documents can be deleted after completion on request.</p></div>
-      </details>
-
-    </div>
-    <div style="text-align:center;margin-top:40px;">
-      <a href="/contact/" class="btn btn-primary btn-lg">Ask a Question</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══ BLOG PROMO ══════════════════════════════════════════════════ -->
-<section class="section" style="background:var(--off-white);" aria-labelledby="blog-promo-heading">
-  <div class="container">
-    <header class="section-header centered reveal">
-      <span class="eyebrow">Further Reading</span>
-      <h2 id="blog-promo-heading" class="section-heading">Guides That May Help You</h2>
-    </header>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:8px;">
-      <a href="/blog/certified-translation-guide/" class="blog-promo-card" style="text-decoration:none;">
-        <div class="blog-promo-img" style="background:var(--navy);display:flex;align-items:center;justify-content:center;height:120px;border-radius:var(--radius-md) var(--radius-md) 0 0;">
-          <i class="bi bi-file-earmark-check-fill" style="font-size:3rem;color:rgba(255,255,255,0.6);"></i>
+  <!-- DOCUMENT TYPES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Documents We Translate</div>
+      <h2 class="section-title">Spanish Document Translation — All Types Covered</h2>
+      <p class="section-intro">From standard civil registry documents to complex legal and academic records, we handle all Spanish-language document types from all 20 Spanish-speaking countries.</p>
+      <div class="grid-3" style="margin-top:48px;gap:24px;">
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true"><i class="bi bi-file-earmark-person-fill"></i></div>
+          <h3>Birth &amp; Identity Documents</h3>
+          <p>Certified translation of birth certificates (certificado/acta/partida de nacimiento), national identity documents (DNI, cédula, DUI), and passports. Each country's birth certificate format differs — we know them all.</p>
         </div>
-        <div class="blog-promo-content">
-          <h4>The Complete Guide to Certified Translation in the UK</h4>
-          <p>Everything you need to know about getting a certified translation accepted by UKVI, courts, and universities.</p>
-          <span style="color:var(--navy);font-weight:600;font-size:0.9rem;">Read Guide <i class="bi bi-arrow-right"></i></span>
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true"><i class="bi bi-heart-fill"></i></div>
+          <h3>Marriage &amp; Divorce Documents</h3>
+          <p>Certified translation of marriage certificates (certificado/acta de matrimonio), divorce decrees (sentencia/acta de divorcio), civil partnership certificates, and separation agreements. Essential for UK spouse and family reunion visas.</p>
         </div>
-      </a>
-      <a href="/blog/immigration-translation-uk/" class="blog-promo-card" style="text-decoration:none;">
-        <div class="blog-promo-img" style="background:#1a4f2a;display:flex;align-items:center;justify-content:center;height:120px;border-radius:var(--radius-md) var(--radius-md) 0 0;">
-          <i class="bi bi-airplane-fill" style="font-size:3rem;color:rgba(255,255,255,0.6);"></i>
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true"><i class="bi bi-shield-fill-check"></i></div>
+          <h3>Criminal Record Certificates</h3>
+          <p>Certified translation of antecedentes penales (Spain), antecedentes judiciales (Argentina, Chile), certificado de buena conducta (Colombia), and equivalent documents from all countries. Required for UK employment, DBS equivalents, and visa applications.</p>
         </div>
-        <div class="blog-promo-content">
-          <h4>Translation for UK Immigration Applications</h4>
-          <p>What documents need translating, what UKVI expects, and how to avoid the most common rejection reasons.</p>
-          <span style="color:var(--navy);font-weight:600;font-size:0.9rem;">Read Guide <i class="bi bi-arrow-right"></i></span>
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true"><i class="bi bi-mortarboard-fill"></i></div>
+          <h3>Academic &amp; Professional Qualifications</h3>
+          <p>Certified translation of university degrees (título universitario, licenciatura, maestría), academic transcripts (expediente académico), professional licences, and vocational qualifications. Accepted by UK ENIC, universities, and employers.</p>
         </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ══ RELATED SERVICES ════════════════════════════════════════════ -->
-<section class="section" aria-labelledby="related-heading">
-  <div class="container">
-    <header class="section-header centered reveal">
-      <span class="eyebrow">Also Available</span>
-      <h2 id="related-heading" class="section-heading">Related Translation Services</h2>
-    </header>
-    <div class="grid-3" style="gap:20px;">
-      <a href="/services/certified-translation-birmingham/" class="service-card" style="text-decoration:none;color:inherit;">
-        <div class="service-icon"><i class="bi bi-file-earmark-check-fill"></i></div>
-        <h3>Certified Translation Birmingham</h3>
-        <p>CIOL-certified translation for all official documents in Birmingham and across the West Midlands.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right"></i></span>
-      </a>
-      <a href="/services/arabic-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;">
-        <div class="service-icon"><i class="bi bi-translate"></i></div>
-        <h3>Certified Arabic Translator UK</h3>
-        <p>Expert Arabic translation covering all 26 Arabic-speaking countries for immigration, legal, and official documents.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right"></i></span>
-      </a>
-      <a href="/services/romanian-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;">
-        <div class="service-icon"><i class="bi bi-translate"></i></div>
-        <h3>Certified Romanian Translator UK</h3>
-        <p>Expert Romanian translation for immigration and legal documents — covering Romania and Moldova.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right"></i></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ══ CTA BAND ════════════════════════════════════════════════════ -->
-<section class="cta-band" aria-labelledby="cta-heading">
-  <div class="container">
-    <div class="cta-band-content">
-      <h2 id="cta-heading" class="cta-band-title">Need a Certified Spanish Translation?</h2>
-      <p class="cta-band-subtitle">Send us your document and receive a free, fixed quote within two hours. CIOL-certified. Accepted by UKVI, courts, and universities.</p>
-      <div class="cta-band-actions">
-        <a href="/contact/" class="btn btn-primary btn-lg">Get a Free Quote</a>
-        <a href="https://wa.me/447852408467" class="btn btn-whatsapp btn-lg"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true"><i class="bi bi-briefcase-fill"></i></div>
+          <h3>Immigration &amp; Visa Documents</h3>
+          <p>Complete Spanish document bundles for UKVI applications — spouse and family visas, settlement, EU Settlement Scheme (EUSS), skilled worker visas, and citizenship. We coordinate document sets to meet your submission deadline.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true"><i class="bi bi-bank2"></i></div>
+          <h3>Legal &amp; Court Documents</h3>
+          <p>Certified translation of contracts, powers of attorney (poderes notariales), court orders, custody agreements, inheritance documents (testamentos, escrituras), and notarial deeds. Accepted in all UK courts and tribunals.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true"><i class="bi bi-heart-pulse-fill"></i></div>
+          <h3>Medical &amp; Healthcare Records</h3>
+          <p>Certified translation of medical records, diagnostic reports, hospital discharge summaries, vaccination certificates, and NHS referral documents to/from Spanish. Handled with full confidentiality and clinical accuracy.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true"><i class="bi bi-car-front-fill"></i></div>
+          <h3>Driving Licences</h3>
+          <p>Certified translation of Spanish driving licences (permiso de conducir) and Latin American equivalents (licencia de conducir/manejo) for DVLA exchange. All categories and restrictions accurately translated.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true"><i class="bi bi-building-fill"></i></div>
+          <h3>Business &amp; Commercial Documents</h3>
+          <p>Certified translation of company incorporation documents (escritura de constitución), articles of association (estatutos sociales), contracts, financial statements, and regulatory submissions.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══ FOOTER ═════════════════════════════════════════════════════ -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="/" class="footer-logo" aria-label="Metaphrase Ltd home">
-          <img src="/assets/img/metaphrase-logo-m.svg" alt="Metaphrase Ltd" width="40" height="40">
-          <span>Metaphrase</span>
+  <!-- COUNTRIES COVERED -->
+  <section class="section" style="background:var(--navy);color:#fff;">
+    <div class="container">
+      <div class="section-label" style="color:rgba(255,255,255,0.7);">All Spanish-Speaking Nations</div>
+      <h2 class="section-title" style="color:#fff;">We Translate Documents from Every Spanish-Speaking Country</h2>
+      <p class="section-intro" style="color:rgba(255,255,255,0.8);">Our translators are familiar with the civil registry systems, document formats, and administrative vocabulary of all 20 countries where Spanish is an official language.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:32px;">
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇪🇸</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Spain</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇲🇽</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Mexico</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇨🇴</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Colombia</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇦🇷</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Argentina</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇵🇪</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Peru</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇻🇪</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Venezuela</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇨🇱</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Chile</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇪🇨</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Ecuador</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇬🇹</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Guatemala</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇨🇺</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Cuba</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇧🇴</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Bolivia</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇩🇴</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Dominican Republic</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇭🇳</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Honduras</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇵🇾</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Paraguay</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇸🇻</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">El Salvador</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇳🇮</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Nicaragua</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇨🇷</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Costa Rica</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇵🇦</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Panama</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇺🇾</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Uruguay</span></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇬🇶</span><span style="color:#fff;font-size:0.9rem;font-weight:600;">Equatorial Guinea</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section" style="background:var(--bg-light);">
+    <div class="container">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Our Translation Process,<br>Step by Step</h2>
+      <p class="section-intro">We keep the process simple and transparent. No unnecessary back-and-forth, no surprises.</p>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Send Your Document</h4>
+            <p>Email or WhatsApp your document as a scanned copy or clear photograph. We accept all common file formats and all document types from all 20 Spanish-speaking countries.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Receive a Fixed Quote</h4>
+            <p>We assess your document and send a fixed, all-inclusive quote within two hours. The certificate of accuracy is always included. No hidden fees, no surprises.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Translation Begins</h4>
+            <p>Once you approve the quote, work begins immediately. Handled directly by our CIOL-certified translators with specialist knowledge of Spanish civil registry systems.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h4>Review &amp; Quality Check</h4>
+            <p>Every translation is reviewed field by field against the original before the certificate is signed. Accent marks (á, é, í, ó, ú, ñ) are checked for complete accuracy.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h4>Certified Delivery</h4>
+            <p>Your certified translation is delivered by email as a PDF. Hard copies by post available on request for physical application submissions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container" style="max-width:860px;">
+      <div class="section-label">Common Questions</div>
+      <h2 class="section-title">Spanish Translation — Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What is a certified Spanish translation?</summary>
+          <div class="faq-body"><p>A certified Spanish translation is a complete, word-for-word English translation of your Spanish-language document, accompanied by a signed certificate of accuracy from the translator. The certificate confirms the translator's professional competency in both languages and attests that the translation is a true and accurate rendering of the original. Without this certificate, UKVI, the Home Office, UK courts, and universities will not accept the translated document.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Are your Spanish translations accepted by UKVI and the Home Office?</summary>
+          <div class="faq-body"><p>Yes. Our certified Spanish translations fully meet UKVI and Home Office requirements. They are complete, word-for-word translations accompanied by a signed certificate of accuracy from a CIOL-certified Chartered Linguist. We have a 100% acceptance record across all visa categories including spouse visas, family reunion, EU Settlement Scheme, and citizenship applications.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Do you translate documents from all Spanish-speaking countries?</summary>
+          <div class="faq-body"><p>Yes. We translate documents from all 20 Spanish-speaking countries including Spain, Mexico, Colombia, Argentina, Peru, Ecuador, Bolivia, Venezuela, Chile, Cuba, Dominican Republic, Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica, Panama, Paraguay, Uruguay, and Equatorial Guinea. Each country's civil registry system and document vocabulary differs, and our translators are familiar with country-specific formats.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Can you translate Spanish antecedentes penales for UK use?</summary>
+          <div class="faq-body"><p>Yes. The antecedentes penales is the official criminal record certificate from Spain, issued by the Ministry of Justice. Latin American equivalents include antecedentes judiciales (Argentina, Chile), certificado de buena conducta (Colombia), and similar documents from every country. These are required for UK employment, professional licensing, and visa applications, and we handle them from all 20 countries.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Do you translate Spanish documents for EU Settlement Scheme applications?</summary>
+          <div class="faq-body"><p>Yes. Spanish nationals resident in the UK may require certified translations of Spanish documents for the EU Settlement Scheme (EUSS) or for settled/pre-settled status applications. The most commonly needed documents include certificado de nacimiento (birth certificate), certificado de matrimonio (marriage certificate), and civil registration documents. We handle EUSS document sets regularly.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Can you translate Latin American documents with accent marks and special characters?</summary>
+          <div class="faq-body"><p>Yes — and this is an important point. Spanish uses accent marks (tildes) such as á, é, í, ó, ú and the ñ character. These are linguistically significant and must be reproduced accurately in certified translations. A name such as Núñez is not the same as Nunez, and a mismatch between your translation and your original document can cause problems at visa stage. Our translators always preserve Spanish orthography faithfully.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Can you translate a Spanish driving licence for DVLA exchange?</summary>
+          <div class="faq-body"><p>Yes. Spanish driving licences (permiso de conducir) and Latin American equivalents (licencia de conducir or licencia de manejo) can be exchanged for a UK licence through the DVLA, subject to eligibility. The exchange requires a certified English translation of the licence. We complete driving licence translations quickly — same-day turnaround is available when needed.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How quickly can you complete a certified Spanish translation?</summary>
+          <div class="faq-body"><p>Standard certified translations are delivered within 24 to 48 hours. Same-day urgent Spanish translation is available — contact us by phone or WhatsApp for immediate assistance. Turnaround depends on document length and complexity, and we will always give you a realistic delivery estimate before work begins.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How much does a certified Spanish translation cost?</summary>
+          <div class="faq-body"><p>Certified Spanish translation starts from £55 for a standard single-page document. The final cost depends on the length and complexity of the document. All quotes are fixed with no hidden costs — the certificate of accuracy is always included. Contact us with your document for a free quote within two hours.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Is my document kept confidential?</summary>
+          <div class="faq-body"><p>Absolutely. Metaphrase Ltd is registered with the Information Commissioner's Office (ICO) and operates in full compliance with UK GDPR. Your documents are treated as strictly confidential and are never shared with any third party. We do not use AI translation tools or cloud platforms that process your document on external servers. Documents can be deleted after completion on request.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED SERVICES -->
+  <section class="section" style="background:var(--bg-light);">
+    <div class="container">
+      <div class="section-label">Also Available</div>
+      <h2 class="section-title">Related Translation Services</h2>
+      <div class="grid-3" style="margin-top:48px;gap:20px;">
+        <a href="https://metaphrase.uk/services/certified-translation-birmingham/" class="service-card" style="text-decoration:none;color:inherit;">
+          <div class="service-icon" aria-hidden="true"><i class="bi bi-file-earmark-check-fill"></i></div>
+          <h3>Certified Translation Birmingham</h3>
+          <p>CIOL-certified translation for all official documents in Birmingham and across the West Midlands.</p>
+          <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
         </a>
-        <p class="footer-tagline">Certified. Precise. Trusted.</p>
-        <p class="footer-desc">CIOL-certified translation and interpreting services across the UK. Legal, immigration, and medical documents accepted by UKVI, the Home Office, courts, and the NHS.</p>
+        <a href="https://metaphrase.uk/services/arabic-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;">
+          <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
+          <h3>Certified Arabic Translator UK</h3>
+          <p>Expert Arabic translation covering all 26 Arabic-speaking countries for immigration, legal, and official documents.</p>
+          <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+        </a>
+        <a href="https://metaphrase.uk/services/romanian-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;">
+          <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
+          <h3>Certified Romanian Translator UK</h3>
+          <p>Expert Romanian translation for immigration and legal documents — covering Romania and Moldova.</p>
+          <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container" style="text-align:center;">
+      <div class="section-label">Start Today</div>
+      <h2 class="section-title" style="color:#fff;">Need a Certified Spanish Translation?</h2>
+      <p style="color:rgba(255,255,255,0.9);max-width:600px;margin:0 auto 32px;">Send us your document and receive a free, fixed quote within two hours. CIOL-certified. Accepted by UKVI, courts, and universities.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://metaphrase.uk/contact/" class="btn btn-primary btn-lg">Get a Free Quote</a>
+        <a href="https://wa.me/447852408467" class="btn btn-secondary btn-lg">WhatsApp Us Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="https://metaphrase.uk/" class="site-logo" aria-label="Metaphrase Ltd">
+          <img src="/assets/img/logo.svg" alt="Metaphrase Ltd" width="160" height="36">
+          <span class="logo-tagline">Certified. Precise. Trusted.</span>
+        </a>
+        <p class="footer-desc">CIOL-certified translation, interpreting, and transcription services across the UK. Specialists in immigration, legal, and medical translation.</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/company/metaphrase-ltd" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/metaphraseltd/" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/metaphrase" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+        </div>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="/services/certified-translation-birmingham/">Certified Translation Birmingham</a></li>
-          <li><a href="/services/court-interpreter-birmingham/">Court Interpreter Birmingham</a></li>
-          <li><a href="/services/nhs-medical-translator/">NHS Medical Translator</a></li>
-          <li><a href="/services/urdu-translator-uk/">Urdu Translator UK</a></li>
-          <li><a href="/services/hindi-translator-uk/">Hindi Translator UK</a></li>
-          <li><a href="/services/punjabi-translator-uk/">Punjabi Translator UK</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>More Languages</h4>
-        <ul>
-          <li><a href="/services/bengali-translator-uk/">Bengali Translator UK</a></li>
-          <li><a href="/services/arabic-translator-uk/">Arabic Translator UK</a></li>
-          <li><a href="/services/polish-translator-uk/">Polish Translator UK</a></li>
-          <li><a href="/services/romanian-translator-uk/">Romanian Translator UK</a></li>
-          <li><a href="/services/spanish-translator-uk/">Spanish Translator UK</a></li>
-          <li><a href="/services/">All Services</a></li>
+          <li><a href="https://metaphrase.uk/services/certified-translation-birmingham/">Certified Translation</a></li>
+          <li><a href="https://metaphrase.uk/services/court-interpreter-birmingham/">Court Interpreting</a></li>
+          <li><a href="https://metaphrase.uk/services/nhs-medical-translator/">NHS &amp; Medical Translation</a></li>
+          <li><a href="https://metaphrase.uk/services/arabic-translator-uk/">Arabic Translation</a></li>
+          <li><a href="https://metaphrase.uk/services/spanish-translator-uk/">Spanish Translation</a></li>
+          <li><a href="https://metaphrase.uk/services/hindi-translator-uk/">Hindi Translation</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="/about/">About Metaphrase</a></li>
-          <li><a href="/blog/">Translation Blog</a></li>
-          <li><a href="/work-with-us/">Work With Us</a></li>
-          <li><a href="/contact/">Contact Us</a></li>
-          <li><a href="/privacy/">Privacy Policy</a></li>
-          <li><a href="/terms/">Terms of Service</a></li>
+          <li><a href="https://metaphrase.uk/about/">About Metaphrase</a></li>
+          <li><a href="https://metaphrase.uk/blog/">Translation Blog</a></li>
+          <li><a href="https://metaphrase.uk/work-with-us/">Work With Us</a></li>
+          <li><a href="https://metaphrase.uk/contact/">Contact Us</a></li>
+          <li><a href="https://metaphrase.uk/privacy/">Privacy Policy</a></li>
+          <li><a href="https://metaphrase.uk/terms/">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@metaphrase.uk">info@metaphrase.uk</a></li>
+          <li><a href="https://wa.me/447852408467">WhatsApp Us</a></li>
+          <li><a href="tel:+447852408467">+44 7852 408 467</a></li>
+          <li>30 Victoria Road, Birmingham, B21 0SA</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Metaphrase Ltd. Registered in England &amp; Wales. All rights reserved.</p>
-      <p style="margin-top:4px;font-size:0.8rem;opacity:0.6;">ICO Registered — UK GDPR Compliant &nbsp;|&nbsp; CIOL Member</p>
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Metaphrase Ltd. Company registered in England &amp; Wales. All rights reserved.</p>
+        <p>Metaphrase Ltd is registered with the Information Commissioner's Office (ICO) and operates in full compliance with UK GDPR.</p>
+        <a href="https://metaphrase.uk/contact/" class="btn btn-primary btn-sm">Request a Quote</a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<script src="/assets/js/premium.js"></script>
-
-<style>
-.lang-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
-@media(max-width:768px){.lang-intro-grid{grid-template-columns:1fr;gap:32px;}}
-.process-steps { display:grid; grid-template-columns:repeat(5,1fr); gap:0; }
-.process-step { display:flex; flex-direction:column; align-items:center; text-align:center; border-right:1px solid var(--border); padding:36px 20px; }
-.process-step:last-child { border-right:none; }
-.step-number { width:56px; height:56px; min-width:56px; background:var(--navy); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.25rem; font-weight:800; margin:0 auto 20px; }
-.step-content h4 { margin:0 0 10px; color:var(--navy); font-size:1rem; font-weight:700; }
-.step-content p { font-size:0.875rem; color:var(--text-dark); line-height:1.75; margin:0; }
-@media(max-width:860px){ .process-steps { grid-template-columns:1fr 1fr; } .process-step { border-right:1px solid var(--border); border-bottom:1px solid var(--border); padding:28px 20px; } .process-step:nth-child(even) { border-right:none; } }
-@media(max-width:480px){ .process-steps { grid-template-columns:1fr; } .process-step { border-right:none; flex-direction:row; align-items:flex-start; text-align:left; gap:16px; padding:24px 0; } .process-step:last-child { border-bottom:none; } .step-number { margin:0; } }
-.blog-promo-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow 0.2s,transform 0.2s;display:block;}
-.blog-promo-card:hover{box-shadow:0 8px 32px rgba(15,40,85,0.12);transform:translateY(-3px);}
-.blog-promo-content{padding:24px;}
-.blog-promo-content h4{color:var(--navy);font-size:1rem;margin-bottom:8px;line-height:1.4;}
-.blog-promo-content p{color:var(--text-muted);font-size:0.88rem;margin-bottom:12px;}
-</style>
+  <script src="/assets/js/premium.js"></script>
 </body>
 </html>
