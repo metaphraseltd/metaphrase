@@ -63,20 +63,11 @@
     .process-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;}
     .process-step{display:flex;flex-direction:column;align-items:center;text-align:center;border-right:1px solid var(--border);padding:36px 20px;}
     .process-step:last-child{border-right:none;}
-    .step-number{width:56px;height:56px;min-width:56px;background:var(--navy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;margin:0 auto 20px;}
+    .step-number{position:relative !important;top:auto !important;right:auto !important;width:56px;height:56px;min-width:56px;background:var(--navy);color:#fff;border-radius:50%;display:flex !important;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;flex-shrink:0;margin:0 auto 20px !important;}
     .step-content h4{margin:0 0 10px;color:var(--navy);font-size:1rem;font-weight:700;}
     .step-content p{font-size:0.875rem;color:var(--text-dark);line-height:1.75;margin:0;}
     @media(max-width:860px){.process-steps{grid-template-columns:1fr 1fr;}.process-step{border-right:1px solid var(--border);border-bottom:1px solid var(--border);padding:28px 20px;}.process-step:nth-child(even){border-right:none;}}
-    @media(max-width:480px){.process-steps{grid-template-columns:1fr;}.process-step{border-right:none;flex-direction:row;align-items:flex-start;text-align:left;gap:16px;padding:24px 0;}.process-step:last-child{border-bottom:none;}.step-number{margin:0;}}
-    /* ── FAQ ────────────────────────────────────────────── */
-    .faq-list{display:flex;flex-direction:column;gap:12px;max-width:860px;margin:0 auto;}
-    .faq-item{border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden;background:var(--white);}
-    .faq-item summary{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;cursor:pointer;font-weight:600;color:var(--navy);font-size:1rem;list-style:none;gap:12px;}
-    .faq-item summary::-webkit-details-marker{display:none;}
-    .faq-item summary::after{content:'+';font-size:1.4rem;font-weight:400;color:var(--navy);flex-shrink:0;line-height:1;}
-    .faq-item[open] summary::after{content:'−';}
-    .faq-body{padding:0 24px 20px;color:var(--text-dark);font-size:0.95rem;line-height:1.75;}
-    .faq-body p{margin:0;}
+    @media(max-width:480px){.process-steps{grid-template-columns:1fr;}.process-step{border-right:none;flex-direction:row;align-items:flex-start;text-align:left;gap:16px;padding:24px 0;}.process-step:last-child{border-bottom:none;}.step-number{margin:0 !important;}}
     /* ── Varieties / scripts grid ───────────────────────── */
     .scripts-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
     @media(max-width:700px){.scripts-grid{grid-template-columns:1fr;}}
@@ -208,7 +199,7 @@
 <body>
 
 <!-- ══ HEADER ════════════════════════════════════════════════════════ -->
-<header class="site-header">
+<header id="header">
   <div class="container nav-container">
     <a href="/" class="logo" aria-label="Metaphrase Ltd — Home">
       <img src="/assets/img/metaphrase-logo-m.svg" alt="Metaphrase Ltd logo" class="logo-mark" width="44" height="44">
@@ -217,7 +208,7 @@
         <span class="logo-tagline">Certified. Precise. Trusted.</span>
       </div>
     </a>
-    <nav class="main-nav" aria-label="Main navigation">
+    <nav class="nav-menu" aria-label="Main navigation">
       <a href="/">Home</a>
       <a href="/about/">About</a>
       <a href="/services/" class="active">Services</a>
@@ -228,20 +219,22 @@
     <div class="nav-cta">
       <a href="/contact/" class="btn btn-primary">Request a Quote</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
-<nav class="mobile-nav" id="mobile-nav" hidden aria-label="Mobile navigation">
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
   <a href="/">Home</a>
   <a href="/about/">About</a>
   <a href="/services/">Services</a>
   <a href="/blog/">Blog</a>
   <a href="/contact/">Contact</a>
   <a href="/work-with-us/">Work With Us</a>
-  <a href="/contact/" class="btn btn-primary" style="margin-top:8px;justify-content:center;">Request a Quote</a>
-  <a href="https://wa.me/447852408467" class="btn btn-whatsapp" style="justify-content:center;"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
+  <div class="mobile-nav-cta">
+    <a href="/contact/" class="btn btn-primary">Request a Quote</a>
+    <a href="https://wa.me/447852408467" class="btn btn-whatsapp"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
+  </div>
 </nav>
 
 <!-- ══ HERO ══════════════════════════════════════════════════════════ -->
@@ -551,57 +544,87 @@
       <span class="eyebrow">Common Questions</span>
       <h2 id="faq-heading" class="section-heading">Ukrainian Translation — Frequently Asked Questions</h2>
     </header>
-    <div class="faq-list">
+    <div class="faq-full-col">
 
-      <details class="faq-item">
-        <summary>What is a certified Ukrainian translation?</summary>
-        <div class="faq-body"><p>A certified Ukrainian translation is a complete, word-for-word English translation of your Ukrainian-language document, accompanied by a signed certificate of accuracy from the translator. The certificate confirms the translator's professional competency in both Ukrainian and English and attests that the translation is a true and accurate rendering of the original. UKVI, the Home Office, and UK courts will not accept translated documents without this certificate.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What is a certified Ukrainian translation?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>A certified Ukrainian translation is a complete, word-for-word English translation of your Ukrainian-language document, accompanied by a signed certificate of accuracy from the translator. The certificate confirms the translator's professional competency in both Ukrainian and English and attests that the translation is a true and accurate rendering of the original. UKVI, the Home Office, and UK courts will not accept translated documents without this certificate.</p></div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Are your Ukrainian translations accepted by UKVI and the Home Office?</summary>
-        <div class="faq-body"><p>Yes. Our certified Ukrainian translations fully meet UKVI and Home Office requirements. They are complete, word-for-word translations accompanied by a signed certificate of accuracy from a CIOL-certified Chartered Linguist. We have a 100% acceptance record and regularly handle documents for the Homes for Ukraine scheme, Ukraine Family Scheme, Temporary Protection visa extensions, and settlement applications.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Are your Ukrainian translations accepted by UKVI and the Home Office?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. Our certified Ukrainian translations fully meet UKVI and Home Office requirements. They are complete, word-for-word translations accompanied by a signed certificate of accuracy from a CIOL-certified Chartered Linguist. We have a 100% acceptance record and regularly handle documents for the Homes for Ukraine scheme, Ukraine Family Scheme, Temporary Protection visa extensions, and settlement applications.</p></div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Can you translate documents for the Homes for Ukraine scheme?</summary>
-        <div class="faq-body"><p>Yes. We regularly handle certified translations for Ukrainians in the UK under the Homes for Ukraine scheme and Ukraine Family Scheme. Commonly required documents include passports, birth certificates (свідоцтво про народження), marriage certificates (свідоцтво про шлюб), and proof of relationship. We understand the urgency many applicants face and offer rapid turnaround on Ukrainian documents.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Can you translate documents for the Homes for Ukraine scheme?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. We regularly handle certified translations for Ukrainians in the UK under the Homes for Ukraine scheme and Ukraine Family Scheme. Commonly required documents include passports, birth certificates (свідоцтво про народження), marriage certificates (свідоцтво про шлюб), and proof of relationship. We understand the urgency many applicants face and offer rapid turnaround on Ukrainian documents.</p></div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Can you translate Soviet-era Ukrainian documents written in Russian?</summary>
-        <div class="faq-body"><p>Yes. Many Ukrainians hold civil documents from the Soviet era (before 1991) that are written in Russian rather than Ukrainian. Birth certificates, marriage certificates, and other civil registry records from this period were commonly issued in Russian by Soviet authorities. We translate these documents accurately, clearly noting in the translation certificate that the source language is Russian — which is relevant for some UKVI processes.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Can you translate Soviet-era Ukrainian documents written in Russian?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. Many Ukrainians hold civil documents from the Soviet era (before 1991) that are written in Russian rather than Ukrainian. Birth certificates, marriage certificates, and other civil registry records from this period were commonly issued in Russian by Soviet authorities. We translate these documents accurately, clearly noting in the translation certificate that the source language is Russian — which is relevant for some UKVI processes.</p></div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Why does transliteration matter for Ukrainian documents?</summary>
-        <div class="faq-body"><p>Ukrainian names are written in Cyrillic and must be converted into Latin characters for UK documents. Different transliteration systems can produce different results for the same name. If your passport shows one spelling of your name and your translated birth certificate shows another, UKVI may flag a discrepancy. We follow the official Ukrainian transliteration standard (Cabinet of Ministers of Ukraine Resolution No. 55, 2010) used in Ukrainian biometric passports, and flag any inconsistencies we notice across documents in your set.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Why does transliteration matter for Ukrainian documents?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Ukrainian names are written in Cyrillic and must be converted into Latin characters for UK documents. Different transliteration systems can produce different results for the same name. If your passport shows one spelling of your name and your translated birth certificate shows another, UKVI may flag a discrepancy. We follow the official Ukrainian transliteration standard (Cabinet of Ministers of Ukraine Resolution No. 55, 2010) used in Ukrainian biometric passports, and flag any inconsistencies we notice across documents in your set.</p></div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Can you translate a Ukrainian довідка про несудимість criminal record certificate?</summary>
-        <div class="faq-body"><p>Yes. The довідка про несудимість (police clearance certificate) is issued by the Ministry of Internal Affairs of Ukraine (МВС України) and is required for UK employment, professional licensing, and some visa applications. Due to the ongoing conflict, obtaining this document from Ukraine can take longer than usual. We advise allowing extra lead time when planning your application, and we can translate it quickly once you have received it.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Can you translate a Ukrainian довідка про несудимість criminal record certificate?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. The довідка про несудимість (police clearance certificate) is issued by the Ministry of Internal Affairs of Ukraine (МВС України) and is required for UK employment, professional licensing, and some visa applications. Due to the ongoing conflict, obtaining this document from Ukraine can take longer than usual. We advise allowing extra lead time when planning your application, and we can translate it quickly once you have received it.</p></div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Can you translate a Ukrainian driving licence for DVLA exchange?</summary>
-        <div class="faq-body"><p>Yes. Ukrainian driving licences (посвідчення водія) can be exchanged for UK licences through the DVLA, subject to eligibility. The exchange requires a certified English translation. Ukrainian licences include both Ukrainian and English category codes, but personal details and issue information must be certified translated. We offer same-day turnaround for driving licences when needed.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Can you translate a Ukrainian driving licence for DVLA exchange?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. Ukrainian driving licences (посвідчення водія) can be exchanged for UK licences through the DVLA, subject to eligibility. The exchange requires a certified English translation. Ukrainian licences include both Ukrainian and English category codes, but personal details and issue information must be certified translated. We offer same-day turnaround for driving licences when needed.</p></div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>How quickly can you complete a certified Ukrainian translation?</summary>
-        <div class="faq-body"><p>Standard certified translations are delivered within 24 to 48 hours. Same-day urgent Ukrainian translation is available — contact us by phone or WhatsApp for immediate assistance. We are aware that many Ukrainian applicants face urgent visa or employment deadlines, and we do our best to accommodate these requests. Turnaround depends on document length and complexity.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How quickly can you complete a certified Ukrainian translation?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Standard certified translations are delivered within 24 to 48 hours. Same-day urgent Ukrainian translation is available — contact us by phone or WhatsApp for immediate assistance. We are aware that many Ukrainian applicants face urgent visa or employment deadlines, and we do our best to accommodate these requests. Turnaround depends on document length and complexity.</p></div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>How much does a certified Ukrainian translation cost?</summary>
-        <div class="faq-body"><p>The cost depends on your document — every document is different in length and complexity. Contact us with your document for a free quote within two hours. The certificate of accuracy is always included with no hidden fees.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How much does a certified Ukrainian translation cost?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>The cost depends on your document — every document is different in length and complexity. Contact us with your document for a free quote within two hours. The certificate of accuracy is always included with no hidden fees.</p></div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Is my document kept confidential?</summary>
-        <div class="faq-body"><p>Absolutely. Metaphrase Ltd is registered with the Information Commissioner's Office (ICO) and operates in full compliance with UK GDPR. Your documents are treated as strictly confidential and are never shared with any third party. We do not use AI translation tools or cloud platforms that process your document on external servers. Documents can be deleted after completion on request.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Is my document kept confidential?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Absolutely. Metaphrase Ltd is registered with the Information Commissioner's Office (ICO) and operates in full compliance with UK GDPR. Your documents are treated as strictly confidential and are never shared with any third party. We do not use AI translation tools or cloud platforms that process your document on external servers. Documents can be deleted after completion on request.</p></div></div>
+      </div>
 
     </div>
     <div style="text-align:center;margin-top:40px;">
@@ -689,20 +712,25 @@
 <!-- ══ FOOTER ══════════════════════════════════════════════════════════ -->
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-inner">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" aria-label="Metaphrase Ltd home">
-          <img src="/assets/img/logo.svg" alt="Metaphrase Ltd" width="160" height="40" loading="lazy">
-        </a>
+        <div class="footer-brand-identity">
+          <img src="/assets/img/metaphrase-logo-m.svg" alt="Metaphrase Ltd" width="44" height="44" loading="lazy">
+          <div>
+            <div class="footer-logo-name">Metaphrase</div>
+            <div class="footer-logo-tagline">Certified. Precise. Trusted.</div>
+          </div>
+        </div>
         <p>CIOL-certified translation and interpreting services across the UK. Legal, immigration, and medical documents accepted by UKVI, the Home Office, courts, and the NHS.</p>
-        <div class="footer-socials">
-          <a href="https://www.facebook.com/metaphraseltd" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.linkedin.com/company/metaphrase-ltd" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-          <a href="https://wa.me/447852408467" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/metaphrase-ltd" class="linkedin" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.instagram.com/metaphraseltd" class="instagram" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/metaphraseltd" class="facebook" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
+          <a href="mailto:info@metaphrase.uk" class="email" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
         </div>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h5>Services</h5>
         <ul>
           <li><a href="/services/certified-translation-birmingham/">Certified Translation Birmingham</a></li>
           <li><a href="/services/court-interpreter-birmingham/">Court Interpreter Birmingham</a></li>
@@ -713,7 +741,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>More Languages</h4>
+        <h5>More Languages</h5>
         <ul>
           <li><a href="/services/polish-translator-uk/">Polish Translator UK</a></li>
           <li><a href="/services/romanian-translator-uk/">Romanian Translator UK</a></li>
@@ -724,7 +752,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Company</h4>
+        <h5>Company</h5>
         <ul>
           <li><a href="/about/">About Metaphrase</a></li>
           <li><a href="/blog/">Translation Blog</a></li>
@@ -736,14 +764,31 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-bottom-inner">
-        <p>&copy; 2026 Metaphrase Ltd. Registered in England &amp; Wales. All rights reserved.</p>
-        <p style="opacity:0.6;font-size:0.8rem;">ICO Registered — UK GDPR Compliant &nbsp;|&nbsp; CIOL Member</p>
-      </div>
+      <p>&copy; 2026 Metaphrase Ltd. Registered in England &amp; Wales. All rights reserved.</p>
+      <p style="opacity:0.6;font-size:0.8rem;">ICO Registered — UK GDPR Compliant &nbsp;|&nbsp; CIOL Member</p>
     </div>
   </div>
 </footer>
 
-<script src="/assets/js/premium.js"></script>
+<!-- WhatsApp float -->
+<a href="https://wa.me/447852408467" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Cookie banner -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <p>We use cookies to improve your experience and analyse site traffic. See our <a href="/privacy/">Privacy Policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-primary btn-sm" id="cookieAccept">Accept</button>
+    <button class="btn btn-secondary btn-sm" id="cookieDecline">Decline</button>
+  </div>
+</div>
+
+<script src="/assets/js/premium.js" defer></script>
 </body>
 </html>
