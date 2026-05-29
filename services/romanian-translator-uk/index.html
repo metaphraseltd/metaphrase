@@ -47,6 +47,108 @@
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"></noscript>
   <link rel="stylesheet" href="/assets/css/premium.css">
 
+  <style>
+  /* ── Stats bar ── */
+  .stats-bar-row{display:flex;flex-wrap:wrap;justify-content:space-around;align-items:center;gap:24px;}
+  .stat-item{display:flex;flex-direction:column;align-items:center;text-align:center;}
+  .stat-num{font-size:2.2rem;font-weight:800;color:#fff;line-height:1;display:block;}
+  .stat-label{font-size:0.8rem;color:rgba(255,255,255,0.65);margin-top:6px;text-transform:uppercase;letter-spacing:0.05em;display:block;}
+  /* ── Hero intent tags ── */
+  .hero-intent-tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+  .intent-tag{display:inline-block;background:rgba(255,255,255,0.15);color:#fff !important;border:1px solid rgba(255,255,255,0.3);border-radius:100px;padding:6px 16px;font-size:0.82rem;font-weight:500;}
+  /* ── FAQ ── */
+  .faq-list{display:flex;flex-direction:column;gap:12px;max-width:860px;margin:0 auto;}
+  .faq-item{border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden;background:var(--white);}
+  .faq-item summary{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;cursor:pointer;font-weight:600;color:var(--navy);font-size:1rem;list-style:none;gap:12px;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:'+';font-size:1.4rem;font-weight:400;color:var(--navy);flex-shrink:0;line-height:1;}
+  .faq-item[open] summary::after{content:'−';}
+  .faq-body{padding:0 24px 20px;color:var(--text-dark);font-size:0.95rem;line-height:1.75;}
+  .faq-body p{margin:0;}
+  .faq-body p+p{margin-top:10px;}
+  /* ── Page-specific layout ── */
+  .why-section{padding:80px 0;}
+  .lang-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:stretch;}
+  .lang-intro-grid>div:last-child{display:flex;flex-direction:column;}
+  .lang-intro-grid>div:last-child .service-card{flex:1;}
+  @media(max-width:900px){.lang-intro-grid{grid-template-columns:1fr;gap:40px;}}
+  .check-row{display:flex;align-items:flex-start;gap:10px;font-size:0.9rem;color:var(--text-dark);}
+  .doc-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:10px;}
+  .doc-list li{display:flex;align-items:center;gap:10px;font-size:0.9rem;color:var(--text-dark);}
+  .doc-list li i{color:var(--navy);font-size:1rem;flex-shrink:0;}
+  .scripts-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:32px;}
+  @media(max-width:768px){.scripts-grid{grid-template-columns:1fr;}}
+  .script-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;}
+  .script-card-header{background:var(--navy);color:#fff;padding:28px 28px 20px;}
+  .script-label{font-family:'Playfair Display',serif;font-size:2rem;color:rgba(255,255,255,0.6);margin-bottom:6px;}
+  .script-card-header h3{color:#fff;margin:0 0 4px;font-size:1.2rem;}
+  .script-origin{font-size:0.82rem;color:rgba(255,255,255,0.7);margin:0;}
+  .script-card-body{padding:24px 28px;font-size:0.9rem;color:var(--text-dark);line-height:1.75;}
+  .script-examples{margin-top:16px;padding-left:18px;display:flex;flex-direction:column;gap:6px;color:var(--text-muted);font-size:0.85rem;}
+  .scripts-note{display:flex;align-items:flex-start;gap:14px;background:rgba(15,40,85,0.06);border:1px solid rgba(15,40,85,0.12);border-radius:var(--radius-lg);padding:20px 24px;font-size:0.9rem;color:var(--text-dark);}
+  .scripts-note i{color:var(--navy);font-size:1.2rem;flex-shrink:0;margin-top:2px;}
+  .scripts-note p{margin:0;line-height:1.7;}
+  .content-two-col{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:stretch;}
+  .content-two-col>div:last-child{display:flex;flex-direction:column;}
+  .content-two-col>div:last-child .service-card{flex:1;}
+  @media(max-width:900px){.content-two-col{grid-template-columns:1fr;gap:40px;}}
+  .reason-mini{display:flex;align-items:flex-start;gap:14px;}
+  .reason-mini i{width:38px;height:38px;background:rgba(15,40,85,0.08);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--navy);flex-shrink:0;}
+  .reason-mini div{flex:1;}
+  .reason-mini strong{display:block;font-size:0.9rem;margin-bottom:2px;color:var(--text-dark);}
+  .reason-mini p{font-size:0.85rem;color:var(--text-muted);margin:0;line-height:1.6;}
+  .imm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px;}
+  @media(max-width:600px){.imm-grid{grid-template-columns:1fr 1fr;}}
+  .imm-card{display:flex;align-items:center;gap:10px;background:rgba(15,40,85,0.05);border:1px solid rgba(15,40,85,0.1);border-radius:10px;padding:14px 16px;font-size:0.88rem;font-weight:600;color:var(--navy);}
+  .imm-card i{font-size:1.1rem;flex-shrink:0;}
+  .doc-section{display:grid;grid-template-columns:80px 1fr;gap:28px;align-items:start;padding:32px 0;}
+  @media(max-width:600px){.doc-section{grid-template-columns:1fr;}}
+  .doc-icon{width:60px;height:60px;background:var(--navy);border-radius:14px;display:flex;align-items:center;justify-content:center;}
+  .doc-icon i{font-size:1.5rem;color:#fff;}
+  .doc-content-col h3{font-size:1.15rem;margin-bottom:12px;color:var(--navy);}
+  .doc-content-col p{font-size:0.9375rem;color:var(--text-dark);line-height:1.75;margin:0;}
+  .doc-divider{height:1px;background:var(--border);margin:0;}
+  .process-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;}
+  .process-step{display:flex;flex-direction:column;align-items:center;text-align:center;border-right:1px solid var(--border);padding:36px 20px;}
+  .process-step:last-child{border-right:none;}
+  .step-number{width:56px;height:56px;min-width:56px;background:var(--navy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;margin:0 auto 20px;}
+  .step-content h4{margin:0 0 10px;color:var(--navy);font-size:1rem;font-weight:700;}
+  .step-content p{font-size:0.875rem;color:var(--text-dark);line-height:1.75;margin:0;}
+  @media(max-width:860px){.process-steps{grid-template-columns:1fr 1fr;}.process-step{border-right:1px solid var(--border);border-bottom:1px solid var(--border);padding:28px 20px;}.process-step:nth-child(even){border-right:none;}}
+  @media(max-width:480px){.process-steps{grid-template-columns:1fr;}.process-step{border-right:none;flex-direction:row;align-items:flex-start;text-align:left;gap:16px;padding:24px 0;}.process-step:last-child{border-bottom:none;}.step-number{margin:0;}}
+  .why-reasons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;}
+  @media(max-width:768px){.why-reasons-grid{grid-template-columns:1fr;}}
+  .cert-example-box{border:1px solid rgba(15,40,85,0.15);border-radius:var(--radius-lg);overflow:hidden;background:var(--white);}
+  .cert-example-header{background:var(--navy);color:#fff;padding:14px 24px;display:flex;align-items:center;gap:10px;font-size:0.875rem;font-weight:600;}
+  .cert-example-header i{font-size:1.1rem;}
+  .cert-example-body{padding:24px;}
+  .cert-example-text{font-size:0.9rem;color:var(--text-dark);line-height:1.75;font-style:italic;background:rgba(15,40,85,0.03);border-left:3px solid var(--navy);padding:14px 18px;border-radius:0 4px 4px 0;margin:0;}
+  .cert-annotations{margin-top:20px;display:flex;flex-direction:column;gap:10px;}
+  .cert-annotation{display:flex;align-items:flex-start;gap:10px;font-size:0.85rem;color:var(--text-dark);}
+  .cert-annotation i{color:var(--navy);font-size:1rem;flex-shrink:0;margin-top:2px;}
+  .grid-4-related{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  @media(max-width:900px){.grid-4-related{grid-template-columns:1fr 1fr;}}
+  @media(max-width:500px){.grid-4-related{grid-template-columns:1fr;}}
+  .blog-promo-card{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;}
+  .blog-promo-img{overflow:hidden;height:100%;min-height:260px;}
+  .blog-promo-img img{width:100%;height:100%;object-fit:cover;display:block;}
+  .blog-promo-content{padding:40px 40px 40px 0;}
+  .blog-promo-content h3{font-size:1.25rem;color:var(--navy);margin-bottom:14px;line-height:1.4;}
+  .blog-promo-content p{font-size:0.9rem;color:var(--text-muted);line-height:1.75;margin:0;}
+  @media(max-width:768px){.blog-promo-card{grid-template-columns:1fr;}.blog-promo-img{min-height:200px;}.blog-promo-content{padding:28px;}}
+  @media(max-width:600px){
+    .lang-intro-grid{grid-template-columns:1fr !important;}
+    .content-two-col{grid-template-columns:1fr !important;}
+    .hero-intent-tags{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;}
+    .intent-tag{text-align:center;}
+    .grid-3{grid-template-columns:1fr !important;}
+    .grid-3 .service-card{display:flex;flex-direction:row;align-items:flex-start;gap:14px;padding:18px 16px;}
+    .grid-3 .service-card .service-icon{width:40px;height:40px;min-width:40px;border-radius:10px;margin-bottom:0;font-size:1.1rem;}
+    .grid-3 .service-card h3{font-size:0.9rem;margin-bottom:4px;}
+    .grid-3 .service-card p{font-size:0.825rem;margin:0;line-height:1.55;}
+  }
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -62,6 +164,8 @@
     "priceRange": "££",
     "currenciesAccepted": "GBP",
     "areaServed": [{"@type": "Country","name": "United Kingdom"}],
+    "sameAs": ["https://www.linkedin.com/company/metaphrase-ltd","https://www.instagram.com/metaphraseltd/","https://www.facebook.com/metaphrase","https://maps.app.goo.gl/dtfUvnDPFnSfpaQ2A"],
+    "founder": {"@type": "Person","name": "Mohammad Kashif Khalid"},
     "address": {"@type": "PostalAddress","streetAddress": "30 Victoria Road","addressLocality": "Birmingham","postalCode": "B21 0SA","addressRegion": "West Midlands","addressCountry": "GB"}
   }
   </script>
@@ -76,7 +180,7 @@
     "areaServed": {"@type": "Country","name": "United Kingdom"},
     "serviceType": "Certified Romanian Translation",
     "url": "https://metaphrase.uk/services/romanian-translator-uk/",
-    "offers": {"@type": "Offer","priceCurrency": "GBP","price": "55"}
+    "offers": {"@type": "Offer","priceCurrency": "GBP","price": "55","priceSpecification": {"@type": "PriceSpecification","minPrice": "55","priceCurrency": "GBP","description": "Per standard page. Certificate of accuracy included."}}
   }
   </script>
 
@@ -152,32 +256,41 @@
   </script>
 </head>
 <body>
-<header id="header">
+
+<header class="site-header">
   <div class="container nav-container">
     <a href="/" class="logo" aria-label="Metaphrase Ltd — Home">
-      <img src="/assets/img/metaphrase-logo-m.svg" alt="Metaphrase Ltd certified translation agency logo" class="logo-mark" width="44" height="44">
+      <img src="/assets/img/metaphrase-logo-m.svg" alt="Metaphrase Ltd logo" class="logo-mark" width="44" height="44">
       <div class="logo-text">
         <span class="logo-name">Metaphrase</span>
         <span class="logo-tagline">Certified. Precise. Trusted.</span>
       </div>
     </a>
-    <nav class="nav-menu" aria-label="Main navigation">
-      <a href="/">Home</a><a href="/about/">About</a><a href="/services/" class="active">Services</a>
-      <a href="/blog/">Blog</a><a href="/contact/">Contact</a><a href="/work-with-us/">Work With Us</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/services/" class="active">Services</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <a href="/work-with-us/">Work With Us</a>
     </nav>
-    <div class="nav-cta"><a href="/contact/" class="btn btn-primary">Request a Quote</a></div>
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+    <div class="nav-cta">
+      <a href="/contact/" class="btn btn-primary">Request a Quote</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
-<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
-  <a href="/">Home</a><a href="/about/">About</a><a href="/services/">Services</a>
-  <a href="/blog/">Blog</a><a href="/contact/">Contact</a><a href="/work-with-us/">Work With Us</a>
-  <div class="mobile-nav-cta">
-    <a href="/contact/" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Request a Quote</a>
-    <a href="https://wa.me/447852408467" class="btn btn-whatsapp btn-lg" style="width:100%;justify-content:center;"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
-  </div>
+<nav class="mobile-nav" id="mobile-nav" hidden aria-label="Mobile navigation">
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <a href="/services/">Services</a>
+  <a href="/blog/">Blog</a>
+  <a href="/contact/">Contact</a>
+  <a href="/work-with-us/">Work With Us</a>
+  <a href="/contact/" class="btn btn-primary" style="margin-top:8px;justify-content:center;">Request a Quote</a>
+  <a href="https://wa.me/447852408467" class="btn btn-whatsapp" style="justify-content:center;"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
 </nav>
 
 <!-- HERO -->
@@ -185,9 +298,9 @@
   <div class="container" style="text-align:center;">
     <span class="eyebrow">CIOL-Accredited · Romania &amp; Moldova · Legal, Immigration &amp; Medical</span>
     <h1 style="color:#FFFFFF;">Certified Romanian Translation<br>Services in the UK</h1>
-    <p style="color:rgba(255,255,255,0.88);max-width:780px;margin:0 auto 28px;font-size:1.05rem;line-height:1.75;">Professional certified Romanian–English translation for official documents — accepted by the Home Office, UKVI, UK courts, universities, and the NHS. Handled by a CIOL-certified Chartered Linguist with specialist knowledge of Romanian and Moldovan civil and legal documents. Serving Romanian and Moldovan communities across Birmingham, London, and the whole UK.</p>
+    <p style="color:rgba(255,255,255,0.88);max-width:780px;margin:0 auto 28px;font-size:1.05rem;line-height:1.75;">Professional certified Romanian–English translation for official documents — accepted by the Home Office, UKVI, UK courts, universities, and the NHS. Handled by CIOL-certified translators with specialist knowledge of Romanian and Moldovan civil and legal documents. Serving Romanian and Moldovan communities across Birmingham, London, and the whole UK.</p>
     <div style="margin-bottom:28px;">
-      <div class="hero-intent-tags" style="justify-content:center;">
+      <div class="hero-intent-tags">
         <span class="intent-tag">Urgent Romanian Translation UK</span>
         <span class="intent-tag">Same-Day Romanian Translator</span>
         <span class="intent-tag">Certified Romanian Translation Near Me</span>
@@ -238,7 +351,7 @@
   <div class="container">
     <div class="lang-intro-grid reveal">
       <div>
-        <span class="eyebrow">Expert Romanian Linguist</span>
+        <span class="eyebrow">Expert Romanian Linguists</span>
         <h2 id="romanian-intro" class="section-heading" style="text-align:left;max-width:none;">Certified Romanian Translation You Can Trust</h2>
         <p style="font-size:1.05rem;color:var(--text-dark);line-height:1.8;margin-bottom:20px;">
           Metaphrase Ltd provides certified Romanian translation services to clients across the UK. Romanian nationals are one of the largest and fastest-growing communities in Britain, with an estimated 400,000 or more living and working here — and demand for accurate, certified translation of Romanian documents is constant across immigration, employment, legal, and medical settings.
@@ -421,7 +534,7 @@
 </section>
 
 <!-- UKVI & HOME OFFICE -->
-<section class="why-section" aria-labelledby="ukvi-section">
+<section class="why-section" style="background:var(--navy);" aria-labelledby="ukvi-section">
   <div class="container">
     <div class="text-center reveal" style="max-width:740px;margin:0 auto 52px;">
       <span class="eyebrow" style="color:rgba(255,255,255,0.7);">Immigration Document Standards</span>
@@ -439,7 +552,7 @@
       </div>
       <div class="reason-item reveal reveal-delay-3">
         <div class="reason-icon"><i class="bi bi-person-badge"></i></div>
-        <div class="reason-text"><h4>Qualified Professional Translator</h4><p>UKVI specifies translations must be by a "competent person." Our CIOL Chartered Linguist status is the highest available professional qualification — the gold standard that UKVI and courts recognise.</p></div>
+        <div class="reason-text"><h4>Qualified Professional Translators</h4><p>UKVI specifies translations must be by a "competent person." Our CIOL Chartered Linguist status is the highest available professional qualification — the gold standard that UKVI and courts recognise.</p></div>
       </div>
       <div class="reason-item reveal reveal-delay-1">
         <div class="reason-icon"><i class="bi bi-check2-all"></i></div>
@@ -473,7 +586,7 @@
           <h3 style="margin-bottom:16px;font-size:1.05rem;">Why Solicitors Use Metaphrase</h3>
           <div style="display:flex;flex-direction:column;gap:16px;">
             <div class="reason-mini"><i class="bi bi-lightning-fill"></i><div><strong>Fast turnaround</strong><p>Urgent legal matters handled within hours when required.</p></div></div>
-            <div class="reason-mini"><i class="bi bi-person-check-fill"></i><div><strong>CIOL-certified linguist</strong><p>Professional credentials your clients and courts can rely on.</p></div></div>
+            <div class="reason-mini"><i class="bi bi-person-check-fill"></i><div><strong>CIOL-certified linguists</strong><p>Professional credentials your clients and courts can rely on.</p></div></div>
             <div class="reason-mini"><i class="bi bi-shield-fill-check"></i><div><strong>No agency middlemen</strong><p>You work directly with the translator — faster, clearer, more accountable.</p></div></div>
             <div class="reason-mini"><i class="bi bi-clipboard2-check-fill"></i><div><strong>Court-ready format</strong><p>Translations certified to the standard required by UK courts.</p></div></div>
           </div>
@@ -587,7 +700,7 @@
       </div>
       <div class="process-step">
         <div class="step-number">3</div>
-        <div class="step-content"><h4>Translation Begins</h4><p>Once you approve the quote, work begins immediately. Handled directly by our CIOL-certified translator — not subcontracted or passed to a junior.</p></div>
+        <div class="step-content"><h4>Translation Begins</h4><p>Once you approve the quote, work begins immediately. Handled directly by our CIOL-certified translators — not subcontracted or passed to a junior.</p></div>
       </div>
       <div class="process-step">
         <div class="step-number">4</div>
@@ -602,7 +715,7 @@
 </section>
 
 <!-- URGENT -->
-<section class="section" style="background:var(--white);" aria-labelledby="urgent-section">
+<section class="section" style="background:var(--off-white);" aria-labelledby="urgent-section">
   <div class="container">
     <div style="max-width:820px;margin:0 auto;" class="reveal">
       <span class="eyebrow">When You Cannot Wait</span>
@@ -618,7 +731,7 @@
 </section>
 
 <!-- WHY CHOOSE -->
-<section class="why-section" aria-labelledby="why-metaphrase">
+<section class="why-section" style="background:var(--navy);" aria-labelledby="why-metaphrase">
   <div class="container">
     <div class="text-center reveal" style="max-width:720px;margin:0 auto 52px;">
       <span class="eyebrow" style="color:rgba(255,255,255,0.7);">The Metaphrase Difference</span>
@@ -628,7 +741,7 @@
     <div class="why-reasons-grid">
       <div class="reason-item reveal reveal-delay-1">
         <div class="reason-icon"><i class="bi bi-award-fill"></i></div>
-        <div class="reason-text"><h4>CIOL Certified Chartered Linguist</h4><p>The highest professional qualification for linguists in the UK. The credential UKVI, courts, and universities rely on when accepting translations.</p></div>
+        <div class="reason-text"><h4>CIOL Certified Chartered Linguists</h4><p>The highest professional qualification for linguists in the UK. The credential UKVI, courts, and universities rely on when accepting translations.</p></div>
       </div>
       <div class="reason-item reveal reveal-delay-2">
         <div class="reason-icon"><i class="bi bi-translate"></i></div>
@@ -636,7 +749,7 @@
       </div>
       <div class="reason-item reveal reveal-delay-3">
         <div class="reason-icon"><i class="bi bi-person-fill"></i></div>
-        <div class="reason-text"><h4>Direct Translator — No Middlemen</h4><p>When you contact Metaphrase, you deal with the translator directly. No agency subcontracting. Faster turnaround, honest pricing, and full accountability.</p></div>
+        <div class="reason-text"><h4>Direct Translators — No Middlemen</h4><p>When you contact Metaphrase, you deal with the translator directly. No agency subcontracting. Faster turnaround, honest pricing, and full accountability.</p></div>
       </div>
       <div class="reason-item reveal reveal-delay-1">
         <div class="reason-icon"><i class="bi bi-check2-circle"></i></div>
@@ -662,77 +775,77 @@
       <h2 id="faq-romanian" class="section-heading">Frequently Asked Questions</h2>
       <p style="color:var(--text-muted);">Specific answers to the questions we are most commonly asked about certified Romanian translation in the UK.</p>
     </div>
-    <div class="faq-full-col reveal">
+    <div class="faq-list reveal">
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">What is a certified Romanian translation and why do I need one? <span class="faq-icon" aria-hidden="true">+</span></button>
-        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+      <details class="faq-item">
+        <summary>What is a certified Romanian translation and why do I need one?</summary>
+        <div class="faq-body">
           <p>A certified Romanian translation is a complete, word-for-word English rendering of your original Romanian document, accompanied by a signed certificate of accuracy. This confirms the translator is professionally competent in both languages and that the translation is a true and accurate representation of the original. You need one whenever you submit a Romanian-language document to any UK official body — UKVI, courts, universities, and the NHS all require certified translations.</p>
-        </div></div>
-      </div>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">Do you translate documents from Moldova as well as Romania? <span class="faq-icon" aria-hidden="true">+</span></button>
-        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+      <details class="faq-item">
+        <summary>Do you translate documents from Moldova as well as Romania?</summary>
+        <div class="faq-body">
           <p>Yes. Moldova uses Romanian as its official language, though the civil registry system and document formats differ from Romania. We also handle Soviet-era Moldovan documents issued in Russian or in Romanian written in Cyrillic script (a legacy of Soviet cultural policy before 1991). When you send your document, we will identify its origin and advise on any specialist considerations before providing your quote.</p>
-        </div></div>
-      </div>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">Are your Romanian translations accepted by UKVI and the Home Office? <span class="faq-icon" aria-hidden="true">+</span></button>
-        <div class="faq-answer" role="region"><div class="faq-answer-inner">
-          <p>Yes. Our certified Romanian translations fully meet all UKVI and Home Office requirements. They are complete, word-for-word translations produced by a CIOL-certified Chartered Linguist with a signed certificate of accuracy. We have a 100% acceptance record across all visa categories.</p>
-        </div></div>
-      </div>
+      <details class="faq-item">
+        <summary>Are your Romanian translations accepted by UKVI and the Home Office?</summary>
+        <div class="faq-body">
+          <p>Yes. Our certified Romanian translations fully meet all UKVI and Home Office requirements. They are complete, word-for-word translations produced by CIOL-certified Chartered Linguists with a signed certificate of accuracy. We have a 100% acceptance record across all visa categories.</p>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">Can you translate a Romanian cazier judiciar criminal record? <span class="faq-icon" aria-hidden="true">+</span></button>
-        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+      <details class="faq-item">
+        <summary>Can you translate a Romanian cazier judiciar criminal record?</summary>
+        <div class="faq-body">
           <p>Yes. The cazier judiciar is one of the most frequently requested Romanian documents we translate. Issued by the Poliția Română, it is required for UK employers, licensing bodies, and UKVI applications. It is formally structured in legal Romanian and must be certified translated for UK use. We handle cazier judiciar certificates regularly and same-day turnaround is available.</p>
-        </div></div>
-      </div>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">Can you translate a Romanian driving licence for DVLA exchange? <span class="faq-icon" aria-hidden="true">+</span></button>
-        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+      <details class="faq-item">
+        <summary>Can you translate a Romanian driving licence for DVLA exchange?</summary>
+        <div class="faq-body">
           <p>Yes. Romanian driving licences require a certified English translation for the DVLA exchange process. Romanian licences list categories, issue and expiry dates, personal details, and restrictions — all of which must be fully translated. We complete driving licence translations quickly, and same-day delivery is usually available.</p>
-        </div></div>
-      </div>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">How quickly can you complete a certified Romanian translation? <span class="faq-icon" aria-hidden="true">+</span></button>
-        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+      <details class="faq-item">
+        <summary>How quickly can you complete a certified Romanian translation?</summary>
+        <div class="faq-body">
           <p>Standard certified translations are delivered within 24 to 48 hours of receiving your document and approving the quote. For a single-page document such as a birth certificate or cazier judiciar, 24 hours is typically achievable. Same-day urgent translation is available — contact us by WhatsApp or phone for the fastest response.</p>
-        </div></div>
-      </div>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">How much does a certified Romanian translation cost? <span class="faq-icon" aria-hidden="true">+</span></button>
-        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+      <details class="faq-item">
+        <summary>How much does a certified Romanian translation cost?</summary>
+        <div class="faq-body">
           <p>Certified Romanian translation starts from £55 for a standard single-page document. All quotes are fixed and all-inclusive — the certificate of accuracy is always included. Send us your document and we will give you a free quote within two hours.</p>
-        </div></div>
-      </div>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">Can you translate Romanian documents for a UK spouse visa? <span class="faq-icon" aria-hidden="true">+</span></button>
-        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+      <details class="faq-item">
+        <summary>Can you translate Romanian documents for a UK spouse visa?</summary>
+        <div class="faq-body">
           <p>Yes. For a UK spouse visa involving a Romanian national, the most commonly required documents are the marriage certificate (certificat de căsătorie), birth certificates, divorce decrees if applicable (sentință de divorț), and criminal record certificates (cazier judiciar). We regularly handle complete document bundles and can coordinate delivery to meet your submission deadline.</p>
-        </div></div>
-      </div>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">Why do diacritics matter so much in Romanian translation? <span class="faq-icon" aria-hidden="true">+</span></button>
-        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+      <details class="faq-item">
+        <summary>Why do diacritics matter so much in Romanian translation?</summary>
+        <div class="faq-body">
           <p>Romanian diacritics — ă, â, î, ș, ț — carry distinct phonetic and semantic meaning. In names and place names, a missing or incorrect diacritic produces a different word or a different name. For example, Ștefan and Stefan, or Ionuț and Ionut, are treated as different names in official documents. If the name in the translation does not match exactly the name in the passport or ID card submitted in the same immigration application, it can trigger a query or a refusal. We reproduce all diacritics precisely, as they appear in the original document.</p>
-        </div></div>
-      </div>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">Is my document kept confidential? <span class="faq-icon" aria-hidden="true">+</span></button>
-        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+      <details class="faq-item">
+        <summary>Is my document kept confidential?</summary>
+        <div class="faq-body">
           <p>Absolutely. Metaphrase Ltd is registered with the Information Commissioner's Office (ICO) and operates in full compliance with UK GDPR. Your documents are treated as strictly confidential and are not shared with any third party. We do not use AI tools or cloud platforms that process your document on external servers. Documents can be deleted after completion on request.</p>
-        </div></div>
-      </div>
+        </div>
+      </details>
 
     </div>
     <div class="text-center reveal" style="margin-top:40px;">
@@ -800,115 +913,23 @@
   </div>
 </section>
 
-<style>
-.why-section { padding:80px 0; }
-.lang-intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:stretch; }
-.lang-intro-grid > div:last-child { display:flex; flex-direction:column; }
-.lang-intro-grid > div:last-child .service-card { flex:1; }
-@media(max-width:900px){ .lang-intro-grid { grid-template-columns:1fr; gap:40px; } }
-.check-row { display:flex; align-items:flex-start; gap:10px; font-size:0.9rem; color:var(--text-dark); }
-.doc-list { list-style:none; padding:0; display:flex; flex-direction:column; gap:10px; }
-.doc-list li { display:flex; align-items:center; gap:10px; font-size:0.9rem; color:var(--text-dark); }
-.doc-list li i { color:var(--navy); font-size:1rem; flex-shrink:0; }
-.scripts-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-bottom:32px; }
-@media(max-width:768px){ .scripts-grid { grid-template-columns:1fr; } }
-.script-card { background:var(--white); border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; }
-.script-card-header { background:var(--navy); color:#fff; padding:28px 28px 20px; }
-.script-label { font-family:'Playfair Display',serif; font-size:2rem; color:rgba(255,255,255,0.6); margin-bottom:6px; }
-.script-card-header h3 { color:#fff; margin:0 0 4px; font-size:1.2rem; }
-.script-origin { font-size:0.82rem; color:rgba(255,255,255,0.7); margin:0; }
-.script-card-body { padding:24px 28px; font-size:0.9rem; color:var(--text-dark); line-height:1.75; }
-.script-examples { margin-top:16px; padding-left:18px; display:flex; flex-direction:column; gap:6px; color:var(--text-muted); font-size:0.85rem; }
-.scripts-note { display:flex; align-items:flex-start; gap:14px; background:rgba(15,40,85,0.06); border:1px solid rgba(15,40,85,0.12); border-radius:var(--radius-lg); padding:20px 24px; font-size:0.9rem; color:var(--text-dark); }
-.scripts-note i { color:var(--navy); font-size:1.2rem; flex-shrink:0; margin-top:2px; }
-.scripts-note p { margin:0; line-height:1.7; }
-.content-two-col { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:stretch; }
-.content-two-col > div:last-child { display:flex; flex-direction:column; }
-.content-two-col > div:last-child .service-card { flex:1; }
-@media(max-width:900px){ .content-two-col { grid-template-columns:1fr; gap:40px; } }
-.reason-mini { display:flex; align-items:flex-start; gap:14px; }
-.reason-mini i { width:38px; height:38px; background:rgba(15,40,85,0.08); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:1rem; color:var(--navy); flex-shrink:0; }
-.reason-mini div { flex:1; }
-.reason-mini strong { display:block; font-size:0.9rem; margin-bottom:2px; color:var(--text-dark); }
-.reason-mini p { font-size:0.85rem; color:var(--text-muted); margin:0; line-height:1.6; }
-.imm-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:28px; }
-@media(max-width:600px){ .imm-grid { grid-template-columns:1fr 1fr; } }
-.imm-card { display:flex; align-items:center; gap:10px; background:rgba(15,40,85,0.05); border:1px solid rgba(15,40,85,0.1); border-radius:10px; padding:14px 16px; font-size:0.88rem; font-weight:600; color:var(--navy); }
-.imm-card i { font-size:1.1rem; flex-shrink:0; }
-.doc-section { display:grid; grid-template-columns:80px 1fr; gap:28px; align-items:start; padding:32px 0; }
-@media(max-width:600px){ .doc-section { grid-template-columns:1fr; } }
-.doc-icon { width:60px; height:60px; background:var(--navy); border-radius:14px; display:flex; align-items:center; justify-content:center; }
-.doc-icon i { font-size:1.5rem; color:#fff; }
-.doc-content-col h3 { font-size:1.15rem; margin-bottom:12px; color:var(--navy); }
-.doc-content-col p { font-size:0.9375rem; color:var(--text-dark); line-height:1.75; margin:0; }
-.doc-divider { height:1px; background:var(--border); margin:0; }
-.process-steps { display:grid; grid-template-columns:repeat(5,1fr); gap:0; }
-.process-step { display:flex; flex-direction:column; align-items:center; text-align:center; border-right:1px solid var(--border); padding:36px 20px; }
-.process-step:last-child { border-right:none; }
-.step-number { width:56px; height:56px; min-width:56px; background:var(--navy); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.25rem; font-weight:800; margin:0 auto 20px; }
-.step-content h4 { margin:0 0 10px; color:var(--navy); font-size:1rem; font-weight:700; }
-.step-content p { font-size:0.875rem; color:var(--text-dark); line-height:1.75; margin:0; }
-@media(max-width:860px){ .process-steps { grid-template-columns:1fr 1fr; } .process-step { border-right:1px solid var(--border); border-bottom:1px solid var(--border); padding:28px 20px; } .process-step:nth-child(even) { border-right:none; } }
-@media(max-width:480px){ .process-steps { grid-template-columns:1fr; } .process-step { border-right:none; flex-direction:row; align-items:flex-start; text-align:left; gap:16px; padding:24px 0; } .process-step:last-child { border-bottom:none; } .step-number { margin:0; } }
-.why-reasons-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:36px; }
-@media(max-width:768px){ .why-reasons-grid { grid-template-columns:1fr; } }
-.faq-full-col { max-width:900px; margin:0 auto; }
-.faq-icon { font-weight:800; font-size:1.4rem; }
-.stats-bar-row { display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; }
-.stats-bar-row .stat-item { display:flex; flex-direction:column; align-items:center; gap:4px; flex:1; min-width:80px; background:transparent !important; border:none !important; padding:0 !important; }
-.stats-bar-row .stat-item:hover { background:transparent !important; }
-.stat-num { font-size:1.6rem; font-weight:800; color:#fff; line-height:1; }
-.stat-label { font-size:0.75rem; color:rgba(255,255,255,0.7); text-align:center; }
-.hero-intent-tags { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
-.intent-tag { background:rgba(255,255,255,0.15); color:rgba(255,255,255,0.9); font-size:0.78rem; padding:5px 12px; border-radius:20px; border:1px solid rgba(255,255,255,0.25); }
-.cert-example-box { border:1px solid rgba(15,40,85,0.15); border-radius:var(--radius-lg); overflow:hidden; background:var(--white); }
-.cert-example-header { background:var(--navy); color:#fff; padding:14px 24px; display:flex; align-items:center; gap:10px; font-size:0.875rem; font-weight:600; }
-.cert-example-body { padding:24px; }
-.cert-example-text { font-size:0.9rem; color:var(--text-dark); line-height:1.75; font-style:italic; background:rgba(15,40,85,0.03); border-left:3px solid var(--navy); padding:14px 18px; border-radius:0 4px 4px 0; margin:0; }
-.cert-annotations { margin-top:20px; display:flex; flex-direction:column; gap:10px; }
-.cert-annotation { display:flex; align-items:flex-start; gap:10px; font-size:0.85rem; color:var(--text-dark); }
-.cert-annotation i { color:var(--navy); font-size:1rem; flex-shrink:0; margin-top:2px; }
-.grid-4-related { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
-@media(max-width:900px){ .grid-4-related { grid-template-columns:1fr 1fr; } }
-@media(max-width:500px){ .grid-4-related { grid-template-columns:1fr; } }
-.blog-promo-card { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; background:var(--white); border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; }
-.blog-promo-img { overflow:hidden; height:100%; min-height:260px; }
-.blog-promo-img img { width:100%; height:100%; object-fit:cover; display:block; }
-.blog-promo-content { padding:40px 40px 40px 0; }
-.blog-promo-content h3 { font-size:1.25rem; color:var(--navy); margin-bottom:14px; line-height:1.4; }
-.blog-promo-content p { font-size:0.9rem; color:var(--text-muted); line-height:1.75; margin:0; }
-@media(max-width:768px){ .blog-promo-card { grid-template-columns:1fr; } .blog-promo-img { min-height:200px; } .blog-promo-content { padding:28px; } }
-@media(max-width:600px){
-  .lang-intro-grid { grid-template-columns:1fr !important; }
-  .content-two-col { grid-template-columns:1fr !important; }
-  .hero-intent-tags { display:grid; grid-template-columns:1fr 1fr; gap:8px; width:100%; }
-  .intent-tag { text-align:center; font-size:0.75rem; }
-  .grid-3 { grid-template-columns:1fr !important; }
-  .grid-3 .service-card { display:flex; flex-direction:row; align-items:flex-start; gap:14px; padding:18px 16px; }
-  .grid-3 .service-card .service-icon { width:40px; height:40px; min-width:40px; border-radius:10px; margin-bottom:0; font-size:1.1rem; }
-  .grid-3 .service-card h3 { font-size:0.9rem; margin-bottom:4px; }
-  .grid-3 .service-card p { font-size:0.825rem; margin:0; line-height:1.55; }
-}
-</style>
-
-<footer role="contentinfo">
+<!-- FOOTER -->
+<footer class="site-footer">
   <div class="container">
-    <div class="footer-grid">
+    <div class="footer-inner">
       <div class="footer-brand">
-        <div class="footer-brand-identity">
-          <span class="footer-logo-name">Metaphrase Ltd</span>
-          <span class="footer-logo-tagline">Certified. Precise. Trusted.</span>
-        </div>
-        <p>CIOL-certified translation, interpreting, and transcription. Trusted by UK courts, the Home Office, and NHS.</p>
-        <div class="footer-social">
-          <a href="https://www.linkedin.com/company/metaphrase-ltd" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          <a href="https://www.instagram.com/metaphraseltd/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.facebook.com/metaphrase" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="mailto:info@metaphrase.uk" aria-label="Email us" class="email"><i class="bi bi-envelope-fill"></i></a>
+        <a href="/" aria-label="Metaphrase Ltd home">
+          <img src="/assets/img/logo.svg" alt="Metaphrase Ltd" width="160" height="40" loading="lazy">
+        </a>
+        <p>CIOL-certified translation and interpreting services across the UK. Trusted by the Home Office, UK courts, and the NHS.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/metaphraseltd" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/metaphrase-ltd" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+          <a href="https://wa.me/447852408467" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>
       <div class="footer-col">
-        <h5>Services</h5>
+        <h4>Services</h4>
         <ul>
           <li><a href="/services/certified-translation-birmingham/">Certified Translation</a></li>
           <li><a href="/services/urdu-translator-uk/">Urdu Translation</a></li>
@@ -922,33 +943,38 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Company</h5>
+        <h4>More Languages</h4>
+        <ul>
+          <li><a href="/services/french-translator-uk/">French Translation</a></li>
+          <li><a href="/services/spanish-translator-uk/">Spanish Translation</a></li>
+          <li><a href="/services/turkish-translator-uk/">Turkish Translation</a></li>
+          <li><a href="/services/ukrainian-translator-uk/">Ukrainian Translation</a></li>
+          <li><a href="/services/punjabi-translator-uk/">Punjabi Translation</a></li>
+          <li><a href="/services/somali-translator-uk/">Somali Translation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
         <ul>
           <li><a href="/about/">About Us</a></li>
           <li><a href="/blog/">Blog</a></li>
           <li><a href="/#testimonials">Testimonials</a></li>
           <li><a href="/contact/">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Contact</h5>
-        <ul>
-          <li><a href="tel:+447852408467">+44 7852 408 467</a></li>
-          <li><a href="mailto:info@metaphrase.uk">info@metaphrase.uk</a></li>
-          <li><a href="https://wa.me/447852408467">WhatsApp</a></li>
-          <li>Birmingham, West Midlands</li>
+          <li><a href="/work-with-us/">Work With Us</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms &amp; Conditions</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Metaphrase Ltd. Company registered in England &amp; Wales.</span>
-      <nav aria-label="Footer legal links">
-        <a href="/privacy/">Privacy Policy</a>
-        <a href="/terms/">Terms &amp; Conditions</a>
-      </nav>
+      <div class="footer-bottom-inner">
+        <p>&copy; 2026 Metaphrase Ltd. Registered in England &amp; Wales. All rights reserved.</p>
+        <p style="opacity:0.6;font-size:0.8rem;">ICO Registered — UK GDPR Compliant &nbsp;|&nbsp; CIOL Member</p>
+      </div>
     </div>
   </div>
 </footer>
+
 <script src="/assets/js/premium.js"></script>
 </body>
 </html>
