@@ -56,16 +56,7 @@
   /* ── Hero intent tags ── */
   .hero-intent-tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
   .intent-tag{display:inline-block;background:rgba(255,255,255,0.15);color:#fff !important;border:1px solid rgba(255,255,255,0.3);border-radius:100px;padding:6px 16px;font-size:0.82rem;font-weight:500;}
-  /* ── FAQ ── */
-  .faq-list{display:flex;flex-direction:column;gap:12px;max-width:860px;margin:0 auto;}
-  .faq-item{border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden;background:var(--white);}
-  .faq-item summary{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;cursor:pointer;font-weight:600;color:var(--navy);font-size:1rem;list-style:none;gap:12px;}
-  .faq-item summary::-webkit-details-marker{display:none;}
-  .faq-item summary::after{content:'+';font-size:1.4rem;font-weight:400;color:var(--navy);flex-shrink:0;line-height:1;}
-  .faq-item[open] summary::after{content:'−';}
-  .faq-body{padding:0 24px 20px;color:var(--text-dark);font-size:0.95rem;line-height:1.75;}
-  .faq-body p{margin:0;}
-  .faq-body p+p{margin-top:10px;}
+  /* ── FAQ ── (premium.js accordion) */
   /* ── Page-specific layout ── */
   .why-section{padding:80px 0;}
   .lang-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:stretch;}
@@ -111,11 +102,11 @@
   .process-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;}
   .process-step{display:flex;flex-direction:column;align-items:center;text-align:center;border-right:1px solid var(--border);padding:36px 20px;}
   .process-step:last-child{border-right:none;}
-  .step-number{width:56px;height:56px;min-width:56px;background:var(--navy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;margin:0 auto 20px;}
+  .step-number{position:relative !important;top:auto !important;right:auto !important;width:56px;height:56px;min-width:56px;background:var(--navy);color:#fff;border-radius:50%;display:flex !important;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;flex-shrink:0;margin:0 auto 20px !important;}
   .step-content h4{margin:0 0 10px;color:var(--navy);font-size:1rem;font-weight:700;}
   .step-content p{font-size:0.875rem;color:var(--text-dark);line-height:1.75;margin:0;}
   @media(max-width:860px){.process-steps{grid-template-columns:1fr 1fr;}.process-step{border-right:1px solid var(--border);border-bottom:1px solid var(--border);padding:28px 20px;}.process-step:nth-child(even){border-right:none;}}
-  @media(max-width:480px){.process-steps{grid-template-columns:1fr;}.process-step{border-right:none;flex-direction:row;align-items:flex-start;text-align:left;gap:16px;padding:24px 0;}.process-step:last-child{border-bottom:none;}.step-number{margin:0;}}
+  @media(max-width:480px){.process-steps{grid-template-columns:1fr;}.process-step{border-right:none;flex-direction:row;align-items:flex-start;text-align:left;gap:16px;padding:24px 0;}.process-step:last-child{border-bottom:none;}.step-number{margin:0 !important;}}
   .why-reasons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;}
   @media(max-width:768px){.why-reasons-grid{grid-template-columns:1fr;}}
   .cert-example-box{border:1px solid rgba(15,40,85,0.15);border-radius:var(--radius-lg);overflow:hidden;background:var(--white);}
@@ -261,7 +252,7 @@
 </head>
 <body>
 
-<header class="site-header">
+<header id="header">
   <div class="container nav-container">
     <a href="/" class="logo" aria-label="Metaphrase Ltd — Home">
       <img src="/assets/img/metaphrase-logo-m.svg" alt="Metaphrase Ltd logo" class="logo-mark" width="44" height="44">
@@ -270,7 +261,7 @@
         <span class="logo-tagline">Certified. Precise. Trusted.</span>
       </div>
     </a>
-    <nav class="main-nav" aria-label="Main navigation">
+    <nav class="nav-menu" aria-label="Main navigation">
       <a href="/">Home</a>
       <a href="/about/">About</a>
       <a href="/services/" class="active">Services</a>
@@ -281,20 +272,22 @@
     <div class="nav-cta">
       <a href="/contact/" class="btn btn-primary">Request a Quote</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
-<nav class="mobile-nav" id="mobile-nav" hidden aria-label="Mobile navigation">
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
   <a href="/">Home</a>
   <a href="/about/">About</a>
   <a href="/services/">Services</a>
   <a href="/blog/">Blog</a>
   <a href="/contact/">Contact</a>
   <a href="/work-with-us/">Work With Us</a>
-  <a href="/contact/" class="btn btn-primary" style="margin-top:8px;justify-content:center;">Request a Quote</a>
-  <a href="https://wa.me/447852408467" class="btn btn-whatsapp" style="justify-content:center;"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
+  <div class="mobile-nav-cta">
+    <a href="/contact/" class="btn btn-primary">Request a Quote</a>
+    <a href="https://wa.me/447852408467" class="btn btn-whatsapp"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -801,79 +794,93 @@
       <h2 id="faq-polish" class="section-heading">Frequently Asked Questions</h2>
       <p style="color:var(--text-muted);">Specific answers to the questions we are most commonly asked about certified Polish translation in the UK.</p>
     </div>
-    <div class="faq-list reveal">
+    <div class="faq-full-col reveal">
 
-      <details class="faq-item">
-        <summary>What is a certified Polish translation and why do I need one?</summary>
-        <div class="faq-body">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What is a certified Polish translation and why do I need one?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
           <p>A certified Polish translation is a complete, word-for-word English rendering of your original Polish document, accompanied by a signed certificate of accuracy from the translator. This certificate confirms that the translator is professionally competent in both languages and that the translation is a true and accurate representation of the original.</p>
           <p>You need one whenever you submit a Polish-language document to any official body in the UK — UKVI, the Home Office, courts, universities, and the NHS all require certified translations. An uncertified translation, however accurate it may appear, will be rejected.</p>
-        </div>
-      </details>
+        </div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Are your Polish translations accepted by UKVI and the Home Office?</summary>
-        <div class="faq-body">
-          <p>Yes. Our certified Polish translations fully meet UKVI and Home Office requirements. They are complete, word-for-word translations produced by CIOL-certified Chartered Linguists and accompanied by a signed certificate of accuracy. We have a 100% acceptance record across all visa categories including spouse visas, settlement, and British citizenship applications.</p>
-        </div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Are your Polish translations accepted by UKVI and the Home Office?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. Our certified Polish translations fully meet UKVI and Home Office requirements. They are complete, word-for-word translations produced by CIOL-certified Chartered Linguists and accompanied by a signed certificate of accuracy. We have a 100% acceptance record across all visa categories including spouse visas, settlement, and British citizenship applications.</p></div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Can you translate pre-1989 communist-era Polish documents?</summary>
-        <div class="faq-body">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Can you translate pre-1989 communist-era Polish documents?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
           <p>Yes. PRL-era documents use administrative terminology and issuing authority names — such as references to the Milicja, People's Courts, and PZPR — that require a translator who understands the historical context. Wartime documents and records from the Kresy (areas now in Ukraine, Belarus, or Lithuania that were Polish before 1945) also require specialist knowledge.</p>
           <p>We identify the period and context of your document before beginning work and will advise on any specific considerations before providing a quote.</p>
-        </div>
-      </details>
+        </div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Can you translate a Polish KRK criminal record certificate?</summary>
-        <div class="faq-body">
-          <p>Yes. The KRK (Krajowy Rejestr Karny) certificate is one of the most frequently requested Polish documents we translate. It is required by UK employers, licensing bodies, and UKVI for DBS-equivalent checks and visa applications. These are formally structured legal documents issued by the Polish Ministry of Justice, and they must be certified translated for UK use. We handle KRK certificates regularly and same-day turnaround is available.</p>
-        </div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Can you translate a Polish KRK criminal record certificate?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. The KRK (Krajowy Rejestr Karny) certificate is one of the most frequently requested Polish documents we translate. It is required by UK employers, licensing bodies, and UKVI for DBS-equivalent checks and visa applications. These are formally structured legal documents issued by the Polish Ministry of Justice, and they must be certified translated for UK use. We handle KRK certificates regularly and same-day turnaround is available.</p></div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Can you translate a Polish driving licence for DVLA exchange?</summary>
-        <div class="faq-body">
-          <p>Yes. Polish driving licences can be exchanged for a UK licence through the DVLA, and the exchange process requires a certified English translation. Polish licences list licence categories, issue and expiry dates, personal details, and any restrictions — all of which must be fully and accurately translated. We complete driving licence translations quickly, and same-day delivery is usually available.</p>
-        </div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Can you translate a Polish driving licence for DVLA exchange?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. Polish driving licences can be exchanged for a UK licence through the DVLA, and the exchange process requires a certified English translation. Polish licences list licence categories, issue and expiry dates, personal details, and any restrictions — all of which must be fully and accurately translated. We complete driving licence translations quickly, and same-day delivery is usually available.</p></div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>How quickly can you complete a certified Polish translation?</summary>
-        <div class="faq-body">
-          <p>Standard certified translations are delivered within 24 to 48 hours of receiving your document and approving the quote. For a single-page document such as a birth certificate, marriage certificate, or driving licence, 24 hours is typically achievable. Same-day urgent Polish translation is available — contact us by WhatsApp or phone for the fastest response.</p>
-        </div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How quickly can you complete a certified Polish translation?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Standard certified translations are delivered within 24 to 48 hours of receiving your document and approving the quote. For a single-page document such as a birth certificate, marriage certificate, or driving licence, 24 hours is typically achievable. Same-day urgent Polish translation is available — contact us by WhatsApp or phone for the fastest response.</p></div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>How much does a certified Polish translation cost?</summary>
-        <div class="faq-body">
-          <p>Certified Polish translation The exact price depends on the length and complexity of your document. All quotes are fixed and all-inclusive — the certificate of accuracy is always included, with no additional charges for certification, formatting, or email delivery. Send us your document and we will give you a free quote within two hours.</p>
-        </div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How much does a certified Polish translation cost?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>The cost depends on your document — every document is different in length and complexity. Contact us with your document for a free quote within two hours. The certificate of accuracy is always included with no hidden fees.</p></div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Can you translate Polish documents for a UK spouse visa?</summary>
-        <div class="faq-body">
-          <p>Yes. For a UK spouse visa involving a Polish national, the most commonly required translated documents are the marriage certificate (akt małżeństwa), birth certificates of both parties, divorce decrees if applicable (wyrok orzekający rozwód), and criminal record certificates. We regularly handle complete document bundles — send us your full set and we will quote for everything at once and coordinate delivery to meet your submission deadline.</p>
-        </div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Can you translate Polish documents for a UK spouse visa?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. For a UK spouse visa involving a Polish national, the most commonly required translated documents are the marriage certificate (akt małżeństwa), birth certificates of both parties, divorce decrees if applicable (wyrok orzekający rozwód), and criminal record certificates. We regularly handle complete document bundles — send us your full set and we will quote for everything at once and coordinate delivery to meet your submission deadline.</p></div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Do you provide certified Polish translation for UK courts and solicitors?</summary>
-        <div class="faq-body">
-          <p>Yes. We work regularly with solicitors and law firms on Polish-language legal matters including family court proceedings, employment tribunals, Crown Court cases, and immigration appeals. Our certified translations are accepted in all UK courts and tribunals. We understand legal timetables and can accommodate urgent instructions.</p>
-        </div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Do you provide certified Polish translation for UK courts and solicitors?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. We work regularly with solicitors and law firms on Polish-language legal matters including family court proceedings, employment tribunals, Crown Court cases, and immigration appeals. Our certified translations are accepted in all UK courts and tribunals. We understand legal timetables and can accommodate urgent instructions.</p></div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Is my document kept confidential?</summary>
-        <div class="faq-body">
-          <p>Absolutely. Metaphrase Ltd is registered with the Information Commissioner's Office (ICO) and operates in full compliance with UK GDPR. Your documents are treated as strictly confidential and are not shared with any third party. We do not use AI tools or cloud platforms that process your document on external servers. Documents can be deleted after completion, and originals returned by post on request.</p>
-        </div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Is my document kept confidential?
+          <span class="faq-icon"><i class="bi bi-plus-lg"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Absolutely. Metaphrase Ltd is registered with the Information Commissioner's Office (ICO) and operates in full compliance with UK GDPR. Your documents are treated as strictly confidential and are not shared with any third party. We do not use AI tools or cloud platforms that process your document on external servers. Documents can be deleted after completion, and originals returned by post on request.</p></div></div>
+      </div>
 
     </div>
     <div class="text-center reveal" style="margin-top:40px;">
@@ -944,20 +951,25 @@
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-inner">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" aria-label="Metaphrase Ltd home">
-          <img src="/assets/img/logo.svg" alt="Metaphrase Ltd" width="160" height="40" loading="lazy">
-        </a>
+        <div class="footer-brand-identity">
+          <img src="/assets/img/metaphrase-logo-m.svg" alt="Metaphrase Ltd" width="44" height="44" loading="lazy">
+          <div>
+            <div class="footer-logo-name">Metaphrase</div>
+            <div class="footer-logo-tagline">Certified. Precise. Trusted.</div>
+          </div>
+        </div>
         <p>CIOL-certified translation and interpreting services across the UK. Trusted by the Home Office, UK courts, and the NHS.</p>
-        <div class="footer-socials">
-          <a href="https://www.facebook.com/metaphraseltd" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.linkedin.com/company/metaphrase-ltd" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-          <a href="https://wa.me/447852408467" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/metaphrase-ltd" class="linkedin" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.instagram.com/metaphraseltd" class="instagram" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/metaphraseltd" class="facebook" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
+          <a href="mailto:info@metaphrase.uk" class="email" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
         </div>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h5>Services</h5>
         <ul>
           <li><a href="/services/certified-translation-birmingham/">Certified Translation</a></li>
           <li><a href="/services/urdu-translator-uk/">Urdu Translation</a></li>
@@ -971,7 +983,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>More Languages</h4>
+        <h5>More Languages</h5>
         <ul>
           <li><a href="/services/french-translator-uk/">French Translation</a></li>
           <li><a href="/services/spanish-translator-uk/">Spanish Translation</a></li>
@@ -982,7 +994,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Company</h4>
+        <h5>Company</h5>
         <ul>
           <li><a href="/about/">About Us</a></li>
           <li><a href="/blog/">Blog</a></li>
@@ -995,14 +1007,31 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-bottom-inner">
-        <p>&copy; 2026 Metaphrase Ltd. Registered in England &amp; Wales. All rights reserved.</p>
-        <p style="opacity:0.6;font-size:0.8rem;">ICO Registered — UK GDPR Compliant &nbsp;|&nbsp; CIOL Member</p>
-      </div>
+      <p>&copy; 2026 Metaphrase Ltd. Registered in England &amp; Wales. All rights reserved.</p>
+      <p style="opacity:0.6;font-size:0.8rem;">ICO Registered — UK GDPR Compliant &nbsp;|&nbsp; CIOL Member</p>
     </div>
   </div>
 </footer>
 
-<script src="/assets/js/premium.js"></script>
+<!-- WhatsApp float -->
+<a href="https://wa.me/447852408467" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Cookie banner -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <p>We use cookies to improve your experience and analyse site traffic. See our <a href="/privacy/">Privacy Policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-primary btn-sm" id="cookieAccept">Accept</button>
+    <button class="btn btn-secondary btn-sm" id="cookieDecline">Decline</button>
+  </div>
+</div>
+
+<script src="/assets/js/premium.js" defer></script>
 </body>
 </html>
