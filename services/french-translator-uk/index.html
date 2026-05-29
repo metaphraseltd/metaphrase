@@ -47,56 +47,6 @@
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"></noscript>
   <link rel="stylesheet" href="/assets/css/premium.css">
 
-  <style>
-    /* ── Stats bar ─────────────────────────────────────── */
-    .stats-bar-row{display:flex;flex-wrap:wrap;justify-content:space-around;align-items:center;gap:24px;}
-    .stat-item{display:flex;flex-direction:column;align-items:center;text-align:center;}
-    .stat-num{font-size:2.2rem;font-weight:800;color:#fff;line-height:1;display:block;}
-    .stat-label{font-size:0.8rem;color:rgba(255,255,255,0.65);margin-top:6px;text-transform:uppercase;letter-spacing:0.05em;display:block;}
-    /* ── Intent tags ────────────────────────────────────── */
-    .hero-intent-tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
-    .intent-tag{display:inline-block;background:rgba(255,255,255,0.15);color:#fff !important;border:1px solid rgba(255,255,255,0.3);border-radius:100px;padding:6px 16px;font-size:0.82rem;font-weight:500;}
-    /* ── Intro grid ─────────────────────────────────────── */
-    .lang-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
-    @media(max-width:768px){.lang-intro-grid{grid-template-columns:1fr;gap:32px;}}
-    /* ── Process steps ──────────────────────────────────── */
-    .process-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;}
-    .process-step{display:flex;flex-direction:column;align-items:center;text-align:center;border-right:1px solid var(--border);padding:36px 20px;}
-    .process-step:last-child{border-right:none;}
-    .step-number{width:56px;height:56px;min-width:56px;background:var(--navy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;margin:0 auto 20px;}
-    .step-content h4{margin:0 0 10px;color:var(--navy);font-size:1rem;font-weight:700;}
-    .step-content p{font-size:0.875rem;color:var(--text-dark);line-height:1.75;margin:0;}
-    @media(max-width:860px){.process-steps{grid-template-columns:1fr 1fr;}.process-step{border-right:1px solid var(--border);border-bottom:1px solid var(--border);padding:28px 20px;}.process-step:nth-child(even){border-right:none;}}
-    @media(max-width:480px){.process-steps{grid-template-columns:1fr;}.process-step{border-right:none;flex-direction:row;align-items:flex-start;text-align:left;gap:16px;padding:24px 0;}.process-step:last-child{border-bottom:none;}.step-number{margin:0;}}
-    /* ── FAQ ────────────────────────────────────────────── */
-    .faq-list{display:flex;flex-direction:column;gap:12px;max-width:860px;margin:0 auto;}
-    .faq-item{border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden;background:var(--white);}
-    .faq-item summary{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;cursor:pointer;font-weight:600;color:var(--navy);font-size:1rem;list-style:none;gap:12px;}
-    .faq-item summary::-webkit-details-marker{display:none;}
-    .faq-item summary::after{content:'+';font-size:1.4rem;font-weight:400;color:var(--navy);flex-shrink:0;line-height:1;}
-    .faq-item[open] summary::after{content:'−';}
-    .faq-body{padding:0 24px 20px;color:var(--text-dark);font-size:0.95rem;line-height:1.75;}
-    .faq-body p{margin:0;}
-    /* ── Varieties / scripts grid ───────────────────────── */
-    .scripts-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-    @media(max-width:700px){.scripts-grid{grid-template-columns:1fr;}}
-    .script-card{border-radius:var(--radius-lg);overflow:hidden;}
-    .script-card-header{padding:28px 32px 20px;display:flex;align-items:center;gap:14px;}
-    .script-card-header h3{color:#fff;margin:0;font-size:1.2rem;}
-    .script-card-header p{color:rgba(255,255,255,0.65);margin:4px 0 0;font-size:0.88rem;}
-    .script-card-body{padding:0 32px 28px;}
-    .script-card-body p{color:rgba(255,255,255,0.82);font-size:0.92rem;line-height:1.7;margin-bottom:16px;}
-    .script-card-body ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px;}
-    .script-card-body li{display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,0.85);font-size:0.9rem;}
-    .script-card-body li i{color:rgba(255,255,255,0.6);margin-top:2px;flex-shrink:0;}
-    /* ── Blog promo ─────────────────────────────────────── */
-    .blog-promo-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow 0.2s,transform 0.2s;display:block;text-decoration:none;}
-    .blog-promo-card:hover{box-shadow:0 8px 32px rgba(15,40,85,0.12);transform:translateY(-3px);}
-    .blog-promo-content{padding:24px;}
-    .blog-promo-content h4{color:var(--navy);font-size:1rem;margin-bottom:8px;line-height:1.4;}
-    .blog-promo-content p{color:var(--text-muted);font-size:0.88rem;margin-bottom:12px;}
-  </style>
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -207,17 +157,16 @@
 </head>
 <body>
 
-<!-- ══ HEADER ════════════════════════════════════════════════════════ -->
-<header class="site-header">
+<header id="header">
   <div class="container nav-container">
     <a href="/" class="logo" aria-label="Metaphrase Ltd — Home">
-      <img src="/assets/img/metaphrase-logo-m.svg" alt="Metaphrase Ltd logo" class="logo-mark" width="44" height="44">
+      <img src="/assets/img/metaphrase-logo-m.svg" alt="Metaphrase Ltd certified translation agency logo" class="logo-mark" width="44" height="44">
       <div class="logo-text">
         <span class="logo-name">Metaphrase</span>
         <span class="logo-tagline">Certified. Precise. Trusted.</span>
       </div>
     </a>
-    <nav class="main-nav" aria-label="Main navigation">
+    <nav class="nav-menu" aria-label="Main navigation">
       <a href="/">Home</a>
       <a href="/about/">About</a>
       <a href="/services/" class="active">Services</a>
@@ -225,33 +174,30 @@
       <a href="/contact/">Contact</a>
       <a href="/work-with-us/">Work With Us</a>
     </nav>
-    <div class="nav-cta">
-      <a href="/contact/" class="btn btn-primary">Request a Quote</a>
-    </div>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+    <div class="nav-cta"><a href="/contact/" class="btn btn-primary">Request a Quote</a></div>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
-<nav class="mobile-nav" id="mobile-nav" hidden aria-label="Mobile navigation">
-  <a href="/">Home</a>
-  <a href="/about/">About</a>
-  <a href="/services/">Services</a>
-  <a href="/blog/">Blog</a>
-  <a href="/contact/">Contact</a>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="/">Home</a><a href="/about/">About</a><a href="/services/">Services</a>
+  <a href="/blog/">Blog</a><a href="/contact/">Contact</a>
   <a href="/work-with-us/">Work With Us</a>
-  <a href="/contact/" class="btn btn-primary" style="margin-top:8px;justify-content:center;">Request a Quote</a>
-  <a href="https://wa.me/447852408467" class="btn btn-whatsapp" style="justify-content:center;"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
+  <div class="mobile-nav-cta">
+    <a href="/contact/" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Request a Quote</a>
+    <a href="https://wa.me/447852408467" class="btn btn-whatsapp btn-lg" style="width:100%;justify-content:center;"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
+  </div>
 </nav>
 
-<!-- ══ HERO ══════════════════════════════════════════════════════════ -->
+<!-- HERO -->
 <section class="page-hero" aria-label="Certified French Translation hero">
   <div class="container" style="text-align:center;">
     <span class="eyebrow">CIOL-Accredited · France &amp; Francophone World · Legal, Immigration &amp; Medical</span>
     <h1 style="color:#fff;">Certified French Translation<br>Services in the UK</h1>
     <p style="color:rgba(255,255,255,0.88);max-width:780px;margin:0 auto 28px;font-size:1.05rem;line-height:1.75;">Professional certified French–English translation for official documents — accepted by the Home Office, UKVI, UK courts, universities, and the NHS. Handled by CIOL-certified Chartered Linguists with specialist knowledge of French civil documents from France, Belgium, North Africa, and all 29 Francophone countries. Serving clients across the UK.</p>
     <div style="margin-bottom:28px;">
-      <div class="hero-intent-tags">
+      <div class="hero-intent-tags" style="justify-content:center;">
         <span class="intent-tag">Urgent French Translation UK</span>
         <span class="intent-tag">Same-Day French Translator</span>
         <span class="intent-tag">Certified French Translation Near Me</span>
@@ -270,7 +216,7 @@
   </div>
 </section>
 
-<!-- ══ TRUST BAR ═════════════════════════════════════════════════════ -->
+<!-- TRUST BAR -->
 <section class="section-sm" style="background:var(--white);">
   <div class="container">
     <div class="trust-bar-inner" style="justify-content:center;padding:0;flex-wrap:wrap;gap:12px;">
@@ -283,7 +229,7 @@
   </div>
 </section>
 
-<!-- ══ STATS BAR ══════════════════════════════════════════════════════ -->
+<!-- STATS BAR -->
 <section style="background:var(--navy);padding:52px 0;" aria-label="Metaphrase key statistics">
   <div class="container">
     <div class="stats-bar-row">
@@ -297,16 +243,20 @@
   </div>
 </section>
 
-<!-- ══ INTRODUCTION ══════════════════════════════════════════════════ -->
+<!-- INTRODUCTION -->
 <section class="section" aria-labelledby="intro-heading">
   <div class="container">
-    <div class="lang-intro-grid">
+    <div class="french-intro-grid">
       <div>
         <span class="eyebrow">About French in the UK</span>
-        <h2 id="intro-heading" class="section-heading">One of the UK's Most In-Demand Languages — Spoken on Five Continents</h2>
-        <p>French is one of the most widely spoken languages in the world, with around 300 million speakers across 29 countries on five continents. In the UK, it is both a widely studied language and the mother tongue of hundreds of thousands of residents — French nationals, Belgians, Swiss nationals, and large communities from Francophone Africa and the Caribbean.</p>
-        <p>What makes French translation particularly demanding for UK purposes is the diversity of the Francophone world. A birth certificate from France (acte de naissance issued by a mairie), a marriage document from Morocco (acte de mariage issued by the État civil), and a criminal record certificate from Senegal all use French — but with different administrative structures, different issuing authorities, and different formats. Translating them accurately for UKVI acceptance requires familiarity with each country's civil registry system, not just the language.</p>
-        <p>Our CIOL-certified translators handle French documents from all Francophone countries using human expertise only. No machine translation. No AI tools. Every certified translation carries a signed statement of accuracy.</p>
+        <h2 id="intro-heading" class="section-heading" style="text-align:left;max-width:none;">One of the UK's Most In-Demand Languages — Spoken on Five Continents</h2>
+        <p style="font-size:1.05rem;color:var(--text-dark);line-height:1.8;margin-bottom:20px;">French is one of the most widely spoken languages in the world, with around 300 million speakers across 29 countries on five continents. In the UK, it is both a widely studied language and the mother tongue of hundreds of thousands of residents — French nationals, Belgians, Swiss nationals, and large communities from Francophone Africa and the Caribbean.</p>
+        <p style="font-size:0.9375rem;color:var(--text-dark);line-height:1.75;margin-bottom:20px;">What makes French translation particularly demanding for UK purposes is the diversity of the Francophone world. A birth certificate from France (acte de naissance issued by a mairie), a marriage document from Morocco (acte de mariage issued by the État civil), and a criminal record certificate from Senegal all use French — but with different administrative structures, different issuing authorities, and different formats. Translating them accurately for UKVI acceptance requires familiarity with each country's civil registry system, not just the language.</p>
+        <p style="font-size:0.9375rem;color:var(--text-dark);line-height:1.75;margin-bottom:28px;">Our CIOL-certified translators handle French documents from all Francophone countries using human expertise only. No machine translation. No AI tools. Every certified translation carries a signed statement of accuracy.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="/contact/" class="btn btn-primary btn-lg"><i class="bi bi-envelope-fill"></i> Get a Free Quote</a>
+          <a href="https://wa.me/447852408467" class="btn btn-whatsapp btn-lg"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
+        </div>
       </div>
       <div style="display:flex;flex-direction:column;gap:20px;">
         <div style="background:var(--off-white);border-radius:var(--radius-lg);padding:32px;border:1px solid var(--border);">
@@ -358,78 +308,80 @@
   </div>
 </section>
 
-<!-- ══ TWO VARIETIES ═════════════════════════════════════════════════ -->
-<section class="section" style="background:var(--off-white);padding-top:0;padding-bottom:56px;" aria-labelledby="varieties-heading">
+<!-- TWO VARIETIES -->
+<section class="section" style="background:var(--off-white);" aria-labelledby="varieties-heading">
   <div class="container">
-    <header class="section-header centered reveal">
+    <div class="text-center reveal" style="max-width:700px;margin:0 auto 48px;">
       <span class="eyebrow">Two Major Contexts</span>
       <h2 id="varieties-heading" class="section-heading">European French vs Francophone Africa &amp; Beyond</h2>
-      <p class="section-subheading">French documents from Europe and from African or Caribbean countries differ substantially in format, issuing authority, and administrative vocabulary — each requiring specialist knowledge to translate accurately for UK acceptance.</p>
-    </header>
-    <div class="scripts-grid">
+      <p style="color:var(--text-muted);">French documents from Europe and from African or Caribbean countries differ substantially in format, issuing authority, and administrative vocabulary — each requiring specialist knowledge to translate accurately for UK acceptance.</p>
+    </div>
+    <div class="scripts-grid reveal">
 
-      <!-- European French -->
       <div class="script-card" style="background:var(--navy);">
         <div class="script-card-header">
           <span style="font-size:2.2rem;">🇫🇷</span>
           <div>
             <h3>European French</h3>
-            <p>France, Belgium, Switzerland, Luxembourg, Monaco</p>
+            <p class="script-origin">France, Belgium, Switzerland, Luxembourg, Monaco</p>
           </div>
         </div>
         <div class="script-card-body">
           <p>French civil documents from France are issued by the mairie (town hall), the Registre du Commerce for business documents, or the Casier Judiciaire National for criminal records. The livret de famille — a uniquely French document not used in other Francophone countries — records key family events and appears frequently in UK immigration applications.</p>
-          <ul>
-            <li><i class="bi bi-check-circle-fill"></i><span><strong style="color:#fff;">Acte de naissance</strong> — birth certificate (mairie)</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span><strong style="color:#fff;">Acte de mariage</strong> — marriage certificate</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span><strong style="color:#fff;">Livret de famille</strong> — family record booklet</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span><strong style="color:#fff;">Casier judiciaire (Bulletin No. 3)</strong> — criminal record</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span><strong style="color:#fff;">Permis de conduire</strong> — driving licence</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span><strong style="color:#fff;">Jugement de divorce</strong> — divorce decree</span></li>
+          <ul class="script-examples">
+            <li><strong style="color:#fff;">Acte de naissance</strong> — birth certificate (mairie)</li>
+            <li><strong style="color:#fff;">Acte de mariage</strong> — marriage certificate</li>
+            <li><strong style="color:#fff;">Livret de famille</strong> — family record booklet</li>
+            <li><strong style="color:#fff;">Casier judiciaire (Bulletin No. 3)</strong> — criminal record</li>
+            <li><strong style="color:#fff;">Permis de conduire</strong> — driving licence</li>
+            <li><strong style="color:#fff;">Jugement de divorce</strong> — divorce decree</li>
           </ul>
         </div>
       </div>
 
-      <!-- Francophone Africa & Beyond -->
       <div class="script-card" style="background:#4a2800;">
         <div class="script-card-header">
           <span style="font-size:2.2rem;">🌍</span>
           <div>
             <h3>Francophone Africa &amp; Caribbean</h3>
-            <p>Morocco, Algeria, Tunisia, Senegal, DR Congo, Ivory Coast, Haiti &amp; more</p>
+            <p class="script-origin">Morocco, Algeria, Tunisia, Senegal, DR Congo, Ivory Coast, Haiti &amp; more</p>
           </div>
         </div>
         <div class="script-card-body">
           <p>French is the administrative language of 21 African countries and several Caribbean nations. Official documents follow each country's own civil registry system. Moroccan, Algerian, and Tunisian civil documents differ structurally from West African or Central African formats. Our translators work with each country's specific document types and administrative French terminology.</p>
-          <ul>
-            <li><i class="bi bi-check-circle-fill"></i><span><strong style="color:#fff;">Acte de naissance</strong> — birth certificate (État civil)</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span><strong style="color:#fff;">Acte de mariage</strong> — marriage act (civil registry)</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span><strong style="color:#fff;">Bulletin no. 3 / Casier judiciaire</strong> — criminal record</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span><strong style="color:#fff;">Diplôme / relevé de notes</strong> — degree and transcript</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span><strong style="color:#fff;">Attestation de célibat</strong> — certificate of single status</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span><strong style="color:#fff;">Jugement supplétif</strong> — delayed birth registration judgment</span></li>
+          <ul class="script-examples">
+            <li><strong style="color:#fff;">Acte de naissance</strong> — birth certificate (État civil)</li>
+            <li><strong style="color:#fff;">Acte de mariage</strong> — marriage act (civil registry)</li>
+            <li><strong style="color:#fff;">Bulletin no. 3 / Casier judiciaire</strong> — criminal record</li>
+            <li><strong style="color:#fff;">Diplôme / relevé de notes</strong> — degree and transcript</li>
+            <li><strong style="color:#fff;">Attestation de célibat</strong> — certificate of single status</li>
+            <li><strong style="color:#fff;">Jugement supplétif</strong> — delayed birth registration judgment</li>
           </ul>
         </div>
       </div>
 
     </div>
+    <div class="scripts-note reveal">
+      <i class="bi bi-info-circle-fill"></i>
+      <p>When you contact us, we will confirm the nature of your document and which country variant is relevant before any work begins. We handle all 29 Francophone nations — and we understand the differences between them.</p>
+    </div>
   </div>
 </section>
 
-<!-- ══ DOCUMENT TYPES ════════════════════════════════════════════════ -->
+<!-- DOCUMENT TYPES -->
 <section class="section" aria-labelledby="docs-heading">
   <div class="container">
-    <header class="section-header centered reveal">
+    <div class="text-center reveal" style="max-width:680px;margin:0 auto 48px;">
       <span class="eyebrow">Documents We Translate</span>
-      <h2 id="docs-heading" class="section-heading">French Document Translation — All Types Covered</h2>
-      <p class="section-subheading">From everyday civil registry documents to complex legal and specialist records, we handle all French-language document types from all 29 Francophone countries.</p>
-    </header>
-    <div class="grid-3" style="gap:24px;">
+      <h2 id="docs-heading" class="section-heading">French Document Translation —<br>All Types Covered</h2>
+      <p style="color:var(--text-muted);">From everyday civil registry documents to complex legal and specialist records, we handle all French-language document types from all 29 Francophone countries.</p>
+    </div>
+    <div class="grid-3 reveal" style="gap:24px;">
 
       <div class="service-card">
         <div class="service-icon"><i class="bi bi-file-earmark-person-fill"></i></div>
         <h3>Birth &amp; Identity Documents</h3>
-        <p>Certified translation of birth certificates (acte de naissance), national identity cards (carte nationale d'identité), passports, and family booklets (livret de famille). We handle the full-form acte de naissance — including marginal notes about subsequent civil events.</p>
+        <p>Certified translation of birth certificates (acte de naissance), national identity cards (carte nationale d'identité), passports, and family booklets (livret de famille). We handle the full-form acte de naissance including marginal notes about subsequent civil events.</p>
       </div>
 
       <div class="service-card">
@@ -484,15 +436,15 @@
   </div>
 </section>
 
-<!-- ══ COUNTRIES COVERED ══════════════════════════════════════════════ -->
-<section class="section" style="background:var(--navy);color:var(--white);" aria-labelledby="countries-heading">
+<!-- COUNTRIES COVERED -->
+<section class="why-section" aria-labelledby="countries-heading">
   <div class="container">
-    <header class="section-header centered reveal">
-      <span class="eyebrow">La Francophonie</span>
-      <h2 id="countries-heading" class="section-heading" style="color:var(--white);">We Translate Documents from All French-Speaking Countries</h2>
-      <p class="section-subheading" style="color:rgba(255,255,255,0.72);">French is an official language in 29 countries across Europe, Africa, the Americas, and the Pacific. Our translators are familiar with the specific document formats and civil registry systems of each.</p>
-    </header>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:8px;">
+    <div class="text-center reveal" style="max-width:740px;margin:0 auto 48px;">
+      <span class="eyebrow" style="color:rgba(255,255,255,0.7);">La Francophonie</span>
+      <h2 id="countries-heading" style="color:var(--white);">We Translate Documents from All French-Speaking Countries</h2>
+      <p style="color:rgba(255,255,255,0.82);font-size:1rem;line-height:1.8;">French is an official language in 29 countries across Europe, Africa, the Americas, and the Pacific. Our translators are familiar with the specific document formats and civil registry systems of each.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;" class="reveal">
       <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇫🇷</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">France</span></div>
       <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇧🇪</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Belgium</span></div>
       <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:10px;"><span style="font-size:1.3rem;">🇨🇭</span><span style="color:var(--white);font-size:0.9rem;font-weight:600;">Switzerland</span></div>
@@ -526,7 +478,7 @@
   </div>
 </section>
 
-<!-- ══ CERTIFICATE OF ACCURACY ════════════════════════════════════════ -->
+<!-- CERTIFICATE OF ACCURACY -->
 <section class="section" style="background:var(--off-white);" aria-labelledby="cert-heading">
   <div class="container">
     <div style="max-width:760px;margin:0 auto;text-align:center;">
@@ -550,10 +502,10 @@
   </div>
 </section>
 
-<!-- ══ PROCESS ════════════════════════════════════════════════════════ -->
+<!-- PROCESS -->
 <section class="section" aria-labelledby="process-section">
   <div class="container">
-    <div class="section-header centered reveal">
+    <div class="text-center reveal" style="max-width:680px;margin:0 auto 52px;">
       <span class="eyebrow">How It Works</span>
       <h2 id="process-section" class="section-heading">Our Translation Process,<br>Step by Step</h2>
       <p style="color:var(--text-muted);">We keep the process simple and transparent. No unnecessary back-and-forth, no surprises.</p>
@@ -598,64 +550,84 @@
   </div>
 </section>
 
-<!-- ══ FAQ ════════════════════════════════════════════════════════════ -->
+<!-- FAQ -->
 <section class="faq-section" aria-labelledby="faq-heading">
   <div class="container">
-    <header class="section-header centered reveal">
+    <div class="text-center reveal" style="max-width:680px;margin:0 auto 48px;">
       <span class="eyebrow">Common Questions</span>
-      <h2 id="faq-heading" class="section-heading">French Translation — Frequently Asked Questions</h2>
-    </header>
-    <div class="faq-list">
+      <h2 id="faq-heading" class="section-heading">French Translation —<br>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-full-col reveal">
 
-      <details class="faq-item">
-        <summary>What is a certified French translation?</summary>
-        <div class="faq-body"><p>A certified French translation is a complete, word-for-word English translation of your French-language document, accompanied by a signed certificate of accuracy from the translator. The certificate confirms the translator's professional competency in both languages and attests that the translation is a true and accurate rendering of the original. UKVI, the Home Office, UK courts, and universities require this certificate — without it, translated documents will not be accepted.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">What is a certified French translation? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>A certified French translation is a complete, word-for-word English translation of your French-language document, accompanied by a signed certificate of accuracy from the translator. The certificate confirms the translator's professional competency in both languages and attests that the translation is a true and accurate rendering of the original. UKVI, the Home Office, UK courts, and universities require this certificate — without it, translated documents will not be accepted.</p>
+        </div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Are your French translations accepted by UKVI and the Home Office?</summary>
-        <div class="faq-body"><p>Yes. Our certified French translations fully meet UKVI and Home Office requirements. They are complete, word-for-word translations accompanied by a signed certificate of accuracy from a CIOL-certified Chartered Linguist. We have a 100% acceptance record across all visa categories including spouse visas, family reunion, EU Settlement Scheme, and citizenship applications.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Are your French translations accepted by UKVI and the Home Office? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>Yes. Our certified French translations fully meet UKVI and Home Office requirements. They are complete, word-for-word translations accompanied by a signed certificate of accuracy from a CIOL-certified Chartered Linguist. We have a 100% acceptance record across all visa categories including spouse visas, family reunion, EU Settlement Scheme, and citizenship applications.</p>
+        </div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>What is a livret de famille and can you translate it?</summary>
-        <div class="faq-body"><p>The livret de famille is a uniquely French official civil document — a bound booklet issued by the mairie (town hall) to married couples or to parents at the birth of their first child. It records marriages, births of children, and deaths within the family unit, and includes printed guidance text that forms part of the official record. It appears frequently in UK immigration applications involving French nationals. We translate the livret de famille in full, including all recorded civil events and the preprinted administrative text.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">What is a livret de famille and can you translate it? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>The livret de famille is a uniquely French official civil document — a bound booklet issued by the mairie (town hall) to married couples or to parents at the birth of their first child. It records marriages, births of children, and deaths within the family unit, and includes printed guidance text that forms part of the official record. It appears frequently in UK immigration applications involving French nationals. We translate the livret de famille in full, including all recorded civil events and the preprinted administrative text.</p>
+        </div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Do you translate French documents from African countries?</summary>
-        <div class="faq-body"><p>Yes. We regularly translate official documents issued in French by Moroccan, Algerian, Tunisian, Senegalese, Ivorian, Congolese, Cameroonian, and other Francophone African authorities. These documents use French but follow each country's own civil registry structure and administrative vocabulary. We are familiar with the specific formats used by État civil offices and other issuing authorities across Francophone Africa.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Do you translate French documents from African countries? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>Yes. We regularly translate official documents issued in French by Moroccan, Algerian, Tunisian, Senegalese, Ivorian, Congolese, Cameroonian, and other Francophone African authorities. These documents use French but follow each country's own civil registry structure and administrative vocabulary. We are familiar with the specific formats used by État civil offices and other issuing authorities across Francophone Africa.</p>
+        </div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Can you translate a French casier judiciaire criminal record?</summary>
-        <div class="faq-body"><p>Yes. The casier judiciaire is the French criminal record system, administered by the Casier Judiciaire National (CJN) in Nantes. Individuals can obtain Bulletin No. 3, which shows offences not subject to rehabilitation. This is the version most commonly required for UK employment and visa applications. We translate it accurately, including all legal terminology and certification annotations.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Can you translate a French casier judiciaire criminal record? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>Yes. The casier judiciaire is the French criminal record system, administered by the Casier Judiciaire National (CJN) in Nantes. Individuals can obtain Bulletin No. 3, which shows offences not subject to rehabilitation. This is the version most commonly required for UK employment and visa applications. We translate it accurately, including all legal terminology and certification annotations.</p>
+        </div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Do you translate French documents for EU Settlement Scheme applications?</summary>
-        <div class="faq-body"><p>Yes. French nationals resident in the UK may need certified translations of French civil documents for EU Settlement Scheme (EUSS) or settled/pre-settled status applications. The documents most commonly required include the acte de naissance, acte de mariage, and livret de famille. We handle EUSS document sets regularly and understand what UKVI expects.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Do you translate French documents for EU Settlement Scheme applications? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>Yes. French nationals resident in the UK may need certified translations of French civil documents for EU Settlement Scheme (EUSS) or settled/pre-settled status applications. The documents most commonly required include the acte de naissance, acte de mariage, and livret de famille. We handle EUSS document sets regularly and understand what UKVI expects.</p>
+        </div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Can you translate a French driving licence for DVLA exchange?</summary>
-        <div class="faq-body"><p>Yes. French driving licences (permis de conduire) can be exchanged for UK licences through the DVLA, subject to eligibility. The DVLA requires a certified English translation. French licences from mainland France and overseas territories (DOM-TOM) are accepted. We complete driving licence translations quickly — same-day turnaround is available when needed.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Can you translate a French driving licence for DVLA exchange? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>Yes. French driving licences (permis de conduire) can be exchanged for UK licences through the DVLA, subject to eligibility. The DVLA requires a certified English translation. French licences from mainland France and overseas territories (DOM-TOM) are accepted. We complete driving licence translations quickly — same-day turnaround is available when needed.</p>
+        </div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>How quickly can you complete a certified French translation?</summary>
-        <div class="faq-body"><p>Standard certified translations are delivered within 24 to 48 hours. Same-day urgent French translation is available — contact us by phone or WhatsApp for immediate assistance. Turnaround depends on document length and complexity, and we will always give you a realistic delivery estimate before work begins.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">How quickly can you complete a certified French translation? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>Standard certified translations are delivered within 24 to 48 hours. Same-day urgent French translation is available — contact us by phone or WhatsApp for immediate assistance. Turnaround depends on document length and complexity, and we will always give you a realistic delivery estimate before work begins.</p>
+        </div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>How much does a certified French translation cost?</summary>
-        <div class="faq-body"><p>Certified French translation starts from £55 for a standard single-page document. The final cost depends on the length and complexity of the document. All quotes are fixed with no hidden costs — the certificate of accuracy is always included. Contact us with your document for a free quote within two hours.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">How much does a certified French translation cost? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>Certified French translation starts from £55 for a standard single-page document. The final cost depends on the length and complexity of the document. All quotes are fixed with no hidden costs — the certificate of accuracy is always included. Contact us with your document for a free quote within two hours.</p>
+        </div></div>
+      </div>
 
-      <details class="faq-item">
-        <summary>Is my document kept confidential?</summary>
-        <div class="faq-body"><p>Absolutely. Metaphrase Ltd is registered with the Information Commissioner's Office (ICO) and operates in full compliance with UK GDPR. Your documents are treated as strictly confidential and are never shared with any third party. We do not use AI translation tools or cloud platforms that process your document on external servers. Documents can be deleted after completion on request.</p></div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Is my document kept confidential? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>Absolutely. Metaphrase Ltd is registered with the Information Commissioner's Office (ICO) and operates in full compliance with UK GDPR. Your documents are treated as strictly confidential and are never shared with any third party. We do not use AI translation tools or cloud platforms that process your document on external servers. Documents can be deleted after completion on request.</p>
+        </div></div>
+      </div>
 
     </div>
     <div style="text-align:center;margin-top:40px;">
@@ -664,46 +636,14 @@
   </div>
 </section>
 
-<!-- ══ BLOG PROMO ══════════════════════════════════════════════════════ -->
-<section class="section" style="background:var(--off-white);" aria-labelledby="blog-promo-heading">
+<!-- RELATED SERVICES -->
+<section class="section" style="background:var(--off-white);" aria-labelledby="related-heading">
   <div class="container">
-    <header class="section-header centered reveal">
-      <span class="eyebrow">Further Reading</span>
-      <h2 id="blog-promo-heading" class="section-heading">Guides That May Help You</h2>
-    </header>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:8px;">
-      <a href="/blog/certified-translation-guide/" class="blog-promo-card">
-        <div class="blog-promo-img" style="background:var(--navy);display:flex;align-items:center;justify-content:center;height:120px;border-radius:var(--radius-md) var(--radius-md) 0 0;">
-          <i class="bi bi-file-earmark-check-fill" style="font-size:3rem;color:rgba(255,255,255,0.6);"></i>
-        </div>
-        <div class="blog-promo-content">
-          <h4>The Complete Guide to Certified Translation in the UK</h4>
-          <p>Everything you need to know about getting a certified translation accepted by UKVI, courts, and universities.</p>
-          <span style="color:var(--navy);font-weight:600;font-size:0.9rem;">Read Guide <i class="bi bi-arrow-right"></i></span>
-        </div>
-      </a>
-      <a href="/blog/immigration-translation-uk/" class="blog-promo-card">
-        <div class="blog-promo-img" style="background:#4a2800;display:flex;align-items:center;justify-content:center;height:120px;border-radius:var(--radius-md) var(--radius-md) 0 0;">
-          <i class="bi bi-airplane-fill" style="font-size:3rem;color:rgba(255,255,255,0.6);"></i>
-        </div>
-        <div class="blog-promo-content">
-          <h4>Translation for UK Immigration Applications</h4>
-          <p>What documents need translating, what UKVI expects, and how to avoid the most common rejection reasons.</p>
-          <span style="color:var(--navy);font-weight:600;font-size:0.9rem;">Read Guide <i class="bi bi-arrow-right"></i></span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ══ RELATED SERVICES ════════════════════════════════════════════════ -->
-<section class="section" aria-labelledby="related-heading">
-  <div class="container">
-    <header class="section-header centered reveal">
+    <div class="text-center reveal" style="max-width:680px;margin:0 auto 48px;">
       <span class="eyebrow">Also Available</span>
       <h2 id="related-heading" class="section-heading">Related Translation Services</h2>
-    </header>
-    <div class="grid-3" style="gap:20px;">
+    </div>
+    <div class="grid-3 reveal" style="gap:20px;">
       <a href="/services/certified-translation-birmingham/" class="service-card" style="text-decoration:none;color:inherit;">
         <div class="service-icon"><i class="bi bi-file-earmark-check-fill"></i></div>
         <h3>Certified Translation Birmingham</h3>
@@ -726,78 +666,136 @@
   </div>
 </section>
 
-<!-- ══ CTA BAND ════════════════════════════════════════════════════════ -->
-<section class="cta-band" aria-labelledby="cta-heading">
-  <div class="container">
-    <div class="cta-band-content">
-      <h2 id="cta-heading" class="cta-band-title">Need a Certified French Translation?</h2>
-      <p class="cta-band-subtitle">Send us your document and receive a free, fixed quote within two hours. CIOL-certified. Accepted by UKVI, courts, and universities.</p>
-      <div class="cta-band-actions">
-        <a href="/contact/" class="btn btn-primary btn-lg">Get a Free Quote</a>
-        <a href="https://wa.me/447852408467" class="btn btn-whatsapp btn-lg"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
-      </div>
+<!-- CTA -->
+<section class="cta-section" aria-labelledby="cta-heading">
+  <div class="container" style="text-align:center;">
+    <span class="eyebrow" style="color:rgba(255,255,255,0.7);">Start Today</span>
+    <h2 id="cta-heading" style="color:var(--white);">Need a Certified French Translation?</h2>
+    <p style="color:rgba(255,255,255,0.9);max-width:600px;margin:0 auto 32px;">Send us your document and receive a free, fixed quote within two hours. CIOL-certified. Accepted by UKVI, courts, and universities across the UK.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="/contact/" class="btn btn-primary btn-lg"><i class="bi bi-envelope-fill"></i> Get a Free Quote</a>
+      <a href="https://wa.me/447852408467" class="btn btn-whatsapp btn-lg"><i class="bi bi-whatsapp"></i> WhatsApp Us Now</a>
     </div>
   </div>
 </section>
 
-<!-- ══ FOOTER ══════════════════════════════════════════════════════════ -->
-<footer class="site-footer">
+<footer role="contentinfo">
   <div class="container">
-    <div class="footer-inner">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" aria-label="Metaphrase Ltd home">
-          <img src="/assets/img/logo.svg" alt="Metaphrase Ltd" width="160" height="40" loading="lazy">
-        </a>
-        <p>CIOL-certified translation and interpreting services across the UK. Legal, immigration, and medical documents accepted by UKVI, the Home Office, courts, and the NHS.</p>
-        <div class="footer-socials">
-          <a href="https://www.facebook.com/metaphraseltd" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.linkedin.com/company/metaphrase-ltd" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-          <a href="https://wa.me/447852408467" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+        <div class="footer-brand-identity">
+          <span class="footer-logo-name">Metaphrase Ltd</span>
+          <span class="footer-logo-tagline">Certified. Precise. Trusted.</span>
+        </div>
+        <p>CIOL-certified translation, interpreting, and transcription. Trusted by UK courts, the Home Office, and NHS.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/metaphrase-ltd" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="linkedin"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/metaphraseltd/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/metaphrase" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+          <a href="mailto:info@metaphrase.uk" aria-label="Email us" class="email"><i class="bi bi-envelope-fill" aria-hidden="true"></i></a>
         </div>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h5>Services</h5>
         <ul>
-          <li><a href="/services/certified-translation-birmingham/">Certified Translation Birmingham</a></li>
-          <li><a href="/services/court-interpreter-birmingham/">Court Interpreter Birmingham</a></li>
-          <li><a href="/services/nhs-medical-translator/">NHS Medical Translator</a></li>
-          <li><a href="/services/urdu-translator-uk/">Urdu Translator UK</a></li>
-          <li><a href="/services/hindi-translator-uk/">Hindi Translator UK</a></li>
-          <li><a href="/services/punjabi-translator-uk/">Punjabi Translator UK</a></li>
+          <li><a href="/services/certified-translation-birmingham/">Certified Translation</a></li>
+          <li><a href="/services/urdu-translator-uk/">Urdu Translation</a></li>
+          <li><a href="/services/hindi-translator-uk/">Hindi Translation</a></li>
+          <li><a href="/services/punjabi-translator-uk/">Punjabi Translation</a></li>
+          <li><a href="/services/french-translator-uk/">French Translation</a></li>
+          <li><a href="/services/court-interpreter-birmingham/">Court Interpreting</a></li>
+          <li><a href="/services/nhs-medical-translator/">Medical Translation</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>More Languages</h4>
+        <h5>Company</h5>
         <ul>
-          <li><a href="/services/bengali-translator-uk/">Bengali Translator UK</a></li>
-          <li><a href="/services/arabic-translator-uk/">Arabic Translator UK</a></li>
-          <li><a href="/services/polish-translator-uk/">Polish Translator UK</a></li>
-          <li><a href="/services/romanian-translator-uk/">Romanian Translator UK</a></li>
-          <li><a href="/services/spanish-translator-uk/">Spanish Translator UK</a></li>
-          <li><a href="/services/french-translator-uk/">French Translator UK</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="/about/">About Metaphrase</a></li>
-          <li><a href="/blog/">Translation Blog</a></li>
-          <li><a href="/work-with-us/">Work With Us</a></li>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#testimonials">Testimonials</a></li>
           <li><a href="/contact/">Contact Us</a></li>
-          <li><a href="/privacy/">Privacy Policy</a></li>
-          <li><a href="/terms/">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+447852408467">+44 7852 408 467</a></li>
+          <li><a href="https://wa.me/447852408467" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a href="mailto:info@metaphrase.uk">info@metaphrase.uk</a></li>
+          <li><a href="/contact/">Send a Message</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-bottom-inner">
-        <p>&copy; 2026 Metaphrase Ltd. Registered in England &amp; Wales. All rights reserved.</p>
-        <p style="opacity:0.6;font-size:0.8rem;">ICO Registered — UK GDPR Compliant &nbsp;|&nbsp; CIOL Member</p>
-      </div>
+      <p>&copy; 2026 Metaphrase Ltd. Registered in England &amp; Wales. ICO Registered.</p>
+      <p><a href="/privacy/">Privacy Policy</a> &middot; <a href="/terms/">Terms of Service</a></p>
     </div>
   </div>
 </footer>
+<div class="whatsapp-float" role="complementary" aria-label="WhatsApp contact">
+  <span class="whatsapp-tooltip">Chat with us now!</span>
+  <a href="https://wa.me/447852408467" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+</div>
+<div class="back-to-top" id="backToTop" aria-label="Back to top">
+  <button aria-label="Scroll back to top"><i class="bi bi-chevron-up" aria-hidden="true"></i></button>
+</div>
+<script src="/assets/js/premium.js" defer></script>
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0f2855;color:#fff;padding:16px 24px;box-shadow:0 -4px 24px rgba(0,0,0,0.18);">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+    <p style="margin:0;font-size:0.80rem;line-height:1.5;flex:1;color:#fff;">We use cookies to improve your experience. By clicking <strong>Accept</strong>, you consent per our <a href="/privacy/" style="color:#C9A84C;text-decoration:underline;">Privacy Policy</a>.</p>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button onclick="cookieChoice('decline')" style="padding:9px 20px;border-radius:6px;border:1px solid rgba(255,255,255,0.4);background:transparent;color:#fff;font-size:0.85rem;cursor:pointer;font-family:inherit;">Decline</button>
+      <button onclick="cookieChoice('accept')" style="padding:9px 20px;border-radius:6px;border:none;background:#C9A84C;color:#fff;font-size:0.85rem;font-weight:600;cursor:pointer;font-family:inherit;">Accept</button>
+    </div>
+  </div>
+</div>
+<script>(function(){if(!localStorage.getItem('cookieConsent')){document.getElementById('cookie-banner').style.display='block';}})();function cookieChoice(c){localStorage.setItem('cookieConsent',c);document.getElementById('cookie-banner').style.display='none';}</script>
 
-<script src="/assets/js/premium.js"></script>
+<style>
+.french-intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+@media(max-width:860px){ .french-intro-grid { grid-template-columns:1fr; gap:32px; } }
+
+.stats-bar-row { display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; }
+.stats-bar-row .stat-item { display:flex; flex-direction:column; align-items:center; gap:4px; flex:1; min-width:80px; background:transparent !important; border:none !important; padding:0 !important; }
+.stats-bar-row .stat-item:hover { background:transparent !important; }
+.stat-num { font-size:1.6rem; font-weight:800; color:#fff; line-height:1; }
+.stat-label { font-size:0.75rem; color:rgba(255,255,255,0.7); text-align:center; }
+@media(max-width:600px){ .stats-bar-row { justify-content:center; } .stats-bar-row .stat-item { min-width:calc(33% - 20px); } }
+
+.hero-intent-tags { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
+.intent-tag { background:rgba(255,255,255,0.15); color:rgba(255,255,255,0.9); font-size:0.78rem; padding:5px 12px; border-radius:20px; border:1px solid rgba(255,255,255,0.25); }
+
+.process-steps { display:grid; grid-template-columns:repeat(5,1fr); gap:0; max-width:none; margin:0; }
+.process-step {
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+  border-right:1px solid var(--border); border-bottom:none !important;
+  padding:36px 20px; position:relative;
+}
+.process-step:last-child { border-right:none; }
+.step-number {
+  position:relative !important; top:auto !important; right:auto !important;
+  width:56px; height:56px; min-width:56px;
+  background:var(--navy); color:#fff; border-radius:50%;
+  display:flex !important; align-items:center; justify-content:center;
+  font-size:1.25rem; font-weight:800; flex-shrink:0;
+  margin:0 auto 20px !important;
+}
+.step-content { flex:none; }
+.step-content h4 { margin:0 0 10px; color:var(--navy); font-size:1rem; font-weight:700; }
+.step-content p { font-size:0.875rem; color:var(--text-dark); line-height:1.75; margin:0; }
+@media(max-width:860px){
+  .process-steps { grid-template-columns:1fr 1fr; }
+  .process-step { border-right:1px solid var(--border); border-bottom:1px solid var(--border) !important; padding:28px 20px; }
+  .process-step:nth-child(even) { border-right:none; }
+  .process-step:nth-last-child(-n+2) { border-bottom:none !important; }
+}
+@media(max-width:480px){
+  .process-steps { grid-template-columns:1fr; }
+  .process-step { border-right:none !important; border-bottom:1px solid var(--border) !important; flex-direction:row; align-items:flex-start; text-align:left; gap:16px; padding:24px 0; }
+  .process-step:last-child { border-bottom:none !important; }
+  .step-number { margin:0 !important; }
+  .step-content { text-align:left; }
+}
+</style>
 </body>
 </html>
