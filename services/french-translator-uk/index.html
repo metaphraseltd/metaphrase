@@ -258,7 +258,7 @@
           <a href="https://wa.me/447852408467" class="btn btn-whatsapp btn-lg"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:20px;">
+      <div>
         <div style="background:var(--off-white);border-radius:var(--radius-lg);padding:32px;border:1px solid var(--border);">
           <h3 style="color:var(--navy);margin-bottom:16px;font-size:1.1rem;">French in Numbers</h3>
           <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
@@ -668,7 +668,7 @@
 
 <!-- CTA -->
 <section class="cta-section" aria-labelledby="cta-heading">
-  <div class="container" style="text-align:center;padding-top:72px;padding-bottom:72px;">
+  <div class="container" style="text-align:center;">
     <span class="eyebrow" style="color:rgba(255,255,255,0.7);">Start Today</span>
     <h2 id="cta-heading" style="color:var(--white);">Need a Certified French Translation?</h2>
     <p style="color:rgba(255,255,255,0.9);max-width:600px;margin:0 auto 32px;">Send us your document and receive a free, fixed quote within two hours. CIOL-certified. Accepted by UKVI, courts, and universities across the UK.</p>
@@ -752,7 +752,9 @@
 <script>(function(){if(!localStorage.getItem('cookieConsent')){document.getElementById('cookie-banner').style.display='block';}})();function cookieChoice(c){localStorage.setItem('cookieConsent',c);document.getElementById('cookie-banner').style.display='none';}</script>
 
 <style>
-.french-intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+.french-intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:stretch; }
+.french-intro-grid > div:last-child { display:flex; flex-direction:column; gap:20px; }
+.french-intro-grid > div:last-child > div:last-child { flex:1; }
 @media(max-width:860px){ .french-intro-grid { grid-template-columns:1fr; gap:32px; } }
 
 .scripts-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
