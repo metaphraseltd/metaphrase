@@ -119,6 +119,18 @@
   .imm-card{display:flex;align-items:center;gap:10px;background:rgba(15,40,85,0.05);border:1px solid rgba(15,40,85,0.1);border-radius:10px;padding:14px 16px;font-size:0.88rem;font-weight:600;color:var(--navy);}
   .imm-card i{font-size:1.1rem;flex-shrink:0;}
   @media(max-width:600px){.stats-bar-row{flex-wrap:wrap;justify-content:center;}.stats-bar-row .stat-item{min-width:calc(33% - 20px);}.stat-num{font-size:1.5rem !important;}}
+  /* Grid 4 related */
+  .grid-4-related { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  @media(max-width:900px){ .grid-4-related { grid-template-columns:1fr 1fr; } }
+  @media(max-width:500px){ .grid-4-related { grid-template-columns:1fr; } }
+  /* Blog promo card with image */
+  .blog-promo-card { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; background:var(--white); border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; }
+  .blog-promo-img { overflow:hidden; height:100%; min-height:260px; }
+  .blog-promo-img img { width:100%; height:100%; object-fit:cover; display:block; }
+  .blog-promo-content { padding:40px 40px 40px 0; }
+  .blog-promo-content h3 { font-size:1.25rem; color:var(--navy); margin-bottom:14px; line-height:1.4; }
+  .blog-promo-content p { font-size:0.9rem; color:var(--text-muted); line-height:1.75; margin:0; }
+  @media(max-width:768px){ .blog-promo-card { grid-template-columns:1fr; } .blog-promo-img { min-height:200px; } .blog-promo-content { padding:28px; } }
   </style>
 
   <script type="application/ld+json">
@@ -897,63 +909,59 @@
   </div>
 </section>
 
-<!-- ══ BLOG PROMO ══════════════════════════════════════════════════════ -->
-<section class="section" style="background:var(--off-white);" aria-labelledby="blog-promo-heading">
+<!-- BLOG PROMO SECTION -->
+<section class="section" style="background:var(--off-white);">
   <div class="container">
-    <header class="section-header centered reveal">
-      <span class="eyebrow">Further Reading</span>
-      <h2 id="blog-promo-heading" class="section-heading">Guides That May Help You</h2>
-    </header>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:8px;">
-      <a href="/blog/certified-translation-guide/" class="blog-promo-card">
-        <div class="blog-promo-img" style="background:var(--navy);display:flex;align-items:center;justify-content:center;height:120px;border-radius:var(--radius-md) var(--radius-md) 0 0;">
-          <i class="bi bi-file-earmark-check-fill" style="font-size:3rem;color:rgba(255,255,255,0.6);"></i>
-        </div>
-        <div class="blog-promo-content">
-          <h4>The Complete Guide to Certified Translation in the UK</h4>
-          <p>Everything you need to know about getting a certified translation accepted by UKVI, courts, and universities.</p>
-          <span style="color:var(--navy);font-weight:600;font-size:0.9rem;">Read Guide <i class="bi bi-arrow-right"></i></span>
-        </div>
-      </a>
-      <a href="/blog/immigration-translation-uk/" class="blog-promo-card">
-        <div class="blog-promo-img" style="background:#5c1a1a;display:flex;align-items:center;justify-content:center;height:120px;border-radius:var(--radius-md) var(--radius-md) 0 0;">
-          <i class="bi bi-airplane-fill" style="font-size:3rem;color:rgba(255,255,255,0.6);"></i>
-        </div>
-        <div class="blog-promo-content">
-          <h4>Translation for UK Immigration Applications</h4>
-          <p>What documents need translating, what UKVI expects, and how to avoid the most common rejection reasons.</p>
-          <span style="color:var(--navy);font-weight:600;font-size:0.9rem;">Read Guide <i class="bi bi-arrow-right"></i></span>
-        </div>
-      </a>
+    <div class="blog-promo-card reveal">
+      <div class="blog-promo-img">
+        <img src="/assets/img/blog/certified-translation-guide.jpg" alt="Certified translation guide for UK immigration" loading="lazy" width="480" height="270">
+      </div>
+      <div class="blog-promo-content">
+        <span class="eyebrow">From Our Blog</span>
+        <h3>The Complete Guide to Certified Translation for UK Immigration</h3>
+        <p>If you are submitting documents to UKVI, the Home Office, or UK courts, understanding the difference between certified, notarised, and apostilled translation is essential. This guide explains what UKVI actually requires, why machine translation is always rejected, and how to get a certified translation accepted first time.</p>
+        <a href="/blog/certified-translation-guide/" class="btn btn-primary" style="margin-top:8px;"><i class="bi bi-arrow-right-circle-fill"></i> Read the Article</a>
+      </div>
+    </div>
+
+    <div class="blog-promo-card reveal" style="margin-top:32px;">
+      <div class="blog-promo-img">
+        <img src="/assets/img/blog/immigration-translation-uk.jpg" alt="Immigration translation guide for UK visa applications" loading="lazy" width="480" height="270">
+      </div>
+      <div class="blog-promo-content">
+        <span class="eyebrow">From Our Blog</span>
+        <h3>Translation for UK Immigration Purposes: What You Need to Know</h3>
+        <p>Visa applications, asylum cases, and settlement applications all require certified English translations of your original documents. This guide covers the specific requirements for different visa routes, how to avoid rejections, and what documents are required for common applications.</p>
+        <a href="/blog/immigration-translation-uk/" class="btn btn-primary" style="margin-top:8px;"><i class="bi bi-arrow-right-circle-fill"></i> Read the Article</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ══ RELATED SERVICES ════════════════════════════════════════════════ -->
-<section class="section" aria-labelledby="related-heading">
+<!-- RELATED SERVICES -->
+<section class="section" style="background:var(--off-white);" aria-labelledby="related-heading">
   <div class="container">
-    <header class="section-header centered reveal">
-      <span class="eyebrow">Also Available</span>
-      <h2 id="related-heading" class="section-heading">Related Translation Services</h2>
-    </header>
-    <div class="grid-3" style="gap:20px;">
+    <h2 id="related-heading" class="section-heading text-center">Related Services</h2>
+    <div class="grid-4-related" style="margin-top:32px;">
       <a href="/services/certified-translation-birmingham/" class="service-card" style="text-decoration:none;color:inherit;">
         <div class="service-icon"><i class="bi bi-file-earmark-check-fill"></i></div>
         <h3>Certified Translation Birmingham</h3>
-        <p>CIOL-certified translation for all official documents in Birmingham and across the West Midlands.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right"></i></span>
+        <p>Official document translation across all languages. UKVI, courts, and employer-accepted.</p>
       </a>
       <a href="/services/arabic-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;">
         <div class="service-icon"><i class="bi bi-translate"></i></div>
         <h3>Certified Arabic Translator UK</h3>
-        <p>Expert Arabic translation covering all 26 Arabic-speaking countries for immigration, legal, and official documents.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right"></i></span>
+        <p>Expert Arabic translation for legal, medical, and immigration documents across the UK.</p>
       </a>
       <a href="/services/ukrainian-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;">
-        <div class="service-icon"><i class="bi bi-translate"></i></div>
+        <div class="service-icon"><i class="bi bi-globe2"></i></div>
         <h3>Certified Ukrainian Translator UK</h3>
-        <p>Expert Ukrainian translation for Homes for Ukraine, Temporary Protection, and official documents — including Soviet-era records.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right"></i></span>
+        <p>Professional Ukrainian–English certified translation for official documents across the UK.</p>
+      </a>
+      <a href="/services/court-interpreter-birmingham/" class="service-card" style="text-decoration:none;color:inherit;">
+        <div class="service-icon"><i class="bi bi-bank"></i></div>
+        <h3>Court Interpreter Birmingham</h3>
+        <p>Professional interpreting for Crown Court, tribunals, and legal hearings across the UK.</p>
       </a>
     </div>
   </div>
@@ -973,24 +981,20 @@
   </div>
 </section>
 
-<!-- ══ FOOTER ══════════════════════════════════════════════════════════ -->
-<footer class="site-footer">
+<footer role="contentinfo">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-brand-identity">
-          <img src="/assets/img/metaphrase-logo-m.svg" alt="Metaphrase Ltd" width="44" height="44" loading="lazy">
-          <div>
-            <div class="footer-logo-name">Metaphrase</div>
-            <div class="footer-logo-tagline">Certified. Precise. Trusted.</div>
-          </div>
+          <span class="footer-logo-name">Metaphrase Ltd</span>
+          <span class="footer-logo-tagline">Certified. Precise. Trusted.</span>
         </div>
-        <p>CIOL-certified translation and interpreting services across the UK. Legal, immigration, and medical documents accepted by UKVI, the Home Office, courts, and the NHS.</p>
+        <p>CIOL-certified translation, interpreting, and transcription. Trusted by UK courts, the Home Office, and NHS.</p>
         <div class="footer-social">
-          <a href="https://www.linkedin.com/company/metaphrase-ltd" class="linkedin" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-          <a href="https://www.instagram.com/metaphraseltd" class="instagram" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.facebook.com/metaphraseltd" class="facebook" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
-          <a href="mailto:info@metaphrase.uk" class="email" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+          <a href="https://www.linkedin.com/company/metaphrase-ltd" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="linkedin"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/metaphraseltd/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/metaphrase" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+          <a href="mailto:info@metaphrase.uk" aria-label="Email us" class="email"><i class="bi bi-envelope-fill" aria-hidden="true"></i></a>
         </div>
       </div>
       <div class="footer-col">
@@ -1005,31 +1009,29 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h5>More Languages</h5>
+        <h5>Company</h5>
         <ul>
-          <li><a href="/services/polish-translator-uk/">Polish Translator UK</a></li>
-          <li><a href="/services/romanian-translator-uk/">Romanian Translator UK</a></li>
-          <li><a href="/services/spanish-translator-uk/">Spanish Translator UK</a></li>
-          <li><a href="/services/french-translator-uk/">French Translator UK</a></li>
-          <li><a href="/services/ukrainian-translator-uk/">Ukrainian Translator UK</a></li>
-          <li><a href="/services/turkish-translator-uk/">Turkish Translator UK</a></li>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#testimonials">Testimonials</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+          <li><a href="/work-with-us/">Work With Us</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Company</h5>
+        <h5>Contact</h5>
         <ul>
-          <li><a href="/about/">About Metaphrase</a></li>
-          <li><a href="/blog/">Translation Blog</a></li>
-          <li><a href="/work-with-us/">Work With Us</a></li>
-          <li><a href="/contact/">Contact Us</a></li>
-          <li><a href="/privacy/">Privacy Policy</a></li>
-          <li><a href="/terms/">Terms of Service</a></li>
+          <li><a href="tel:+447852408467">+44 7852 408 467</a></li>
+          <li><a href="https://wa.me/447852408467" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a href="mailto:info@metaphrase.uk">info@metaphrase.uk</a></li>
+          <li><a href="/contact/">Send a Message</a></li>
+          <li><a href="https://maps.app.goo.gl/nRmAKT7i17k8CCxAA" target="_blank" rel="noopener">Find Us on Google Maps</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Metaphrase Ltd. Registered in England &amp; Wales. All rights reserved.</p>
-      <p style="opacity:0.6;font-size:0.8rem;">ICO Registered — UK GDPR Compliant &nbsp;|&nbsp; CIOL Member</p>
+      <p>&copy; 2026 Metaphrase Ltd. Registered in England &amp; Wales. ICO Registered.</p>
+      <p><a href="/privacy/">Privacy Policy</a> &middot; <a href="/terms/">Terms of Service</a></p>
     </div>
   </div>
 </footer>
