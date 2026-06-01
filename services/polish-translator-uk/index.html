@@ -49,8 +49,37 @@
 
   <style>
   /* ── Stats bar ── */
-  .stats-bar-row{display:flex;flex-wrap:wrap;justify-content:space-around;align-items:center;gap:24px;}
+  .stats-bar-row{display:flex;flex-wrap:nowrap;justify-content:space-around;align-items:center;gap:16px;}
   .stat-item{display:flex;flex-direction:column;align-items:center;text-align:center;}
+  .stats-bar-row .stat-item:hover{background:transparent !important;box-shadow:none !important;transform:none !important;border:none !important;}
+  .problems-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  @media(max-width:900px){.problems-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:600px){.problems-grid{grid-template-columns:1fr;}}
+  .problem-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px 24px;}
+  .problem-icon{width:48px;height:48px;background:rgba(15,40,85,0.08);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+  .problem-icon i{font-size:1.3rem;color:var(--navy);}
+  .problem-card h4{font-size:0.95rem;margin-bottom:10px;color:var(--navy);}
+  .problem-card p{font-size:0.875rem;color:var(--text-muted);line-height:1.7;margin:0;}
+  .why-reasons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;}
+  @media(max-width:768px){.why-reasons-grid{grid-template-columns:1fr;}}
+  .comparison-table{width:100%;border-collapse:collapse;font-size:0.875rem;}
+  .comparison-table th{background:var(--navy);color:#fff;padding:14px 16px;text-align:left;font-size:0.82rem;font-weight:600;}
+  .comparison-table th:first-child{background:rgba(15,40,85,0.8);}
+  .comparison-table td{padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:middle;color:var(--text-dark);}
+  .comparison-table tr:last-child td{border-bottom:none;}
+  .comparison-table tr:nth-child(even) td{background:rgba(15,40,85,0.02);}
+  .comparison-badge{display:inline-block;font-size:0.7rem;padding:2px 8px;border-radius:10px;margin-left:6px;font-weight:700;vertical-align:middle;}
+  .comparison-badge.good{background:rgba(255,255,255,0.2);color:#fff;}
+  .comparison-badge.bad{background:rgba(15,40,85,0.1);color:var(--navy);}
+  .comp-good{color:#0d4a1c;font-weight:600;}
+  .comp-good i{color:#1a7a32;margin-right:6px;}
+  .comp-bad{color:#4a5568;font-weight:500;}
+  .comp-bad i{color:#dc2626;margin-right:6px;}
+  .ai-warning-note{display:flex;align-items:flex-start;gap:14px;background:rgba(15,40,85,0.05);border:1px solid rgba(15,40,85,0.15);border-radius:var(--radius-lg);padding:20px 24px;font-size:0.9rem;color:var(--text-dark);}
+  .ai-warning-note i{color:var(--navy);font-size:1.2rem;flex-shrink:0;margin-top:2px;}
+  .ai-warning-note p{margin:0;line-height:1.7;}
+  .imm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px;}
+  @media(max-width:600px){.imm-grid{grid-template-columns:1fr 1fr;}}
   .stat-num{font-size:2.2rem;font-weight:800;color:#fff;line-height:1;display:block;}
   .stat-label{font-size:0.8rem;color:rgba(255,255,255,0.65);margin-top:6px;text-transform:uppercase;letter-spacing:0.05em;display:block;}
   /* ── Hero intent tags ── */
@@ -356,7 +385,7 @@
         <div class="service-card" style="padding:32px;">
           <h3 style="margin-bottom:6px;font-size:1.1rem;">Polish Documents We Translate</h3>
           <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:20px;">Civil, legal, academic, and commercial documents from Poland</p>
-          <ul class="doc-list">
+          <ul class="doc-list" style="font-size:0.8rem;">
             <li><i class="bi bi-file-earmark-text-fill"></i> Akt urodzenia — Birth Certificates</li>
             <li><i class="bi bi-file-earmark-text-fill"></i> Akt małżeństwa — Marriage Certificates</li>
             <li><i class="bi bi-file-earmark-text-fill"></i> Akt zgonu — Death Certificates</li>
@@ -398,26 +427,17 @@
       <p style="font-size:1rem;color:var(--text-dark);line-height:1.8;margin-bottom:36px;">
         Machine translation cannot handle Polish reliably. The language's complex case system means that the same word can take seven different forms depending on its grammatical function — and automated tools regularly produce nonsensical output for Polish legal and civil documents. The only safe option for official purposes is a certified human translation from a qualified professional.
       </p>
-      <div class="cert-example-box">
-        <div class="cert-example-header">
-          <i class="bi bi-file-earmark-check-fill"></i>
-          <span>Example: What a Certificate of Accuracy Looks Like</span>
+      <div style="background:var(--white);border:2px solid var(--navy);border-radius:var(--radius-lg);padding:40px;margin-top:36px;font-family:'Georgia',serif;">
+        <div style="text-align:center;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border);">
+          <p style="font-size:1.15rem;font-weight:700;color:var(--navy);margin:0;">CERTIFICATE OF ACCURACY</p>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin:6px 0 0;">Certified Translation — Polish to English</p>
         </div>
-        <div class="cert-example-body">
-          <p class="cert-example-text">
-            <em>"I, [Translator Name], Chartered Linguist (MCIL), certify that I am competent in both the Polish and English languages and that the attached translation of [document title] is, to the best of my knowledge and belief, a true and accurate rendering of the original Polish-language document. I am not a party to the matter in question and have no interest in the outcome.</em>
-          </p>
-          <p class="cert-example-text" style="margin-top:12px;">
-            <em>Signed: [Signature] &nbsp;&nbsp; Date: [Date of certification]<br>
-            Name: [Translator Name] MCIL &nbsp;&nbsp; Credentials: CIOL Chartered Linguist<br>
-            ICO Registration: [ZB number] &nbsp;&nbsp; Contact: info@metaphrase.uk"</em>
-          </p>
-          <div class="cert-annotations">
-            <div class="cert-annotation"><i class="bi bi-arrow-right-circle-fill"></i><span><strong>Translator's full name and credentials</strong> — confirms professional standing accepted by UKVI and courts.</span></div>
-            <div class="cert-annotation"><i class="bi bi-arrow-right-circle-fill"></i><span><strong>Statement of competency in both languages</strong> — UKVI requires this specific confirmation.</span></div>
-            <div class="cert-annotation"><i class="bi bi-arrow-right-circle-fill"></i><span><strong>Declaration of accuracy and completeness</strong> — without this, the translation has no official standing.</span></div>
-            <div class="cert-annotation"><i class="bi bi-arrow-right-circle-fill"></i><span><strong>ICO registration number</strong> — confirms compliance with UK data protection law.</span></div>
-          </div>
+        <p style="line-height:1.9;color:var(--text-dark);font-size:0.95rem;">I, <strong>[Translator Name]</strong>, Chartered Linguist (MCIL), Member of the Chartered Institute of Linguists, hereby certify that I am competent to translate from Polish into English and that the attached translation is, to the best of my knowledge and belief, a complete and accurate rendering of the original Polish-language document.</p>
+        <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:16px;font-size:0.88rem;color:var(--text-dark);">
+          <div><strong style="color:var(--navy);display:block;margin-bottom:4px;">Name:</strong>[Translator Name] MCIL</div>
+          <div><strong style="color:var(--navy);display:block;margin-bottom:4px;">Organisation:</strong>Metaphrase Ltd</div>
+          <div><strong style="color:var(--navy);display:block;margin-bottom:4px;">Date:</strong>[Date of Certification]</div>
+          <div><strong style="color:var(--navy);display:block;margin-bottom:4px;">Signature:</strong><span style="font-style:italic;font-size:1.1rem;">Signed</span></div>
         </div>
       </div>
     </div>
@@ -1055,7 +1075,7 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="site-footer">
+<footer role="contentinfo">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
