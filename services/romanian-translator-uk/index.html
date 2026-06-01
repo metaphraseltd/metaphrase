@@ -49,8 +49,9 @@
 
   <style>
   /* ── Stats bar ── */
-  .stats-bar-row{display:flex;flex-wrap:wrap;justify-content:space-around;align-items:center;gap:24px;}
-  .stat-item{display:flex;flex-direction:column;align-items:center;text-align:center;}
+  .stats-bar-row{display:flex;justify-content:space-between;flex-wrap:nowrap;gap:20px;}
+  .stats-bar-row .stat-item{display:flex;flex-direction:column;align-items:center;gap:4px;flex:1;min-width:80px;background:transparent !important;border:none !important;padding:0 !important;}
+  .stats-bar-row .stat-item:hover{background:transparent !important;}
   .stat-num{font-size:2.2rem;font-weight:800;color:#fff;line-height:1;display:block;}
   .stat-label{font-size:0.8rem;color:rgba(255,255,255,0.65);margin-top:6px;text-transform:uppercase;letter-spacing:0.05em;display:block;}
   /* ── Hero intent tags ── */
