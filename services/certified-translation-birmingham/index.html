@@ -502,32 +502,21 @@
 
 <div class="whatsapp-float" role="complementary" aria-label="WhatsApp contact">
   <span class="whatsapp-tooltip">Chat with us now!</span>
-  <a href="https://wa.me/447852408467" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
-    <i class="bi bi-whatsapp" aria-hidden="true"></i>
-  </a>
+  <a href="https://wa.me/447852408467" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
 </div>
-
 <div class="back-to-top" id="backToTop" aria-label="Back to top">
   <button aria-label="Scroll back to top"><i class="bi bi-chevron-up" aria-hidden="true"></i></button>
 </div>
-
 <script src="/assets/js/premium.js" defer></script>
-
-<div id="cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:#0f2855; color:#fff; padding:16px 24px; box-shadow:0 -4px 24px rgba(0,0,0,0.18);">
-  <div style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
-    <p style="margin:0; font-size:0.80rem; line-height:1.5; flex:1; color:#fff;">
-      We use cookies to improve your experience and analyse site traffic. By clicking <strong>Accept</strong>, you consent to our use of cookies in accordance with our <a href="/privacy/" style="color:#C9A84C; text-decoration:underline;">Privacy Policy</a>.
-    </p>
-    <div style="display:flex; gap:10px; flex-shrink:0;">
-      <button onclick="cookieChoice('decline')" style="padding:9px 20px; border-radius:6px; border:1px solid rgba(255,255,255,0.4); background:transparent; color:#fff; font-size:0.85rem; cursor:pointer; font-family:inherit;">Decline</button>
-      <button onclick="cookieChoice('accept')" style="padding:9px 20px; border-radius:6px; border:none; background:#C9A84C; color:#fff; font-size:0.85rem; font-weight:600; cursor:pointer; font-family:inherit;">Accept</button>
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0f2855;color:#fff;padding:16px 24px;box-shadow:0 -4px 24px rgba(0,0,0,0.18);">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+    <p style="margin:0;font-size:0.80rem;line-height:1.5;flex:1;color:#fff;">We use cookies to improve your experience. By clicking <strong>Accept</strong>, you consent per our <a href="/privacy/" style="color:#C9A84C;text-decoration:underline;">Privacy Policy</a>.</p>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button onclick="cookieChoice('decline')" style="padding:9px 20px;border-radius:6px;border:1px solid rgba(255,255,255,0.4);background:transparent;color:#fff;font-size:0.85rem;cursor:pointer;font-family:inherit;">Decline</button>
+      <button onclick="cookieChoice('accept')" style="padding:9px 20px;border-radius:6px;border:none;background:#C9A84C;color:#fff;font-size:0.85rem;font-weight:600;cursor:pointer;font-family:inherit;">Accept</button>
     </div>
   </div>
 </div>
-<script>
-  (function(){if(!localStorage.getItem('cookieConsent')){document.getElementById('cookie-banner').style.display='block';}})();
-  function cookieChoice(choice){localStorage.setItem('cookieConsent',choice);document.getElementById('cookie-banner').style.display='none';}
-</script>
-
+<script>(function(){if(!localStorage.getItem('cookieConsent')){document.getElementById('cookie-banner').style.display='block';}})();function cookieChoice(c){localStorage.setItem('cookieConsent',c);document.getElementById('cookie-banner').style.display='none';}</script>
 </body>
 </html>

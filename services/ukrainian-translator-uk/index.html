@@ -87,6 +87,7 @@
     .blog-promo-content{padding:24px;}
     .blog-promo-content h4{color:var(--navy);font-size:1rem;margin-bottom:8px;line-height:1.4;}
     .blog-promo-content p{color:var(--text-muted);font-size:0.88rem;margin-bottom:12px;}
+  @media(max-width:600px){.stats-bar-row{flex-wrap:wrap;justify-content:center;}.stats-bar-row .stat-item{min-width:calc(33% - 20px);}.stat-num{font-size:1.5rem !important;}}
   </style>
 
   <script type="application/ld+json">
@@ -1005,24 +1006,23 @@
 </footer>
 
 <!-- WhatsApp float -->
-<a href="https://wa.me/447852408467" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <i class="bi bi-whatsapp"></i>
-</a>
-
-<!-- Back to top -->
-<button class="back-to-top" id="backToTop" aria-label="Back to top">
-  <i class="bi bi-arrow-up"></i>
-</button>
-
-<!-- Cookie banner -->
-<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
-  <p>We use cookies to improve your experience and analyse site traffic. See our <a href="/privacy/">Privacy Policy</a>.</p>
-  <div class="cookie-actions">
-    <button class="btn btn-primary btn-sm" id="cookieAccept">Accept</button>
-    <button class="btn btn-secondary btn-sm" id="cookieDecline">Decline</button>
+<div class="whatsapp-float" role="complementary" aria-label="WhatsApp contact">
+  <span class="whatsapp-tooltip">Chat with us now!</span>
+  <a href="https://wa.me/447852408467" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+</div>
+<div class="back-to-top" id="backToTop" aria-label="Back to top">
+  <button aria-label="Scroll back to top"><i class="bi bi-chevron-up" aria-hidden="true"></i></button>
+</div>
+<script src="/assets/js/premium.js" defer></script>
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0f2855;color:#fff;padding:16px 24px;box-shadow:0 -4px 24px rgba(0,0,0,0.18);">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+    <p style="margin:0;font-size:0.80rem;line-height:1.5;flex:1;color:#fff;">We use cookies to improve your experience. By clicking <strong>Accept</strong>, you consent per our <a href="/privacy/" style="color:#C9A84C;text-decoration:underline;">Privacy Policy</a>.</p>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button onclick="cookieChoice('decline')" style="padding:9px 20px;border-radius:6px;border:1px solid rgba(255,255,255,0.4);background:transparent;color:#fff;font-size:0.85rem;cursor:pointer;font-family:inherit;">Decline</button>
+      <button onclick="cookieChoice('accept')" style="padding:9px 20px;border-radius:6px;border:none;background:#C9A84C;color:#fff;font-size:0.85rem;font-weight:600;cursor:pointer;font-family:inherit;">Accept</button>
+    </div>
   </div>
 </div>
-
-<script src="/assets/js/premium.js" defer></script>
+<script>(function(){if(!localStorage.getItem('cookieConsent')){document.getElementById('cookie-banner').style.display='block';}})();function cookieChoice(c){localStorage.setItem('cookieConsent',c);document.getElementById('cookie-banner').style.display='none';}</script>
 </body>
 </html>
