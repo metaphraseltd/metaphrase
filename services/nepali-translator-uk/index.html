@@ -48,55 +48,174 @@
   <link rel="stylesheet" href="/assets/css/premium.css">
 
   <style>
-    .lang-intro-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: start;
-    }
-    @media (max-width: 860px) {
-      .lang-intro-grid { grid-template-columns: 1fr; gap: 32px; }
-    }
-    .process-steps {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 0;
-    }
-    .process-step {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      border-right: 1px solid var(--border);
-      padding: 36px 20px;
-    }
-    .process-step:last-child { border-right: none; }
-    .step-number {
-      width: 56px;
-      height: 56px;
-      min-width: 56px;
-      background: var(--navy);
-      color: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-      font-weight: 800;
-      margin: 0 auto 20px;
-    }
-    .step-content h4 { margin: 0 0 10px; color: var(--navy); font-size: 1rem; font-weight: 700; }
-    .step-content p { font-size: 0.875rem; color: var(--text-dark); line-height: 1.75; margin: 0; }
-    @media (max-width: 860px) {
-      .process-steps { grid-template-columns: 1fr 1fr; }
-      .process-step { border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-      .process-step:nth-child(2n) { border-right: none; }
-    }
-    @media (max-width: 480px) {
-      .process-steps { grid-template-columns: 1fr; }
-      .process-step { border-right: none; border-bottom: 1px solid var(--border); }
-      .process-step:last-child { border-bottom: none; }
-    }
+/* Page-specific styles */
+.why-section { padding:80px 0; }
+.nepali-intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:stretch; }
+.nepali-intro-grid > div:last-child { display:flex; flex-direction:column; }
+.nepali-intro-grid > div:last-child .service-card { flex:1; }
+@media(max-width:900px){ .nepali-intro-grid { grid-template-columns:1fr; gap:40px; } }
+
+.check-row { display:flex; align-items:flex-start; gap:10px; font-size:0.9rem; color:var(--text-dark); }
+
+.doc-list { list-style:none; padding:0; display:flex; flex-direction:column; gap:10px; }
+.doc-list li { display:flex; align-items:center; gap:10px; font-size:0.9rem; color:var(--text-dark); }
+.doc-list li i { color:var(--navy); font-size:1rem; flex-shrink:0; }
+
+.scripts-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-bottom:32px; }
+@media(max-width:768px){ .scripts-grid { grid-template-columns:1fr; } }
+
+.script-card { background:var(--white); border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; }
+.script-card-header { background:var(--navy); color:#fff; padding:28px 28px 20px; }
+.script-label { font-family:'Playfair Display',serif; font-size:2rem; color:rgba(255,255,255,0.6); margin-bottom:6px; }
+.script-card-header h3 { color:#fff; margin:0 0 4px; font-size:1.2rem; }
+.script-origin { font-size:0.82rem; color:rgba(255,255,255,0.7); margin:0; }
+.script-card-body { padding:24px 28px; font-size:0.9rem; color:var(--text-dark); line-height:1.75; }
+.script-examples { margin-top:16px; padding-left:18px; display:flex; flex-direction:column; gap:6px; color:var(--text-muted); font-size:0.85rem; }
+
+.scripts-note { display:flex; align-items:flex-start; gap:14px; background:rgba(15,40,85,0.06); border:1px solid rgba(15,40,85,0.12); border-radius:var(--radius-lg); padding:20px 24px; font-size:0.9rem; color:var(--text-dark); }
+.scripts-note i { color:var(--navy); font-size:1.2rem; flex-shrink:0; margin-top:2px; }
+.scripts-note p { margin:0; line-height:1.7; }
+
+.content-two-col { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:stretch; }
+.content-two-col > div:last-child { display:flex; flex-direction:column; }
+.content-two-col > div:last-child .service-card { flex:1; }
+@media(max-width:900px){ .content-two-col { grid-template-columns:1fr; gap:40px; } }
+
+.reason-mini { display:flex; align-items:flex-start; gap:14px; }
+.reason-mini i { width:38px; height:38px; background:rgba(15,40,85,0.08); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:1rem; color:var(--navy); flex-shrink:0; }
+.reason-mini div { flex:1; }
+.reason-mini strong { display:block; font-size:0.9rem; margin-bottom:2px; color:var(--text-dark); }
+.reason-mini p { font-size:0.85rem; color:var(--text-muted); margin:0; line-height:1.6; }
+
+.imm-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:28px; }
+@media(max-width:600px){ .imm-grid { grid-template-columns:1fr 1fr; } }
+.imm-card { display:flex; align-items:center; gap:10px; background:rgba(15,40,85,0.05); border:1px solid rgba(15,40,85,0.1); border-radius:10px; padding:14px 16px; font-size:0.88rem; font-weight:600; color:var(--navy); }
+.imm-card i { font-size:1.1rem; flex-shrink:0; }
+
+.doc-section { display:grid; grid-template-columns:80px 1fr; gap:28px; align-items:start; padding:32px 0; }
+@media(max-width:600px){ .doc-section { grid-template-columns:1fr; } }
+.doc-icon { width:60px; height:60px; background:var(--navy); border-radius:14px; display:flex; align-items:center; justify-content:center; }
+.doc-icon i { font-size:1.5rem; color:#fff; }
+.doc-content-col h3 { font-size:1.15rem; margin-bottom:12px; color:var(--navy); }
+.doc-content-col p { font-size:0.9375rem; color:var(--text-dark); line-height:1.75; margin:0; }
+.doc-divider { height:1px; background:var(--border); margin:0; }
+
+/* Horizontal process steps */
+.process-steps { display:grid; grid-template-columns:repeat(5,1fr); gap:0; max-width:none; margin:0; }
+.process-step {
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+  border-right:1px solid var(--border); border-bottom:none !important;
+  padding:36px 20px; position:relative;
+}
+.process-step:last-child { border-right:none; }
+.step-number {
+  position:relative !important; top:auto !important; right:auto !important;
+  width:56px; height:56px; min-width:56px;
+  background:var(--navy); color:#fff; border-radius:50%;
+  display:flex !important; align-items:center; justify-content:center;
+  font-size:1.25rem; font-weight:800; flex-shrink:0;
+  margin:0 auto 20px !important;
+}
+.step-content { flex:none; }
+.step-content h4 { margin:0 0 10px; color:var(--navy); font-size:1rem; font-weight:700; }
+.step-content p { font-size:0.875rem; color:var(--text-dark); line-height:1.75; margin:0; }
+@media(max-width:860px){
+  .process-steps { grid-template-columns:1fr 1fr; }
+  .process-step { border-right:1px solid var(--border); border-bottom:1px solid var(--border) !important; padding:28px 20px; }
+  .process-step:nth-child(even) { border-right:none; }
+  .process-step:nth-last-child(-n+2) { border-bottom:none !important; }
+}
+@media(max-width:480px){
+  .process-steps { grid-template-columns:1fr; }
+  .process-step { border-right:none !important; border-bottom:1px solid var(--border) !important; flex-direction:row; align-items:flex-start; text-align:left; gap:16px; padding:24px 0; }
+  .process-step:last-child { border-bottom:none !important; }
+  .step-number { margin:0 !important; }
+  .step-content { text-align:left; }
+}
+
+.problems-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+@media(max-width:900px){ .problems-grid { grid-template-columns:1fr 1fr; } }
+@media(max-width:600px){ .problems-grid { grid-template-columns:1fr; } }
+.problem-card { background:var(--white); border:1px solid var(--border); border-radius:var(--radius-lg); padding:28px 24px; }
+.problem-icon { width:48px; height:48px; background:rgba(15,40,85,0.08); border-radius:12px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; }
+.problem-icon i { font-size:1.3rem; color:var(--navy); }
+.problem-card h4 { font-size:0.95rem; margin-bottom:10px; color:var(--navy); }
+.problem-card p { font-size:0.875rem; color:var(--text-muted); line-height:1.7; margin:0; }
+
+.why-reasons-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:36px; }
+@media(max-width:768px){ .why-reasons-grid { grid-template-columns:1fr; } }
+
+.faq-full-col { max-width:900px; margin:0 auto; }
+.faq-icon { font-weight:800; font-size:1.4rem; }
+
+.intent-tag:hover { background:rgba(255,255,255,0.15); border-color:rgba(255,255,255,0.25); cursor:default; }
+.comparison-badge.bad { background:rgba(15,40,85,0.1); color:var(--navy); }
+
+.stats-bar-row { display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; }
+.stats-bar-row .stat-item { display:flex; flex-direction:column; align-items:center; gap:4px; flex:1; min-width:80px; background:transparent !important; border:none !important; padding:0 !important; }
+.stats-bar-row .stat-item:hover { background:transparent !important; }
+.stat-num { font-size:1.6rem; font-weight:800; color:#fff; line-height:1; }
+.stat-label { font-size:0.75rem; color:rgba(255,255,255,0.7); text-align:center; }
+@media(max-width:600px){ .stats-bar-row { justify-content:center; } .stats-bar-row .stat-item { min-width:calc(33% - 20px); } }
+
+.hero-intent-tags { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
+.intent-tag { background:rgba(255,255,255,0.15); color:rgba(255,255,255,0.9); font-size:0.78rem; padding:5px 12px; border-radius:20px; border:1px solid rgba(255,255,255,0.25); }
+
+@media(max-width:600px){
+  .hero-intent-tags { display:grid; grid-template-columns:1fr 1fr; gap:8px; width:100%; }
+  .intent-tag { text-align:center; font-size:0.75rem; }
+  .grid-3 { grid-template-columns:1fr !important; }
+  .grid-3 .service-card { display:flex; flex-direction:row; align-items:flex-start; gap:14px; padding:18px 16px; }
+  .grid-3 .service-card .service-icon { width:40px; height:40px; min-width:40px; border-radius:10px; margin-bottom:0; font-size:1.1rem; }
+  .grid-3 .service-card h3 { font-size:0.9rem; margin-bottom:4px; }
+  .grid-3 .service-card p { font-size:0.825rem; margin:0; line-height:1.55; }
+  .process-step { flex-direction:row !important; align-items:flex-start; text-align:left; gap:14px; padding:20px 0; }
+  .step-number { margin:0 !important; min-width:44px; width:44px; height:44px; font-size:1rem; flex-shrink:0; }
+  .step-content { flex:1; min-width:0; }
+  .step-content h4 { font-size:0.9rem; margin-bottom:6px; }
+  .step-content p { font-size:0.825rem; line-height:1.6; white-space:normal; overflow-wrap:break-word; }
+  .nepali-intro-grid { grid-template-columns:1fr !important; }
+  .content-two-col { grid-template-columns:1fr !important; }
+}
+
+.cert-example-box { border:1px solid rgba(15,40,85,0.15); border-radius:var(--radius-lg); overflow:hidden; background:var(--white); }
+.cert-example-header { background:var(--navy); color:#fff; padding:14px 24px; display:flex; align-items:center; gap:10px; font-size:0.875rem; font-weight:600; }
+.cert-example-header i { font-size:1.1rem; }
+.cert-example-body { padding:24px; }
+.cert-example-text { font-size:0.9rem; color:var(--text-dark); line-height:1.75; font-style:italic; background:rgba(15,40,85,0.03); border-left:3px solid var(--navy); padding:14px 18px; border-radius:0 4px 4px 0; margin:0; }
+.cert-annotations { margin-top:20px; display:flex; flex-direction:column; gap:10px; }
+.cert-annotation { display:flex; align-items:flex-start; gap:10px; font-size:0.85rem; color:var(--text-dark); }
+.cert-annotation i { color:var(--navy); font-size:1rem; flex-shrink:0; margin-top:2px; }
+
+.comparison-table { width:100%; border-collapse:collapse; font-size:0.875rem; }
+.comparison-table th { background:var(--navy); color:#fff; padding:14px 16px; text-align:left; font-size:0.82rem; font-weight:600; }
+.comparison-table th:first-child { background:rgba(15,40,85,0.8); }
+.comparison-table td { padding:12px 16px; border-bottom:1px solid var(--border); vertical-align:middle; color:var(--text-dark); }
+.comparison-table tr:last-child td { border-bottom:none; }
+.comparison-table tr:nth-child(even) td { background:rgba(15,40,85,0.02); }
+.comparison-badge { display:inline-block; font-size:0.7rem; padding:2px 8px; border-radius:10px; margin-left:6px; font-weight:700; vertical-align:middle; }
+.comparison-badge.good { background:rgba(255,255,255,0.2); color:#fff; }
+.comp-good { color:#0d4a1c; font-weight:600; }
+.comp-good i { color:#1a7a32; margin-right:6px; }
+.comp-bad { color:#4a5568; font-weight:500; }
+.comp-bad i { color:#dc2626; margin-right:6px; }
+.ai-warning-note { display:flex; align-items:flex-start; gap:14px; background:rgba(15,40,85,0.05); border:1px solid rgba(15,40,85,0.15); border-radius:var(--radius-lg); padding:20px 24px; font-size:0.9rem; color:var(--text-dark); }
+.ai-warning-note i { color:var(--navy); font-size:1.2rem; flex-shrink:0; margin-top:2px; }
+.ai-warning-note p { margin:0; line-height:1.7; }
+
+.grid-4-related { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+@media(max-width:900px){ .grid-4-related { grid-template-columns:1fr 1fr; } }
+@media(max-width:500px){ .grid-4-related { grid-template-columns:1fr; } }
+
+/* Blog promo card */
+.blog-promo-card { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; background:var(--white); border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; }
+.blog-promo-img { overflow:hidden; height:100%; min-height:260px; }
+.blog-promo-img img { width:100%; height:100%; object-fit:cover; display:block; }
+.blog-promo-content { padding:40px 40px 40px 0; }
+.blog-promo-content h3 { font-size:1.25rem; color:var(--navy); margin-bottom:14px; line-height:1.4; }
+.blog-promo-content p { font-size:0.9rem; color:var(--text-muted); line-height:1.75; margin:0; }
+@media(max-width:768px){ .blog-promo-card { grid-template-columns:1fr; } .blog-promo-img { min-height:200px; } .blog-promo-content { padding:28px; } }
+@media(max-width:600px){.stats-bar-row{flex-wrap:wrap;justify-content:center;}.stats-bar-row .stat-item{min-width:calc(33% - 20px);}.stat-num{font-size:1.5rem !important;}}
   </style>
 
   <script type="application/ld+json">
@@ -204,313 +323,314 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="https://metaphrase.uk/" class="site-logo" aria-label="Metaphrase Ltd certified translation agency logo">
-        <img src="/assets/img/logo.svg" alt="Metaphrase" width="180" height="40">
+<header id="header">
+  <div class="container nav-container">
+    <a href="/" class="logo" aria-label="Metaphrase Ltd — Home">
+      <img src="/assets/img/metaphrase-logo-m.svg" alt="Metaphrase Ltd certified translation agency logo" class="logo-mark" width="44" height="44">
+      <div class="logo-text">
+        <span class="logo-name">Metaphrase</span>
         <span class="logo-tagline">Certified. Precise. Trusted.</span>
-      </a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="https://metaphrase.uk/">Home</a>
-        <a href="https://metaphrase.uk/about/">About</a>
-        <a href="https://metaphrase.uk/services/">Services</a>
-        <a href="https://metaphrase.uk/blog/">Blog</a>
-        <a href="https://metaphrase.uk/contact/">Contact</a>
-        <a href="https://metaphrase.uk/work-with-us/">Work With Us</a>
-      </nav>
-      <a href="https://metaphrase.uk/contact/" class="btn btn-primary nav-cta">Request a Quote</a>
-      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <nav class="mobile-nav" aria-label="Mobile navigation" hidden>
-      <a href="https://metaphrase.uk/">Home</a>
-      <a href="https://metaphrase.uk/about/">About</a>
-      <a href="https://metaphrase.uk/services/">Services</a>
-      <a href="https://metaphrase.uk/blog/">Blog</a>
-      <a href="https://metaphrase.uk/contact/">Contact</a>
-      <a href="https://metaphrase.uk/work-with-us/">Work With Us</a>
-      <div style="display:flex;gap:12px;margin-top:8px;flex-wrap:wrap;">
-        <a href="https://metaphrase.uk/contact/" class="btn btn-primary" style="flex:1;text-align:center;">Request a Quote</a>
-        <a href="https://wa.me/447852408467" class="btn btn-secondary" style="flex:1;text-align:center;">WhatsApp Us</a>
       </div>
+    </a>
+    <nav class="nav-menu" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/services/" class="active">Services</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a><a href="/work-with-us/">Work With Us</a>
     </nav>
-  </header>
+    <div class="nav-cta"><a href="/contact/" class="btn btn-primary">Request a Quote</a></div>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="/">Home</a><a href="/about/">About</a><a href="/services/">Services</a>
+  <a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+  <a href="/work-with-us/">Work With Us</a>
+  <div class="mobile-nav-cta">
+    <a href="/contact/" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Request a Quote</a>
+    <a href="https://wa.me/447852408467" class="btn btn-whatsapp btn-lg" style="width:100%;justify-content:center;"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
+  </div>
+</nav>
 
-  <!-- HERO -->
-  <section class="page-hero" style="background:linear-gradient(135deg,#003893 40%,#DC143C 100%);">
-    <div class="container">
-      <span class="eyebrow">CIOL-Accredited · Nepal &amp; Gurkha Documents · Legal, Immigration &amp; Settlement</span>
-      <h1 style="color:#FFFFFF;">Certified Nepali Translation <br>Services in the UK</h1>
-      <p class="hero-lead" style="color:rgba(255,255,255,0.92);max-width:720px;margin:0 auto 28px;">
-        Professional certified Nepali–English translation for official documents — accepted by the Home Office, UKVI, UK courts, universities, and the NHS. Specialist translators for Nepal citizenship certificates, Gurkha family reunion applications, and all Nepali civil and legal documents. Serving Nepali communities across the UK.
-      </p>
-      <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="justify-content:center;margin-top:32px;">
-        <a href="https://metaphrase.uk/">Home</a>
-        <span aria-hidden="true">›</span>
-        <a href="https://metaphrase.uk/services/">Services</a>
-        <span aria-hidden="true">›</span>
-        <strong>Certified Nepali Translator UK</strong>
-      </nav>
+<!-- HERO -->
+<section class="page-hero" aria-label="Certified Nepali Translation hero" style="background:linear-gradient(135deg,#003893 55%,#DC143C 100%);">
+  <div class="container" style="text-align:center;">
+    <span class="eyebrow">CIOL-Accredited · Nepal &amp; Gurkha Documents · Legal, Immigration &amp; Medical</span>
+    <h1 style="color:#FFFFFF;">Certified Nepali Translation<br>Services in the UK</h1>
+    <p style="color:rgba(255,255,255,0.88);max-width:780px;margin:0 auto 28px;font-size:1.05rem;line-height:1.75;">Professional certified Nepali–English translation for official documents — accepted by the Home Office, UKVI, UK courts, universities, and the NHS. Handled by a CIOL-certified Chartered Linguist with specialist knowledge of Nepali civil documents, Gurkha military records, and documents from both Nepal and Indian Nepali-speaking communities. Serving clients across the UK.</p>
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb" style="justify-content:center;margin-top:28px;">
+      <a href="/">Home</a> <span aria-hidden="true">›</span>
+      <a href="/services/">Services</a> <span aria-hidden="true">›</span>
+      <strong>Certified Nepali Translator UK</strong>
+    </nav>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="section-sm" style="background:var(--white);">
+  <div class="container">
+    <div class="trust-bar-inner" style="justify-content:center;padding:0;flex-wrap:wrap;gap:12px;">
+      <span class="trust-badge"><i class="bi bi-patch-check-fill"></i> CIOL Certified Linguist</span>
+      <span class="trust-badge"><i class="bi bi-shield-check"></i> ICO Registered</span>
+      <span class="trust-badge trust-badge-highlight"><i class="bi bi-building"></i> UKVI &amp; Home Office Accepted</span>
+      <span class="trust-badge"><i class="bi bi-translate"></i> Nepal &amp; Gurkha Documents</span>
+      <span class="trust-badge"><i class="bi bi-clock-fill"></i> 24–48hr Turnaround</span>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TRUST BAR -->
-  <section class="section-sm" style="border-bottom:1px solid var(--border);">
-    <div class="container">
-      <div class="trust-bar-inner">
-        <span class="trust-badge"><i class="bi bi-patch-check-fill" aria-hidden="true"></i> CIOL Certified Linguist</span>
-        <span class="trust-badge"><i class="bi bi-shield-lock-fill" aria-hidden="true"></i> ICO Registered</span>
-        <span class="trust-badge"><i class="bi bi-bank" aria-hidden="true"></i> UKVI &amp; Home Office Accepted</span>
-        <span class="trust-badge"><i class="bi bi-flag-fill" aria-hidden="true"></i> Nepal &amp; Gurkha Documents</span>
-        <span class="trust-badge"><i class="bi bi-clock-fill" aria-hidden="true"></i> 24–48hr Turnaround</span>
+<!-- STATS BAR -->
+<section style="background:var(--navy);padding:52px 0;" aria-label="Metaphrase key statistics">
+  <div class="container">
+    <div class="stats-bar-row">
+      <div class="stat-item"><span class="stat-num">10+</span><span class="stat-label">Years' Experience</span></div>
+      <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">UKVI Acceptance Rate</span></div>
+      <div class="stat-item"><span class="stat-num">2</span><span class="stat-label">Nepali Regions</span></div>
+      <div class="stat-item"><span class="stat-num">24hr</span><span class="stat-label">Standard Turnaround</span></div>
+      <div class="stat-item"><span class="stat-num">0</span><span class="stat-label">Rejections Ever</span></div>
+      <div class="stat-item"><span class="stat-num">6+</span><span class="stat-label">Sectors Served</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="section" style="background:var(--off-white);" aria-labelledby="nepali-intro">
+  <div class="container">
+    <div class="nepali-intro-grid reveal">
+      <div>
+        <span class="eyebrow">Expert Nepali Linguist</span>
+        <h2 id="nepali-intro" class="section-heading" style="text-align:left;max-width:none;">Certified Nepali Translation You Can Trust</h2>
+        <p style="font-size:1.05rem;color:var(--text-dark);line-height:1.8;margin-bottom:20px;">
+          Metaphrase Ltd provides certified Nepali translation services to clients across the UK. With over ten years of professional experience and the highest qualification available to linguists in the UK, we deliver accurate, accepted translations for immigration, legal, medical, and commercial purposes. We work with clients in Aldershot, Folkestone, London, Reading, and across the UK wherever there are Nepali-speaking communities, including both Gurkha veterans and Nepali nationals who have come to the UK through student, skilled worker, and family routes.
+        </p>
+        <p style="font-size:1.05rem;color:var(--text-dark);line-height:1.8;margin-bottom:20px;">
+          We are specialists in both Nepali from Nepal and Nepali spoken in the Darjeeling and Sikkim communities of India. Nepali (नेपाली) is the official language of Nepal and an official scheduled language of India, written in the Devanagari script. While Nepali and Hindi share the same script, they are distinct languages with different vocabulary, grammar, and formal administrative registers. Our translators are specialists in Nepali specifically — not Hindi generalists working from script recognition alone.
+        </p>
+        <p style="font-size:1.05rem;color:var(--text-dark);line-height:1.8;margin-bottom:28px;">
+          Every certified Nepali translation we produce is accompanied by a signed certificate of accuracy and has been accepted, without issue, by the Home Office, UKVI, UK courts, the NHS, and British universities. Upload your Nepali documents today and receive a certified translation within hours.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="/contact/" class="btn btn-primary btn-lg"><i class="bi bi-envelope-fill"></i> Get a Free Quote</a>
+          <a href="https://wa.me/447852408467" class="btn btn-whatsapp btn-lg"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- STATS BAR -->
-  <section style="background:var(--navy);padding:52px 0;">
-    <div class="container">
-      <div class="stats-bar-row">
-        <div class="stat-item">
-          <span class="stat-num">10+</span>
-          <span class="stat-label">Years' Experience</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">100%</span>
-          <span class="stat-label">UKVI Acceptance Rate</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">Nepal &amp; India</span>
-          <span class="stat-label">Both Origins Covered</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">24hr</span>
-          <span class="stat-label">Standard Turnaround</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">0</span>
-          <span class="stat-label">Rejections Ever</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">6+</span>
-          <span class="stat-label">Sectors Served</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INTRO -->
-  <section class="section" id="intro">
-    <div class="container">
-      <div class="section-label">Expert Nepali Linguist</div>
-      <div class="lang-intro-grid">
-        <div>
-          <h2 class="section-title">Certified Nepali Translation You Can Trust</h2>
-          <p>Metaphrase Ltd provides certified Nepali translation services to clients across the UK. With over ten years of professional experience and the highest qualification available to linguists in the UK, we deliver accurate, accepted translations for immigration, settlement, legal, and official purposes. The UK has a significant and growing Nepali community — with established populations in Aldershot, Folkestone, Ashford, Reading, and London, shaped largely by the Gurkha military community and an expanding skilled worker and student cohort — and we serve Nepali-speaking clients across all of these cities.</p>
-          <p style="margin-top:20px;">Nepali (नेपाली) is the official language of Nepal and an official scheduled language of India, spoken by approximately 17 million people in Nepal and a further 3 million in the Indian states of Sikkim, West Bengal (Darjeeling district), and Assam. It is also spoken in Bhutan and across the global Nepali diaspora. Nepali is written in the Devanagari script — the same script used to write Hindi — but Nepali and Hindi are distinct languages with different vocabulary, grammar, syntax, and formal administrative registers. A Hindi translator cannot accurately translate Nepali official documents.</p>
-          <p style="margin-top:20px;">Every certified Nepali translation we produce is accompanied by a signed certificate of accuracy and has been accepted, without issue, by the Home Office, UKVI, UK courts, the NHS, and British universities. Send us your Nepali documents today and receive a certified translation within 24–48 hours.</p>
-          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;">
-            <a href="https://metaphrase.uk/contact/" class="btn btn-primary">Get a Free Quote</a>
-            <a href="https://wa.me/447852408467" class="btn btn-secondary">WhatsApp Us</a>
-          </div>
-        </div>
-        <div>
-          <h3 style="font-size:1.15rem;font-weight:700;color:var(--navy);margin:0 0 20px;">Nepali Documents We Translate</h3>
-          <p style="font-size:0.9rem;color:var(--text-muted);margin:0 0 16px;">From Nepal, India (Darjeeling/Sikkim), and Nepali communities across the UK</p>
+      <div class="reveal reveal-delay-1">
+        <div class="service-card" style="padding:32px;">
+          <h3 style="margin-bottom:6px;font-size:1.1rem;">Nepali Documents We Translate</h3>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:20px;">From Nepal, Darjeeling/Sikkim, and the UK Nepali community</p>
           <ul class="doc-list">
-            <li>Citizenship Certificates (नागरिकता प्रमाणपत्र)</li>
-            <li>Birth Certificates &amp; Death Certificates</li>
-            <li>Marriage Certificates &amp; Divorce Decrees</li>
-            <li>Nepali Passports &amp; National Identity Cards</li>
-            <li>Educational Degrees &amp; Transcripts</li>
-            <li>Police Clearance (Character) Certificates</li>
-            <li>Lal Purja (Land Ownership Certificates)</li>
-            <li>Court Orders &amp; Legal Declarations</li>
-            <li>Medical Records &amp; Hospital Letters</li>
-            <li>Military Service Records (Gurkha)</li>
-            <li>Pension &amp; Financial Documents</li>
-            <li>Power of Attorney &amp; Notarised Documents</li>
+            <li><i class="bi bi-file-earmark-text-fill"></i> Citizenship Certificates (नागरिकता प्रमाणपत्र)</li>
+            <li><i class="bi bi-file-earmark-text-fill"></i> Birth Certificates &amp; Death Certificates</li>
+            <li><i class="bi bi-file-earmark-text-fill"></i> Marriage Certificates &amp; Divorce Decrees</li>
+            <li><i class="bi bi-file-earmark-text-fill"></i> Nepali Passports &amp; National Identity Cards</li>
+            <li><i class="bi bi-file-earmark-text-fill"></i> Educational Degrees &amp; Transcripts</li>
+            <li><i class="bi bi-file-earmark-text-fill"></i> Police Clearance (Character) Certificates</li>
+            <li><i class="bi bi-file-earmark-text-fill"></i> Lal Purja (Land Ownership Certificates)</li>
+            <li><i class="bi bi-file-earmark-text-fill"></i> Court Orders &amp; Legal Declarations</li>
+            <li><i class="bi bi-file-earmark-text-fill"></i> Medical Records &amp; Hospital Letters</li>
+            <li><i class="bi bi-file-earmark-text-fill"></i> Gurkha Military Service Records</li>
+            <li><i class="bi bi-file-earmark-text-fill"></i> Pension &amp; Financial Documents</li>
+            <li><i class="bi bi-file-earmark-text-fill"></i> Power of Attorney &amp; Notarised Documents</li>
           </ul>
-          <ul class="feature-list" style="margin-top:24px;">
-            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Nepali–English and English–Nepali certified translations</li>
-            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> 100% acceptance record with UKVI, Home Office, and UK courts</li>
-            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Nepal citizenship certificate specialists</li>
-            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Gurkha settlement and family reunion documents</li>
-            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> 24–48 hour standard turnaround; same-day urgent available</li>
-            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Based in Birmingham — serving clients across the UK</li>
+          <div style="display:flex;flex-direction:column;gap:11px;margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
+            <div class="check-row"><i class="bi bi-check-circle-fill" style="color:var(--navy);font-size:1.1rem;flex-shrink:0;"></i><span style="font-size:0.9375rem;">Nepali–English and English–Nepali certified translations</span></div>
+            <div class="check-row"><i class="bi bi-check-circle-fill" style="color:var(--navy);font-size:1.1rem;flex-shrink:0;"></i><span style="font-size:0.9375rem;">100% acceptance record with UKVI, Home Office, and UK courts</span></div>
+            <div class="check-row"><i class="bi bi-check-circle-fill" style="color:var(--navy);font-size:1.1rem;flex-shrink:0;"></i><span style="font-size:0.9375rem;">Specialist in Nepal and Darjeeling/Sikkim Nepali documents</span></div>
+            <div class="check-row"><i class="bi bi-check-circle-fill" style="color:var(--navy);font-size:1.1rem;flex-shrink:0;"></i><span style="font-size:0.9375rem;">Legal, immigration, medical, and academic document specialists</span></div>
+            <div class="check-row"><i class="bi bi-check-circle-fill" style="color:var(--navy);font-size:1.1rem;flex-shrink:0;"></i><span style="font-size:0.9375rem;">24–48 hour standard turnaround; same-day urgent available</span></div>
+            <div class="check-row"><i class="bi bi-check-circle-fill" style="color:var(--navy);font-size:1.1rem;flex-shrink:0;"></i><span style="font-size:0.9375rem;">Based in Birmingham — serving clients across the UK</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS CERTIFIED TRANSLATION -->
+<section class="section" style="background:var(--white);" aria-labelledby="what-is-certified">
+  <div class="container">
+    <div style="max-width:820px;margin:0 auto;" class="reveal">
+      <span class="eyebrow">Understanding Certified Translation</span>
+      <h2 id="what-is-certified" class="section-heading" style="text-align:left;max-width:none;">What Is a Certified Nepali Translation?</h2>
+      <p style="font-size:1rem;color:var(--text-dark);line-height:1.8;margin-bottom:18px;">
+        A certified Nepali translation is a complete, word-for-word English rendering of your original Nepali document, accompanied by a formal statement — known as a certificate of accuracy — signed by the translator. That certificate confirms three things: that the translator is competent in both Nepali and English, that the translation is a true and complete representation of the original document, and that the translator accepts professional responsibility for its accuracy.
+      </p>
+      <p style="font-size:1rem;color:var(--text-dark);line-height:1.8;margin-bottom:18px;">
+        At Metaphrase, our certificates include the translator's full name, CIOL professional credentials, contact details, signature, date of certification, and ICO registration number. This is the document UKVI, the Home Office, and UK courts rely on when accepting translations.
+      </p>
+      <p style="font-size:1rem;color:var(--text-dark);line-height:1.8;margin-bottom:36px;">
+        Although Nepali uses the Devanagari script — the same alphabet used to write Hindi and other Indo-Aryan languages — Nepali is an independent language with its own vocabulary, grammar, and administrative terminology. Nepal's government documents use formal Nepali terms that differ from Hindi equivalents. UKVI-compliant translation requires a specialist Nepali linguist, not a Hindi translator working from script recognition.
+      </p>
+
+      <!-- CERTIFICATION WORDING EXAMPLE -->
+      <div style="background:var(--white);border:2px solid var(--navy);border-radius:var(--radius-lg);padding:40px;margin-top:36px;font-family:'Georgia',serif;">
+        <div style="text-align:center;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border);">
+          <p style="font-size:1.15rem;font-weight:700;color:var(--navy);margin:0;">CERTIFICATE OF ACCURACY</p>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin:6px 0 0;">Certified Translation — Nepali to English</p>
+        </div>
+        <p style="line-height:1.9;color:var(--text-dark);font-size:0.95rem;">I, <strong>[Translator Name]</strong>, Chartered Linguist (MCIL), Member of the Chartered Institute of Linguists, hereby certify that I am competent to translate from Nepali into English and that the attached translation is, to the best of my knowledge and belief, a complete and accurate rendering of the original Nepali-language document.</p>
+        <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:16px;font-size:0.88rem;color:var(--text-dark);">
+          <div><strong style="color:var(--navy);display:block;margin-bottom:4px;">Name:</strong>[Translator Name] MCIL</div>
+          <div><strong style="color:var(--navy);display:block;margin-bottom:4px;">Organisation:</strong>Metaphrase Ltd</div>
+          <div><strong style="color:var(--navy);display:block;margin-bottom:4px;">Date:</strong>[Date of Certification]</div>
+          <div><strong style="color:var(--navy);display:block;margin-bottom:4px;">Signature:</strong><span style="font-style:italic;font-size:1.1rem;">Signed</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES WE OFFER -->
+<section class="section" style="background:var(--off-white);" aria-labelledby="services-offered">
+  <div class="container">
+    <div class="text-center reveal" style="max-width:680px;margin:0 auto 48px;">
+      <span class="eyebrow">What We Do</span>
+      <h2 id="services-offered" class="section-heading">Nepali Translation<br>Services We Offer</h2>
+      <p style="color:var(--text-muted);">We handle the full range of certified and professional Nepali translation needs — from single-page documents to complex multi-document cases.</p>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="service-card">
+        <div class="service-icon"><i class="bi bi-file-earmark-check-fill"></i></div>
+        <h3>Certified Document Translation</h3>
+        <p>Word-for-word certified translations with a signed certificate of accuracy. Accepted by UKVI, the Home Office, UK courts, universities, and the NHS.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="bi bi-house-heart-fill"></i></div>
+        <h3>Gurkha Settlement &amp; Family Reunion</h3>
+        <p>Specialist translation of documents required for Gurkha settlement applications, family reunion visas, and military pension applications from Nepali nationals.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="bi bi-building"></i></div>
+        <h3>Immigration &amp; Visa Translation</h3>
+        <p>All documents required for UK visa and immigration applications — birth certificates, marriage certificates, passports, police clearances, and more.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="bi bi-bank"></i></div>
+        <h3>Legal &amp; Court Translation</h3>
+        <p>Nepali document translation for Crown Court, Magistrates Court, employment tribunals, family proceedings, and solicitor instruction.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+        <h3>Medical &amp; NHS Translation</h3>
+        <p>Patient records, clinical correspondence, referral letters, and consent forms for NHS trusts and GP practices serving Nepali-speaking communities.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="bi bi-mortarboard-fill"></i></div>
+        <h3>Academic &amp; Educational Translation</h3>
+        <p>Degree certificates, transcripts, and mark sheets from Nepali universities — Tribhuvan, Kathmandu, Pokhara — for UK ENIC, UCAS, and professional body recognition.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEPAL AND DARJEELING NEPALI -->
+<section class="section" style="background:var(--white);" aria-labelledby="varieties-explained">
+  <div class="container">
+    <div class="text-center reveal" style="max-width:700px;margin:0 auto 48px;">
+      <span class="eyebrow">A Critical Distinction</span>
+      <h2 id="varieties-explained" class="section-heading">Nepal Nepali and Indian Nepali:<br>One Language, Two Document Systems</h2>
+      <p style="color:var(--text-muted);">The UK's Nepali community originates from both Nepal and the Nepali-speaking areas of Darjeeling and Sikkim in India. Both speak Nepali, but their official documents follow entirely different national systems.</p>
+    </div>
+    <div class="scripts-grid reveal">
+      <div class="script-card">
+        <div class="script-card-header" style="background:var(--navy);">
+          <div class="script-label">नेपाली</div>
+          <h3>Nepal Nepali</h3>
+          <p class="script-origin">Nepal · Gurkha community · UK residents from Nepal</p>
+        </div>
+        <div class="script-card-body">
+          <p>The large majority of the UK's Nepali community are Nepali nationals — many Gurkha veterans who served in the British Army, their families, or Nepali citizens who have come to the UK as students, skilled workers, or family members. Documents from Nepal are issued by the Government of Nepal through the Ministry of Home Affairs, the Vital Registration Management Division, and the District Administration Offices.</p>
+          <p style="margin-top:14px;">Nepal's primary identity document is the citizenship certificate (नागरिकता प्रमाणपत्र), distinct from a passport and foundational for all immigration applications. UKVI requires certified translation of the citizenship certificate for almost all applications from Nepali nationals. Nepali birth and marriage certificates are issued by Ward Offices under the Vital Registration Management Division and may be handwritten or in older formats.</p>
+          <ul class="script-examples">
+            <li>Nepal citizenship certificates (all types)</li>
+            <li>Nepal birth, marriage &amp; death certificates</li>
+            <li>Nepal passports and National Identity Cards</li>
+            <li>Lal Purja (land ownership records)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="script-card">
+        <div class="script-card-header" style="background:#1a3a4a;">
+          <div class="script-label">दार्जिलिङ</div>
+          <h3>Indian Nepali (Darjeeling &amp; Sikkim)</h3>
+          <p class="script-origin">Darjeeling · Sikkim · Indian Nepali diaspora</p>
+        </div>
+        <div class="script-card-body">
+          <p>A smaller but significant section of the UK's Nepali-speaking community are Indian citizens from Darjeeling district (West Bengal) and Sikkim state, where Nepali is an official language. These communities have historical connections with the British military — Darjeeling Gurkhas were recruited into the Indian Army after independence — and growing numbers have come to the UK through skilled worker and student routes.</p>
+          <p style="margin-top:14px;">Documents from Darjeeling and Sikkim are issued under Indian law by state and central government authorities. Their formats follow Indian civil registration conventions and differ entirely from Nepali government documents, despite being written in Nepali using the Devanagari script. Birth certificates, marriage certificates, school certificates, and university transcripts require a translator familiar with both Nepali and Indian administrative systems.</p>
+          <ul class="script-examples">
+            <li>Darjeeling District birth &amp; marriage certificates</li>
+            <li>Sikkim state government documents</li>
+            <li>Indian passports with Nepali-language entries</li>
+            <li>Darjeeling and Sikkim university transcripts</li>
           </ul>
         </div>
       </div>
     </div>
-  </section>
+    <div class="scripts-note reveal">
+      <i class="bi bi-info-circle-fill"></i>
+      <p>Whether your documents come from Nepal or from Darjeeling and Sikkim, we translate all Nepali-language documents. If you are unsure about your document's origin or format, send it to us and we will advise at no charge.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- WHAT IS CERTIFIED TRANSLATION -->
-  <section class="section" style="background:var(--bg-light);">
-    <div class="container" style="max-width:860px;">
-      <div class="section-label">Understanding Certified Translation</div>
-      <h2 class="section-title">What Is a Certified Nepali Translation?</h2>
-      <p>A certified Nepali translation is a complete, word-for-word English rendering of your original Nepali document, accompanied by a formal statement — known as a certificate of accuracy — signed by the translator. That certificate confirms three things: that the translator is competent in both Nepali and English, that the translation is a true and complete representation of the original document, and that the translator accepts professional responsibility for its accuracy.</p>
-      <p style="margin-top:20px;">At Metaphrase, our certificates include the translator's full name, CIOL professional credentials, contact details, signature, date of certification, and ICO registration number. This is the document UKVI, the Home Office, and UK courts rely on when accepting translations.</p>
-      <p style="margin-top:20px;">Although Nepali uses the Devanagari script — the same alphabet used to write Hindi, Marathi, and Sanskrit — it is an independent Indo-Aryan language with its own administrative vocabulary, formal register, and document conventions. Nepal government documents use formal Nepali terms specific to the Nepali state system (such as <em>nāgariktā</em> for citizenship, <em>lāl purjā</em> for land ownership, <em>janm darta</em> for birth registration) that do not correspond to Hindi equivalents. A UKVI-compliant translation requires a specialist Nepali linguist, not a Hindi translator working from shared script recognition.</p>
-
-      <div class="cert-example-box" style="margin-top:32px;">
-        <div class="cert-example-label">Example: What a Certificate of Accuracy Looks Like</div>
-        <p><em>"I, [Translator Name], Chartered Linguist (MCIL), certify that I am competent in both the Nepali and English languages and that the attached translation of [document title] is, to the best of my knowledge and belief, a true and accurate rendering of the original Nepali-language document. I am not a party to the matter in question and have no interest in the outcome.</em></p>
-        <p style="margin-top:12px;"><em>Signed: [Signature] &nbsp;Date: [Date of certification]<br>
-        Name: [Translator Name] MCIL &nbsp;Credentials: CIOL Chartered Linguist<br>
-        ICO Registration: [ZB number] &nbsp;Contact: info@metaphrase.uk"</em></p>
+<!-- UKVI & HOME OFFICE -->
+<section class="why-section" aria-labelledby="ukvi-section">
+  <div class="container">
+    <div class="text-center reveal" style="max-width:740px;margin:0 auto 52px;">
+      <span class="eyebrow" style="color:rgba(255,255,255,0.7);">Immigration Document Standards</span>
+      <h2 id="ukvi-section" style="color:var(--white);white-space:nowrap;">UKVI &amp; Home Office Acceptance</h2>
+      <p style="color:rgba(255,255,255,0.82);font-size:1rem;line-height:1.8;margin-top:16px;">Our certified Nepali translations fully comply with UKVI and Home Office requirements.<br>We have never had a translation rejected.</p>
+    </div>
+    <div class="why-reasons-grid">
+      <div class="reason-item reveal reveal-delay-1">
+        <div class="reason-icon"><i class="bi bi-file-earmark-check"></i></div>
+        <div class="reason-text">
+          <h4>Complete Word-for-Word Translation</h4>
+          <p>UKVI requires that every element of the original document is translated — including headers, stamps, seals, form field labels, and marginal notations. We translate everything, nothing is paraphrased or omitted.</p>
+        </div>
       </div>
-
-      <div class="cert-features" style="margin-top:32px;">
-        <div class="cert-feature">
-          <i class="bi bi-person-badge-fill" aria-hidden="true"></i>
-          <div><strong>Translator's full name and credentials</strong> — confirms who produced the translation and their professional standing.</div>
+      <div class="reason-item reveal reveal-delay-2">
+        <div class="reason-icon"><i class="bi bi-patch-check"></i></div>
+        <div class="reason-text">
+          <h4>Signed Certificate of Accuracy</h4>
+          <p>Every translation includes a certificate signed by our CIOL-certified Chartered Linguist confirming competency and accuracy. This is the document UKVI, the Home Office, and courts rely on when accepting translations.</p>
         </div>
-        <div class="cert-feature">
-          <i class="bi bi-translate" aria-hidden="true"></i>
-          <div><strong>Statement of competency in both languages</strong> — UKVI requires this specific confirmation.</div>
+      </div>
+      <div class="reason-item reveal reveal-delay-3">
+        <div class="reason-icon"><i class="bi bi-person-badge"></i></div>
+        <div class="reason-text">
+          <h4>Qualified Professional Translator</h4>
+          <p>UKVI specifies that translations must be completed by a "competent person" — a professional translator, not a friend, family member, or automated tool. Our CIOL certification demonstrates exactly this standard.</p>
         </div>
-        <div class="cert-feature">
-          <i class="bi bi-check-square-fill" aria-hidden="true"></i>
-          <div><strong>Declaration of accuracy and completeness</strong> — without this, the translation has no official standing.</div>
+      </div>
+      <div class="reason-item reveal reveal-delay-1">
+        <div class="reason-icon"><i class="bi bi-check2-all"></i></div>
+        <div class="reason-text">
+          <h4>100% Acceptance Record</h4>
+          <p>Every certified translation we have produced for UKVI and Home Office purposes has been accepted. We know the exact format and content these authorities require, and we get it right first time.</p>
         </div>
-        <div class="cert-feature">
-          <i class="bi bi-shield-check" aria-hidden="true"></i>
-          <div><strong>ICO registration number</strong> — confirms compliance with UK data protection law.</div>
+      </div>
+      <div class="reason-item reveal reveal-delay-2">
+        <div class="reason-icon"><i class="bi bi-clock-history"></i></div>
+        <div class="reason-text">
+          <h4>Fast Turnaround for Visa Deadlines</h4>
+          <p>Immigration deadlines are unforgiving. We offer 24–48 hour standard turnaround and same-day urgent translation when your application cannot wait. Contact us as early as possible to secure your delivery slot.</p>
+        </div>
+      </div>
+      <div class="reason-item reveal reveal-delay-3">
+        <div class="reason-icon"><i class="bi bi-envelope-check"></i></div>
+        <div class="reason-text">
+          <h4>Digital and Hard Copy Delivery</h4>
+          <p>Certified translations are delivered by email as a PDF. Hard copies by post are available on request — useful when your application requires original certified documents to be submitted physically.</p>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- SERVICES GRID -->
-  <section class="section">
-    <div class="container">
-      <div class="section-label">What We Do</div>
-      <h2 class="section-title">Nepali Translation <br>Services We Offer</h2>
-      <p class="section-intro">We handle the full range of certified and professional Nepali translation needs — from personal documents to complex settlement, legal, and academic cases.</p>
-      <div class="grid-3" style="margin-top:48px;">
-        <div class="service-card">
-          <div class="service-icon" aria-hidden="true"><i class="bi bi-file-earmark-text-fill"></i></div>
-          <h3>Certified Document Translation</h3>
-          <p>Word-for-word certified translations of all Nepali official documents, with a signed certificate of accuracy. Accepted by UKVI, the Home Office, UK courts, universities, and the NHS.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon" aria-hidden="true"><i class="bi bi-house-heart-fill"></i></div>
-          <h3>Gurkha Settlement &amp; Family Reunion</h3>
-          <p>Specialist translation of documents required for Gurkha settlement applications and family reunion visas — citizenship certificates, birth and marriage certificates, dependency evidence, and military service records.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon" aria-hidden="true"><i class="bi bi-airplane-fill"></i></div>
-          <h3>Immigration &amp; Visa Translation</h3>
-          <p>All documents required for UK spouse, partner, student, and skilled worker visa applications from Nepali nationals — including citizenship certificates, passports, police clearances, and family documents.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon" aria-hidden="true"><i class="bi bi-balance-scale-fill"></i></div>
-          <h3>Legal &amp; Court Translation</h3>
-          <p>Nepali document translation for Crown Court, Magistrates Court, family proceedings, employment tribunals, and solicitor instruction — with full certification to court standard.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon" aria-hidden="true"><i class="bi bi-heart-pulse-fill"></i></div>
-          <h3>Medical &amp; NHS Translation</h3>
-          <p>Patient records, referral letters, clinical correspondence, and consent forms for NHS trusts and GP practices serving Nepali-speaking patients — particularly the large Gurkha veteran community in Hampshire and Kent.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon" aria-hidden="true"><i class="bi bi-mortarboard-fill"></i></div>
-          <h3>Academic &amp; Educational Translation</h3>
-          <p>Degree certificates, transcripts, and school records from Nepali universities — Tribhuvan University, Kathmandu University, Pokhara University — for UK ENIC, UCAS, and professional body recognition.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TWO-VARIETY SECTION -->
-  <section class="section" style="background:var(--bg-light);">
-    <div class="container">
-      <div class="section-label">Two Major Communities</div>
-      <h2 class="section-title">Nepal Nepali and Indian Nepali: <br>One Language, Two Document Systems</h2>
-      <p class="section-intro">The UK's Nepali community originates primarily from Nepal itself, and secondarily from the Nepali-speaking communities of the Darjeeling hills and Sikkim in India. Both communities speak Nepali, but their official documents are issued under entirely different national systems.</p>
-      <div class="scripts-grid" style="margin-top:48px;">
-        <div class="script-card">
-          <div class="script-card-header" style="background:var(--navy);">
-            <span style="font-size:1.5rem;font-weight:700;color:#fff;font-family:'Noto Sans Devanagari',sans-serif;">नेपाली</span>
-            <h3 style="color:#fff;margin:8px 0 4px;">Nepal Nepali</h3>
-            <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin:0;">Kathmandu · Pokhara · Chitwan · UK Gurkha community</p>
-          </div>
-          <div class="script-card-body">
-            <p>The large majority of the UK's Nepali community are Nepali nationals — many of them Gurkha veterans who served in the British Army's Brigade of Gurkhas, their families, or Nepali citizens who have come to the UK as students, skilled workers, or through spouse and partner visas. Documents from Nepal are issued by the Government of Nepal through its Ministry of Home Affairs, the Vital Registration Management Division, and the District Administration Offices.</p>
-            <p style="margin-top:16px;">Nepal's primary identity document is the citizenship certificate (नागरिकता प्रमाणपत्र), which is distinct from a passport and serves as the foundational proof of Nepali nationality. UKVI requires a certified translation of the citizenship certificate for almost all immigration applications from Nepali nationals. Nepali birth and marriage certificates are issued by Ward Offices (formerly VDC offices) under the Vital Registration Management Division, and their format has changed over time — older documents may be handwritten or typed in older formats.</p>
-            <ul style="margin-top:16px;padding-left:20px;font-size:0.9rem;line-height:1.8;">
-              <li>Nepal citizenship certificates (all types)</li>
-              <li>Nepal birth, marriage &amp; death certificates</li>
-              <li>Nepal passports and National Identity Cards</li>
-              <li>Lal Purja (land ownership records)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="script-card">
-          <div class="script-card-header" style="background:#1a3a4a;">
-            <span style="font-size:1.5rem;font-weight:700;color:#fff;font-family:'Noto Sans Devanagari',sans-serif;">दार्जिलिङ</span>
-            <h3 style="color:#fff;margin:8px 0 4px;">Indian Nepali (Darjeeling &amp; Sikkim)</h3>
-            <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin:0;">Darjeeling · Sikkim · Kalimpong · Indian Nepali diaspora</p>
-          </div>
-          <div class="script-card-body">
-            <p>A smaller but significant section of the UK's Nepali-speaking community are Indian citizens from the Darjeeling hills district (West Bengal) and the state of Sikkim, where Nepali is an official language and the mother tongue of the majority population. These communities have a long history of connection with the British military — Darjeeling Gurkhas were recruited into the Indian Army's Gorkha regiments after Indian independence — and a growing number have come to the UK through skilled worker and student routes.</p>
-            <p style="margin-top:16px;">Documents from Darjeeling and Sikkim are issued under Indian law and by Indian government authorities — West Bengal state government, Sikkim state government, and central Indian government institutions. Their formats follow Indian civil registration conventions and differ entirely from Nepali government documents, despite being written in the same Nepali language and Devanagari script. Birth certificates, marriage certificates, school-leaving certificates, and university transcripts from Darjeeling and Sikkim require a translator familiar with Indian administrative Nepali as well as Nepali administrative Nepali.</p>
-            <ul style="margin-top:16px;padding-left:20px;font-size:0.9rem;line-height:1.8;">
-              <li>Darjeeling District birth &amp; marriage certificates</li>
-              <li>Sikkim state government documents</li>
-              <li>Indian passports with Nepali-language entries</li>
-              <li>Darjeeling and Sikkim university transcripts</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <p style="margin-top:32px;text-align:center;font-size:0.95rem;color:var(--text-muted);">Whether your documents come from Nepal or from the Darjeeling and Sikkim communities in India, we translate all Nepali-language documents. If you are unsure about your document's origin or format, send it to us and we will confirm at no charge.</p>
-    </div>
-  </section>
-
-  <!-- UKVI SECTION -->
-  <section class="section" style="background:var(--navy);color:#fff;">
-    <div class="container">
-      <div class="section-label" style="color:rgba(255,255,255,0.7);">Immigration Document Standards</div>
-      <h2 class="section-title" style="color:#fff;">UKVI &amp; Home Office <br>Acceptance</h2>
-      <p class="section-intro" style="color:rgba(255,255,255,0.85);">Our certified Nepali translations fully comply with UKVI and Home Office requirements. We have never had a translation rejected.</p>
-      <div class="grid-2" style="margin-top:48px;gap:32px;">
-        <div class="feature-block" style="background:rgba(255,255,255,0.07);border-radius:12px;padding:28px;">
-          <i class="bi bi-file-earmark-check-fill" style="font-size:2rem;color:#fff;margin-bottom:16px;display:block;" aria-hidden="true"></i>
-          <h4 style="color:#fff;margin:0 0 10px;">Complete Word-for-Word Translation</h4>
-          <p style="color:rgba(255,255,255,0.8);margin:0;font-size:0.9rem;">UKVI requires that every element of the original document is translated — including headers, stamps, seals, form field labels, and handwritten annotations. Nepal citizenship certificates contain specific fields including citizenship number, zone, district, and VDC/municipality details — all of which we translate in full.</p>
-        </div>
-        <div class="feature-block" style="background:rgba(255,255,255,0.07);border-radius:12px;padding:28px;">
-          <i class="bi bi-pen-fill" style="font-size:2rem;color:#fff;margin-bottom:16px;display:block;" aria-hidden="true"></i>
-          <h4 style="color:#fff;margin:0 0 10px;">Signed Certificate of Accuracy</h4>
-          <p style="color:rgba(255,255,255,0.8);margin:0;font-size:0.9rem;">Every translation includes a certificate signed by our CIOL-certified Chartered Linguist confirming competency and accuracy. This is the document UKVI, the Home Office, and UK courts rely on when accepting Nepali translations for immigration and legal purposes.</p>
-        </div>
-        <div class="feature-block" style="background:rgba(255,255,255,0.07);border-radius:12px;padding:28px;">
-          <i class="bi bi-award-fill" style="font-size:2rem;color:#fff;margin-bottom:16px;display:block;" aria-hidden="true"></i>
-          <h4 style="color:#fff;margin:0 0 10px;">Qualified Professional Translator</h4>
-          <p style="color:rgba(255,255,255,0.8);margin:0;font-size:0.9rem;">Nepali uses the Devanagari script — the same alphabet as Hindi — but Nepali is an independent language with distinct vocabulary and grammar. UKVI specifies translations must be completed by a competent person: Nepali documents require a specialist Nepali linguist, not a Hindi translator working from script familiarity alone.</p>
-        </div>
-        <div class="feature-block" style="background:rgba(255,255,255,0.07);border-radius:12px;padding:28px;">
-          <i class="bi bi-trophy-fill" style="font-size:2rem;color:#fff;margin-bottom:16px;display:block;" aria-hidden="true"></i>
-          <h4 style="color:#fff;margin:0 0 10px;">100% Acceptance Record</h4>
-          <p style="color:rgba(255,255,255,0.8);margin:0;font-size:0.9rem;">Every certified Nepali translation we have produced for UKVI and Home Office purposes has been accepted — across Gurkha settlement applications, spouse and partner visas, student visas, skilled worker visas, and citizenship applications. We know exactly what these authorities require.</p>
-        </div>
-        <div class="feature-block" style="background:rgba(255,255,255,0.07);border-radius:12px;padding:28px;">
-          <i class="bi bi-lightning-charge-fill" style="font-size:2rem;color:#fff;margin-bottom:16px;display:block;" aria-hidden="true"></i>
-          <h4 style="color:#fff;margin:0 0 10px;">Fast Turnaround for Urgent Deadlines</h4>
-          <p style="color:rgba(255,255,255,0.8);margin:0;font-size:0.9rem;">Immigration appointments, tribunal hearings, and visa deadlines cannot wait. We offer 24–48 hour standard turnaround and same-day urgent Nepali translation when your case is time-critical. Contact us by WhatsApp for immediate assistance.</p>
-        </div>
-        <div class="feature-block" style="background:rgba(255,255,255,0.07);border-radius:12px;padding:28px;">
-          <i class="bi bi-envelope-fill" style="font-size:2rem;color:#fff;margin-bottom:16px;display:block;" aria-hidden="true"></i>
-          <h4 style="color:#fff;margin:0 0 10px;">Digital and Hard Copy Delivery</h4>
-          <p style="color:rgba(255,255,255,0.8);margin:0;font-size:0.9rem;">Certified translations are delivered by email as a PDF. Hard copies by post are available on request — useful when your application requires original certified documents to be submitted physically to UKVI or the Home Office.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
   
 <!-- LEGAL & SOLICITOR -->
@@ -664,46 +784,40 @@
     </div>
   </section>
 
-  <!-- URGENT -->
-  <section class="section">
-    <div class="container" style="max-width:800px;text-align:center;">
-      <div class="section-label">When You Cannot Wait</div>
-      <h2 class="section-title">Same-Day &amp; Urgent Nepali Translation</h2>
-      <p>Immigration appointments, tribunal hearings, and visa deadlines cannot be moved. If you have a Nepali document — a citizenship certificate, birth certificate, marriage certificate, or police clearance — that needs to be translated today or by first thing tomorrow, contact us directly by WhatsApp or phone rather than waiting for an email response.</p>
-      <p style="margin-top:16px;">We offer urgent Nepali translation for most standard document types. Same-day delivery is available for documents received by early afternoon. A small surcharge applies for urgent work — this will be confirmed in your quote before work begins.</p>
-      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:32px;">
-        <a href="https://wa.me/447852408467" class="btn btn-primary btn-lg">WhatsApp for Urgent Help</a>
-        <a href="tel:+447852408467" class="btn btn-secondary btn-lg">Call +44 7852 408 467</a>
+<!-- CONFIDENTIALITY & GDPR -->
+<section class="section" style="background:var(--off-white);" aria-labelledby="gdpr-section">
+  <div class="container">
+    <div class="content-two-col reveal">
+      <div>
+        <span class="eyebrow">Privacy &amp; Data Protection</span>
+        <h2 id="gdpr-section" class="section-heading" style="text-align:left;max-width:none;">Confidentiality &amp; GDPR Compliance</h2>
+        <p style="font-size:1rem;color:var(--text-dark);line-height:1.8;margin-bottom:16px;">
+          The documents you send us are personal. They contain sensitive information about you and your family — dates of birth, addresses, family relationships, financial details. We treat them accordingly.
+        </p>
+        <p style="font-size:1rem;color:var(--text-dark);line-height:1.8;margin-bottom:16px;">
+          Metaphrase Ltd is registered with the Information Commissioner's Office (ICO) and operates in full compliance with UK GDPR and the Data Protection Act 2018. Your documents and personal data are not shared with third parties. They are used solely for the purpose of completing your translation.
+        </p>
+        <p style="font-size:1rem;color:var(--text-dark);line-height:1.8;">
+          We do not use machine translation tools, cloud-based AI platforms, or third-party translation portals that may process your document on external servers. Everything is handled securely and in-house.
+        </p>
       </div>
-    </div>
-  </section>
-
-  <!-- GDPR -->
-  <section class="section" style="background:var(--bg-light);">
-    <div class="container">
-      <div class="section-label">Privacy &amp; Data Protection</div>
-      <h2 class="section-title">Confidentiality &amp; GDPR Compliance</h2>
-      <p class="section-intro">The documents you send us are personal. We treat every document with the utmost seriousness and handle all personal documentation with complete confidentiality.</p>
-      <div class="lang-intro-grid" style="margin-top:48px;">
-        <div>
-          <p>Metaphrase Ltd is registered with the Information Commissioner's Office (ICO) and operates in full compliance with UK GDPR and the Data Protection Act 2018. Your documents and personal data are not shared with third parties. They are used solely for the purpose of completing your translation.</p>
-          <p style="margin-top:16px;">We do not use machine translation tools, cloud-based AI platforms, or third-party translation portals that may process your document on external servers. Everything is handled securely and in-house.</p>
-        </div>
-        <div>
-          <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin:0 0 16px;">Our Data Protection Commitments</h3>
-          <ul class="feature-list">
-            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> ICO registered — registration verified on request</li>
-            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Full UK GDPR compliance</li>
-            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> No third-party sharing of your documents</li>
-            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> No AI or cloud platform processing</li>
-            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Secure email transmission only</li>
-            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Documents deleted after project completion on request</li>
-            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Original documents returned by post if required</li>
-          </ul>
+      <div class="reveal reveal-delay-1">
+        <div class="service-card" style="padding:32px;">
+          <h3 style="margin-bottom:20px;font-size:1rem;">Our Data Protection Commitments</h3>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div class="check-row"><i class="bi bi-shield-check" style="color:var(--navy);font-size:1.1rem;flex-shrink:0;"></i><span>ICO registered — registration verified on request</span></div>
+            <div class="check-row"><i class="bi bi-shield-check" style="color:var(--navy);font-size:1.1rem;flex-shrink:0;"></i><span>Full UK GDPR compliance</span></div>
+            <div class="check-row"><i class="bi bi-shield-check" style="color:var(--navy);font-size:1.1rem;flex-shrink:0;"></i><span>No third-party sharing of your documents</span></div>
+            <div class="check-row"><i class="bi bi-shield-check" style="color:var(--navy);font-size:1.1rem;flex-shrink:0;"></i><span>No AI or cloud platform processing</span></div>
+            <div class="check-row"><i class="bi bi-shield-check" style="color:var(--navy);font-size:1.1rem;flex-shrink:0;"></i><span>Secure email transmission only</span></div>
+            <div class="check-row"><i class="bi bi-shield-check" style="color:var(--navy);font-size:1.1rem;flex-shrink:0;"></i><span>Documents deleted after project completion on request</span></div>
+            <div class="check-row"><i class="bi bi-shield-check" style="color:var(--navy);font-size:1.1rem;flex-shrink:0;"></i><span>Original documents returned by post if required</span></div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   
 <!-- SAME-DAY URGENT -->
@@ -835,67 +949,171 @@
   </div>
 </section>
 
-  <!-- FAQ -->
-  <section class="section" style="background:var(--bg-light);">
-    <div class="container" style="max-width:860px;">
-      <div class="section-label">Detailed Answers</div>
-      <h2 class="section-title">Frequently Asked Questions</h2>
-      <p class="section-intro">Specific answers to the questions we are most commonly asked about certified Nepali translation in the UK.</p>
-      <div class="faq-list" style="margin-top:48px;">
-        <details class="faq-item">
-          <summary>Can you translate Nepal citizenship certificates for UKVI?</summary>
-          <div class="faq-body">
-            <p>Yes. Nepal citizenship certificates (नागरिकता प्रमाणपत्र) are among the most common documents we translate for UKVI applications. The citizenship certificate is Nepal's primary identity document — distinct from a passport — and is required for nearly all UK immigration applications from Nepali nationals. We translate all types of citizenship certificate, including descent-based, birth-based, and naturalisation-based, and all formats from older handwritten certificates to current printed formats.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Do you translate documents for Gurkha veterans and their families?</summary>
-          <div class="faq-body">
-            <p>Yes. We regularly assist Gurkha veterans, their spouses, and their adult dependent children with translation of documents required for UK settlement and family reunion applications. We understand the specific documentation requirements for Gurkha settlement applications, the types of Nepali civil documents typically required, and the context of Gurkha service in the British Army. All translations are certified to the standard required by UKVI and the Home Office.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Is Nepali the same as Hindi? Can a Hindi translator translate Nepali?</summary>
-          <div class="faq-body">
-            <p>No. Although Nepali and Hindi both use the Devanagari script, they are distinct languages with different vocabulary, grammar, and formal administrative registers. A Hindi translator who recognises Devanagari script cannot accurately translate Nepali official documents. Nepal's citizenship certificates, birth certificates, and court documents use formal Nepali administrative vocabulary — terms such as <em>nāgariktā</em>, <em>lāl purjā</em>, <em>māyako nāma</em> — that differ from their Hindi equivalents. Our Nepali translators are specialists in Nepali, not Hindi generalists.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Are your Nepali translations accepted by UKVI and the Home Office?</summary>
-          <div class="faq-body">
-            <p>Yes. Our certified Nepali translations fully meet UKVI and Home Office requirements. They are complete, word-for-word translations accompanied by a signed certificate of accuracy from a CIOL-certified Chartered Linguist. We have translated documents for Nepali clients across all visa and immigration categories — Gurkha settlement, spouse and partner visas, student visas, skilled worker visas, and citizenship applications — and all translations have been accepted without issue.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Can you translate older handwritten Nepali documents?</summary>
-          <div class="faq-body">
-            <p>Yes. Older Nepali documents — particularly citizenship certificates, birth certificates, and marriage certificates issued before the standardisation of printed formats — may be handwritten in traditional Nepali script. We are experienced with handwritten Nepali documents including those with older administrative vocabulary and district-specific terminology. If a document is partially illegible, we will note this in the translation and certificate of accuracy, as is required for complete UKVI compliance.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>How much does a certified Nepali translation cost?</summary>
-          <div class="faq-body">
-            <p>The cost depends on your document — every document is different in length and complexity. Contact us with your document for a free quote within two hours. The certificate of accuracy is always included with no hidden fees.</p>
-          </div>
-        </details>
+<!-- FAQs -->
+<section class="faq-section" aria-labelledby="faq-nepali">
+  <div class="container">
+    <div class="text-center reveal" style="max-width:680px;margin:0 auto 48px;">
+      <span class="eyebrow">Detailed Answers</span>
+      <h2 id="faq-nepali" class="section-heading">Frequently Asked Questions</h2>
+      <p style="color:var(--text-muted);">Specific answers to the questions we are most commonly asked about certified Nepali translation in the UK.</p>
+    </div>
+    <div class="faq-full-col reveal">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">What is a certified Nepali translation and why do I need one? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>A certified Nepali translation is a complete, word-for-word English rendering of your original Nepali document, accompanied by a signed certificate of accuracy from the translator. This certificate confirms that the translator is professionally competent in both languages and that the translation is a true and accurate representation of the original.</p>
+          <p style="margin-top:10px;">You need one whenever you submit a Nepali-language document to any official body in the UK. UKVI, the Home Office, UK courts, universities, and the NHS all require certified translations. An uncertified translation — however accurate it may appear — will be rejected.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Can you translate Nepal citizenship certificates for UKVI? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>Yes. Nepal citizenship certificates (नागरिकता प्रमाणपत्र) are among the most common documents we translate for UKVI applications. The citizenship certificate is Nepal's primary identity document — distinct from a passport — and is required for nearly all UK immigration applications from Nepali nationals. We translate all types of citizenship certificate, including descent-based, birth-based, and naturalisation-based, and all formats from older handwritten certificates to current printed formats.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Do you translate documents for Gurkha veterans and their families? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>Yes. We regularly assist Gurkha veterans, their spouses, and their adult dependent children with translation of documents required for UK settlement and family reunion applications. We understand the specific documentation requirements for Gurkha settlement applications, the types of Nepali civil documents typically required, and the context of Gurkha service in the British Army. All translations are certified to the standard required by UKVI and the Home Office.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Is Nepali the same as Hindi? Can a Hindi translator translate Nepali? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>No. Although Nepali and Hindi both use the Devanagari script, they are distinct languages with different vocabulary, grammar, and formal administrative registers. A Hindi translator who recognises Devanagari script cannot accurately translate Nepali official documents. Nepal's citizenship certificates, birth certificates, and court documents use formal Nepali administrative vocabulary — terms such as <em>nāgariktā</em>, <em>lāl purjā</em> — that differ from their Hindi equivalents. Our Nepali translators are specialists in Nepali, not Hindi generalists.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Are your Nepali translations accepted by UKVI and the Home Office? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>Yes. Our certified Nepali translations fully meet all UKVI and Home Office requirements. They are complete, word-for-word translations produced by a CIOL-certified Chartered Linguist and accompanied by a signed certificate of accuracy.</p>
+          <p style="margin-top:10px;">We have a 100% acceptance record with UKVI across all visa categories — Gurkha settlement, spouse visas, family reunion, student visas, skilled worker visas, and citizenship applications. If a solicitor or immigration adviser has told you that you need a certified translation, ours will meet that requirement.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Can you translate older handwritten Nepali documents? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>Yes. Older Nepali documents — particularly citizenship certificates, birth certificates, and marriage certificates issued before standardisation of printed formats — may be handwritten in traditional Nepali script. We are experienced in reading and translating handwritten Nepali text, including documents where the handwriting is faded, stylised, or uses district-specific conventions.</p>
+          <p style="margin-top:10px;">Where a section of text is genuinely illegible, we annotate it clearly with a note such as "[text illegible]" — the correct professional approach accepted by UKVI and courts.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">How quickly can you complete a certified Nepali translation? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>Standard certified translations are delivered within 24 to 48 hours of receiving your document and approving the quote. For a single-page document such as a citizenship certificate or marriage certificate, 24 hours is typically achievable.</p>
+          <p style="margin-top:10px;">Same-day urgent Nepali translation is available for most standard document types. If you have an urgent deadline, contact us immediately by WhatsApp or phone rather than email.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">How much does a certified Nepali translation cost? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>The exact price depends on the length and complexity of your document. All quotes are fixed and all-inclusive — the certificate of accuracy is always included, with no additional charges for certification, formatting, or email delivery.</p>
+          <p style="margin-top:10px;">Send us your document and we will give you a free quote within two hours.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Do you provide certified Nepali translation for UK courts and solicitors? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>Yes. We regularly work with law firms and solicitors across Birmingham and nationally. Our certified translations have been accepted in Crown Court, Magistrates Court, employment tribunals, family courts, and immigration tribunals.</p>
+          <p style="margin-top:10px;">We understand legal timetables and the consequences of delays. If you have an urgent instructed matter, contact us directly and we will give you an honest assessment of what we can deliver and by when.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Is my document kept confidential? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" role="region"><div class="faq-answer-inner">
+          <p>Absolutely. Metaphrase Ltd is registered with the Information Commissioner's Office (ICO) and operates in full compliance with UK GDPR. Your documents are treated as strictly confidential and are not shared with any third party. We do not use AI translation tools or cloud platforms that would process your document on external servers. Documents can be deleted from our systems after completion, and originals returned by post on request.</p>
+        </div></div>
+      </div>
+
+    </div>
+    <div class="text-center reveal" style="margin-top:40px;">
+      <a href="/contact/" class="btn btn-primary btn-lg"><i class="bi bi-chat-dots-fill"></i> Ask a Question</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band" aria-labelledby="nepali-cta">
+  <div class="container">
+    <h2 id="nepali-cta">Need a Certified Nepali Translator?</h2>
+    <p>Get a free, no-obligation quote. Accepted by UKVI, the Home Office, UK courts, universities, and the NHS. Turnaround from 24 hours.</p>
+    <div class="cta-band-actions">
+      <a href="/contact/" class="btn btn-primary btn-lg"><i class="bi bi-envelope-fill"></i> Request a Free Quote</a>
+      <a href="https://wa.me/447852408467" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+      <a href="tel:+447852408467" class="btn btn-ghost-white btn-lg"><i class="bi bi-telephone-fill"></i> +44 7852 408 467</a>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG LINK -->
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="blog-promo-card reveal">
+      <div class="blog-promo-img">
+        <img src="/assets/img/blog/nepali-language-history.jpg" alt="The history and culture of the Nepali language" loading="lazy" width="480" height="270">
+      </div>
+      <div class="blog-promo-content">
+        <span class="eyebrow">From Our Blog</span>
+        <h3>Nepali: The Language of Nepal and the Gurkha Community</h3>
+        <p>Nepali is spoken by over 17 million people in Nepal and millions more across the Indian states of Darjeeling, Sikkim, and Assam. This article traces the origins of Nepali, the distinction between Nepal Nepali and Indian Nepali, the unique characteristics of the Devanagari script, and what all of this means for certified translation in the UK.</p>
+        <a href="/blog/nepali-language-guide/" class="btn btn-primary" style="margin-top:8px;"><i class="bi bi-arrow-right-circle-fill"></i> Read the Article</a>
       </div>
     </div>
-  </section>
 
-  <!-- CTA -->
-  <section class="section cta-section">
-    <div class="container" style="text-align:center;">
-      <div class="section-label">Start Today</div>
-      <h2 class="section-title" style="color:#fff;">Get Your Nepali Document <br>Translated Today</h2>
-      <p style="color:rgba(255,255,255,0.9);max-width:600px;margin:0 auto 32px;">Send your document by email or WhatsApp. Receive a fixed quote within two hours. Certified translation delivered within 24–48 hours. Same-day urgent available.</p>
-      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-        <a href="https://metaphrase.uk/contact/" class="btn btn-primary btn-lg">Get a Free Quote</a>
-        <a href="https://wa.me/447852408467" class="btn btn-secondary btn-lg">WhatsApp Us Now</a>
+    <div class="blog-promo-card reveal" style="margin-top:32px;">
+      <div class="blog-promo-img">
+        <img src="/assets/img/blog/certified-translation-guide.jpg" alt="Certified translation guide for UK immigration" loading="lazy" width="480" height="270">
+      </div>
+      <div class="blog-promo-content">
+        <span class="eyebrow">From Our Blog</span>
+        <h3>The Complete Guide to Certified Translation for UK Immigration</h3>
+        <p>If you are submitting documents to UKVI, the Home Office, or UK courts, understanding the difference between certified, notarised, and apostilled translation is essential. This guide explains what UKVI actually requires, why machine translation is always rejected, and how to get a certified translation accepted first time.</p>
+        <a href="/blog/certified-translation-guide/" class="btn btn-primary" style="margin-top:8px;"><i class="bi bi-arrow-right-circle-fill"></i> Read the Article</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
+<!-- RELATED SERVICES -->
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <h2 class="section-heading text-center">Related Services</h2>
+    <div class="grid-4-related" style="margin-top:32px;">
+      <a href="/services/certified-translation-birmingham/" class="service-card" style="text-decoration:none;color:inherit;">
+        <div class="service-icon"><i class="bi bi-file-earmark-check-fill"></i></div>
+        <h3>Certified Translation Birmingham</h3>
+        <p>Official document translation across all languages. UKVI, courts, and employer-accepted.</p>
+      </a>
+      <a href="/services/urdu-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;">
+        <div class="service-icon"><i class="bi bi-translate"></i></div>
+        <h3>Certified Urdu Translation</h3>
+        <p>Expert Urdu–English translation for legal, medical, and immigration documents across the UK.</p>
+      </a>
+      <a href="/services/hindi-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;">
+        <div class="service-icon"><i class="bi bi-globe2"></i></div>
+        <h3>Certified Hindi Translation</h3>
+        <p>Professional Hindi–English certified translation for Indian documents, visas, and academic records.</p>
+      </a>
+      <a href="/services/court-interpreter-birmingham/" class="service-card" style="text-decoration:none;color:inherit;">
+        <div class="service-icon"><i class="bi bi-bank"></i></div>
+        <h3>Court Interpreter Birmingham</h3>
+        <p>Professional interpreting for Crown Court, tribunals, and legal hearings across the UK.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
   <footer role="contentinfo">
   <div class="container">
     <div class="footer-grid">
