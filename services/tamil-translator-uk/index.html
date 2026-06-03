@@ -1015,6 +1015,13 @@
 .doc-list li { display:flex; align-items:center; gap:10px; font-size:0.9rem; color:var(--text-dark); }
 .doc-list li i { color:var(--navy); font-size:1rem; flex-shrink:0; }
 
+.stats-bar-row { display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; }
+.stats-bar-row .stat-item { display:flex; flex-direction:column; align-items:center; gap:4px; flex:1; min-width:80px; background:transparent !important; border:none !important; padding:0 !important; }
+.stats-bar-row .stat-item:hover { background:transparent !important; }
+.stat-num { font-size:1.6rem; font-weight:800; color:#fff; line-height:1; }
+.stat-label { font-size:0.75rem; color:rgba(255,255,255,0.7); text-align:center; }
+@media(max-width:600px){ .stats-bar-row { justify-content:center; } .stats-bar-row .stat-item { min-width:calc(33% - 20px); } }
+
 </style>
 
 <footer role="contentinfo">
