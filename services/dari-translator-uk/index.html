@@ -1050,6 +1050,16 @@
     </div>
   </div>
 </footer>
+
+<style>
+.stats-bar-row { display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; }
+.stats-bar-row .stat-item { display:flex; flex-direction:column; align-items:center; gap:4px; flex:1; min-width:80px; background:transparent !important; border:none !important; padding:0 !important; }
+.stats-bar-row .stat-item:hover { background:transparent !important; }
+.stat-num { font-size:1.6rem; font-weight:800; color:#fff; line-height:1; }
+.stat-label { font-size:0.75rem; color:rgba(255,255,255,0.7); text-align:center; }
+@media(max-width:600px){ .stats-bar-row { justify-content:center; } .stats-bar-row .stat-item { min-width:calc(33% - 20px); } }
+</style>
+
 <div class="whatsapp-float" role="complementary" aria-label="WhatsApp contact">
   <span class="whatsapp-tooltip">Chat with us now!</span>
   <a href="https://wa.me/447852408467" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
