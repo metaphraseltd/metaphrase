@@ -447,6 +447,7 @@ p { color: var(--text-body); }
   border-radius: var(--radius-lg); padding: 36px 32px;
   position: relative; transition: all var(--duration-slow) var(--ease); overflow: hidden;
 }
+.service-card p { margin-bottom: 16px; line-height: 1.8; }
 .service-card::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
   background: linear-gradient(90deg, var(--accent), var(--blue-light));
@@ -1019,8 +1020,8 @@ footer { background: #08142A; padding: 64px 0 0; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .grid-2 { grid-template-columns: 1fr; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 16px; } /* 2×2 on mobile */
-  /* Services: keep 2-col on mobile so cards don't require endless scroll */
-  .grid-3 { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  /* Services: single column on mobile for better readability */
+  .grid-3 { grid-template-columns: 1fr; gap: 16px; }
 
   /* Homepage service cards: compact icon+title tiles on mobile */
   .services-section .service-card { padding: 18px 12px !important; text-align: center; }
@@ -1036,6 +1037,9 @@ footer { background: #08142A; padding: 64px 0 0; }
   .service-detail-card h3 { font-size: 1rem; margin-bottom: 8px; }
   .service-detail-card p { font-size: 0.9rem; line-height: 1.65; margin-bottom: 14px; }
   .service-detail-card .btn { padding: 9px 16px; font-size: 0.85rem; margin-top: 12px !important; }
+  /* Service card document section — single column on mobile for better readability */
+  .service-card { margin-bottom: 16px; }
+  .service-card p { margin-bottom: 12px; line-height: 1.7; }
 
   /* Interpreting visual cards container — 2-col grid on mobile */
   .interp-cards-inner { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 10px !important; flex-direction: unset !important; }
