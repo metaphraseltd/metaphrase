@@ -138,6 +138,11 @@
   .blog-promo-content h3 { font-size:1.25rem; color:var(--navy); margin-bottom:14px; line-height:1.4; }
   .blog-promo-content p { font-size:0.9rem; color:var(--text-muted); line-height:1.75; margin:0; }
   @media(max-width:768px){ .blog-promo-card { grid-template-columns:1fr; } .blog-promo-img { min-height:200px; } .blog-promo-content { padding:28px; } }
+  /* Mobile text wrapping improvements */
+  @media(max-width:600px){
+    li { word-break: break-word; overflow-wrap: break-word; }
+    li span { word-break: break-word; overflow-wrap: break-word; }
+  }
   </style>
 
   <script type="application/ld+json">
@@ -346,8 +351,8 @@
           <h3 style="color:var(--navy);margin-bottom:16px;font-size:1.1rem;">Turkish in Numbers</h3>
           <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
             <li style="display:flex;gap:12px;align-items:flex-start;"><i class="bi bi-people-fill" style="color:var(--navy);margin-top:3px;flex-shrink:0;"></i><span><strong>85+ million</strong> Turkish speakers in Turkey and worldwide</span></li>
-            <li style="display:flex;gap:12px;align-items:flex-start;"><i class="bi bi-geo-alt-fill" style="color:var(--navy);margin-top:3px;flex-shrink:0;"></i><span><strong>150,000+</strong> <span style="white-space:nowrap;">Turkish and Turkish Cypriot community in the UK</span></span></li>
-            <li style="display:flex;gap:12px;align-items:flex-start;"><i class="bi bi-translate" style="color:var(--navy);margin-top:3px;flex-shrink:0;"></i><span>Uses Latin alphabet with <strong>special characters</strong> — <span style="white-space:nowrap;">ç, ğ, ı, İ, ö, ş, ü</span></span></li>
+            <li style="display:flex;gap:12px;align-items:flex-start;"><i class="bi bi-geo-alt-fill" style="color:var(--navy);margin-top:3px;flex-shrink:0;"></i><span><strong>150,000+</strong> Turkish and Turkish Cypriot community in the UK</span></li>
+            <li style="display:flex;gap:12px;align-items:flex-start;"><i class="bi bi-translate" style="color:var(--navy);margin-top:3px;flex-shrink:0;"></i><span>Uses Latin alphabet with <strong>special characters</strong> — ç, ğ, ı, İ, ö, ş, ü</span></li>
             <li style="display:flex;gap:12px;align-items:flex-start;"><i class="bi bi-file-earmark-text-fill" style="color:var(--navy);margin-top:3px;flex-shrink:0;"></i><span><strong>Nüfus kayıt örneği</strong> — unique Turkish family registration document, widely required in UK immigration</span></li>
             <li style="display:flex;gap:12px;align-items:flex-start;"><i class="bi bi-flag-fill" style="color:var(--navy);margin-top:3px;flex-shrink:0;"></i><span>Also covers <strong>Northern Cyprus (TRNC)</strong> Turkish documents</span></li>
           </ul>
