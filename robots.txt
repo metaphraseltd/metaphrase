@@ -1,3 +1,32 @@
+# Metaphrase Ltd - robots.txt
+# Allow search engines to crawl and index all public pages
+
 User-agent: *
 Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /*.json$
+Disallow: /cdn-cgi/
+
+# Slow down aggressive crawlers
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
+
+# Point to sitemap for search engines
 Sitemap: https://metaphrase.uk/sitemap.xml
+
+# Allow indexing of all language and service pages
+User-agent: Googlebot
+Allow: /services/
+Allow: /blog/
+
+User-agent: Bingbot
+Allow: /services/
+Allow: /blog/
