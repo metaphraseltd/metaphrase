@@ -62,6 +62,65 @@
   </script>
 
   <style>
+    /* ─── Language Icon Cards (compact) ──────────────────── */
+    .lang-icon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+    }
+    .lang-icon-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 16px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      min-height: 120px;
+    }
+    .lang-icon-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 8px 24px rgba(37,99,235,0.15);
+      transform: translateY(-4px);
+      background: rgba(37,99,235,0.02);
+    }
+    .lang-icon-card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .lang-icon-card-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      line-height: 1.4;
+    }
+    @media (max-width: 900px) {
+      .lang-icon-grid {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        gap: 16px;
+      }
+      .lang-icon-card { min-height: 110px; padding: 12px; }
+      .lang-icon-card-icon { font-size: 2rem; margin-bottom: 8px; }
+      .lang-icon-card-name { font-size: 0.85rem; }
+    }
+    @media (max-width: 600px) {
+      .lang-icon-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+      }
+      .lang-icon-card { min-height: 100px; padding: 10px; }
+      .lang-icon-card-icon { font-size: 1.8rem; margin-bottom: 6px; }
+      .lang-icon-card-name { font-size: 0.75rem; }
+    }
+
     /* ─── Slim CTA strip ─────────────────────────────────── */
     .cta-strip {
       background: linear-gradient(90deg, var(--navy) 0%, #1a3a6b 100%);
@@ -1112,130 +1171,78 @@
 <section class="section" style="background:var(--off-white);" aria-labelledby="specialist-heading">
   <div class="container">
     <header class="section-header centered reveal">
-      <span class="eyebrow">Specialist Services</span>
-      <h2 id="specialist-heading" class="section-heading">Dedicated Language Service Pages</h2>
-      <p class="section-subheading">Explore our specialist service pages for detailed information on specific languages, legal settings, and document types.</p>
+      <span class="eyebrow">Specialist Language Services</span>
+      <h2 id="specialist-heading" class="section-heading">Our Languages</h2>
+      <p class="section-subheading">Click on any language to explore expert translation services, specific document types, and detailed information.</p>
     </header>
-    <div class="grid-3" style="margin-top:8px;">
-      <a href="/services/certified-translation-birmingham/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Certified Translation Birmingham">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-file-earmark-check-fill"></i></div>
-        <h3>Certified Translation Birmingham</h3>
-        <p>UKVI, Home Office, and court-accepted certified translations for all official document types. 100% acceptance rate.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+    <div class="lang-icon-grid reveal" style="margin-top:48px; margin-left:auto; margin-right:auto;">
+      <a href="/services/urdu-translator-uk/" class="lang-icon-card" aria-label="Urdu Translation Services">
+        <span class="lang-icon-card-icon">🇵🇰</span>
+        <span class="lang-icon-card-name">Urdu</span>
       </a>
-      <a href="/services/urdu-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Certified Urdu Translator UK">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
-        <h3>Certified Urdu Translator UK</h3>
-        <p>Expert Urdu-English and English-Urdu certified translation for legal, medical, and immigration documents.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+      <a href="/services/hindi-translator-uk/" class="lang-icon-card" aria-label="Hindi Translation Services">
+        <span class="lang-icon-card-icon">🇮🇳</span>
+        <span class="lang-icon-card-name">Hindi</span>
       </a>
-      <a href="/services/hindi-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Certified Hindi Translator UK">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
-        <h3>Certified Hindi Translator UK</h3>
-        <p>Professional certified Hindi translation for legal, medical, and official documents accepted by UK authorities.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+      <a href="/services/punjabi-translator-uk/" class="lang-icon-card" aria-label="Punjabi Translation Services">
+        <span class="lang-icon-card-icon">🇮🇳</span>
+        <span class="lang-icon-card-name">Punjabi</span>
       </a>
-      <a href="/services/punjabi-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Certified Punjabi Translator UK">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
-        <h3>Certified Punjabi Translator UK</h3>
-        <p>Expert Punjabi translation covering both Gurmukhi and Shahmukhi scripts for immigration and legal purposes.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+      <a href="/services/bengali-translator-uk/" class="lang-icon-card" aria-label="Bengali Translation Services">
+        <span class="lang-icon-card-icon">🇧🇩</span>
+        <span class="lang-icon-card-name">Bengali</span>
       </a>
-      <a href="/services/bengali-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Certified Bengali Translator UK">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
-        <h3>Certified Bengali Translator UK</h3>
-        <p>Expert Bengali translation covering Standard Bengali and Sylheti for immigration, legal, and official documents.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+      <a href="/services/polish-translator-uk/" class="lang-icon-card" aria-label="Polish Translation Services">
+        <span class="lang-icon-card-icon">🇵🇱</span>
+        <span class="lang-icon-card-name">Polish</span>
       </a>
-      <a href="/services/polish-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Certified Polish Translator UK">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
-        <h3>Certified Polish Translator UK</h3>
-        <p>Expert Polish translation for immigration, legal, and official documents — including KRK criminal records, USC civil documents, and historical pre-1989 records.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+      <a href="/services/romanian-translator-uk/" class="lang-icon-card" aria-label="Romanian Translation Services">
+        <span class="lang-icon-card-icon">🇷🇴</span>
+        <span class="lang-icon-card-name">Romanian</span>
       </a>
-      <a href="/services/romanian-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Certified Romanian Translator UK">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
-        <h3>Certified Romanian Translator UK</h3>
-        <p>Expert Romanian translation covering Romania and Moldova — including Soviet-era Moldovan documents, diacritics-accurate renderings, and EU Settlement Scheme applications.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+      <a href="/services/arabic-translator-uk/" class="lang-icon-card" aria-label="Arabic Translation Services">
+        <span class="lang-icon-card-icon">🇸🇦</span>
+        <span class="lang-icon-card-name">Arabic</span>
       </a>
-      <a href="/services/arabic-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Certified Arabic Translator UK">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
-        <h3>Certified Arabic Translator UK</h3>
-        <p>Expert Arabic translation covering all 26 Arabic-speaking countries — Syria, Iraq, Egypt, Saudi Arabia, UAE and beyond — for immigration, legal, and official documents.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+      <a href="/services/spanish-translator-uk/" class="lang-icon-card" aria-label="Spanish Translation Services">
+        <span class="lang-icon-card-icon">🇪🇸</span>
+        <span class="lang-icon-card-name">Spanish</span>
       </a>
-      <a href="/services/spanish-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Certified Spanish Translator UK">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
-        <h3>Certified Spanish Translator UK</h3>
-        <p>Expert Spanish translation covering Spain and all 19 Latin American countries — immigration, legal, EU Settlement Scheme, and official documents from all Spanish-speaking nations.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+      <a href="/services/french-translator-uk/" class="lang-icon-card" aria-label="French Translation Services">
+        <span class="lang-icon-card-icon">🇫🇷</span>
+        <span class="lang-icon-card-name">French</span>
       </a>
-      <a href="/services/french-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Certified French Translator UK">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
-        <h3>Certified French Translator UK</h3>
-        <p>Expert French translation covering France, Belgium, Switzerland, and all 29 Francophone countries — including EU Settlement Scheme documents and Francophone African civil records.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+      <a href="/services/ukrainian-translator-uk/" class="lang-icon-card" aria-label="Ukrainian Translation Services">
+        <span class="lang-icon-card-icon">🇺🇦</span>
+        <span class="lang-icon-card-name">Ukrainian</span>
       </a>
-      <a href="/services/ukrainian-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Certified Ukrainian Translator UK">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
-        <h3>Certified Ukrainian Translator UK</h3>
-        <p>Expert Ukrainian translation for Homes for Ukraine, Temporary Protection visas, family reunion, and all official documents — including Soviet-era Russian-language Ukrainian records.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+      <a href="/services/turkish-translator-uk/" class="lang-icon-card" aria-label="Turkish Translation Services">
+        <span class="lang-icon-card-icon">🇹🇷</span>
+        <span class="lang-icon-card-name">Turkish</span>
       </a>
-      <a href="/services/turkish-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Certified Turkish Translator UK">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
-        <h3>Certified Turkish Translator UK</h3>
-        <p>Expert Turkish translation for immigration and legal documents — including the nüfus kayıt örneği, adli sicil, and documents from Turkey and Northern Cyprus.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+      <a href="/services/pashto-translator-uk/" class="lang-icon-card" aria-label="Pashto Translation Services">
+        <span class="lang-icon-card-icon">🇦🇫</span>
+        <span class="lang-icon-card-name">Pashto</span>
       </a>
-      <a href="/services/pashto-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Certified Pashto Translator UK">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
-        <h3>Certified Pashto Translator UK</h3>
-        <p>Expert Pashto translation for Afghan and Pakistani documents — including tazkera, asylum evidence, ARAP and ACRS scheme applications, and all Pashto and Dari documents.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+      <a href="/services/somali-translator-uk/" class="lang-icon-card" aria-label="Somali Translation Services">
+        <span class="lang-icon-card-icon">🇸🇴</span>
+        <span class="lang-icon-card-name">Somali</span>
       </a>
-      <a href="/services/somali-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Certified Somali Translator UK">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
-        <h3>Certified Somali Translator UK</h3>
-        <p>Expert Somali translation for documents from Somalia, Somaliland, and the Horn of Africa — including asylum evidence, pre-1972 Arabic-script documents, and clan elder statements.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+      <a href="/services/dari-translator-uk/" class="lang-icon-card" aria-label="Dari Translation Services">
+        <span class="lang-icon-card-icon">🇦🇫</span>
+        <span class="lang-icon-card-name">Dari</span>
       </a>
-      <a href="/services/dari-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Certified Dari Translator UK">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
-        <h3>Certified Dari Translator UK</h3>
-        <p>Expert Afghan Dari translation for tazkera, asylum evidence, ARAP and ACRS applications, Hazara and Tajik community documents, and bilingual Dari/Pashto official documents.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+      <a href="/services/tamil-translator-uk/" class="lang-icon-card" aria-label="Tamil Translation Services">
+        <span class="lang-icon-card-icon">🇱🇰</span>
+        <span class="lang-icon-card-name">Tamil</span>
       </a>
-      <a href="/services/tamil-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Certified Tamil Translator UK">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
-        <h3>Certified Tamil Translator UK</h3>
-        <p>Expert Tamil translation for Sri Lankan and Indian documents — including bilingual Sinhala/Tamil civil records, asylum evidence, Jaffna matrimonial documents, and Tamil Nadu qualifications.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+      <a href="/services/nepali-translator-uk/" class="lang-icon-card" aria-label="Nepali Translation Services">
+        <span class="lang-icon-card-icon">🇳🇵</span>
+        <span class="lang-icon-card-name">Nepali</span>
       </a>
-      <a href="/services/nepali-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Certified Nepali Translator UK">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
-        <h3>Certified Nepali Translator UK</h3>
-        <p>Expert Nepali translation for Nepal citizenship certificates, Gurkha settlement and family reunion applications, and all civil documents from Nepal and the Darjeeling/Sikkim communities in India.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-      </a>
-      <a href="/services/chinese-mandarin-translator-uk/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Certified Chinese Mandarin Translator UK">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-translate"></i></div>
-        <h3>Certified Chinese Mandarin Translator UK</h3>
-        <p>Expert Chinese translation for Simplified and Traditional Chinese documents — mainland China birth certificates, household registration (hukou), Hong Kong BN(O) route documents, and Taiwanese civil records.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-      </a>
-      <a href="/services/court-interpreter-birmingham/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="Court Interpreter Birmingham">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-bank"></i></div>
-        <h3>Court Interpreter Birmingham</h3>
-        <p>CIOL-certified court interpreting for Crown Court, Magistrates, tribunals, and police interviews in Birmingham.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-      </a>
-      <a href="/services/nhs-medical-translator/" class="service-card" style="text-decoration:none;color:inherit;" aria-label="NHS Medical Translator and Interpreter">
-        <div class="service-icon" aria-hidden="true"><i class="bi bi-heart-pulse-fill"></i></div>
-        <h3>NHS Medical Translator</h3>
-        <p>Certified medical translation and interpreting for NHS trusts, GPs, and hospitals. GDPR compliant and confidential.</p>
-        <span class="btn btn-secondary" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+      <a href="/services/chinese-mandarin-translator-uk/" class="lang-icon-card" aria-label="Chinese Translation Services">
+        <span class="lang-icon-card-icon">🇨🇳</span>
+        <span class="lang-icon-card-name">Chinese</span>
       </a>
     </div>
   </div>
