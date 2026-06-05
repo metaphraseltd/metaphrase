@@ -51,6 +51,18 @@
     /* Page-specific styles */
     .why-section { padding:80px 0; }
 
+    .bengali-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: stretch;
+    }
+    .bengali-intro-grid > div:last-child { display:flex; flex-direction:column; }
+    .bengali-intro-grid > div:last-child .service-card { flex:1; }
+    @media (max-width: 900px) {
+      .bengali-intro-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
     .lang-intro-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -219,6 +231,7 @@
       .step-content { flex:1; min-width:0; }
       .step-content h4 { font-size:0.9rem; margin-bottom:6px; }
       .step-content p { font-size:0.825rem; line-height:1.6; white-space:normal; overflow-wrap:break-word; }
+      .bengali-intro-grid { grid-template-columns:1fr !important; }
       .lang-intro-grid { grid-template-columns:1fr !important; }
       .content-two-col { grid-template-columns:1fr !important; }
     }
@@ -428,7 +441,7 @@
   <section class="section" style="background:var(--off-white);" aria-labelledby="chinese-intro">
     <div class="container">
       <span class="eyebrow">Expert Chinese Linguist</span>
-      <div class="bengali-intro-grid reveal">
+      <div class="lang-intro-grid reveal">
         <div>
           <h2 class="section-heading">Certified Chinese Translation You Can Trust</h2>
           <p>Metaphrase Ltd provides certified Chinese translation services to clients across the UK. With over ten years of professional experience and the highest qualification available to linguists in the UK, we deliver accurate, accepted translations for immigration, legal, academic, and official purposes. The UK has one of Europe's largest Chinese-speaking communities — with major populations in London, Manchester, Birmingham, and Edinburgh — drawn from mainland China, Hong Kong, Taiwan, Malaysia, Singapore, and beyond.</p>
