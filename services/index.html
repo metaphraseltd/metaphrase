@@ -102,6 +102,25 @@
       color: var(--text-dark);
       line-height: 1.4;
     }
+    /* Service types grid (3 columns centered) */
+    .lang-icon-grid[style*="max-width: 600px"] {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+    @media (max-width: 1200px) {
+      .lang-icon-grid[style*="max-width: 600px"] {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .lang-icon-grid[style*="max-width: 600px"] {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+    }
+    @media (max-width: 600px) {
+      .lang-icon-grid[style*="max-width: 600px"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
     @media (max-width: 1200px) {
       .lang-icon-grid {
         grid-template-columns: repeat(6, 1fr);
@@ -1173,15 +1192,38 @@
 </section>
 
 
-<!-- ══ SPECIALIST SERVICE LANDING PAGES ═══════════════════════ -->
+<!-- ══ SERVICE TYPES & LANGUAGES ══════════════════════════════ -->
 <section class="section" style="background:var(--off-white);" aria-labelledby="specialist-heading">
   <div class="container">
     <header class="section-header centered reveal">
-      <span class="eyebrow">Specialist Language Services</span>
-      <h2 id="specialist-heading" class="section-heading">Our Languages</h2>
-      <p class="section-subheading">Click on any language to explore expert translation services, specific document types, and detailed information.</p>
+      <span class="eyebrow">Our Services</span>
+      <h2 id="specialist-heading" class="section-heading">Translation &amp; Language Services</h2>
+      <p class="section-subheading">Choose your service type or select a language to explore expert translation, interpreting, and transcription services.</p>
     </header>
-    <div class="lang-icon-grid reveal" style="margin-top:48px; margin-left:auto; margin-right:auto;">
+
+    <!-- Service Types -->
+    <div style="margin-top:48px; margin-bottom:56px;">
+      <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted); margin-bottom:20px; text-align:center;">Service Types</div>
+      <div class="lang-icon-grid reveal" style="max-width:600px; margin-left:auto; margin-right:auto;">
+        <a href="/services/certified-translation-birmingham/" class="lang-icon-card" aria-label="Certified Translation Services">
+          <span class="lang-icon-card-icon">📄</span>
+          <span class="lang-icon-card-name">Certified<br>Translation</span>
+        </a>
+        <a href="/services/court-interpreter-birmingham/" class="lang-icon-card" aria-label="Court Interpreter Services">
+          <span class="lang-icon-card-icon">⚖️</span>
+          <span class="lang-icon-card-name">Court<br>Interpreting</span>
+        </a>
+        <a href="/services/nhs-medical-translator/" class="lang-icon-card" aria-label="NHS Medical Translation Services">
+          <span class="lang-icon-card-icon">🏥</span>
+          <span class="lang-icon-card-name">Medical<br>Translation</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div>
+      <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted); margin-bottom:20px; text-align:center;">Languages We Translate</div>
+      <div class="lang-icon-grid reveal" style="margin-top:0;">
       <a href="/services/urdu-translator-uk/" class="lang-icon-card" aria-label="Urdu Translation Services">
         <span class="lang-icon-card-icon">🇵🇰</span>
         <span class="lang-icon-card-name">Urdu</span>
@@ -1250,6 +1292,7 @@
         <span class="lang-icon-card-icon">🇨🇳</span>
         <span class="lang-icon-card-name">Chinese</span>
       </a>
+      </div>
     </div>
   </div>
 </section>
