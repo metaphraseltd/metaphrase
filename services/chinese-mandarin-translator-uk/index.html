@@ -329,39 +329,37 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="https://metaphrase.uk/" class="site-logo" aria-label="Metaphrase Ltd certified translation agency logo">
-        <img src="/assets/img/logo.svg" alt="Metaphrase" width="180" height="40">
+<header id="header">
+  <div class="container nav-container">
+    <a href="/" class="logo" aria-label="Metaphrase Ltd — Home">
+      <img src="/assets/img/metaphrase-logo-m.svg" alt="Metaphrase Ltd certified translation agency logo" class="logo-mark" width="44" height="44">
+      <div class="logo-text">
+        <span class="logo-name">Metaphrase</span>
         <span class="logo-tagline">Certified. Precise. Trusted.</span>
-      </a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="https://metaphrase.uk/">Home</a>
-        <a href="https://metaphrase.uk/about/">About</a>
-        <a href="https://metaphrase.uk/services/">Services</a>
-        <a href="https://metaphrase.uk/blog/">Blog</a>
-        <a href="https://metaphrase.uk/contact/">Contact</a>
-        <a href="https://metaphrase.uk/work-with-us/">Work With Us</a>
-      </nav>
-      <a href="https://metaphrase.uk/contact/" class="btn btn-primary nav-cta">Request a Quote</a>
-      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <nav class="mobile-nav" aria-label="Mobile navigation" hidden>
-      <a href="https://metaphrase.uk/">Home</a>
-      <a href="https://metaphrase.uk/about/">About</a>
-      <a href="https://metaphrase.uk/services/">Services</a>
-      <a href="https://metaphrase.uk/blog/">Blog</a>
-      <a href="https://metaphrase.uk/contact/">Contact</a>
-      <a href="https://metaphrase.uk/work-with-us/">Work With Us</a>
-      <div style="display:flex;gap:12px;margin-top:8px;flex-wrap:wrap;">
-        <a href="https://metaphrase.uk/contact/" class="btn btn-primary" style="flex:1;text-align:center;">Request a Quote</a>
-        <a href="https://wa.me/447852408467" class="btn btn-secondary" style="flex:1;text-align:center;">WhatsApp Us</a>
       </div>
+    </a>
+    <nav class="nav-menu" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/services/" class="active">Services</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a><a href="/work-with-us/">Work With Us</a>
     </nav>
-  </header>
+    <div class="nav-cta"><a href="/contact/" class="btn btn-primary">Request a Quote</a></div>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="/">Home</a><a href="/about/">About</a><a href="/services/">Services</a>
+  <a href="/blog/">Blog</a><a href="/contact/">Contact</a>
+  <a href="/work-with-us/">Work With Us</a>
+  <div class="mobile-nav-cta">
+    <a href="/contact/" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Request a Quote</a>
+    <a href="https://wa.me/447852408467" class="btn btn-whatsapp btn-lg" style="width:100%;justify-content:center;"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
+  </div>
+</nav>
 
   <!-- HERO -->
   <section class="page-hero" style="background:linear-gradient(135deg,#DE2910 75%,#FFDE00 100%);">
