@@ -103,21 +103,22 @@
       line-height: 1.4;
     }
     /* Service types grid (3 columns centered) */
-    .lang-icon-grid[style*="max-width: 600px"] {
+    .lang-icon-grid[style*="max-width: 450px"] {
       grid-template-columns: repeat(3, 1fr) !important;
+      width: 100% !important;
     }
     @media (max-width: 1200px) {
-      .lang-icon-grid[style*="max-width: 600px"] {
+      .lang-icon-grid[style*="max-width: 450px"] {
         grid-template-columns: repeat(3, 1fr) !important;
       }
     }
     @media (max-width: 768px) {
-      .lang-icon-grid[style*="max-width: 600px"] {
+      .lang-icon-grid[style*="max-width: 450px"] {
         grid-template-columns: repeat(3, 1fr) !important;
       }
     }
     @media (max-width: 600px) {
-      .lang-icon-grid[style*="max-width: 600px"] {
+      .lang-icon-grid[style*="max-width: 450px"] {
         grid-template-columns: repeat(2, 1fr) !important;
       }
     }
@@ -1202,9 +1203,9 @@
     </header>
 
     <!-- Service Types -->
-    <div style="margin-top:48px; margin-bottom:56px;">
+    <div style="margin-top:48px; margin-bottom:56px; display:flex; flex-direction:column; align-items:center;">
       <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted); margin-bottom:20px; text-align:center;">Service Types</div>
-      <div class="lang-icon-grid reveal" style="max-width:600px; margin-left:auto; margin-right:auto;">
+      <div class="lang-icon-grid reveal" style="max-width:450px; width:100%; margin:0 auto;">
         <a href="/services/certified-translation-birmingham/" class="lang-icon-card" aria-label="Certified Translation Services">
           <span class="lang-icon-card-icon">📄</span>
           <span class="lang-icon-card-name">Certified<br>Translation</span>
