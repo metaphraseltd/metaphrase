@@ -1464,6 +1464,23 @@
   var currentSearch = '';
   var currentFilter = 'all';
 
+  /* ── Get page from URL parameter on load ── */
+  function getPageFromURL() {
+    var params = new URLSearchParams(window.location.search);
+    var page = parseInt(params.get('page')) || 1;
+    return Math.max(1, page);
+  }
+
+  /* ── Update URL when page changes ── */
+  function updateURL() {
+    var url = window.location.pathname;
+    if (currentPage > 1) {
+      window.history.replaceState({}, '', url + '?page=' + currentPage);
+    } else {
+      window.history.replaceState({}, '', url);
+    }
+  }
+
   /* ── Get the subset of cards matching current search + filter ── */
   function getVisible() {
     return allCards.filter(function (card) {
@@ -1496,6 +1513,9 @@
 
     // build pagination
     buildPagination(totalPages, visible.length);
+
+    // update URL to reflect current page
+    updateURL();
   }
 
   /* ── Build pagination controls ── */
@@ -1561,7 +1581,8 @@
     });
   });
 
-  /* ── Initial render ── */
+  /* ── Initial render - get page from URL ── */
+  currentPage = getPageFromURL();
   render();
 })();
 </script>
