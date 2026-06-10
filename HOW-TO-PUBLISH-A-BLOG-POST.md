@@ -211,4 +211,4 @@ Your post will be live at `metaphrase.uk/blog/your-folder-name/` within 1–2 mi
 
 ---
 
-*Questions? Contact Kashif at info@metaphrase.uk or WhatsApp +44 7852 408 467*
+*Questions? Contact Kashif at info@metaphrase.uk or WhatsApp 07417 371859*

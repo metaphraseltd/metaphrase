@@ -435,7 +435,7 @@ This tells Google where to find your sitemap automatically.
    - Click "Create a Business"
    - Enter: **Metaphrase Ltd**
    - Address: **30 Victoria Road, Birmingham, B21 0SA**
-   - Phone: **+44 7852 408 467**
+   - Phone: **07417 371859**
    - Category: **Translation Service** (Primary) + **Interpreter** (Secondary)
    - Description: *CIOL-certified translation services for legal, immigration, and official documents in 20+ languages*
 
@@ -491,7 +491,7 @@ Get listed on these directories to improve local authority:
 **Format**: Keep Name, Address, Phone (NAP) IDENTICAL across all listings:
 - **Metaphrase Ltd**
 - **30 Victoria Road, Birmingham, B21 0SA, UK**
-- **+44 7852 408 467**
+- **07417 371859**
 - **info@metaphrase.uk**
 
 ---
@@ -521,7 +521,7 @@ Add this Schema markup to ALL language translator pages (in `<head>` section):
   "name": "Metaphrase Ltd - Certified [LANGUAGE] Translator UK",
   "description": "Professional certified [LANGUAGE] translation services accepted by UKVI, Home Office, courts and universities.",
   "url": "https://metaphrase.uk/services/[language]-translator-uk/",
-  "telephone": "+447852408467",
+  "telephone": "+447417371859",
   "email": "info@metaphrase.uk",
   "address": {
     "@type": "PostalAddress",

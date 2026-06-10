@@ -21,7 +21,7 @@
 - [ ] If not found → Create new listing with:
   - **Business Name**: Metaphrase Ltd
   - **Address**: 30 Victoria Road, Birmingham, B21 0SA
-  - **Phone**: +44 7852 408 467
+  - **Phone**: 07417 371859
   - **Category**: Translation Service (Primary) + Interpreter (Secondary)
   - **Description**: CIOL-certified translation in 20+ languages
 
@@ -127,7 +127,7 @@ Metaphrase Ltd
 30 Victoria Road
 Birmingham, B21 0SA
 United Kingdom
-Phone: +44 7852 408 467
+Phone: 07417 371859
 Email: info@metaphrase.uk
 ```
 

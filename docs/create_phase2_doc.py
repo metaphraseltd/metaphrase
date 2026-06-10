@@ -172,7 +172,7 @@ set_cell_border(right_cell, 'left', '1A5CB5', size=12)
 contact_lines = [
     "metaphrase.uk",
     "info@metaphrase.uk",
-    "+44 7852 408 467",
+    "07417 371859",
     "30 Victoria Road, Birmingham, B21 0SA"
 ]
 first = True

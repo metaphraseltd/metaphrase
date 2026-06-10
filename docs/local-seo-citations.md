@@ -11,7 +11,7 @@ Use these exact values across all directory listings to ensure NAP consistency:
 Name:     Metaphrase Ltd
 Address:  Birmingham, West Midlands, United Kingdom
           (Note: Full registered office address not yet published publicly — add once confirmed)
-Phone:    +44 7852 408 467
+Phone:    07417 371859
 Email:    info@metaphrase.uk
 Website:  https://metaphrase.uk
 ```
@@ -103,7 +103,7 @@ Submit to all of the following with the NAP block above. Tick each once submitte
 The following JSON-LD LocalBusiness schema is already live on all pages:
 
 - `@type`: ["LocalBusiness", "ProfessionalService"]
-- `telephone`: "+447852408467"
+- `telephone`: "+447417371859"
 - `email`: "info@metaphrase.uk"
 - `addressLocality`: "Birmingham"
 - `addressRegion`: "West Midlands"
