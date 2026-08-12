@@ -1092,6 +1092,359 @@
 </section>
 
 
+<!-- ═══════════════════════════════════════════════
+     ABOUT THE EXPERT SECTION
+═══════════════════════════════════════════════ -->
+<section id="expert" class="section" style="background: linear-gradient(135deg, #0f2340 0%, #1a3a5c 100%); padding: 120px 0; position: relative; overflow: hidden;">
+  <!-- Animated background elements -->
+  <div style="position: absolute; top: -50px; right: -100px; width: 300px; height: 300px; background: rgba(201, 168, 76, 0.08); border-radius: 50%; animation: float 8s ease-in-out infinite;"></div>
+  <div style="position: absolute; bottom: -50px; left: -150px; width: 400px; height: 400px; background: rgba(46, 117, 182, 0.05); border-radius: 50%; animation: float 10s ease-in-out infinite reverse;"></div>
+
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(20px); }
+    }
+
+    .expert-container {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .expert-container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+
+    .expert-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      position: relative;
+    }
+
+    .credential-badge {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      border-radius: 12px;
+      padding: 24px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      animation: slideUp 0.6s ease forwards;
+      opacity: 0;
+    }
+
+    .credential-badge:nth-child(1) { animation-delay: 0.1s; }
+    .credential-badge:nth-child(2) { animation-delay: 0.2s; }
+    .credential-badge:nth-child(3) { animation-delay: 0.3s; }
+    .credential-badge:nth-child(4) { animation-delay: 0.4s; }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .credential-badge:hover {
+      background: rgba(255, 255, 255, 0.18);
+      border-color: rgba(201, 168, 76, 0.6);
+      transform: translateY(-4px);
+    }
+
+    .badge-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .badge-title {
+      font-weight: 600;
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .badge-desc {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+    }
+
+    .expert-content h2 {
+      color: #fff;
+      font-size: 48px;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      animation: slideUp 0.6s ease forwards;
+      opacity: 0;
+      animation-delay: 0.15s;
+    }
+
+    .expert-subtitle {
+      font-size: 18px;
+      color: #C9A84C;
+      font-weight: 600;
+      margin-bottom: 32px;
+      animation: slideUp 0.6s ease forwards;
+      opacity: 0;
+      animation-delay: 0.25s;
+    }
+
+    .expert-bio {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 32px;
+      animation: slideUp 0.6s ease forwards;
+      opacity: 0;
+      animation-delay: 0.35s;
+    }
+
+    .expertise-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .expertise-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .expertise-item {
+      display: flex;
+      gap: 12px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 15px;
+      animation: slideUp 0.6s ease forwards;
+      opacity: 0;
+    }
+
+    .expertise-item:nth-child(1) { animation-delay: 0.45s; }
+    .expertise-item:nth-child(2) { animation-delay: 0.5s; }
+    .expertise-item:nth-child(3) { animation-delay: 0.55s; }
+    .expertise-item:nth-child(4) { animation-delay: 0.6s; }
+
+    .expertise-icon {
+      color: #C9A84C;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .expert-cta-section {
+      margin-top: 48px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(201, 168, 76, 0.2);
+      animation: slideUp 0.6s ease forwards;
+      opacity: 0;
+      animation-delay: 0.7s;
+    }
+
+    .cta-heading {
+      font-size: 16px;
+      font-weight: 600;
+      color: #C9A84C;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .languages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: 768px) {
+      .languages-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+    }
+
+    .lang-badge {
+      background: rgba(201, 168, 76, 0.15);
+      border: 1px solid rgba(201, 168, 76, 0.4);
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .lang-badge:hover {
+      background: rgba(201, 168, 76, 0.25);
+      border-color: rgba(201, 168, 76, 0.8);
+      transform: translateY(-2px);
+    }
+
+    .expert-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      .expert-buttons {
+        flex-direction: column;
+      }
+
+      .expert-buttons a {
+        width: 100%;
+      }
+    }
+
+    .btn-expert-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: #C9A84C;
+      color: #0f2340;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      border: 2px solid #C9A84C;
+    }
+
+    .btn-expert-primary:hover {
+      background: transparent;
+      color: #C9A84C;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201, 168, 76, 0.25);
+    }
+
+    .btn-expert-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: transparent;
+      color: #C9A84C;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(201, 168, 76, 0.4);
+    }
+
+    .btn-expert-secondary:hover {
+      border-color: #C9A84C;
+      background: rgba(201, 168, 76, 0.1);
+      transform: translateY(-2px);
+    }
+  </style>
+
+  <div class="container">
+    <div class="expert-container">
+      <!-- Left: Credentials Visual -->
+      <div class="expert-visual">
+        <div class="credential-badge">
+          <span class="badge-icon">🎓</span>
+          <div class="badge-title">MA English</div>
+          <div class="badge-desc">Master's degree with advanced linguistic expertise</div>
+        </div>
+        <div class="credential-badge">
+          <span class="badge-icon">🏅</span>
+          <div class="badge-title">CIOL Certified</div>
+          <div class="badge-desc">Chartered Linguist — UK's highest professional recognition</div>
+        </div>
+        <div class="credential-badge">
+          <span class="badge-icon">⏱️</span>
+          <div class="badge-title">10+ Years</div>
+          <div class="badge-desc">Professional translation & interpretation experience</div>
+        </div>
+        <div class="credential-badge">
+          <span class="badge-icon">🌍</span>
+          <div class="badge-title">Global Experience</div>
+          <div class="badge-desc">Worked with Uber, TikTok, Facebook, Google localisation</div>
+        </div>
+      </div>
+
+      <!-- Right: Content -->
+      <div class="expert-content">
+        <h2>Meet Mohammad Kashif Khalid</h2>
+        <div class="expert-subtitle">Founder & CIOL-Certified Chartered Linguist</div>
+
+        <p class="expert-bio">
+          With a Master's degree in English and over a decade of professional experience, Kashif brings uncompromising standards to every project. As a <a href="https://www.ciol.org.uk/member-check/profile/58240/25304" target="_blank" rel="noopener" style="color: #C9A84C; font-weight: 600; text-decoration: underline;">CIOL-certified Chartered Linguist</a>, he combines rigorous linguistic expertise with a deep understanding of legal, medical, and business contexts.
+        </p>
+
+        <p class="expert-bio">
+          Trusted by the Ministry of Justice, NHS, leading UK law firms, and top international companies, Kashif has honed his craft in high-stakes environments where precision, confidentiality, and cultural sensitivity are non-negotiable.
+        </p>
+
+        <!-- Expertise List -->
+        <div class="expertise-list">
+          <div class="expertise-item">
+            <span class="expertise-icon">✓</span>
+            <span>Legal document translation</span>
+          </div>
+          <div class="expertise-item">
+            <span class="expertise-icon">✓</span>
+            <span>Medical translation expertise</span>
+          </div>
+          <div class="expertise-item">
+            <span class="expertise-icon">✓</span>
+            <span>Business localisation</span>
+          </div>
+          <div class="expertise-item">
+            <span class="expertise-icon">✓</span>
+            <span>Professional interpreting</span>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="expert-cta-section">
+          <div class="cta-heading">Book Interpretation in Your Language</div>
+          <div class="languages-grid">
+            <div class="lang-badge">🇵🇰 Urdu</div>
+            <div class="lang-badge">🇮🇳 Hindi</div>
+            <div class="lang-badge">🇵🇰 Punjabi</div>
+          </div>
+
+          <div class="expert-buttons">
+            <a href="tel:+447417371859" class="btn-expert-primary">
+              <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+              Call to Book (24/7)
+            </a>
+            <a href="https://wa.me/447417371859?text=Hi%20Kashif%2C%20I%27d%20like%20to%20book%20interpretation%20services" target="_blank" rel="noopener" class="btn-expert-secondary">
+              <i class="bi bi-whatsapp" aria-hidden="true"></i>
+              WhatsApp
+            </a>
+          </div>
+
+          <p style="font-size: 13px; color: rgba(255, 255, 255, 0.6); margin-top: 16px; line-height: 1.6;">
+            <strong>Want to learn more about Kashif's work?</strong>
+            <a href="http://kashifkhalid.uk/" target="_blank" rel="noopener" style="color: #C9A84C; text-decoration: underline;">Visit his professional portfolio</a>
+            for case studies, client testimonials, and detailed expertise overview.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── FOOTER ── -->
 <footer role="contentinfo">
   <div class="container">
