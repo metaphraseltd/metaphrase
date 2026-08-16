@@ -390,6 +390,9 @@
       transform: scale(1.04);
     }
 
+    .card-img-link { display:block; width:100%; height:100%; cursor:pointer; }
+    .sidebar-recent-item .card-img-link { width:auto; height:auto; }
+
     .blog-card-content {
       padding: 28px;
       flex: 1;
@@ -988,7 +991,7 @@
   <div class="container">
     <div class="featured-post">
       <div class="featured-post-img">
-        <img loading="lazy" decoding="async" src="/assets/img/blog/certified-translation-guide.jpg" alt="Certified Translation Guide">
+        <a class="card-img-link" href="/blog/certified-translation-guide/"><img loading="lazy" decoding="async" src="/assets/img/blog/certified-translation-guide.jpg" alt="Certified Translation Guide"></a>
       </div>
       <div class="featured-post-body">
         <div class="featured-badge">Certified Translation</div>
@@ -1013,11 +1016,32 @@
       <!-- Main Grid -->
       <div class="blog-grid-inner">
 
+        <!-- Card: Certified Urdu Translation — 15 August 2026 -->
+        <article class="premium-blog-card" data-category="certified-translation" data-title="Certified Urdu Translation in the UK: The Complete Guide" data-excerpt="Certified Urdu translation in the UK for UKVI, the Home Office, courts and universities — what certification means, when you need it, and how to get it right.">
+          <div class="blog-card-image">
+            <a class="card-img-link" href="/blog/urdu-certified-translation-uk/"><img loading="lazy" decoding="async" src="/assets/img/blog/urdu-certified-translation-uk.jpg" alt="Certified Urdu translation in the UK — Metaphrase Ltd"></a>
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-card-meta">
+              <span><i class="bi bi-calendar"></i> 15 August 2026</span>
+              <span>•</span>
+              <span><i class="bi bi-clock"></i> 7 min read</span>
+              <span class="blog-card-tag">Certified Translation</span>
+            </div>
+            <h2><a href="/blog/urdu-certified-translation-uk/">Certified Urdu Translation in the UK: The Complete Guide</a></h2>
+            <p>Certified Urdu translation accepted by UKVI, the Home Office, courts and universities — what certification means, the documents it covers, and how to make sure yours is accepted first time.</p>
+            <a href="/blog/urdu-certified-translation-uk/" class="blog-read-link">
+              Read More <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+
 
         <!-- Card 0: Somali Translation for Immigration — 2 June 2026 -->
         <article class="premium-blog-card" data-category="immigration" data-title="Somali Translation for UK Immigration and Asylum: What You Need to Know" data-excerpt="Expert guide to Somali document translation for UK immigration and asylum. Somalia vs Somaliland, UKVI requirements, certified translation for Home Office applications, and why specialist translation matters for asylum outcomes.">
           <div class="blog-card-image">
-            <img loading="lazy" decoding="async" src="/assets/img/blog/somali-translation-immigration.jpg" alt="Somali translation for UK immigration and asylum">
+            <a class="card-img-link" href="/blog/somali-translation-immigration/"><img loading="lazy" decoding="async" src="/assets/img/blog/somali-translation-immigration.jpg" alt="Somali translation for UK immigration and asylum"></a>
           </div>
           <div class="blog-card-content">
             <div class="blog-card-meta">
@@ -1037,7 +1061,7 @@
         <!-- Card 1: Bengali Language History — 27 May 2026 -->
         <article class="premium-blog-card" data-category="language-culture" data-title="Bengali: A Language That People Died to Defend — and Why It Matters Today" data-excerpt="A complete guide to the Bengali language — its ancient origins, 270 million speakers, the 1952 Language Movement, Standard Bengali vs Sylheti, and why certified Bengali translation matters for UK institutions.">
           <div class="blog-card-image">
-            <img loading="lazy" decoding="async" src="/assets/img/blog/bengali-language-history.jpg" alt="The Bengali script and cultural heritage of Bangladesh and West Bengal">
+            <a class="card-img-link" href="/blog/bengali-language-history/"><img loading="lazy" decoding="async" src="/assets/img/blog/bengali-language-history.jpg" alt="The Bengali script and cultural heritage of Bangladesh and West Bengal"></a>
           </div>
           <div class="blog-card-content">
             <div class="blog-card-meta">
@@ -1057,7 +1081,7 @@
         <!-- Card 1: Urdu Language History — 26 May 2026 -->
         <article class="premium-blog-card" data-category="language-culture" data-title="The History &amp; Importance of Urdu: Nastaliq Script, South Asian Heritage &amp; the UK" data-excerpt="A complete guide to the Urdu language — its origins, Nastaliq script, 230 million speakers, and why certified Urdu translation matters for UK institutions.">
           <div class="blog-card-image">
-            <img loading="lazy" decoding="async" src="/assets/img/blog/urdu-language-history.jpg" alt="The beauty of Urdu Nastaliq script and its cultural heritage">
+            <a class="card-img-link" href="/blog/urdu-language-history/"><img loading="lazy" decoding="async" src="/assets/img/blog/urdu-language-history.jpg" alt="The beauty of Urdu Nastaliq script and its cultural heritage"></a>
           </div>
           <div class="blog-card-content">
             <div class="blog-card-meta">
@@ -1077,7 +1101,7 @@
         <!-- Card 2: Hindi Language History — 26 May 2026 -->
         <article class="premium-blog-card" data-category="language-culture" data-title="The History &amp; Demography of Hindi: Devanagari, Hindustani &amp; What It Means for the UK" data-excerpt="A complete guide to the Hindi language — its ancient origins, 600 million speakers, Devanagari script, and what this means for certified translation in the UK.">
           <div class="blog-card-image">
-            <img loading="lazy" decoding="async" src="/assets/img/blog/hindi-language-history.jpg" alt="The rich cultural heritage of the Hindi language and Devanagari script">
+            <a class="card-img-link" href="/blog/hindi-language-history/"><img loading="lazy" decoding="async" src="/assets/img/blog/hindi-language-history.jpg" alt="The rich cultural heritage of the Hindi language and Devanagari script"></a>
           </div>
           <div class="blog-card-content">
             <div class="blog-card-meta">
@@ -1097,7 +1121,7 @@
         <!-- Card 2: Punjabi Language History — 20 May 2026 -->
         <article class="premium-blog-card" data-category="language-culture" data-title="The History &amp; Demography of Punjabi: Gurmukhi, Shahmukhi &amp; What It Means for the UK" data-excerpt="An in-depth guide to the Punjabi language — its history, its two scripts, its 130 million speakers, and what this means for translation in the UK.">
           <div class="blog-card-image">
-            <img loading="lazy" decoding="async" src="/assets/img/blog/punjabi-language-history.jpg" alt="Golden wheat fields of Punjab at dawn">
+            <a class="card-img-link" href="/blog/punjabi-language-history/"><img loading="lazy" decoding="async" src="/assets/img/blog/punjabi-language-history.jpg" alt="Golden wheat fields of Punjab at dawn"></a>
           </div>
           <div class="blog-card-content">
             <div class="blog-card-meta">
@@ -1117,7 +1141,7 @@
         <!-- Card 3: NHS Translation — 11 May 2026 -->
         <article class="premium-blog-card" data-category="healthcare" data-title="Translation Services for the NHS and Healthcare Providers" data-excerpt="How professional translation and interpreting supports better patient outcomes in NHS trusts, hospitals and GP surgeries across the UK.">
           <div class="blog-card-image">
-            <img loading="lazy" decoding="async" src="/assets/img/blog/translation-for-nhs.jpg" alt="Healthcare professional consulting with a patient">
+            <a class="card-img-link" href="/blog/translation-for-nhs/"><img loading="lazy" decoding="async" src="/assets/img/blog/translation-for-nhs.jpg" alt="Healthcare professional consulting with a patient"></a>
           </div>
           <div class="blog-card-content">
             <div class="blog-card-meta">
@@ -1137,7 +1161,7 @@
         <!-- Card 4: Immigration Translation — 11 May 2026 -->
         <article class="premium-blog-card" data-category="immigration" data-title="Immigration Document Translation UK: Everything You Need to Know" data-excerpt="What the Home Office and UKVI require, which documents need certified translation, and how to avoid costly mistakes in your application.">
           <div class="blog-card-image">
-            <img loading="lazy" decoding="async" src="/assets/img/blog/immigration-translation-uk.jpg" alt="Immigration documents and passport on a desk">
+            <a class="card-img-link" href="/blog/immigration-translation-uk/"><img loading="lazy" decoding="async" src="/assets/img/blog/immigration-translation-uk.jpg" alt="Immigration documents and passport on a desk"></a>
           </div>
           <div class="blog-card-content">
             <div class="blog-card-meta">
@@ -1157,7 +1181,7 @@
         <!-- Card 5: Home Office Documents — 11 May 2026 -->
         <article class="premium-blog-card" data-category="immigration" data-title="Which Documents Need Translation for the Home Office?" data-excerpt="A complete guide to which documents require certified translation for Home Office and UKVI visa, ILR, and citizenship applications.">
           <div class="blog-card-image">
-            <img loading="lazy" decoding="async" src="/assets/img/blog/document-translation-home-office.jpg" alt="Official documents and passport for Home Office application">
+            <a class="card-img-link" href="/blog/document-translation-home-office/"><img loading="lazy" decoding="async" src="/assets/img/blog/document-translation-home-office.jpg" alt="Official documents and passport for Home Office application"></a>
           </div>
           <div class="blog-card-content">
             <div class="blog-card-meta">
@@ -1177,7 +1201,7 @@
         <!-- Card 6: Birmingham — 11 May 2026 -->
         <article class="premium-blog-card" data-category="immigration" data-title="Translation Services in Birmingham: Your Complete Guide" data-excerpt="A complete guide to finding professional translation and interpreting services in Birmingham — who needs it, what is available, and how to choose.">
           <div class="blog-card-image">
-            <img loading="lazy" decoding="async" src="/assets/img/blog/birmingham-translation-services.jpg" alt="Birmingham city skyline">
+            <a class="card-img-link" href="/blog/birmingham-translation-services/"><img loading="lazy" decoding="async" src="/assets/img/blog/birmingham-translation-services.jpg" alt="Birmingham city skyline"></a>
           </div>
           <div class="blog-card-content">
             <div class="blog-card-meta">
@@ -1197,7 +1221,7 @@
         <!-- Card 8: Logo Story — 6 May 2026 -->
         <article class="premium-blog-card" data-category="brand" data-title="A Logo With Meaning: The Story Behind the Metaphrase Mark" data-excerpt="Three universal concepts — continuity, communication, and exchange — fused into one mark. Here is the full story.">
           <div class="blog-card-image">
-            <img src="/assets/img/blog/logo-meaning.jpg" alt="Brand identity and logo design" loading="lazy">
+            <a class="card-img-link" href="/blog/logo-meaning/"><img src="/assets/img/blog/logo-meaning.jpg" alt="Brand identity and logo design" loading="lazy"></a>
           </div>
           <div class="blog-card-content">
             <div class="blog-card-meta">
@@ -1217,7 +1241,7 @@
         <!-- Card 9: Choosing a Certified Translator — 5 Mar 2026 -->
         <article class="premium-blog-card" data-category="standards" data-title="Why Choosing a CIOL-Certified Linguist Matters" data-excerpt="Not all translators are equal. Learn what CIOL certification means and how to verify credentials.">
           <div class="blog-card-image">
-            <img loading="lazy" decoding="async" src="/assets/img/blog/choosing-certified-translator.jpg" alt="CIOL Certification">
+            <a class="card-img-link" href="/blog/choosing-certified-translator/"><img loading="lazy" decoding="async" src="/assets/img/blog/choosing-certified-translator.jpg" alt="CIOL Certification"></a>
           </div>
           <div class="blog-card-content">
             <div class="blog-card-meta">
@@ -1237,7 +1261,7 @@
         <!-- Card 11: Certified Translation Guide — 15 Jan 2026 -->
         <article class="premium-blog-card" data-category="certified-translation" data-title="The Complete Guide to Certified Translation in the UK (2026)" data-excerpt="Everything from Home Office requirements to CIOL certification — the definitive UK guide.">
           <div class="blog-card-image">
-            <img loading="lazy" decoding="async" src="/assets/img/blog/certified-translation-guide.jpg" alt="Certified Translation Guide">
+            <a class="card-img-link" href="/blog/certified-translation-guide/"><img loading="lazy" decoding="async" src="/assets/img/blog/certified-translation-guide.jpg" alt="Certified Translation Guide"></a>
           </div>
           <div class="blog-card-content">
             <div class="blog-card-meta">
@@ -1283,7 +1307,7 @@
           <div class="sidebar-cats">
             <div class="sidebar-cat" data-filter="all">
               <span>All Posts</span>
-              <span>14</span>
+              <span>15</span>
             </div>
             <div class="sidebar-cat" data-filter="immigration">
               <span>Immigration &amp; Visa</span>
@@ -1295,7 +1319,7 @@
             </div>
             <div class="sidebar-cat" data-filter="certified-translation">
               <span>Certified Translation</span>
-              <span>1</span>
+              <span>2</span>
             </div>
             <div class="sidebar-cat" data-filter="healthcare">
               <span>Healthcare</span>
@@ -1321,27 +1345,27 @@
           <h4>Recent Posts</h4>
           <div class="sidebar-recent">
             <div class="sidebar-recent-item">
-              <img loading="lazy" decoding="async" src="/assets/img/blog/urdu-language-history.jpg" alt="Urdu language history">
+              <a class="card-img-link" href="/blog/urdu-language-history/"><img loading="lazy" decoding="async" src="/assets/img/blog/urdu-language-history.jpg" alt="Urdu language history"></a>
               <a href="/blog/urdu-language-history/">The History &amp; Importance of Urdu: Nastaliq Script, South Asian Heritage &amp; the UK</a>
             </div>
             <div class="sidebar-recent-item">
-              <img loading="lazy" decoding="async" src="/assets/img/blog/hindi-language-history.jpg" alt="Hindi language history">
+              <a class="card-img-link" href="/blog/hindi-language-history/"><img loading="lazy" decoding="async" src="/assets/img/blog/hindi-language-history.jpg" alt="Hindi language history"></a>
               <a href="/blog/hindi-language-history/">The History &amp; Demography of Hindi: Devanagari, Hindustani &amp; What It Means for the UK</a>
             </div>
             <div class="sidebar-recent-item">
-              <img loading="lazy" decoding="async" src="/assets/img/blog/punjabi-language-history.jpg" alt="Punjab wheat fields">
+              <a class="card-img-link" href="/blog/punjabi-language-history/"><img loading="lazy" decoding="async" src="/assets/img/blog/punjabi-language-history.jpg" alt="Punjab wheat fields"></a>
               <a href="/blog/punjabi-language-history/">The History &amp; Demography of Punjabi: Gurmukhi, Shahmukhi &amp; What It Means for the UK</a>
             </div>
             <div class="sidebar-recent-item">
-              <img loading="lazy" decoding="async" src="/assets/img/blog/translation-for-nhs.jpg" alt="NHS healthcare">
+              <a class="card-img-link" href="/blog/translation-for-nhs/"><img loading="lazy" decoding="async" src="/assets/img/blog/translation-for-nhs.jpg" alt="NHS healthcare"></a>
               <a href="/blog/translation-for-nhs/">Translation Services for the NHS and Healthcare Providers</a>
             </div>
             <div class="sidebar-recent-item">
-              <img loading="lazy" decoding="async" src="/assets/img/blog/immigration-translation-uk.jpg" alt="Immigration documents">
+              <a class="card-img-link" href="/blog/immigration-translation-uk/"><img loading="lazy" decoding="async" src="/assets/img/blog/immigration-translation-uk.jpg" alt="Immigration documents"></a>
               <a href="/blog/immigration-translation-uk/">Immigration Document Translation UK: Everything You Need to Know</a>
             </div>
             <div class="sidebar-recent-item">
-              <img loading="lazy" decoding="async" src="/assets/img/blog/document-translation-home-office.jpg" alt="Home Office documents">
+              <a class="card-img-link" href="/blog/document-translation-home-office/"><img loading="lazy" decoding="async" src="/assets/img/blog/document-translation-home-office.jpg" alt="Home Office documents"></a>
               <a href="/blog/document-translation-home-office/">Which Documents Need Translation for the Home Office?</a>
             </div>
           </div>
